@@ -7,6 +7,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFF6F4FF),
       body:SafeArea(
         child:Center(
           child: Column(
@@ -21,7 +22,7 @@ class LoginPage extends StatelessWidget {
                   height: 150,
                   fit: BoxFit.contain,
                 ),
-                SizedBox(height: 20),
+                // SizedBox(height: 20),
                 const Text(
                   "Vibey",
                   style: TextStyle(
@@ -30,7 +31,7 @@ class LoginPage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 10),
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -93,7 +94,23 @@ style:TextStyle(fontSize:30,fontWeight:FontWeight.bold)
                 ),
               ],
             ),
+            SizedBox(height:20),
+            Container(
+              width:350,
+              height:350,
+              decoration:BoxDecoration(
+                color:Colors.white,
+                borderRadius:BorderRadius.circular(20)
+              ),
+              child: Column(
+                children:[
+                 Text("Email")
+                ]
+              ),
+            )
             ]
+            // Login section
+          
           ),
         )
       )
