@@ -14,6 +14,7 @@ class LoginPage extends StatelessWidget {
              Column(
               mainAxisSize: MainAxisSize.min,
               children: [
+                  SizedBox(height: 20),
                 Image.asset(
                   'assets/image/logos.png',
                   width: 250,
@@ -88,7 +89,7 @@ style:TextStyle(fontSize:30,fontWeight:FontWeight.bold)
                   SizedBox(height: 10),
                 Text(
                   "Sign in to discover amazing events",
-                  style: TextStyle(color: Colors.grey[600]),
+                  style: TextStyle(color: Colors.grey[500],fontWeight:FontWeight.bold),
                 ),
               ],
             ),
