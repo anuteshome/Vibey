@@ -20,12 +20,22 @@ class _LoginPageState extends State<LoginPage> {
       String email = EmailTextController.text.trim();
       String password = PasswordTextController.text;
 
-      try(
-        final response = auth.respository.login(
-          email:email,
-          password:password
-        )
-      )
+      try {
+        final response = authRepository.login(email: email, password: password);
+        if (response != null) {
+          print("Login succesfully");
+        }
+      } on AuthException catch (er) {
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar( SnackBar(content: Text(er.message)));
+      }catch(error){
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content:Text("Something went wrong"),
+          )
+        );
+      }
 
       if (email.isEmpty || password.isEmpty) {
         ScaffoldMessenger.of(context).showSnackBar(
