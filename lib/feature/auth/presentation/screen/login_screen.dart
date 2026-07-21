@@ -124,12 +124,17 @@ style:TextStyle(fontSize:30,fontWeight:FontWeight.bold)
             ),
               child: Center(child: Text("Login",style:TextStyle(color:Colors.white,fontSize:16,fontWeight:FontWeight.bold))),
             ),
+            SizedBox(height: 5),
                        Container(
                       width: 320,
                       height:60,
                        decoration:BoxDecoration(
               color:Colors.white,
               borderRadius:BorderRadius.circular(12),
+              border:Border.all(
+                color:Color(0xFF6C5CE7),
+                width: 1.0
+              )
 
             ),
                child:Row(
