@@ -163,7 +163,9 @@ class LoginPage extends StatelessWidget {
                  children: [
                    Text("Don't have an account ?"),
                    SizedBox(width:20),
-                   Text("Signup",style:TextStyle(color:Color(0xFF6C5CE7))),
+                   GestureDetector(
+                    onTap:() => {},
+                    child: Text("Signup",style:TextStyle(color:Color(0xFF6C5CE7)))),
                  ],
                )
           
