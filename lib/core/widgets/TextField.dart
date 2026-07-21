@@ -1,8 +1,8 @@
 import "package:flutter/material.dart";
 
 
-class TextFeild extends StatelessWidget {
-  const TextFeild({super.key});
+class TextFeilds extends StatelessWidget {
+  const TextFeilds({super.key});
 
   @override
   Widget build(BuildContext context) {

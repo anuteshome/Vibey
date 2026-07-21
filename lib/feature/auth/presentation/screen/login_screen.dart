@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:vibey/core/widgets/TextField.dart";
 
 
 class LoginPage extends StatelessWidget {
@@ -107,10 +108,10 @@ style:TextStyle(fontSize:30,fontWeight:FontWeight.bold)
                   child: Column(
                     children:[
                      Text("Email"),
-                     TextField(),
+                    TextFeilds(),
 
                       Text("Password"),
-                     TextField()
+                     TextFeilds()
                     ]
                   ),
                              ),
