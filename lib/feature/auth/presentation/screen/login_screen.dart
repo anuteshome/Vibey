@@ -129,9 +129,9 @@ style:TextStyle(fontSize:30,fontWeight:FontWeight.bold)
                       height:60,
                        decoration:BoxDecoration(
               color:Colors.white,
-              borderRadius:BorderRadius.circular(12)
-            ),
+              borderRadius:BorderRadius.circular(12),
 
+            ),
                child:Row(
                 mainAxisAlignment:MainAxisAlignment.center,
                  children: [
@@ -144,7 +144,15 @@ style:TextStyle(fontSize:30,fontWeight:FontWeight.bold)
                   ),
                              ),
                ],
+             ),
+             Row(
+               children: [
+                 Text("don't have an account ?"),
+                 SizedBox(width:20),
+                 Text("Signup"),
+               ],
              )
+
             ]
             // Login section
           ),
