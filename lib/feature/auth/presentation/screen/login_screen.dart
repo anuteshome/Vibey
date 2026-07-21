@@ -37,8 +37,8 @@ class _LoginPageState extends State<LoginPage> {
         return;
       }
 
-      print(Email);
-      print(Password);
+      print("Email: $Email");
+      print("Password: $Password");
     });
   }
 
