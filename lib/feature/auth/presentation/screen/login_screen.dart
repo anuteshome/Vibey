@@ -118,32 +118,34 @@ class LoginPage extends StatelessWidget {
                           Text("Password",style:TextStyle(fontSize:15,fontWeight: FontWeight.bold)),
                               SizedBox(height:5),
                          TextFeilds(),
-                         Text("Forget password",style:TextStyle(color:Color(0xFF6C5CE7),fontWeight:FontWeight.bold),textAlign: TextAlign.left,),
+                         Align(
+                          alignment: Alignment.centerRight,
+                          child: Text("Forget password",style:TextStyle(color:Color(0xFF6C5CE7),fontWeight:FontWeight.bold),textAlign: TextAlign.left,)),
                         Container(
                           width: 320,
                           height:60,
                            decoration:BoxDecoration(
-                                      color:Color(0xFF6C5CE7),
-                                      borderRadius:BorderRadius.circular(12)
-                                    ),
-                                      child: Center(child: Text("Login",style:TextStyle(color:Colors.white,fontSize:16,fontWeight:FontWeight.bold))),
-                                    ),
+                         color:Color(0xFF6C5CE7),
+                          borderRadius:BorderRadius.circular(12)
+                        ),
+                        child: Center(child: Text("Login",style:TextStyle(color:Colors.white,fontSize:16,fontWeight:FontWeight.bold))),
+                     ),
                                     SizedBox(height: 20),
                            Container(
                           width: 320,
                           height:60,
                            decoration:BoxDecoration(
-                                      color:Colors.white,
-                                      borderRadius:BorderRadius.circular(12),
-                                      border:Border.all(
-                                        color:Color(0xFF6C5CE7),
-                                        width: 1.0
-                                      )
+                          color:Colors.white,
+                     borderRadius:BorderRadius.circular(12),
+                   border:Border.all(
+                 color:Color(0xFF6C5CE7),
+               width: 1.0
+                    )
                                 
                                     ),
-                                       child:Row(
-                                        mainAxisAlignment:MainAxisAlignment.center,
-                                         children: [
+            child:Row(
+                  mainAxisAlignment:MainAxisAlignment.center,
+                      children: [
                        Icon(Icons.email),
                        SizedBox(width:20),
                       Text("Continue with google",style:TextStyle(color:Colors.black,fontSize:16,fontWeight:FontWeight.bold)),
