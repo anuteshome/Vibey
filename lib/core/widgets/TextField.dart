@@ -5,19 +5,21 @@ class TextFeilds extends StatelessWidget {
   // final Controller = TextEdittingController();
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 320,
-      height: 100,
-      // icon:Icon(Icons.email)
-      child: TextField(
-      
-        // controller: Controller,
-        decoration: InputDecoration(
-          border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-          contentPadding: EdgeInsets.all(20),
-          hintText: "Enter your...",
-          prefixIcon: Icon(Icons.email),
-          
+    return Padding(
+      padding: const EdgeInsets.only(left:10),
+      child: Container(
+        width: 320,
+        height: 100,
+        // icon:Icon(Icons.email)
+        child: TextField(
+          // controller: Controller,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+            contentPadding: EdgeInsets.all(20),
+            hintText: "Enter your...",
+            prefixIcon: Icon(Icons.email),
+            
+          ),
         ),
       ),
     );
