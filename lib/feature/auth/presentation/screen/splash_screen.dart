@@ -50,7 +50,7 @@ body:SafeArea(
               style:TextStyle(fontSize:17,color:Color(0xFF6C5CE7),fontWeight:FontWeight.w600))
           ],
         ),
-        SizedBox(height: 30),
+        SizedBox(height: 50),
 
         Row(
           mainAxisSize:MainAxisSize.min,
@@ -83,7 +83,10 @@ SizedBox(width:20),
             ),
           ],
         ),
-         Text("Loading amazing events...")
+        SizedBox(height:20),
+         Text("Loading amazing events...",
+         style:TextStyle(color:Color(0xFF6C5CE7)),
+         )
       ]
    
           ),
