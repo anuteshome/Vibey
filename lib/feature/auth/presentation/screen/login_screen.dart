@@ -124,7 +124,7 @@ class LoginPage extends StatelessWidget {
                         GestureDetector(
                           onTap:(){},
                           child: Container(
-                            width: 320,
+                            width: double.infinity,
                             height:60,
                              decoration:BoxDecoration(
                            color:Color(0xFF6C5CE7),
@@ -137,8 +137,8 @@ class LoginPage extends StatelessWidget {
                            GestureDetector(
                             onTap:(){},
                              child: Container(
-                                                       width: 320,
-                                                       height:60,
+                                     width: double.infinity,
+                                   height:60,
                              decoration:BoxDecoration(
                                                        color:Colors.white,
                                                   borderRadius:BorderRadius.circular(12),

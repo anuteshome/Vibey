@@ -8,7 +8,7 @@ class TextFeilds extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left:10),
       child: Container(
-        width: 320,
+        width: double.infinity,
         height: 70,
         // icon:Icon(Icons.email)
         child: TextField(
