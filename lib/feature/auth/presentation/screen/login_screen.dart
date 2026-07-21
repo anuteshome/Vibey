@@ -197,7 +197,7 @@ class LoginPage extends StatelessWidget {
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Icon(Icons.email),
+                                    Icon(Icons.email,color: Color(0xFF6C5CE7),),
                                     SizedBox(width: 20),
                                     Text(
                                       "Continue With Google",
