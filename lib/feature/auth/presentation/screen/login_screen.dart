@@ -120,7 +120,7 @@ class LoginPage extends StatelessWidget {
                          TextFeilds(),
                          Align(
                           alignment: Alignment.centerRight,
-                          child: Text("Forget password",style:TextStyle(color:Color(0xFF6C5CE7),fontWeight:FontWeight.bold),textAlign: TextAlign.left,)),
+                          child: Text("Forgot password",style:TextStyle(color:Color(0xFF6C5CE7),fontWeight:FontWeight.bold),textAlign: TextAlign.left,)),
                         GestureDetector(
                           onTap:(){},
                           child: Container(
@@ -152,7 +152,7 @@ class LoginPage extends StatelessWidget {
                                                      children: [
                                                       Icon(Icons.email),
                                                       SizedBox(width:20),
-                                                     Text("Continue with google",style:TextStyle(color:Colors.black,fontSize:16,fontWeight:FontWeight.bold)),
+                                                     Text("Continue With Google",style:TextStyle(color:Colors.black,fontSize:16,fontWeight:FontWeight.bold)),
                                              ],
                                            ),
                                          ),
