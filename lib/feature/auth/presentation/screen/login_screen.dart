@@ -151,7 +151,7 @@ style:TextStyle(fontSize:30,fontWeight:FontWeight.bold)
                children: [
                  Text("Don't have an account ?"),
                  SizedBox(width:20),
-                 Text("Signup"),
+                 Text("Signup",style:TextStyle(color:Color(0xFF6C5CE7))),
                ],
              )
 
