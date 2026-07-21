@@ -1,10 +1,26 @@
 import "package:flutter/material.dart";
 import "package:vibey/core/widgets/TextField.dart";
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  LoginPage({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   final EmailTextController = TextEditingController();
   final PasswordTextController = TextEditingController();
-   LoginPage({super.key});
+
+  void Login() {
+    setState(() {
+      String Email = EmailTextController.text.trim();
+      String Password = PasswordTextController.text.trim();
+
+      print(Email);
+      print(Password);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -160,7 +176,7 @@ class LoginPage extends StatelessWidget {
                               ),
                             ),
                             GestureDetector(
-                              onTap: () {},
+                              onTap: Login,
                               child: Container(
                                 width: double.infinity,
                                 height: 60,
@@ -197,7 +213,7 @@ class LoginPage extends StatelessWidget {
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Icon(Icons.email,color: Color(0xFF6C5CE7),),
+                                    Icon(Icons.email, color: Color(0xFF6C5CE7)),
                                     SizedBox(width: 20),
                                     Text(
                                       "Continue With Google",
