@@ -107,10 +107,12 @@ style:TextStyle(fontSize:30,fontWeight:FontWeight.bold)
                   ),
                   child: Column(
                     children:[
-                     Text("Email"),
+                      SizedBox(height:15),
+                     Text("Email",style:TextStyle(fontSize:15,fontWeight: FontWeight.bold)),
+                        SizedBox(height:10),
                     TextFeilds(),
-
-                      Text("Password"),
+                      Text("Password",style:TextStyle(fontSize:15,fontWeight: FontWeight.bold)),
+                          SizedBox(height:10),
                      TextFeilds()
                     ]
                   ),
