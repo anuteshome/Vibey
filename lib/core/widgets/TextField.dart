@@ -16,7 +16,8 @@ class TextFeilds extends StatelessWidget {
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
           contentPadding: EdgeInsets.all(20),
           hintText: "Enter your...",
-          prefixIcon: Icon(Icons.email)
+          prefixIcon: Icon(Icons.email),
+          
         ),
       ),
     );

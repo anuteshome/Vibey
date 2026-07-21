@@ -113,7 +113,16 @@ style:TextStyle(fontSize:30,fontWeight:FontWeight.bold)
                     TextFeilds(),
                       Text("Password",style:TextStyle(fontSize:15,fontWeight: FontWeight.bold)),
                           SizedBox(height:10),
-                     TextFeilds()
+                     TextFeilds(),
+                     Text("Forget password",style:TextStyle(color:Color(0xFF6C5CE7),fontWeight:FontWeight.bold),textAlign: TextAlign.left,),
+                    Container(
+            width:300,
+            height:60,
+            decoration:BoxDecoration(
+              color:Color(0xFF6C5CE7),
+              borderRadius:BorderRadius.circular(12)
+            )
+                    )
                     ]
                   ),
                              ),
