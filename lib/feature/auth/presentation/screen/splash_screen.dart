@@ -49,6 +49,39 @@ body:SafeArea(
               Text("Enjoy",
               style:TextStyle(fontSize:17,color:Color(0xFF6C5CE7),fontWeight:FontWeight.w600))
           ],
+        ),
+        SizedBox(height: 30),
+
+        Row(
+          mainAxisSize:MainAxisSize.min,
+          children: [
+            Container(
+              width:8,
+              height:8,
+              decoration: BoxDecoration(
+                color:Color(0xFF6C5CE7),
+                borderRadius:BorderRadius.circular(20),
+              ),
+            ),
+SizedBox(width:20),
+            Container(
+              width:8,
+              height:8,
+              decoration: BoxDecoration(
+                color:Color.fromARGB(255, 219, 215, 242),
+                borderRadius:BorderRadius.circular(20),
+              ),
+            ),
+SizedBox(width:20),
+            Container(
+              width:8,
+              height:8,
+              decoration: BoxDecoration(
+                color:Color.fromARGB(255, 219, 215, 242),
+                borderRadius:BorderRadius.circular(20),
+              ),
+            ),
+          ],
         )
       ]
     
