@@ -46,7 +46,8 @@ body:SafeArea(
                 )
                ),
               SizedBox(width: 20),
-              Text("Enjoy")
+              Text("Enjoy",
+              style:TextStyle(fontSize:17,color:Color(0xFF6C5CE7),fontWeight:FontWeight.w600))
           ],
         )
       ]
