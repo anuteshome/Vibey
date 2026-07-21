@@ -100,29 +100,47 @@ style:TextStyle(fontSize:30,fontWeight:FontWeight.bold)
                children: [
                  Container(
                   width:350,
-                  height:350,
+                  // height:350,
                   decoration:BoxDecoration(
                     color:Colors.white,
                     borderRadius:BorderRadius.circular(20)
                   ),
                   child: Column(
                     children:[
-                      SizedBox(height:15),
+                      SizedBox(height:5),
                      Text("Email",style:TextStyle(fontSize:15,fontWeight: FontWeight.bold)),
-                        SizedBox(height:10),
+                        SizedBox(height:5),
                     TextFeilds(),
                       Text("Password",style:TextStyle(fontSize:15,fontWeight: FontWeight.bold)),
-                          SizedBox(height:10),
+                          SizedBox(height:5),
                      TextFeilds(),
                      Text("Forget password",style:TextStyle(color:Color(0xFF6C5CE7),fontWeight:FontWeight.bold),textAlign: TextAlign.left,),
                     Container(
-            width:300,
-            height:60,
-            decoration:BoxDecoration(
+                      width: 300,
+                      height:50,
+                       decoration:BoxDecoration(
               color:Color(0xFF6C5CE7),
               borderRadius:BorderRadius.circular(12)
-            )
-                    )
+            ),
+              child: Text("Login",style:TextStyle(color:Colors.white,fontSize:16,fontWeight:FontWeight.bold)),
+            ),
+                  Container(
+                    width:300,
+                    height:30,
+                    decoration:BoxDecoration(
+                      borderRadius:BorderRadius.circular(20),
+                      color:Colors.grey
+                    ),
+                    child: Center(
+                      child: Row(
+                                      children:[
+                                      Icon(Icons.email),
+                                      Text("Continue With Google")
+                      ]
+                           ),
+                    ),
+                  ),
+
                     ]
                   ),
                              ),
