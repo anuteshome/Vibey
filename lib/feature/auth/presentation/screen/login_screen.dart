@@ -20,6 +20,13 @@ class _LoginPageState extends State<LoginPage> {
       String email = EmailTextController.text.trim();
       String password = PasswordTextController.text;
 
+      try(
+        final response = auth.respository.login(
+          email:email,
+          password:password
+        )
+      )
+
       if (email.isEmpty || password.isEmpty) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text("Please Add Email and Password")),
