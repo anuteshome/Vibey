@@ -34,7 +34,7 @@ body:SafeArea(
           ),
    SizedBox(width: 20),
              Text("Book",
-             style),
+             style:TextStyle(fontSize:17,color:Color(0xFF6C5CE7),fontWeight:FontWeight.w600)),
    SizedBox(width: 20),
                Container(
                 width:8,
