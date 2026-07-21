@@ -5,5 +5,10 @@ class AuthRepository {
 
   AuthRepository(this.Supabase);
 
-  
+Future<AuthResponse> Login({
+  required String email,
+  required String password,
+})
+
+
 }
