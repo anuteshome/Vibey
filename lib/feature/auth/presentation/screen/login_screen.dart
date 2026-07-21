@@ -34,55 +34,55 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 10),
-                  // Row(
-                  //   mainAxisSize: MainAxisSize.min,
-                  //   children: [
-                  //     Text(
-                  //       "Find",
-                  //       style: TextStyle(
-                  //         fontSize: 17,
-                  //         color: Color(0xFF6C5CE7),
-                  //         fontWeight: FontWeight.w600,
-                  //       ),
-                  //     ),
-                  //     SizedBox(width: 20),
-                  //     Container(
-                  //       width: 8,
-                  //       height: 8,
-                  //       decoration: BoxDecoration(
-                  //         borderRadius: BorderRadius.circular(20),
-                  //         color: Color(0xFFFF6B9D),
-                  //       ),
-                  //     ),
-                  //     SizedBox(width: 20),
-                  //     Text(
-                  //       "Book",
-                  //       style: TextStyle(
-                  //         fontSize: 17,
-                  //         color: Color(0xFF6C5CE7),
-                  //         fontWeight: FontWeight.w600,
-                  //       ),
-                  //     ),
-                  //     SizedBox(width: 20),
-                  //     Container(
-                  //       width: 8,
-                  //       height: 8,
-                  //       decoration: BoxDecoration(
-                  //         color: Color(0xFFFF6B9D),
-                  //         borderRadius: BorderRadius.circular(20),
-                  //       ),
-                  //     ),
-                  //     SizedBox(width: 20),
-                  //     Text(
-                  //       "Enjoy",
-                  //       style: TextStyle(
-                  //         fontSize: 17,
-                  //         color: Color(0xFF6C5CE7),
-                  //         fontWeight: FontWeight.w600,
-                  //       ),
-                  //     ),
-                  //   ],
-                  // ),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        "Find",
+                        style: TextStyle(
+                          fontSize: 17,
+                          color: Color(0xFF6C5CE7),
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      SizedBox(width: 20),
+                      Container(
+                        width: 8,
+                        height: 8,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Color(0xFFFF6B9D),
+                        ),
+                      ),
+                      SizedBox(width: 20),
+                      Text(
+                        "Book",
+                        style: TextStyle(
+                          fontSize: 17,
+                          color: Color(0xFF6C5CE7),
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      SizedBox(width: 20),
+                      Container(
+                        width: 8,
+                        height: 8,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFFF6B9D),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                      ),
+                      SizedBox(width: 20),
+                      Text(
+                        "Enjoy",
+                        style: TextStyle(
+                          fontSize: 17,
+                          color: Color(0xFF6C5CE7),
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
             
                 
                   // SizedBox(height: 20),
@@ -128,7 +128,7 @@ class LoginPage extends StatelessWidget {
                                     ),
                                       child: Center(child: Text("Login",style:TextStyle(color:Colors.white,fontSize:16,fontWeight:FontWeight.bold))),
                                     ),
-                                    SizedBox(height: 5),
+                                    SizedBox(height: 20),
                            Container(
                           width: 320,
                           height:60,
