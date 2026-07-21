@@ -15,7 +15,7 @@ class _LoginPageState extends State<LoginPage> {
   void Login() {
     setState(() {
       String Email = EmailTextController.text.trim();
-      String Password = PasswordTextController.text.trim();
+      String Password = PasswordTextController.text;
 
       if (Email.isEmpty || Password.isEmpty) {
         ScaffoldMessenger.of(context).showSnackBar(
