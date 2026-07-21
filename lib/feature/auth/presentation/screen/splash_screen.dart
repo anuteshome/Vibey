@@ -10,13 +10,17 @@ class SplashScreen extends StatelessWidget {
 body:SafeArea(
   child: Center(
     child: Column(
+      mainAxisSize: MainAxisSize.min,
       children:[
-        Image.asset("assets/image/logo.png"),
+        Image.asset('lib/assets/image/logo.png',width: 50,height: 50,),
         Text("Vibey"),
         Row(
+          mainAxisSize:MainAxisSize.min,
           children: [
             Text("Find"),
+            SizedBox(width: 10),
              Text("Book"),
+              SizedBox(width: 10),
               Text("Enjoy")
           ],
         )
