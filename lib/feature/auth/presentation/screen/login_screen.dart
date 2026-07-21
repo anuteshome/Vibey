@@ -30,8 +30,11 @@ class _LoginPageState extends State<LoginPage> {
         ).showSnackBar(const SnackBar(content: Text("please and vaild email")));
         return;
       }
-      if(Password.length < 6){
-
+      if (Password.length < 6) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text("Password must be greater than 6")),
+        );
+        return;
       }
 
       print(Email);
