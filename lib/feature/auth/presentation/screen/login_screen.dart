@@ -95,24 +95,33 @@ style:TextStyle(fontSize:30,fontWeight:FontWeight.bold)
               ],
             ),
             SizedBox(height:20),
-            Container(
-              width:350,
-              height:350,
-              decoration:BoxDecoration(
-                color:Colors.white,
-                borderRadius:BorderRadius.circular(20)
-              ),
-              child: Column(
-                children:[
-                 Text("Email")
-                ]
-              ),
-            )
+             Column(
+               children: [
+                 Container(
+                  width:350,
+                  height:350,
+                  decoration:BoxDecoration(
+                    color:Colors.white,
+                    borderRadius:BorderRadius.circular(20)
+                  ),
+                  child: Column(
+                    children:[
+                     Text("Email"),
+                     TextField(),
+
+                      Text("Password"),
+                     TextField()
+                    ]
+                  ),
+                             ),
+               ],
+             )
             ]
             // Login section
-          
           ),
+          
         )
+        
       )
     );
   }
