@@ -145,9 +145,11 @@ style:TextStyle(fontSize:30,fontWeight:FontWeight.bold)
                              ),
                ],
              ),
+             SizedBox(height:10),
              Row(
+              mainAxisAlignment: MainAxisAlignment.center,
                children: [
-                 Text("don't have an account ?"),
+                 Text("Don't have an account ?"),
                  SizedBox(width:20),
                  Text("Signup"),
                ],
