@@ -14,31 +14,31 @@ class _LoginPageState extends State<LoginPage> {
 
   void Login() {
     setState(() {
-      String Email = EmailTextController.text.trim();
-      String Password = PasswordTextController.text;
+      String email = EmailTextController.text.trim();
+      String password = PasswordTextController.text;
 
-      if (Email.isEmpty || Password.isEmpty) {
+      if (email.isEmpty || password.isEmpty) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text("Please Add Email and Password")),
         );
         return;
       }
 
-      if (!Email.contains("@")) {
+      if (!email.contains("@")) {
         ScaffoldMessenger.of(
           context,
         ).showSnackBar(const SnackBar(content: Text("please and vaild email")));
         return;
       }
-      if (Password.length < 6) {
+      if (password.length < 6) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text("Password must be greater than 6")),
         );
         return;
       }
 
-      print("Email: $Email");
-      print("Password: $Password");
+      print("Email: $email");
+      print("Password: $password");
     });
   }
 
