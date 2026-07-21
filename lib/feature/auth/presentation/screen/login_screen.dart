@@ -121,15 +121,18 @@ class LoginPage extends StatelessWidget {
                          Align(
                           alignment: Alignment.centerRight,
                           child: Text("Forget password",style:TextStyle(color:Color(0xFF6C5CE7),fontWeight:FontWeight.bold),textAlign: TextAlign.left,)),
-                        Container(
-                          width: 320,
-                          height:60,
-                           decoration:BoxDecoration(
-                         color:Color(0xFF6C5CE7),
-                          borderRadius:BorderRadius.circular(12)
+                        GestureDetector(
+                          onTap:(){},
+                          child: Container(
+                            width: 320,
+                            height:60,
+                             decoration:BoxDecoration(
+                           color:Color(0xFF6C5CE7),
+                            borderRadius:BorderRadius.circular(12)
+                          ),
+                          child: Center(child: Text("Login",style:TextStyle(color:Colors.white,fontSize:16,fontWeight:FontWeight.bold))),
+                                               ),
                         ),
-                        child: Center(child: Text("Login",style:TextStyle(color:Colors.white,fontSize:16,fontWeight:FontWeight.bold))),
-                     ),
                                     SizedBox(height: 20),
                            Container(
                           width: 320,
@@ -143,14 +146,17 @@ class LoginPage extends StatelessWidget {
                     )
                                 
                                     ),
-            child:Row(
-                  mainAxisAlignment:MainAxisAlignment.center,
-                      children: [
-                       Icon(Icons.email),
-                       SizedBox(width:20),
-                      Text("Continue with google",style:TextStyle(color:Colors.black,fontSize:16,fontWeight:FontWeight.bold)),
-                                         ],
-                                       )),
+            child:GestureDetector(
+              onTap:(){},
+              child: Row(
+                    mainAxisAlignment:MainAxisAlignment.center,
+                        children: [
+                         Icon(Icons.email),
+                         SizedBox(width:20),
+                        Text("Continue with google",style:TextStyle(color:Colors.black,fontSize:16,fontWeight:FontWeight.bold)),
+                                           ],
+                                         ),
+            )),
                         ]
                       ),
                     ),
