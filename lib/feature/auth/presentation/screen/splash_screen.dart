@@ -29,7 +29,7 @@ body:SafeArea(
             height: 8,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: Color(0XFF6C5CE7)
+             color:Color(0xFFFF6B9D),
             ),
           ),
    SizedBox(width: 20),
