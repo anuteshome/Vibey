@@ -6,6 +6,25 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(   
+body:SafeArea(
+  child: Center(
+    child: Column(
+      children:[
+        Image.asset("assets/image/logo.png"),
+        Text("Vibey"),
+        Row(
+          children: [
+            Text("Find"),
+             Text("Book"),
+              Text("Enjoy")
+          ],
+        )
+      ]
+    
+          ),
+  ),
+),
+    );
   }
 }
