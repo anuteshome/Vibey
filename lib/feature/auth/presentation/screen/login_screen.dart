@@ -17,6 +17,23 @@ class _LoginPageState extends State<LoginPage> {
       String Email = EmailTextController.text.trim();
       String Password = PasswordTextController.text.trim();
 
+      if (Email.isEmpty || Password.isEmpty) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text("Please Add Email and Password")),
+        );
+        return;
+      }
+
+      if (!Email.contains("@")) {
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(const SnackBar(content: Text("please and vaild email")));
+        return;
+      }
+      if(Password.length < 6){
+
+      }
+
       print(Email);
       print(Password);
     });
