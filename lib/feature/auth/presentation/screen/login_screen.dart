@@ -134,29 +134,29 @@ class LoginPage extends StatelessWidget {
                                                ),
                         ),
                                     SizedBox(height: 20),
-                           Container(
-                          width: 320,
-                          height:60,
-                           decoration:BoxDecoration(
-                          color:Colors.white,
-                     borderRadius:BorderRadius.circular(12),
-                   border:Border.all(
-                 color:Color(0xFF6C5CE7),
-               width: 1.0
-                    )
-                                
-                                    ),
-            child:GestureDetector(
-              onTap:(){},
-              child: Row(
-                    mainAxisAlignment:MainAxisAlignment.center,
-                        children: [
-                         Icon(Icons.email),
-                         SizedBox(width:20),
-                        Text("Continue with google",style:TextStyle(color:Colors.black,fontSize:16,fontWeight:FontWeight.bold)),
-                                           ],
+                           GestureDetector(
+                            onTap:(){},
+                             child: Container(
+                                                       width: 320,
+                                                       height:60,
+                             decoration:BoxDecoration(
+                                                       color:Colors.white,
+                                                  borderRadius:BorderRadius.circular(12),
+                                                border:Border.all(
+                                              color:Color(0xFF6C5CE7),
+                                            width: 1.0
+                                                 )      
                                          ),
-            )),
+                                           child: Row(
+                                                 mainAxisAlignment:MainAxisAlignment.center,
+                                                     children: [
+                                                      Icon(Icons.email),
+                                                      SizedBox(width:20),
+                                                     Text("Continue with google",style:TextStyle(color:Colors.black,fontSize:16,fontWeight:FontWeight.bold)),
+                                             ],
+                                           ),
+                                         ),
+                           ),
                         ]
                       ),
                     ),
