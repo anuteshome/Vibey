@@ -87,8 +87,8 @@ style:TextStyle(fontSize:30,fontWeight:FontWeight.bold)
 ),
                   SizedBox(height: 10),
                 Text(
-                  "Loading amazing events...",
-                  style: TextStyle(color: Colors.grey[500]),
+                  "Sign in to discover amazing events",
+                  style: TextStyle(color: Colors.grey[600]),
                 ),
               ],
             ),
