@@ -5,7 +5,7 @@ class AuthRepository {
 
   AuthRepository(this.Supabase);
 
-  Future<AuthResponse> login({
+  Future<AuthResponse> login ({
     required String email,
     required String password,
   }) async {

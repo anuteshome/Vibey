@@ -1,5 +1,7 @@
 import "package:flutter/material.dart";
 import "package:vibey/core/widgets/TextField.dart";
+import "package:vibey/feature/auth/data/repository/auth_repository.dart";
+import "package:supabase_flutter/supabase_flutter.dart";
 
 class LoginPage extends StatefulWidget {
   LoginPage({super.key});
@@ -11,6 +13,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final EmailTextController = TextEditingController();
   final PasswordTextController = TextEditingController();
+  final authRepository = AuthRepository(Supabase.instance.client);
 
   void Login() {
     setState(() {
