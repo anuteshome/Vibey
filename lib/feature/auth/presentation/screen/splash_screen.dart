@@ -13,12 +13,12 @@ body:SafeArea(
     child: Column(
       mainAxisSize: MainAxisSize.min,
       children:[
-        Image.asset('assets/image/logos.png',
+         Image.asset('assets/image/logos.png',
         width: 250,height: 150,
         fit:BoxFit.contain
         ),
         SizedBox(height:20),
-        Text("Vibey",
+        const Text("Vibey",
         style:TextStyle(color:Color(0xFF6C5CE7),fontSize:50,fontWeight:FontWeight.bold)),
         SizedBox(height:20),
         Row(
