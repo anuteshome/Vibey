@@ -82,9 +82,10 @@ SizedBox(width:20),
               ),
             ),
           ],
-        )
+        ),
+         Text("Loading amazing events...")
       ]
-    
+   
           ),
   ),
 ),
