@@ -88,7 +88,7 @@ SizedBox(width:20),
         ),
         SizedBox(height:20),
          Text("Loading amazing events...",
-         style:TextStyle(color:Color(0xFF6C5CE7)),
+         style:TextStyle(color:Colors.grey[500]),
          )
       ]
    
