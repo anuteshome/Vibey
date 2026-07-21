@@ -34,58 +34,58 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 10),
-                  Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        "Find",
-                        style: TextStyle(
-                          fontSize: 17,
-                          color: Color(0xFF6C5CE7),
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                      SizedBox(width: 20),
-                      Container(
-                        width: 8,
-                        height: 8,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Color(0xFFFF6B9D),
-                        ),
-                      ),
-                      SizedBox(width: 20),
-                      Text(
-                        "Book",
-                        style: TextStyle(
-                          fontSize: 17,
-                          color: Color(0xFF6C5CE7),
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                      SizedBox(width: 20),
-                      Container(
-                        width: 8,
-                        height: 8,
-                        decoration: BoxDecoration(
-                          color: Color(0xFFFF6B9D),
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                      ),
-                      SizedBox(width: 20),
-                      Text(
-                        "Enjoy",
-                        style: TextStyle(
-                          fontSize: 17,
-                          color: Color(0xFF6C5CE7),
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ],
-                  ),
+                  // Row(
+                  //   mainAxisSize: MainAxisSize.min,
+                  //   children: [
+                  //     Text(
+                  //       "Find",
+                  //       style: TextStyle(
+                  //         fontSize: 17,
+                  //         color: Color(0xFF6C5CE7),
+                  //         fontWeight: FontWeight.w600,
+                  //       ),
+                  //     ),
+                  //     SizedBox(width: 20),
+                  //     Container(
+                  //       width: 8,
+                  //       height: 8,
+                  //       decoration: BoxDecoration(
+                  //         borderRadius: BorderRadius.circular(20),
+                  //         color: Color(0xFFFF6B9D),
+                  //       ),
+                  //     ),
+                  //     SizedBox(width: 20),
+                  //     Text(
+                  //       "Book",
+                  //       style: TextStyle(
+                  //         fontSize: 17,
+                  //         color: Color(0xFF6C5CE7),
+                  //         fontWeight: FontWeight.w600,
+                  //       ),
+                  //     ),
+                  //     SizedBox(width: 20),
+                  //     Container(
+                  //       width: 8,
+                  //       height: 8,
+                  //       decoration: BoxDecoration(
+                  //         color: Color(0xFFFF6B9D),
+                  //         borderRadius: BorderRadius.circular(20),
+                  //       ),
+                  //     ),
+                  //     SizedBox(width: 20),
+                  //     Text(
+                  //       "Enjoy",
+                  //       style: TextStyle(
+                  //         fontSize: 17,
+                  //         color: Color(0xFF6C5CE7),
+                  //         fontWeight: FontWeight.w600,
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
             
                 
-                  SizedBox(height: 20),
+                  // SizedBox(height: 20),
           Text("Welcome Back",
           style:TextStyle(fontSize:30,fontWeight:FontWeight.bold)
           ),
@@ -106,47 +106,51 @@ class LoginPage extends StatelessWidget {
                       color:Colors.white,
                       borderRadius:BorderRadius.circular(20)
                     ),
-                    child: Column(
-                      children:[
-                        SizedBox(height:5),
-                       Text("Email",style:TextStyle(fontSize:15,fontWeight: FontWeight.bold)),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children:[
                           SizedBox(height:5),
-                      TextFeilds(),
-                        Text("Password",style:TextStyle(fontSize:15,fontWeight: FontWeight.bold)),
+                         Text("Email",style:TextStyle(fontSize:15,fontWeight: FontWeight.bold)),
                             SizedBox(height:5),
-                       TextFeilds(),
-                       Text("Forget password",style:TextStyle(color:Color(0xFF6C5CE7),fontWeight:FontWeight.bold),textAlign: TextAlign.left,),
-                      Container(
-                        width: 320,
-                        height:60,
-                         decoration:BoxDecoration(
-                color:Color(0xFF6C5CE7),
-                borderRadius:BorderRadius.circular(12)
-              ),
-                child: Center(child: Text("Login",style:TextStyle(color:Colors.white,fontSize:16,fontWeight:FontWeight.bold))),
-              ),
-              SizedBox(height: 5),
-                         Container(
-                        width: 320,
-                        height:60,
-                         decoration:BoxDecoration(
-                color:Colors.white,
-                borderRadius:BorderRadius.circular(12),
-                border:Border.all(
-                  color:Color(0xFF6C5CE7),
-                  width: 1.0
-                )
-          
-              ),
-                 child:Row(
-                  mainAxisAlignment:MainAxisAlignment.center,
-                   children: [
-                     Icon(Icons.email),
-                     SizedBox(width:20),
-                    Text("Continue with google",style:TextStyle(color:Colors.black,fontSize:16,fontWeight:FontWeight.bold)),
-                   ],
-                 )),
-                      ]
+                        TextFeilds(),
+                          Text("Password",style:TextStyle(fontSize:15,fontWeight: FontWeight.bold)),
+                              SizedBox(height:5),
+                         TextFeilds(),
+                         Text("Forget password",style:TextStyle(color:Color(0xFF6C5CE7),fontWeight:FontWeight.bold),textAlign: TextAlign.left,),
+                        Container(
+                          width: 320,
+                          height:60,
+                           decoration:BoxDecoration(
+                                      color:Color(0xFF6C5CE7),
+                                      borderRadius:BorderRadius.circular(12)
+                                    ),
+                                      child: Center(child: Text("Login",style:TextStyle(color:Colors.white,fontSize:16,fontWeight:FontWeight.bold))),
+                                    ),
+                                    SizedBox(height: 5),
+                           Container(
+                          width: 320,
+                          height:60,
+                           decoration:BoxDecoration(
+                                      color:Colors.white,
+                                      borderRadius:BorderRadius.circular(12),
+                                      border:Border.all(
+                                        color:Color(0xFF6C5CE7),
+                                        width: 1.0
+                                      )
+                                
+                                    ),
+                                       child:Row(
+                                        mainAxisAlignment:MainAxisAlignment.center,
+                                         children: [
+                       Icon(Icons.email),
+                       SizedBox(width:20),
+                      Text("Continue with google",style:TextStyle(color:Colors.black,fontSize:16,fontWeight:FontWeight.bold)),
+                                         ],
+                                       )),
+                        ]
+                      ),
                     ),
                                ),
                  ],

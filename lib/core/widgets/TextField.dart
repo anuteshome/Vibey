@@ -9,13 +9,13 @@ class TextFeilds extends StatelessWidget {
       padding: const EdgeInsets.only(left:10),
       child: Container(
         width: 320,
-        height: 100,
+        height: 70,
         // icon:Icon(Icons.email)
         child: TextField(
           // controller: Controller,
           decoration: InputDecoration(
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-            contentPadding: EdgeInsets.all(20),
+            contentPadding: EdgeInsets.all(15),
             hintText: "Enter your...",
             prefixIcon: Icon(Icons.email),
             
