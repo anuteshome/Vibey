@@ -116,31 +116,30 @@ style:TextStyle(fontSize:30,fontWeight:FontWeight.bold)
                      TextFeilds(),
                      Text("Forget password",style:TextStyle(color:Color(0xFF6C5CE7),fontWeight:FontWeight.bold),textAlign: TextAlign.left,),
                     Container(
-                      width: 300,
-                      height:50,
+                      width: 320,
+                      height:60,
                        decoration:BoxDecoration(
               color:Color(0xFF6C5CE7),
               borderRadius:BorderRadius.circular(12)
             ),
-              child: Text("Login",style:TextStyle(color:Colors.white,fontSize:16,fontWeight:FontWeight.bold)),
+              child: Center(child: Text("Login",style:TextStyle(color:Colors.white,fontSize:16,fontWeight:FontWeight.bold))),
             ),
-                  Container(
-                    width:300,
-                    height:30,
-                    decoration:BoxDecoration(
-                      borderRadius:BorderRadius.circular(20),
-                      color:Colors.grey
-                    ),
-                    child: Center(
-                      child: Row(
-                                      children:[
-                                      Icon(Icons.email),
-                                      Text("Continue With Google")
-                      ]
-                           ),
-                    ),
-                  ),
+                       Container(
+                      width: 320,
+                      height:60,
+                       decoration:BoxDecoration(
+              color:Colors.white,
+              borderRadius:BorderRadius.circular(12)
+            ),
 
+               child:Row(
+                mainAxisAlignment:MainAxisAlignment.center,
+                 children: [
+                   Icon(Icons.email),
+                   SizedBox(width:20),
+                  Text("Continue with google",style:TextStyle(color:Colors.black,fontSize:16,fontWeight:FontWeight.bold)),
+                 ],
+               )),
                     ]
                   ),
                              ),
