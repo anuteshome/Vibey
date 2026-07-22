@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:vibey/core/widgets/TextField.dart";
+import "package:vibey/feature/attendee/Attende.dart";
 import "package:vibey/feature/attendee/homepage_screen.dart";
 import "package:vibey/feature/auth/data/repository/auth_repository.dart";
 import "package:supabase_flutter/supabase_flutter.dart";
@@ -56,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
         ScaffoldMessenger.of(
           context,
         ).showSnackBar(SnackBar(content: Text("Login success")));
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => AttendePage()));
       }
       debugPrint('User ID: ${response.user!.id}');
       debugPrint('Email: ${response.user!.email}');
