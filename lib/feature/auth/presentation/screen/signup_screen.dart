@@ -217,7 +217,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       SizedBox(height: 10),
                       // Login button
                       GestureDetector(
-                        onTap: SignUp,
+                        onTap: isLoading? null: SignUp,
                         child: Container(
                           width: double.infinity,
                           height: 60,
