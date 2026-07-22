@@ -55,7 +55,7 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
           ),
 // Hero
 Column(
-  mainAxisAlignment: MainAxisAlignment.start,
+  crossAxisAlignment: CrossAxisAlignment.start,
   children: [
     Text("Hello Annaya"),
     Text("Discover Events That inspire You"),
