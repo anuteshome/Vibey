@@ -36,7 +36,6 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children:[
                 Text("Vibey",style:TextStyle(fontSize:25,color:Color(0xFF6C5CE7),fontWeight:FontWeight.bold)),
-            
                 Row(
                   children:[
                     Icon(Icons.person),
@@ -53,7 +52,13 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
                 )
               ]
             ),
-          )
+          ),
+// Hero
+Text("Hello Annaya"),
+Text("Discover Events That inspire You"),
+Text("Find amazing events around you and create unforgatable momments")
+
+
         ]
       ),
     );
