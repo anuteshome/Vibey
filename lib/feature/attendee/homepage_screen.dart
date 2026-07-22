@@ -227,13 +227,16 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
                   ),
                 ),
 
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children:[
-                    Text("Addis Music Festical",style:TextStyle(color:Colors.white,fontWeight: FontWeight.bold,fontSize:30)),
-                    Text("Jull 30",style:TextStyle(color:Colors.white,fontWeight: FontWeight.bold,fontSize:15)),
-                     Text("Bole Ednamoll",style:TextStyle(color:Colors.white,fontWeight: FontWeight.bold,fontSize:15)),
-                  ]
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20,vertical:15),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children:[
+                      Text("Addis Music Festical",style:TextStyle(color:Colors.white,fontWeight: FontWeight.bold,fontSize:25)),
+                      Text("Jull 30",style:TextStyle(color:Colors.white,fontWeight: FontWeight.bold,fontSize:15)),
+                       Text("Bole Ednamoll",style:TextStyle(color:Colors.white,fontWeight: FontWeight.bold,fontSize:15)),
+                    ]
+                  ),
                 )
               ]
             )
