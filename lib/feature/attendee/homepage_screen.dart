@@ -95,12 +95,15 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
           ),
         ),
         // Catagoies
-        Row(
-          mainAxisAlignment:MainAxisAlignment.spaceBetween ,
-          children:[
-            Text("Catagoies"),
-            Text("See all >")
-          ]
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20,vertical:10),
+          child: Row(
+            mainAxisAlignment:MainAxisAlignment.spaceBetween ,
+            children:[
+              Text("Catagoies",style:TextStyle(fontSize:17,fontWeight: FontWeight.bold)),
+              Text("See all >",style:TextStyle(fontSize:17,fontWeight: FontWeight.bold))
+            ]
+          ),
         )
           ]
         ),
