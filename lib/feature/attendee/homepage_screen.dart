@@ -104,7 +104,8 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
               Text("See all >",style:TextStyle(fontSize:17,fontWeight: FontWeight.bold,color:Color(0xFF6C5CE7)))
             ]
           ),
-        )
+        ),
+        // 
           ]
         ),
       ),
