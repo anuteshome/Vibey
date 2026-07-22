@@ -60,12 +60,15 @@ class _SignUpPageState extends State<SignUpPage> {
               content: Text("Account Created! please confirm your account"),
             ),
           );
-        }else{
-        ScaffoldMessenger.of(
-          context,
-        ).showSnackBar(SnackBar(content: Text("Signup success")));
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => LoginPage()),
+          );
+        } else {
+          ScaffoldMessenger.of(
+            context,
+          ).showSnackBar(SnackBar(content: Text("Signup success")));
         }
-       
       }
     } on AuthException catch (er) {
       ScaffoldMessenger.of(
