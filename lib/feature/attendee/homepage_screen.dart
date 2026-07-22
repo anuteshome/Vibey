@@ -77,9 +77,9 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
           child: Container(
             width:double.infinity,
             height:60,
-            color:Colors.white,
             decoration: BoxDecoration(
                 borderRadius:BorderRadius.circular(12),
+               color:Colors.white,
             ),
            child:TextField(
             decoration:InputDecoration(
