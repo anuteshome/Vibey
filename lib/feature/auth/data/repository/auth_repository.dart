@@ -23,9 +23,11 @@ class AuthRepository {
     return await supabase.auth.signUp(
       email: email,
       password: password,
-      data:{
-       'name': name,
-     },
+      data: {'name': name},
     );
+  }
+
+  Future<void> logout() async {
+    return await supabase.auth.signOut();
   }
 }
