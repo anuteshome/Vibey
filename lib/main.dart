@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vibey/feature/auth/presentation/screen/splash_screen.dart';
+import "package:supabase_flutter/supabase_flutter.dart";
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +12,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home:SplashScreen(),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: SplashScreen());
   }
 }
