@@ -54,9 +54,18 @@ class _SignUpPageState extends State<SignUpPage> {
       );
       if (!mounted) return;
       if (response.user != null) {
+        if (response.session == null) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text("Account Created! please confirm your account"),
+            ),
+          );
+        }else{
         ScaffoldMessenger.of(
           context,
         ).showSnackBar(SnackBar(content: Text("Signup success")));
+        }
+       
       }
     } on AuthException catch (er) {
       ScaffoldMessenger.of(
@@ -67,10 +76,10 @@ class _SignUpPageState extends State<SignUpPage> {
         context,
       ).showSnackBar(SnackBar(content: Text("something went wrong")));
     } finally {
-      if(mounted){
+      if (mounted) {
         setState(() {
-        isLoading = false;
-      });
+          isLoading = false;
+        });
       }
     }
   }
