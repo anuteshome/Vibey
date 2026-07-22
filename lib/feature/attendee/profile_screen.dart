@@ -5,7 +5,7 @@ import "package:vibey/feature/auth/presentation/screen/login_screen.dart";
 
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
+   ProfilePage({super.key});
 
   final authRepsitory = AuthRepository(Supabase.instance.client);
 
