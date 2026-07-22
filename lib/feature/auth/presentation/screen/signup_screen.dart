@@ -67,9 +67,11 @@ class _SignUpPageState extends State<SignUpPage> {
         context,
       ).showSnackBar(SnackBar(content: Text("something went wrong")));
     } finally {
-      setState(() {
+      if(mounted){
+        setState(() {
         isLoading = false;
       });
+      }
     }
   }
 
