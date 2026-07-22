@@ -31,7 +31,7 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
       body: Column(
         children:[
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30,vertical:40),
+            padding: const EdgeInsets.only(left: 30,right:30,top:40,bottom: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children:[
