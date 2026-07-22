@@ -68,11 +68,12 @@ class _SignUpPageState extends State<SignUpPage> {
           ScaffoldMessenger.of(
             context,
           ).showSnackBar(SnackBar(content: Text("Signup success")));
-                    Navigator.push(
+
+        }
+        Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => LoginPage()),
           );
-        }
       }
     } on AuthException catch (er) {
       ScaffoldMessenger.of(
