@@ -72,15 +72,18 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
           ),
         ),
         SizedBox(height:10),
-        Container(
-          width:double.infinity,
-          height:60,
-          color:Colors.white,
-         child:TextField(
-          decoration:InputDecoration(
-            border:InputBorder.none
-          )
-         )
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Container(
+            width:double.infinity,
+            height:60,
+            color:Colors.white,
+           child:TextField(
+            decoration:InputDecoration(
+              border:InputBorder.none
+            )
+           )
+          ),
         )
           ]
         ),
