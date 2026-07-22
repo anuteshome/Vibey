@@ -35,7 +35,7 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children:[
-                Text("Vibey",style:TextStyle(fontSize:30,color:Color(0xFF6C5CE7),fontWeight:FontWeight.bold)),
+                Text("Vibey",style:TextStyle(fontSize:25,color:Color(0xFF6C5CE7),fontWeight:FontWeight.bold)),
             
                 Row(
                   children:[
