@@ -37,7 +37,7 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
         //   image:AssetImage("assets/image/image.png"),
         //   fit: BoxFit.cover,
         //  )
-          color:Colors.grey[100],
+          color:Colors.grey[200],
         ),
         child: Column(
           children:[
