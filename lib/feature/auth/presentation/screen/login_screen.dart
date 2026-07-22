@@ -234,7 +234,10 @@ class _LoginPageState extends State<LoginPage> {
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                                 child: Center(
-                                  child: Text(
+                                   child:isLoading?const CircularProgressIndicator(
+                                    color:Colors.white,
+                                   ):
+                                const Text(
                                     "Login",
                                     style: TextStyle(
                                       color: Colors.white,
