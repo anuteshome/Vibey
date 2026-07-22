@@ -82,8 +82,10 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
                color:Colors.white,
             ),
            child:TextField(
+
             decoration:InputDecoration(
-              border:InputBorder.none
+              border:InputBorder.none,
+              prefixIcon:Icon(Icons.search),
             )
            )
           ),
