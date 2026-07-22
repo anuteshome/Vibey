@@ -19,16 +19,43 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Vibey"),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.logout),
-            onPressed: () => Logout(context),
-          ),
-        ],
+      // appBar: AppBar(
+      //   title: Text("Vibey"),
+      //   actions: [
+      //     IconButton(
+      //       icon: Icon(Icons.logout),
+      //       onPressed: () => Logout(context),
+      //     ),
+      //   ],
+      // ),
+      body: Column(
+        children:[
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30,vertical:40),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children:[
+                Text("Vibey",style:TextStyle(fontSize:30,color:Color(0xFF6C5CE7),fontWeight:FontWeight.bold)),
+            
+                Row(
+                  children:[
+                    Icon(Icons.person),
+                    SizedBox(width:20),
+                    Container(
+                      width:50,
+                      height:50,
+                      decoration:BoxDecoration(
+                        borderRadius:BorderRadius.circular(50),
+                        color:Colors.grey,
+                      )
+                    )
+                  ]
+                )
+              ]
+            ),
+          )
+        ]
       ),
-      body: Text("Homepage"),
     );
   }
 }
