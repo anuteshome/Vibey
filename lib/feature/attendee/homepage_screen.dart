@@ -183,6 +183,13 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
           child: Align(
             alignment: Alignment.centerLeft,
             child: Text("Featured Event",style:TextStyle(fontSize:17,fontWeight: FontWeight.bold))),
+        ),
+        Container(
+          width:double.infinity,
+          height:250,
+          decoration: BoxDecoration(
+            color:Colors.grey
+          ),
         )
           ]
         ),
