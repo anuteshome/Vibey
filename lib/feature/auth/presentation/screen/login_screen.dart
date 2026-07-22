@@ -15,11 +15,17 @@ class _LoginPageState extends State<LoginPage> {
   final EmailTextController = TextEditingController();
   final PasswordTextController = TextEditingController();
   final authRepository = AuthRepository(Supabase.instance.client);
+  final session = Supabase.instance.client.auth.currentSession;
   bool isLoading = false;
 
   Future<void> Login() async {
     String email = EmailTextController.text.trim();
     String password = PasswordTextController.text;
+    if (session != null) {
+      return SignUpPage();
+    } else {
+      return LoginPage();
+    }
 
     if (email.isEmpty || password.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -297,7 +303,10 @@ class _LoginPageState extends State<LoginPage> {
                     SizedBox(width: 20),
                     GestureDetector(
                       onTap: () => {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage())),
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SignUpPage()),
+                        ),
                       },
                       child: Text(
                         "Signup",
