@@ -70,7 +70,7 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
             crossAxisAlignment: CrossAxisAlignment.start,
             
             children: [
-        Text("Hello Annaya",style:TextStyle(color:Colors.white)),
+        Text("Hello Annaya",style:TextStyle(color:Colors.white,fontSize:15,fontWeight:FontWeight.bold)),
         Text("Discover Events That inspire You",style:TextStyle(color:Colors.white,fontSize:25,fontWeight:FontWeight.bold)),
         Text("Find amazing events around you and create unforgatable momments",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold)),
             ],
