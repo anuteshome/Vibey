@@ -116,7 +116,7 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
                 height:80,
                 decoration:BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
-                color:Colors.red[300],
+                color:Colors.red[100],
                 ),
                 child:Column(
                   children:[
@@ -132,7 +132,7 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
             height:80,
             decoration:BoxDecoration(
             borderRadius: BorderRadius.circular(12),
-            color:Colors.orange[300],
+            color:Colors.orange[100],
             ),
             child:Column(
               children:[
@@ -148,7 +148,7 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
             height:80,
             decoration:BoxDecoration(
             borderRadius: BorderRadius.circular(12),
-            color:Colors.green[300],
+            color:Colors.green[100],
             ),
             child:Column(
               children:[
@@ -164,7 +164,7 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
             height:80,
             decoration:BoxDecoration(
             borderRadius: BorderRadius.circular(12),
-            color:Colors.blue[300],
+            color:Colors.blue[100],
             ),
             child:Column(
               children:[
