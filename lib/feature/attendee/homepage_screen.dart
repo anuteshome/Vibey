@@ -5,15 +5,22 @@ import "package:supabase_flutter/supabase_flutter.dart";
 class HomePage extends StatelessWidget {
    HomePage({super.key});
 
-  final authRepsitory = AuthRepository(Supabase.instance.client);
+
+
+  void Logout(){
+      final authRepsitory = AuthRepository(Supabase.instance.client);
+      authRepsitory.logout;
+
+      Navigator.pushAndRemoveUntil(context, newRoute, predicate)
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Vibey"),
-        actions: [IconButton(icon: Icon(Icons.logout), onPressed: authRepsitory.logout)],
+        actions: [IconButton(icon: Icon(Icons.logout), onPressed: Logout,)]
       ),
-      body: Text("Homepage"),
+            body: Text("Homepage"),
     );
   }
 }
