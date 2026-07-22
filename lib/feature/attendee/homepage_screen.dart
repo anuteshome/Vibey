@@ -29,7 +29,7 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
       //   ],
       // ),
       body: Container(
-        height:250,
+        height:260,
         
         decoration: BoxDecoration(
          image:DecorationImage(
