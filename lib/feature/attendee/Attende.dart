@@ -14,7 +14,7 @@ class AttendePage extends StatefulWidget {
 class _AttendePageState extends State<AttendePage> {
   int _selectedIndex = 0;
 
-  void ChangePage(index) {
+  void ChangePage(int index) {
     setState(() {
       _selectedIndex = index;
     });
@@ -33,7 +33,8 @@ class _AttendePageState extends State<AttendePage> {
       
       body: _Pages[_selectedIndex],
         bottomNavigationBar:BottomNavigationBar(
-          onTap:(index)=> ChangePage(index),
+          currentIndex: _selectedIndex,
+          onTap:ChangePage,
           items:[
             BottomNavigationBarItem(icon: Icon(Icons.home),label:"home"),
             BottomNavigationBarItem(icon:Icon(Icons.search),label:"Explore"),
