@@ -54,9 +54,14 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
             ),
           ),
 // Hero
-Text("Hello Annaya"),
-Text("Discover Events That inspire You"),
-Text("Find amazing events around you and create unforgatable momments")
+Column(
+  mainAxisAlignment: MainAxisAlignment.start,
+  children: [
+    Text("Hello Annaya"),
+    Text("Discover Events That inspire You"),
+    Text("Find amazing events around you and create unforgatable momments"),
+  ],
+)
 
 
         ]
