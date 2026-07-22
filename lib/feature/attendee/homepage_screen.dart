@@ -197,6 +197,35 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
               ),
               borderRadius:BorderRadius.circular(20),
             ),
+            child:Column(
+              children:[
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20,vertical:13),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children:[
+                    Container(
+                      width: 80,
+                      height:25,
+                      decoration: BoxDecoration(
+                        color:Color.fromARGB(255, 91, 73, 228),
+                        borderRadius: BorderRadius.circular(6)
+                      ),
+                      child: Center(child: Text("Featured",style:TextStyle(color:Colors.white,fontWeight: FontWeight.bold)))),
+                    Container(
+                      width: 35,
+                      height:35,
+                      decoration:BoxDecoration(
+                        borderRadius:BorderRadius.circular(50),
+                        color:Colors.white,
+                      ),
+                      child: Icon(Icons.lock,color: Colors.grey,),
+                    )
+                    ]
+                  ),
+                )
+              ]
+            )
           ),
         )
           ]
