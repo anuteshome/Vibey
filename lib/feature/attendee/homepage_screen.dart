@@ -28,47 +28,58 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
       //     ),
       //   ],
       // ),
-      body: Column(
-        children:[
-          Padding(
-            padding: const EdgeInsets.only(left: 30,right:30,top:40,bottom: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children:[
-                Text("Vibey",style:TextStyle(fontSize:25,color:Color(0xFF6C5CE7),fontWeight:FontWeight.bold)),
-                Row(
-                  children:[
-                    Icon(Icons.person),
-                    SizedBox(width:20),
-                    Container(
-                      width:50,
-                      height:50,
-                      decoration:BoxDecoration(
-                        borderRadius:BorderRadius.circular(50),
-                        color:Colors.grey,
+      body: Container(
+        height:250,
+        
+        decoration: BoxDecoration(
+         image:DecorationImage(
+          image:AssetImage("assets/image/image.png"),
+          fit: BoxFit.cover,
+         )
+          // color:Colors.grey[700],
+        ),
+        child: Column(
+          children:[
+            Padding(
+              padding: const EdgeInsets.only(left: 30,right:30,top:40,bottom: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children:[
+                  Text("Vibey",style:TextStyle(fontSize:25,color:Color(0xFF6C5CE7),fontWeight:FontWeight.bold)),
+                  Row(
+                    children:[
+                      Icon(Icons.person),
+                      SizedBox(width:20),
+                      Container(
+                        width:50,
+                        height:50,
+                        decoration:BoxDecoration(
+                          borderRadius:BorderRadius.circular(50),
+                          color:Colors.grey,
+                        )
                       )
-                    )
-                  ]
-                )
-              ]
+                    ]
+                  )
+                ]
+              ),
             ),
+        // Hero
+        Padding(
+          padding: const EdgeInsets.only(left: 20,right:50),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            
+            children: [
+        Text("Hello Annaya",style:TextStyle(color:Colors.white)),
+        Text("Discover Events That inspire You",style:TextStyle(color:Colors.white)),
+        Text("Find amazing events around you and create unforgatable momments",style:TextStyle(color:Colors.white)),
+            ],
           ),
-// Hero
-Padding(
-  padding: const EdgeInsets.only(left: 20,right:50),
-  child: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    
-    children: [
-      Text("Hello Annaya"),
-      Text("Discover Events That inspire You"),
-      Text("Find amazing events around you and create unforgatable momments"),
-    ],
-  ),
-)
-
-
-        ]
+        )
+        
+        
+          ]
+        ),
       ),
     );
   }
