@@ -69,9 +69,9 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
           padding: const EdgeInsets.only(left: 20,right:90),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            
             children: [
         Text("Hello Annaya",style:TextStyle(fontSize:15,fontWeight:FontWeight.bold)),
+        SizedBox(height:5),
         Text("Discover Events That inspire You",style:TextStyle(fontSize:25,fontWeight:FontWeight.bold)),
             ],
           ),
