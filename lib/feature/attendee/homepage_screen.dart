@@ -105,7 +105,21 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
             ]
           ),
         ),
-        // 
+        // Catagoies container
+        Container(
+          width:70,
+          height:80,
+          decoration:BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          color:Colors.red[300],
+          ),
+          child:Column(
+            children:[
+              Icon(Icons.lock),
+              Text("Music")
+            ]
+          )
+        )
           ]
         ),
       ),
