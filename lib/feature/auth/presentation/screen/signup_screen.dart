@@ -52,6 +52,7 @@ class _SignUpPageState extends State<SignUpPage> {
         name: name,
         password: password,
       );
+      if (!mounted) return;
       if (response.user != null) {
         ScaffoldMessenger.of(
           context,
@@ -217,7 +218,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       SizedBox(height: 10),
                       // Login button
                       GestureDetector(
-                        onTap: isLoading? null: SignUp,
+                        onTap: isLoading ? null : SignUp,
                         child: Container(
                           width: double.infinity,
                           height: 60,
@@ -227,17 +228,16 @@ class _SignUpPageState extends State<SignUpPage> {
                           ),
 
                           child: Center(
-                            child: isLoading?CircularProgressIndicator(
-                              color:Colors.white,
-                            ):
-                            Text(
-                              "Signup",
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                              ),
-                            ),
+                            child: isLoading
+                                ? CircularProgressIndicator(color: Colors.white)
+                                : Text(
+                                    "Signup",
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                    ),
+                                  ),
                           ),
                         ),
                       ),
