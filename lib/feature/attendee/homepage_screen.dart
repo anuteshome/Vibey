@@ -190,7 +190,11 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
             width:double.infinity,
             height:250,
             decoration: BoxDecoration(
-              color:Colors.grey,
+              // color:Colors.grey,
+              image:DecorationImage(
+                image:AssetImage("assets/image/image.png"),
+                fit: BoxFit.cover,
+              ),
               borderRadius:BorderRadius.circular(20),
             ),
           ),
