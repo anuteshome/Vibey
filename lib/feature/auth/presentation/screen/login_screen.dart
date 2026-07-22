@@ -16,7 +16,6 @@ class _LoginPageState extends State<LoginPage> {
   final EmailTextController = TextEditingController();
   final PasswordTextController = TextEditingController();
   final authRepository = AuthRepository(Supabase.instance.client);
-  final session = Supabase.instance.client.auth.currentSession;
   bool isLoading = false;
 
   Future<void> Login() async {

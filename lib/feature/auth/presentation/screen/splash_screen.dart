@@ -1,5 +1,7 @@
 import "package:flutter/material.dart";
+import "package:vibey/feature/attendee/homepage_screen.dart";
 import "package:vibey/feature/auth/presentation/screen/login_screen.dart";
+import "package:supabase_flutter/supabase_flutter.dart";
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -9,6 +11,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+    final session = Supabase.instance.client.auth.currentSession;
   Future<void> goToLogin() async {
     await Future.delayed(const Duration(seconds: 3));
     if (!mounted) return;
@@ -21,7 +24,15 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    goToLogin();
+          if (session != null) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => HomePage(),)
+      );
+    } else {
+      goToLogin();
+    }
+   
   }
 
   @override
