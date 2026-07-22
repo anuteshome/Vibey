@@ -25,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
           if (session != null) {
-      Navigator.push(
+      Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => HomePage(),)
       );
