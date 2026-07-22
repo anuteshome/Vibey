@@ -19,6 +19,7 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+                  backgroundColor: Color.fromARGB(255, 229, 226, 246),
       // appBar: AppBar(
       //   title: Text("Vibey"),
       //   actions: [
@@ -37,12 +38,12 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
         //   image:AssetImage("assets/image/image.png"),
         //   fit: BoxFit.cover,
         //  )
-            color: Color.fromARGB(255, 229, 226, 246),
+
         ),
         child: Column(
           children:[
             Padding(
-              padding: const EdgeInsets.only(left: 30,right:30,top:40,bottom: 20),
+              padding: const EdgeInsets.only(left: 30,right:30,top:50,bottom: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children:[
