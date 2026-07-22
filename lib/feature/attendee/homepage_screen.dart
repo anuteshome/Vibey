@@ -65,14 +65,14 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
             ),
         // Hero
         Padding(
-          padding: const EdgeInsets.only(left: 20,right:50),
+          padding: const EdgeInsets.only(left: 20,right:90),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             
             children: [
         Text("Hello Annaya",style:TextStyle(color:Colors.white)),
-        Text("Discover Events That inspire You",style:TextStyle(color:Colors.white)),
-        Text("Find amazing events around you and create unforgatable momments",style:TextStyle(color:Colors.white)),
+        Text("Discover Events That inspire You",style:TextStyle(color:Colors.white,fontSize:25,fontWeight:FontWeight.bold)),
+        Text("Find amazing events around you and create unforgatable momments",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold)),
             ],
           ),
         )
