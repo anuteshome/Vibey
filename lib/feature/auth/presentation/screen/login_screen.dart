@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import "package:vibey/core/widgets/TextField.dart";
 import "package:vibey/feature/auth/data/repository/auth_repository.dart";
 import "package:supabase_flutter/supabase_flutter.dart";
+import "package:vibey/feature/auth/presentation/screen/signup_screen.dart";
 
 class LoginPage extends StatefulWidget {
   LoginPage({super.key});
@@ -295,7 +296,9 @@ class _LoginPageState extends State<LoginPage> {
                     Text("Don't have an account ?"),
                     SizedBox(width: 20),
                     GestureDetector(
-                      onTap: () => {},
+                      onTap: () => {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage())),
+                      },
                       child: Text(
                         "Signup",
                         style: TextStyle(color: Color(0xFF6C5CE7)),
