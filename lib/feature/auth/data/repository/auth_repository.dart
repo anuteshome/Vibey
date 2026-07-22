@@ -1,14 +1,14 @@
 import "package:supabase_flutter/supabase_flutter.dart";
 
 class AuthRepository {
-  final SupabaseClient Supabase;
+  final SupabaseClient supabase;
 
-  AuthRepository(this.Supabase);
+  AuthRepository(this.supabase);
 
   Future<AuthResponse> login ({
     required String email,
     required String password,
   }) async {
-    await Supabase.auth.signInWithPassword(email: email, password: password);
+   return  await supabase.auth.signInWithPassword(email: email, password: password);
   }
 }

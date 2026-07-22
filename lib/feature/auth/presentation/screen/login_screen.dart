@@ -16,12 +16,12 @@ class _LoginPageState extends State<LoginPage> {
   final authRepository = AuthRepository(Supabase.instance.client);
 
   Future<void> Login() async {
-    setState(() {
       String email = EmailTextController.text.trim();
       String password = PasswordTextController.text;
 
       try {
         final response = await authRepository.login(email: email, password: password);
+        if(!mounted)return;
         if (response != null) {
           print("Login succesfully");
         }
@@ -59,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
 
       print("Email: $email");
       print("Password: $password");
-    });
+    
   }
 
   @override
