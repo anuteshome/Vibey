@@ -84,10 +84,11 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
            child:Padding(
              padding: const EdgeInsets.symmetric(horizontal:17,vertical:6),
              child: TextField(
-             
               decoration:InputDecoration(
                 border:InputBorder.none,
                 prefixIcon:Icon(Icons.search),
+                hintText:"Search events,artists or places..."
+                
               )
              ),
            )
