@@ -1,26 +1,34 @@
 import "package:flutter/material.dart";
 import "package:vibey/feature/auth/data/repository/auth_repository.dart";
 import "package:supabase_flutter/supabase_flutter.dart";
+import "package:vibey/feature/auth/presentation/screen/login_screen.dart";
 
 class HomePage extends StatelessWidget {
-   HomePage({super.key});
+  HomePage({super.key});
+final authRepsitory = AuthRepository(Supabase.instance.client);
 
-
-
-  void Logout(){
-      final authRepsitory = AuthRepository(Supabase.instance.client);
-      authRepsitory.logout;
-
-      Navigator.pushAndRemoveUntil(context, newRoute, predicate)
+  void Logout(BuildContext context) async {
+    await authRepsitory.logout();
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(builder: (context) => LoginPage()),
+      (route) => false
+    );
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Vibey"),
-        actions: [IconButton(icon: Icon(Icons.logout), onPressed: Logout,)]
+        actions: [
+          IconButton(
+            icon: Icon(Icons.logout),
+            onPressed: () => Logout(context),
+          ),
+        ],
       ),
-            body: Text("Homepage"),
+      body: Text("Homepage"),
     );
   }
 }
