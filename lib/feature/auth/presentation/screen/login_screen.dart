@@ -14,7 +14,7 @@ class _LoginPageState extends State<LoginPage> {
   final EmailTextController = TextEditingController();
   final PasswordTextController = TextEditingController();
   final authRepository = AuthRepository(Supabase.instance.client);
-  bool loading = false;
+  bool isLoading = false;
 
   Future<void> Login() async {
     String email = EmailTextController.text.trim();
@@ -40,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
       return;
     }
     setState(() {
-      loading = true;
+      isLoading = true;
     });
     try {
       final response = await authRepository.login(
@@ -59,6 +59,12 @@ class _LoginPageState extends State<LoginPage> {
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(const SnackBar(content: Text("Something went wrong")));
+    } finally {
+      if (mounted) {
+        setState(() {
+          isLoading = false;
+        });
+      }
     }
 
     print("Email: $email");
