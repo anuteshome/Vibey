@@ -36,9 +36,9 @@ class _AttendePageState extends State<AttendePage> {
           currentIndex: _selectedIndex,
           onTap:ChangePage,
             type: BottomNavigationBarType.fixed,
-  selectedItemColor: Colors.purple,
-  unselectedItemColor: Colors.grey,
-  backgroundColor: Colors.white,
+           selectedItemColor: Colors.purple,
+          unselectedItemColor: Colors.grey,
+          backgroundColor: Colors.white,
           items:[
             BottomNavigationBarItem(icon: Icon(Icons.home),label:"home"),
             BottomNavigationBarItem(icon:Icon(Icons.search),label:"Explore"),
