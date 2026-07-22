@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:vibey/core/widgets/TextField.dart";
+import "package:vibey/feature/attendee/homepage_screen.dart";
 import "package:vibey/feature/auth/data/repository/auth_repository.dart";
 import "package:supabase_flutter/supabase_flutter.dart";
 import "package:vibey/feature/auth/presentation/screen/signup_screen.dart";
@@ -21,11 +22,7 @@ class _LoginPageState extends State<LoginPage> {
   Future<void> Login() async {
     String email = EmailTextController.text.trim();
     String password = PasswordTextController.text;
-    if (session != null) {
-      return SignUpPage();
-    } else {
-      return LoginPage();
-    }
+  
 
     if (email.isEmpty || password.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -78,6 +75,7 @@ class _LoginPageState extends State<LoginPage> {
         });
       }
     }
+
   }
 
   @override
