@@ -198,6 +198,8 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
               borderRadius:BorderRadius.circular(20),
             ),
             child:Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children:[
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20,vertical:13),
@@ -223,6 +225,15 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
                     )
                     ]
                   ),
+                ),
+
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children:[
+                    Text("Addis Music Festical",style:TextStyle(color:Colors.white,fontWeight: FontWeight.bold,fontSize:30)),
+                    Text("Jull 30",style:TextStyle(color:Colors.white,fontWeight: FontWeight.bold,fontSize:15)),
+                     Text("Bole Ednamoll",style:TextStyle(color:Colors.white,fontWeight: FontWeight.bold,fontSize:15)),
+                  ]
                 )
               ]
             )
