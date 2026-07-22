@@ -14,52 +14,55 @@ class _LoginPageState extends State<LoginPage> {
   final EmailTextController = TextEditingController();
   final PasswordTextController = TextEditingController();
   final authRepository = AuthRepository(Supabase.instance.client);
+  bool loading = false;
 
   Future<void> Login() async {
-      String email = EmailTextController.text.trim();
-      String password = PasswordTextController.text;
+    String email = EmailTextController.text.trim();
+    String password = PasswordTextController.text;
 
-      try {
-        final response = await authRepository.login(email: email, password: password);
-        if(!mounted)return;
-        if (response != null) {
-          print("Login succesfully");
-        }
-      } on AuthException catch (er) {
-        ScaffoldMessenger.of(
-          context,
-        ).showSnackBar( SnackBar(content: Text(er.message)));
-      }catch(error){
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content:Text("Something went wrong"),
-          )
-        );
-      }
+    if (email.isEmpty || password.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Please Add Email and Password")),
+      );
+      return;
+    }
 
-      if (email.isEmpty || password.isEmpty) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text("Please Add Email and Password")),
-        );
-        return;
+    if (!email.contains("@")) {
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text("please and vaild email")));
+      return;
+    }
+    if (password.length < 6) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Password must be greater than 6")),
+      );
+      return;
+    }
+    setState(() {
+      loading = true;
+    });
+    try {
+      final response = await authRepository.login(
+        email: email,
+        password: password,
+      );
+      if (!mounted) return;
+      if (response != null) {
+        print("Login succesfully");
       }
+    } on AuthException catch (er) {
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(er.message)));
+    } catch (error) {
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text("Something went wrong")));
+    }
 
-      if (!email.contains("@")) {
-        ScaffoldMessenger.of(
-          context,
-        ).showSnackBar(const SnackBar(content: Text("please and vaild email")));
-        return;
-      }
-      if (password.length < 6) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text("Password must be greater than 6")),
-        );
-        return;
-      }
-
-      print("Email: $email");
-      print("Password: $password");
-    
+    print("Email: $email");
+    print("Password: $password");
   }
 
   @override
