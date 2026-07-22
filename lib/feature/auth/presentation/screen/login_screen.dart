@@ -48,9 +48,14 @@ class _LoginPageState extends State<LoginPage> {
         password: password,
       );
       if (!mounted) return;
-      if (response != null) {
+      if (response.user != null) {
         print("Login succesfully");
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text("Login success")));
       }
+      debugPrint('User ID: ${response.user!.id}');
+      debugPrint('Email: ${response.user!.email}');
     } on AuthException catch (er) {
       ScaffoldMessenger.of(
         context,
@@ -66,9 +71,6 @@ class _LoginPageState extends State<LoginPage> {
         });
       }
     }
-
-    print("Email: $email");
-    print("Password: $password");
   }
 
   @override
@@ -234,17 +236,18 @@ class _LoginPageState extends State<LoginPage> {
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                                 child: Center(
-                                   child:isLoading?const CircularProgressIndicator(
-                                    color:Colors.white,
-                                   ):
-                                const Text(
-                                    "Login",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
+                                  child: isLoading
+                                      ? const CircularProgressIndicator(
+                                          color: Colors.white,
+                                        )
+                                      : const Text(
+                                          "Login",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
                                 ),
                               ),
                             ),
