@@ -176,6 +176,13 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
           )
             ],
           ),
+        ),
+        //Featured Section
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 15),
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: Text("Featured Event",style:TextStyle(fontSize:17,fontWeight: FontWeight.bold))),
         )
           ]
         ),
