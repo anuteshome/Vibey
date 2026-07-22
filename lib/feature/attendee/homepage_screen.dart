@@ -87,12 +87,20 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
               decoration:InputDecoration(
                 border:InputBorder.none,
                 prefixIcon:Icon(Icons.search),
+                contentPadding: EdgeInsets.all(12),
                 hintText:"Search events,artists or places..."
-                
               )
              ),
            )
           ),
+        ),
+        // Catagoies
+        Row(
+          mainAxisAlignment:MainAxisAlignment.spaceBetween ,
+          children:[
+            Text("Catagoies"),
+            Text("See all >")
+          ]
         )
           ]
         ),
