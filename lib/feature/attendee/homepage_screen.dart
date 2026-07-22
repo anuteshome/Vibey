@@ -254,7 +254,17 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
               ]
             )
           ),
-        )
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20,vertical:15),
+          child: Row(
+            mainAxisAlignment:MainAxisAlignment.spaceBetween ,
+            children:[
+              Text("Upcoming Events",style:TextStyle(fontSize:17,fontWeight: FontWeight.bold)),
+              Text("See all >",style:TextStyle(fontSize:17,fontWeight: FontWeight.bold,color:Color(0xFF6C5CE7)))
+            ]
+          ),
+        ),
           ]
         ),
       ),
