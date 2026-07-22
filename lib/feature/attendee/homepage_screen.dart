@@ -75,18 +75,21 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Container(
-            width:double.infinity,
-            height:60,
+            // width:double.infinity,
+            // height:60,
             decoration: BoxDecoration(
                 borderRadius:BorderRadius.circular(12),
                color:Colors.white,
             ),
-           child:TextField(
-
-            decoration:InputDecoration(
-              border:InputBorder.none,
-              prefixIcon:Icon(Icons.search),
-            )
+           child:Padding(
+             padding: const EdgeInsets.symmetric(horizontal:17,vertical:6),
+             child: TextField(
+             
+              decoration:InputDecoration(
+                border:InputBorder.none,
+                prefixIcon:Icon(Icons.search),
+              )
+             ),
            )
           ),
         )
