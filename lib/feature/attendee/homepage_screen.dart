@@ -106,19 +106,76 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
           ),
         ),
         // Catagoies container
-        Container(
-          width:70,
-          height:80,
-          decoration:BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          color:Colors.red[300],
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Row(
+            mainAxisAlignment:MainAxisAlignment.spaceBetween ,
+            children: [
+              Container(
+                width:70,
+                height:80,
+                decoration:BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color:Colors.red[300],
+                ),
+                child:Column(
+                  children:[
+                    SizedBox(height:20),
+                    Icon(Icons.lock),
+                    Text("Music")
+                  ]
+                )
+              ),
+          
+              Container(
+            width:70,
+            height:80,
+            decoration:BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            color:Colors.orange[300],
+            ),
+            child:Column(
+              children:[
+                SizedBox(height:20),
+                Icon(Icons.lock),
+                Text("Music")
+              ]
+            )
           ),
-          child:Column(
-            children:[
-              Icon(Icons.lock),
-              Text("Music")
-            ]
+          
+          Container(
+            width:70,
+            height:80,
+            decoration:BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            color:Colors.green[300],
+            ),
+            child:Column(
+              children:[
+                SizedBox(height:20),
+                Icon(Icons.lock),
+                Text("Music")
+              ]
+            )
+          ),
+          
+          Container(
+            width:70,
+            height:80,
+            decoration:BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            color:Colors.blue[300],
+            ),
+            child:Column(
+              children:[
+                SizedBox(height:20),
+                Icon(Icons.lock),
+                Text("Music")
+              ]
+            )
           )
+            ],
+          ),
         )
           ]
         ),
