@@ -7,6 +7,15 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar:AppBar(
+        title: Text("Vibey"),
+      actions: [
+        IconButton(
+          icon: Icon(Icons.logout),
+          onPressed: () => {},
+          )
+      ],
+      ),
       body:Text("Homepage")
     );
   }
