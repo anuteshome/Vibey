@@ -30,16 +30,6 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
       //   ],
       // ),
       body: Container(
-        height:260,
-        
-        decoration: BoxDecoration(
-
-        //  image:DecorationImage(
-        //   image:AssetImage("assets/image/image.png"),
-        //   fit: BoxFit.cover,
-        //  )
-
-        ),
         child: Column(
           children:[
             Padding(
@@ -71,14 +61,27 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-        Text("Hello Annaya",style:TextStyle(fontSize:15,fontWeight:FontWeight.bold)),
+        Text("Hello Ananya 👋",style:TextStyle(fontSize:15,fontWeight:FontWeight.bold)),
         SizedBox(height:5),
-        Text("Discover Events That inspire You",style:TextStyle(fontSize:25,fontWeight:FontWeight.bold)),
+        Padding(
+          padding: const EdgeInsets.only(right: 80),
+          child: Text("Discover Events That inspire You",style:TextStyle(fontSize:25,fontWeight:FontWeight.bold)),
+        ),
+        // Search
             ],
           ),
+        ),
+        SizedBox(height:10),
+        Container(
+          width:double.infinity,
+          height:60,
+          color:Colors.white,
+         child:TextField(
+          decoration:InputDecoration(
+            border:InputBorder.none
+          )
+         )
         )
-        
-        
           ]
         ),
       ),
