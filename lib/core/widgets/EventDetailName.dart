@@ -41,12 +41,17 @@ class EventDetailName extends StatelessWidget {
           ),
         ),
 
-        Row(
-          children: [
-            Icon(Ionicons.star, color: Color(0xFF6C5CE7)),
-            Text("4.8"),
-            Text("(230 Reviews)"),
-          ],
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            children: [
+              Icon(Ionicons.star, color: Color(0xFF6C5CE7)),
+              SizedBox(width:5),
+              Text("4.8"),
+              SizedBox(width:5),
+              Text("(230 Reviews)"),
+            ],
+          ),
         ),
       ],
     );
