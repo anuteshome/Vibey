@@ -7,6 +7,12 @@ class UpcomingEvent {
   final String Location;
   final String Price;
   final String Image;
+  final double Rate;
+  final String Review;
+  final String Discription;
+  final String Organizer;
+  final String Catagory;
+  final String About;
 
   UpcomingEvent({
     required this.Name,
@@ -15,6 +21,13 @@ class UpcomingEvent {
     required this.Location,
     required this.Price,
     required this.Image,
+    required this.Rate,
+    required this.Review,
+    required this.Discription,
+    required this.Organizer,
+    required this.Catagory,
+    required this.About,
+
   });
 }
 
