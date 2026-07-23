@@ -6,27 +6,30 @@ class UpcomingEvents extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width:300,
-      height:100,
-      child: Row(
-        mainAxisAlignment:MainAxisAlignment.spaceBetween,
-        children:[
-          Image.asset("assets/image/logo.png"),
-          Column(
-            children:[
-              Text("Flutter Developer Meetup"),
-              Text("Jul 30 2026"),
-              Text("Addis Ababa")
-            ]
-          ),
-          Column(
-            children:[
-              Icon(Icons.save),
-              Text("ETB 200")
-            ]
-          )
-        ]
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+      child: Container(
+        width:double.infinity,
+        height:100,
+        child: Row(
+          mainAxisAlignment:MainAxisAlignment.spaceBetween,
+          children:[
+            Image.asset("assets/image/logo.png"),
+            Column(
+              children:[
+                Text("Flutter Developer Meetup"),
+                Text("Jul 30 2026"),
+                Text("Addis Ababa")
+              ]
+            ),
+            Column(
+              children:[
+                Icon(Icons.save),
+                Text("ETB 200")
+              ]
+            )
+          ]
+        ),
       ),
     );
   }
