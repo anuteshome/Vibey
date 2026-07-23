@@ -55,9 +55,9 @@ class Event {
   ];
 
   final List<Catagorie> catagories = [
-    Catagorie(Name: "Music", icon: Icons.lock, color: Colors.red),
-    Catagorie(Name: "Tech", icon: Icons.person, color: Colors.green),
-    Catagorie(Name: "Art", icon: Icons.search, color: Colors.red),
-     Catagorie(Name: "Coffee", icon: Icons.coffee, color: Colors.brown),
+    Catagorie(Name: "Music", icon: Icons.lock, color: Color.fromARGB(255, 179, 172, 231)),
+    Catagorie(Name: "Tech", icon: Icons.person, color:Color.fromARGB(255, 205, 235, 153)),
+    Catagorie(Name: "Art", icon: Icons.search, color: Color.fromARGB(255, 235, 163, 163)),
+     Catagorie(Name: "Coffee", icon: Icons.coffee, color: Color.fromARGB(255, 225, 226, 163)),
   ];
 }
