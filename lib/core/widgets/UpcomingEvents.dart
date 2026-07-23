@@ -8,7 +8,20 @@ class UpcomingEvents extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children:[
-        
+        Image.asset("assets/image/logo.png"),
+        Column(
+          children:[
+            Text("Flutter Developer Meetup"),
+            Text("Jul 30 2026"),
+            Text("Addis Ababa")
+          ]
+        ),
+        Column(
+          children:[
+            Icon(Icons.save),
+            Text("ETB 200")
+          ]
+        )
       ]
     );
   }
