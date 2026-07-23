@@ -156,10 +156,11 @@ class HomePage extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Catagories(),
-                    Catagories(),
-                    Catagories(),
-                    Catagories(),
+                 Catagories(
+                  Name: "Music",
+                  icon: Icons.lock,
+                  
+                 )
                   ],
                 ),
               ),
