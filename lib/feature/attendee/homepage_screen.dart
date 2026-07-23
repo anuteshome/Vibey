@@ -117,7 +117,7 @@ class HomePage extends StatelessWidget {
                         border: InputBorder.none,
                         prefixIcon: Icon(Icons.search),
                         contentPadding: EdgeInsets.all(12),
-                        hintText: "Search events,artists or places...",
+                        hintText: "Search events, artists or places...",
                       ),
                     ),
                   ),
