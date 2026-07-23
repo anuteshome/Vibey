@@ -60,7 +60,18 @@ class EventDetailName extends StatelessWidget {
      Container(
       child:Column(
         children:[
-       
+          Row(
+            children:[
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                ),
+                child: Icon(Ionicons.star)),
+                Text("Date and Time"),
+                Text("July 30,2025 10:00 AM")
+
+            ]
+          )
         ]
       )
      )
