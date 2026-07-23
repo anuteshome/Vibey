@@ -33,11 +33,12 @@ class UpcomingEvents extends StatelessWidget {
           
             ),
              ),
+             SizedBox(width:5),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment:CrossAxisAlignment.start ,
                 children:[
-                  Text("Flutter Developer Meetup",style:TextStyle(fontSize:17,fontWeight:FontWeight.bold,)),
+                  Text("Flutter Developer Meetup",style:TextStyle(fontSize:15,fontWeight:FontWeight.bold,)),
                   SizedBox(height: 5,),
                   Text("Jul 30 2026",style:TextStyle(fontSize:12,)),
                   SizedBox(height: 5,),
@@ -45,8 +46,10 @@ class UpcomingEvents extends StatelessWidget {
                 ]
               ),
               Column(
+                mainAxisAlignment:MainAxisAlignment.center ,
                 children:[
                   Icon(Icons.save),
+                  SizedBox(height:5),
                   Text("ETB 200")
                 ]
               )
