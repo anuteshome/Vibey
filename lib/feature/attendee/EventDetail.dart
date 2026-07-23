@@ -4,19 +4,20 @@ import "package:vibey/core/widgets/EventDetailName.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 
 class EventDetail extends StatelessWidget {
-  const EventDetail({super.key});
+  final UpcomingEvent  upcomingEvent;
+  const EventDetail({super.key,required this.upcomingEvent});
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-        child: Center(
-          child: Column(
-            children:[
-              EventDetailImage(UpcomingEvent:UpcomingEvent),
-              EventDetailName(UpcomingEvent:UpcomingEvent),
-            ]
-          ),
+      child: Center(
+        child: Column(
+          children: [
+            EventDetailImage(UpcomingEvent: UpcomingEvent),
+            EventDetailName(UpcomingEvent: UpcomingEvent),
+          ],
         ),
+      ),
     );
   }
 }

@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import "package:vibey/core/widgets/Catagories.dart";
 import "package:vibey/core/widgets/FeaturedEvents.dart";
 import "package:vibey/core/widgets/UpcomingEvents.dart";
+import "package:vibey/feature/attendee/EventDetail.dart";
 import "package:vibey/feature/auth/data/repository/auth_repository.dart";
 import "package:supabase_flutter/supabase_flutter.dart";
 import "package:vibey/feature/auth/presentation/screen/login_screen.dart";
@@ -50,7 +51,7 @@ class HomePage extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Icon(Ionicons.notifications_outline,size: 30,),
+                        Icon(Ionicons.notifications_outline, size: 30),
                         SizedBox(width: 20),
                         Container(
                           width: 50,
@@ -151,16 +152,16 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-                 SizedBox(
-              height: 80,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: eventObj.catagories.length,
-                itemBuilder: (context, index) {
-                  return Catagories(cata: eventObj.catagories[index]);
-                },
+              SizedBox(
+                height: 80,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: eventObj.catagories.length,
+                  itemBuilder: (context, index) {
+                    return Catagories(cata: eventObj.catagories[index]);
+                  },
+                ),
               ),
-     ),
               //Featured Section
               Padding(
                 padding: const EdgeInsets.symmetric(
@@ -179,16 +180,31 @@ class HomePage extends StatelessWidget {
                 height: 200,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: eventObj.featureEvents.length,
+                  itemCount: eventObj.upcomingEvent.length,
                   itemBuilder: (context, index) {
-                    return FeatureEvents(
-                      featureEvent: eventObj.featureEvents[index],
+                    final event = eventObj.upcomingEvent[index];
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                EventDetail(upcomingEvent: event),
+                          ),
+                        );
+                      },
+                      child: FeatureEvents(upcomingEvent: event),
                     );
                   },
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20, top: 15,bottom:0),
+                padding: const EdgeInsets.only(
+                  left: 20,
+                  right: 20,
+                  top: 15,
+                  bottom: 0,
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

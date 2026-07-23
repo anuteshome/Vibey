@@ -3,8 +3,9 @@ import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 
 class FeatureEvents extends StatelessWidget {
-  final FeaturedEvent featureEvent;
-  FeatureEvents({super.key, required this.featureEvent});
+  // final FeaturedEvent featureEvent;
+   final UpcomingEvent  upcomingEvent;
+  FeatureEvents({super.key, required this.upcomingEvent});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class FeatureEvents extends StatelessWidget {
         decoration: BoxDecoration(
           // color:Colors.grey,
           image: DecorationImage(
-            image: AssetImage(featureEvent.Image),
+            image: AssetImage(upcomingEvent.Image),
             fit: BoxFit.cover,
           ),
           borderRadius: BorderRadius.circular(20),
@@ -39,7 +40,7 @@ class FeatureEvents extends StatelessWidget {
                     ),
                     child: Center(
                       child: Text(
-                        featureEvent.Type,
+                        upcomingEvent.Type,
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -71,7 +72,7 @@ class FeatureEvents extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                      featureEvent.Name,
+                      upcomingEvent.Name,
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -79,7 +80,7 @@ class FeatureEvents extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        featureEvent.Date,
+                        upcomingEvent.Date,
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -87,7 +88,7 @@ class FeatureEvents extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        featureEvent.Location,
+                        upcomingEvent.Location,
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,

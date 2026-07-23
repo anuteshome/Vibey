@@ -7,6 +7,7 @@ class UpcomingEvent {
   final String Location;
   final String Price;
   final String Image;
+  final String Type;
   final double Rate;
   final String Review;
   final String Discription;
@@ -17,6 +18,7 @@ class UpcomingEvent {
   UpcomingEvent({
     required this.Name,
     required this.Date,
+     required this.Type,
     required this.Time,
     required this.Location,
     required this.Price,
