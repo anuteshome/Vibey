@@ -264,7 +264,7 @@ class EventDetailName extends StatelessWidget {
               ),
               SizedBox(height: 5),
               Text(
-               upcomingEvent.About,
+               event.About,
                 style: TextStyle(color: Colors.grey[800]),
               ),
             ],
@@ -291,7 +291,7 @@ class EventDetailName extends StatelessWidget {
                   Column(
                     children: [
                       Text(
-                        "ETB ${upcomingEvent.Price}",
+                        "ETB ${event.Price}",
                         style: TextStyle(
                           color: Color(0xFF6C5CE7),
                           fontWeight: FontWeight.bold,

@@ -17,8 +17,8 @@ class EventDetail extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              EventDetailImage(EventModel: event),
-              EventDetailName(EventModel: event),
+              EventDetailImage(event: event),
+              EventDetailName(event: event),
             ],
           ),
         ),

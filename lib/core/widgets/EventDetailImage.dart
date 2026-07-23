@@ -3,8 +3,8 @@ import "package:vibey/models/Attende/AttendeModel.dart";
 
 
 class EventDetailImage extends StatelessWidget {
-  final UpcomingEvent upcomingEvent ;
-  const EventDetailImage({super.key,required this.upcomingEvent});
+  final EventModel event ;
+  const EventDetailImage({super.key,required this.event});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class EventDetailImage extends StatelessWidget {
       height: 220,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage(upcomingEvent.Image),
+          image: AssetImage(event.Image),
           fit: BoxFit.cover,
         ),
         borderRadius: BorderRadius.circular(12),
@@ -37,7 +37,7 @@ class EventDetailImage extends StatelessWidget {
                     vertical: 3,
                   ),
                   child: Text(
-                    upcomingEvent.Type,
+                    event.Type,
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,

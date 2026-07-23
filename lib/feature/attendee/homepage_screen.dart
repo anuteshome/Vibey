@@ -180,20 +180,20 @@ class HomePage extends StatelessWidget {
                 height: 200,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: eventObj.upcomingEvent.length,
+                  itemCount: eventObj.event.length,
                   itemBuilder: (context, index) {
-                    final event = eventObj.upcomingEvent[index];
+                    final event = eventObj.event[index];
                     return GestureDetector(
                       onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                EventDetail(upcomingEvent: event),
+                                EventDetail(event: event),
                           ),
                         );
                       },
-                      child: FeatureEvents(upcomingEvent: event),
+                      child: FeatureEvents(event: event),
                     );
                   },
                 ),
@@ -243,11 +243,11 @@ class HomePage extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                EventDetail(EventModel: event),
+                                EventDetail(event: event),
                           ),
                         );
                       },
-                      child: UpcomingEvents(EventModel: event),
+                      child: UpcomingEvents(event: event),
                     );
                   },
                 ),
