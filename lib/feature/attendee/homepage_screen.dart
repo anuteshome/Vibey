@@ -152,18 +152,20 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               // Catagoies container
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                 Catagories(
-                  Name: "Music",
-                  icon: Icons.lock,
+              // Padding(
+              //   padding: const EdgeInsets.symmetric(horizontal: 20),
+              //   child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //     children: [
                   
-                 )
-                  ],
-                ),
+              //     ],
+              //   ),
+              // ),
+              ListView.builder(
+                itemCount: eventObj.catagories.length,
+                itemBuilder: (context, index) {
+                  return Catagories(cata: eventObj.catagories[index]);
+                },
               ),
               //Featured Section
               Padding(
