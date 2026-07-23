@@ -1,4 +1,5 @@
 import "package:vibey/models/Attende/AttendeModel.dart";
+import "package:flutter/material.dart";
 
 class Event {
   final List<UpcomingEvent> upcomingEvent = [
@@ -53,23 +54,9 @@ class Event {
     ),
   ];
 
-  final List<Catagorie> catagories =[
-       Catagorie(
-        Name: "Music",
-        icon:"Icons.lock",
-        Color: "red[600]"
-       ),
-        Catagorie(
-        Name: "Tech",
-        icon:"Icons.person",
-        Color: "green[600]"
-       ),
-        Catagorie(
-        Name: "Art",
-        icon:"Icons.search",
-        Color:Colors.red,
-       ),
-
-
- ];
+  final List<Catagorie> catagories = [
+    Catagorie(Name: "Music", icon: Icons.lock, color: Colors.red),
+    Catagorie(Name: "Tech", icon: Icons.person, color: Colors.green),
+    Catagorie(Name: "Art", icon: Icons.search, color: Colors.red),
+  ];
 }
