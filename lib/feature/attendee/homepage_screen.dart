@@ -10,6 +10,7 @@ import "package:vibey/data/Attende/AttendeData.dart";
 class HomePage extends StatelessWidget {
   HomePage({super.key});
   final authRepsitory = AuthRepository(Supabase.instance.client);
+        final eventObj=Event();
 
   void Logout(BuildContext context) async {
     await authRepsitory.logout();
@@ -198,15 +199,14 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-              Expanded(
-                child: ListView.builder(
-                  itemCount: upcomingEvent.length,
+              
+               ListView.builder(
+                  itemCount: eventObj.upcomingEvent.length,
                   itemBuilder: (context, index) {
                     // final upcoming = upcomingEvent[index];
-                    return UpcomingEvents(upcomingEvent: upcomingEvent[index]);
+                    return UpcomingEvents(UpcomingEvent: eventObj.upcomingEvent[index]);
                   },
                 ),
-              ),
             ],
           ),
         ),

@@ -1,7 +1,7 @@
 import "package:vibey/models/Attende/AttendeModel.dart";
 
 class Event {
-  final List<UpcomingEvent> upcomingEvent = [
+  final List<UpcomingEvent> upcomingEvent= [
     UpcomingEvent(
       Name: "Addis Music Festival",
       Date:"Jull 30",
