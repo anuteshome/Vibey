@@ -32,24 +32,44 @@ class Event {
   final List<FeaturedEvent> featureEvents = [
     FeaturedEvent(
       Name: "Addis Festival",
-      Type:"Featured",
-      Date:"Jul 30",
-      Location:"Addis Ababa",
-      Image:"assets/image/image.png"
-      ),
-          FeaturedEvent(
+      Type: "Featured",
+      Date: "Jul 30",
+      Location: "Addis Ababa",
+      Image: "assets/image/image.png",
+    ),
+    FeaturedEvent(
       Name: "Odoo Developer",
-      Type:"Featured",
-      Date:"May 12",
-      Location:"Mekele ",
-      Image:"assets/image/image.png"
-      ),
-                FeaturedEvent(
+      Type: "Featured",
+      Date: "May 12",
+      Location: "Mekele ",
+      Image: "assets/image/image.png",
+    ),
+    FeaturedEvent(
       Name: "Tecno Mobile Event",
-      Type:"Featured",
-      Date:"Oct 12",
-      Location:"Jimma ",
-      Image:"assets/image/image.png"
-      ),
+      Type: "Featured",
+      Date: "Oct 12",
+      Location: "Jimma ",
+      Image: "assets/image/image.png",
+    ),
   ];
+
+  final List<Catagorie> catagories =[
+       Catagorie(
+        Name: "Music",
+        Icon:"Icons.lock",
+        Color: "red[600]"
+       ),
+        Catagorie(
+        Name: "Tech",
+        Icon:"Icons.computer",
+        Color: "green[600]"
+       ),
+        Catagorie(
+        Name: "Art",
+        Icon:"Icons.draw",
+        Color: "orange[600]"
+       ),
+
+
+ ];
 }
