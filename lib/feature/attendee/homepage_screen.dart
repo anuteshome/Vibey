@@ -188,7 +188,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
+                padding: const EdgeInsets.only(left: 20, right: 20, top: 15,bottom:0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -211,16 +211,21 @@ class HomePage extends StatelessWidget {
                 ),
               ),
 
-              ListView.builder(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: eventObj.upcomingEvent.length,
-                itemBuilder: (context, index) {
-                  // final upcoming = upcomingEvent[index];
-                  return UpcomingEvents(
-                    upcomingEvent: eventObj.upcomingEvent[index],
-                  );
-                },
+              Container(
+                decoration: BoxDecoration(
+                  // color:Colors.grey
+                ),
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: eventObj.upcomingEvent.length,
+                  itemBuilder: (context, index) {
+                    // final upcoming = upcomingEvent[index];
+                    return UpcomingEvents(
+                      upcomingEvent: eventObj.upcomingEvent[index],
+                    );
+                  },
+                ),
               ),
             ],
           ),
