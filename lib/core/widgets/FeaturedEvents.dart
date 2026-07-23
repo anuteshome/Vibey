@@ -11,7 +11,7 @@ class FeatureEvents extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 6),
       child: Container(
-        width: 280,
+        width: 320,
         height: 250,
         decoration: BoxDecoration(
           // color:Colors.grey,

@@ -42,14 +42,14 @@ class Event {
       Type:"Featured",
       Date:"May 12",
       Location:"Mekele ",
-      Image:"assets/image/logo.png"
+      Image:"assets/image/image.png"
       ),
                 FeaturedEvent(
       Name: "Tecno Mobile Event",
       Type:"Featured",
       Date:"Oct 12",
       Location:"Jimma ",
-      Image:"assets/image/First.png"
+      Image:"assets/image/image.png"
       ),
   ];
 }
