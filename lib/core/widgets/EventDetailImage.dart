@@ -7,12 +7,19 @@ class EventDetailImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-   width: 300,
-   height:70,
+   width: 390,
+   height:220,
    decoration:BoxDecoration(
-    color:Colors.grey,
+    image:DecorationImage(image: AssetImage("assets/image/image.png"),fit:BoxFit.cover),
     borderRadius: BorderRadius.circular(12)
-   )
+   ),
+   child:Column(
+    children: [
+
+    ],
+    )
+
+
     );
   }
 }
