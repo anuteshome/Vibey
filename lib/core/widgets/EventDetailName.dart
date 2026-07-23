@@ -9,6 +9,7 @@ class EventDetailImage extends StatelessWidget {
     return Column(
       children: [
         Row(
+          mainAxisAlignment:MainAxisAlignment.spaceBetween,
           children: [
             Text("Addis Music Fest"),
             Column(
