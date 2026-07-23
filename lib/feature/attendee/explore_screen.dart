@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:vibey/core/widgets/EventDetailImage.dart";
 
 
 class ExplorePage extends StatelessWidget {
@@ -7,7 +8,16 @@ class ExplorePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Text("Explore page")
+      appBar:AppBar(
+        title: Text("Event Detail Test"),
+      ),
+      body:Center(
+        child: Column(
+          children:[
+            EventDetailImage(),
+          ]
+        ),
+      )
     );
   }
 }
