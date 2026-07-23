@@ -10,7 +10,7 @@ import "package:vibey/data/Attende/AttendeData.dart";
 class HomePage extends StatelessWidget {
   HomePage({super.key});
   final authRepsitory = AuthRepository(Supabase.instance.client);
-        final eventObj=Event();
+  final eventObj = Event();
 
   void Logout(BuildContext context) async {
     await authRepsitory.logout();
@@ -172,16 +172,20 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-            SizedBox(
-          height: 200,
-
-            ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 20,
-                  right:20,
-                  top: 15,
+              SizedBox(
+                height: 200,
+               child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                  itemCount: eventObj.featureEvents.length,
+                  itemBuilder: (context, index) {
+                    return FeatureEvents(
+                      featureEvent: eventObj.featureEvents[index],
+                    );
+                  },
                 ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -203,16 +207,18 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-              
-               ListView.builder(
-                 shrinkWrap: true,
-                 physics: const NeverScrollableScrollPhysics(), 
-                  itemCount: eventObj.upcomingEvent.length,
-                  itemBuilder: (context, index) {
-                    // final upcoming = upcomingEvent[index];
-                    return UpcomingEvents(upcomingEvent: eventObj.upcomingEvent[index]);
-                  },
-                ),
+
+              ListView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemCount: eventObj.upcomingEvent.length,
+                itemBuilder: (context, index) {
+                  // final upcoming = upcomingEvent[index];
+                  return UpcomingEvents(
+                    upcomingEvent: eventObj.upcomingEvent[index],
+                  );
+                },
+              ),
             ],
           ),
         ),
