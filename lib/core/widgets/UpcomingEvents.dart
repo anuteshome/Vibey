@@ -10,42 +10,48 @@ class UpcomingEvents extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
       child: Container(
         width:double.infinity,
-        height:100,
+        height:90,
         decoration:BoxDecoration(
           color:Colors.white,
           borderRadius:BorderRadius.circular(12),
         ),
-        child: Row(
-          mainAxisAlignment:MainAxisAlignment.spaceBetween,
-          children:[
-           Container(
-          width:120,
-          height: 80,
-          decoration: BoxDecoration(
-          // color:Colors.grey,
-          image:DecorationImage(
-            image:AssetImage("assets/image/image.png"),
-            fit: BoxFit.cover
-          ),
-          borderRadius: BorderRadius.circular(12)
-
-          ),
-           ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children:[
-                Text("Flutter Developer Meetup"),
-                Text("Jul 30 2026"),
-                Text("Addis Ababa")
-              ]
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 5),
+          child: Row(
+            mainAxisAlignment:MainAxisAlignment.spaceBetween,
+            children:[
+             Container(
+            width:120,
+            height: 80,
+            decoration: BoxDecoration(
+            // color:Colors.grey,
+            image:DecorationImage(
+              image:AssetImage("assets/image/image.png"),
+              fit: BoxFit.cover
             ),
-            Column(
-              children:[
-                Icon(Icons.save),
-                Text("ETB 200")
-              ]
-            )
-          ]
+            borderRadius: BorderRadius.circular(12)
+          
+            ),
+             ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment:CrossAxisAlignment.start ,
+                children:[
+                  Text("Flutter Developer Meetup",style:TextStyle(fontSize:17,fontWeight:FontWeight.bold,)),
+                  SizedBox(height: 5,),
+                  Text("Jul 30 2026",style:TextStyle(fontSize:12,)),
+                  SizedBox(height: 5,),
+                  Text("Addis Ababa",style:TextStyle(fontSize:12,))
+                ]
+              ),
+              Column(
+                children:[
+                  Icon(Icons.save),
+                  Text("ETB 200")
+                ]
+              )
+            ]
+          ),
         ),
       ),
     );
