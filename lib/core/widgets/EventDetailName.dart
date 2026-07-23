@@ -1,8 +1,8 @@
 import "package:flutter/material.dart";
 
 
-class EventDetailImage extends StatelessWidget {
-  const EventDetailImage({super.key});
+class EventDetailName extends StatelessWidget {
+  const EventDetailName({super.key});
 
   @override
   Widget build(BuildContext context) {
