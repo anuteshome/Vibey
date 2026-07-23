@@ -18,7 +18,7 @@ class ExplorePage extends StatelessWidget {
         child: Center(
           child: Column(
             children:[
-              EventDetailImage(),
+              EventDetailImage(UpcomingEvent:UpcomingEvent),
               EventDetailName(UpcomingEvent:UpcomingEvent),
             ]
           ),
