@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:vibey/core/widgets/Catagories.dart";
 import "package:vibey/core/widgets/FeaturedEvents.dart";
 import "package:vibey/feature/auth/data/repository/auth_repository.dart";
 import "package:supabase_flutter/supabase_flutter.dart";
@@ -103,55 +104,10 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
           child: Row(
             mainAxisAlignment:MainAxisAlignment.spaceBetween ,
             children: [
-              Container(
-                width:70,
-                height:80,
-                decoration:BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color:Colors.red[100],
-                ),
-                child:Column(
-                  children:[
-                    SizedBox(height:20),
-                    Icon(Icons.lock),
-                    Text("Music")
-                  ]
-                )
-              ),
-          
-              Container(
-            width:70,
-            height:80,
-            decoration:BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
-            color:Colors.orange[100],
-            ),
-            child:Column(
-              children:[
-                SizedBox(height:20),
-                Icon(Icons.lock),
-                Text("Music")
-              ]
-            )
-          ),
-          
-          Container(
-            width:70,
-            height:80,
-            decoration:BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
-            color:Colors.green[100],
-            ),
-            child:Column(
-              children:[
-                SizedBox(height:20),
-                Icon(Icons.lock),
-                Text("Music")
-              ]
-            )
-          ),
-          
-        
+            Catagories(),
+            Catagories(),
+            Catagories(),
+            Catagories(),
             ],
           ),
         ),
