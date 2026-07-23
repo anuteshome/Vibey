@@ -15,3 +15,19 @@ class UpcomingEvent {
     required this.Image,
   });
 }
+
+class FeaturedEvent {
+  final String Name;
+  final String Date;
+  final String Location;
+  final String Type;
+  final String Image;
+
+  FeaturedEvent({
+    required this.Name,
+    required this.Date,
+    required this.Location,
+    required this.Type,
+    required this.Image,
+  });
+}

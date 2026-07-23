@@ -174,9 +174,10 @@ class HomePage extends StatelessWidget {
               ),
               FeatureEvents(),
               Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 20,
-                  vertical: 15,
+                padding: const EdgeInsets.only(
+                  left: 20,
+                  right:20,
+                  top: 15,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
