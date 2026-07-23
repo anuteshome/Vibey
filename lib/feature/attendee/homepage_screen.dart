@@ -201,10 +201,12 @@ class HomePage extends StatelessWidget {
               ),
               
                ListView.builder(
+                 shrinkWrap: true,
+                 physics: const NeverScrollableScrollPhysics(), 
                   itemCount: eventObj.upcomingEvent.length,
                   itemBuilder: (context, index) {
                     // final upcoming = upcomingEvent[index];
-                    return UpcomingEvents(UpcomingEvent: eventObj.upcomingEvent[index]);
+                    return UpcomingEvents(upcomingEvent: eventObj.upcomingEvent[index]);
                   },
                 ),
             ],

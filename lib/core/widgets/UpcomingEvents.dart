@@ -3,8 +3,8 @@ import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 
 class UpcomingEvents extends StatelessWidget {
-    final UpcomingEvent;
-   UpcomingEvents({super.key,required this.UpcomingEvent});
+    final UpcomingEvent upcomingEvent;
+   UpcomingEvents({super.key,required this.upcomingEvent});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class UpcomingEvents extends StatelessWidget {
                 decoration: BoxDecoration(
                   // color:Colors.grey,
                   image: DecorationImage(
-                    image: AssetImage(UpcomingEvent.Image),
+                    image: AssetImage(upcomingEvent.Image),
                     fit: BoxFit.cover,
                   ),
                   borderRadius: BorderRadius.circular(12),
@@ -40,7 +40,7 @@ class UpcomingEvents extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    UpcomingEvent.Name,
+                    upcomingEvent.Name,
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 5),
@@ -52,9 +52,9 @@ class UpcomingEvents extends StatelessWidget {
                         color: Color(0xFF6C5CE7),
                       ),
                       SizedBox(width: 5),
-                      Text(UpcomingEvent.Date, style: TextStyle(fontSize: 12)),
+                      Text(upcomingEvent.Date, style: TextStyle(fontSize: 12)),
                       SizedBox(width: 5),
-                      Text(UpcomingEvent.Time, style: TextStyle(fontSize: 12)),
+                      Text(upcomingEvent.Time, style: TextStyle(fontSize: 12)),
                     ],
                   ),
                   SizedBox(height: 5),
@@ -67,7 +67,7 @@ class UpcomingEvents extends StatelessWidget {
                         weight: 800,
                       ),
                       SizedBox(width: 5),
-                      Text(UpcomingEvent.Location, style: TextStyle(fontSize: 12)),
+                      Text(upcomingEvent.Location, style: TextStyle(fontSize: 12)),
                     ],
                   ),
                 ],
@@ -78,7 +78,7 @@ class UpcomingEvents extends StatelessWidget {
                   Icon(Ionicons.bookmark_outline, color: Colors.grey),
                   SizedBox(height: 15),
                   Text(
-                    "ETB ${UpcomingEvent.Price}",
+                    "ETB ${upcomingEvent.Price}",
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
