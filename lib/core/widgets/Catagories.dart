@@ -7,14 +7,17 @@ class Catagories extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 40,
-      height: 80,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        color:(cata.color),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Container(
+        width: 80,
+        height: 80,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          color:(cata.color),
+        ),
+        child: Column(children: [SizedBox(height: 20), Icon(cata.icon), Text(cata.Name)]),
       ),
-      child: Column(children: [SizedBox(height: 20), Icon(cata.icon), Text(cata.Name)]),
     );
   }
 }
