@@ -234,20 +234,20 @@ class HomePage extends StatelessWidget {
                 child: ListView.builder(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  itemCount: eventObj.upcomingEvent.length,
+                  itemCount: eventObj.event.length,
                   itemBuilder: (context, index) {
-                    final event = eventObj.upcomingEvent[index];
+                    final event = eventObj.event[index];
                     return GestureDetector(
                       onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                EventDetail(upcomingEvent: event),
+                                EventDetail(EventModel: event),
                           ),
                         );
                       },
-                      child: UpcomingEvents(upcomingEvent: event),
+                      child: UpcomingEvents(EventModel: event),
                     );
                   },
                 ),

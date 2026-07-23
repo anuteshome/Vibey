@@ -4,8 +4,8 @@ import "package:vibey/core/widgets/EventDetailName.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 
 class EventDetail extends StatelessWidget {
-  final UpcomingEvent  upcomingEvent;
-  const EventDetail({super.key,required this.upcomingEvent});
+  final EventModel  event;
+  const EventDetail({super.key,required this.event});
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +17,8 @@ class EventDetail extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              EventDetailImage(upcomingEvent: upcomingEvent),
-              EventDetailName(upcomingEvent: upcomingEvent),
+              EventDetailImage(EventModel: event),
+              EventDetailName(EventModel: event),
             ],
           ),
         ),

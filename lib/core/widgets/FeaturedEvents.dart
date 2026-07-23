@@ -4,8 +4,8 @@ import "package:vibey/models/Attende/AttendeModel.dart";
 
 class FeatureEvents extends StatelessWidget {
   // final FeaturedEvent featureEvent;
-   final UpcomingEvent  upcomingEvent;
-  FeatureEvents({super.key, required this.upcomingEvent});
+   final EventModel  event;
+  FeatureEvents({super.key, required this.event});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class FeatureEvents extends StatelessWidget {
         decoration: BoxDecoration(
           // color:Colors.grey,
           image: DecorationImage(
-            image: AssetImage(upcomingEvent.Image),
+            image: AssetImage(event.Image),
             fit: BoxFit.cover,
           ),
           borderRadius: BorderRadius.circular(20),
@@ -40,7 +40,7 @@ class FeatureEvents extends StatelessWidget {
                     ),
                     child: Center(
                       child: Text(
-                        upcomingEvent.Type,
+                        event.Type,
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -72,7 +72,7 @@ class FeatureEvents extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                      upcomingEvent.Name,
+                      event.Name,
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -80,7 +80,7 @@ class FeatureEvents extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        upcomingEvent.Date,
+                        event.Date,
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -88,7 +88,7 @@ class FeatureEvents extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        upcomingEvent.Location,
+                        event.Location,
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
