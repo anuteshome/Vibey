@@ -151,16 +151,6 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-              // Catagoies container
-              // Padding(
-              //   padding: const EdgeInsets.symmetric(horizontal: 20),
-              //   child: Row(
-              //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //     children: [
-                  
-              //     ],
-              //   ),
-              // ),
                  SizedBox(
               height: 80,
               child: ListView.builder(
