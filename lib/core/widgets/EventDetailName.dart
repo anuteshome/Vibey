@@ -58,21 +58,30 @@ class EventDetailName extends StatelessWidget {
           child: Text("Don't spend another week polishing shadows, fonts, or colors. The homepage is good enough to move forward."),
         ),
      Container(
-      child:Column(
-        children:[
-          Row(
-            children:[
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey,
-                ),
-                child: Icon(Ionicons.star)),
-                Text("Date and Time"),
-                Text("July 30,2025 10:00 AM")
-
-            ]
-          )
-        ]
+      child:Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20,vertical:10),
+        child: Column(
+          children:[
+            Row(
+              children:[
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.grey,
+                  ),
+                  child: Icon(Ionicons.star)),
+                  SizedBox(height: 20),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Date and Time"),
+                      Text("July 30,2025 10:00 AM"),
+                    ],
+                  )
+        
+              ]
+            )
+          ]
+        ),
       )
      )
 
