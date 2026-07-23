@@ -48,9 +48,9 @@ class UpcomingEvents extends StatelessWidget {
               Column(
                 mainAxisAlignment:MainAxisAlignment.center ,
                 children:[
-                  Icon(Icons.save),
-                  SizedBox(height:5),
-                  Text("ETB 200")
+                  Icon(Icons.save_outlined,color: Colors.grey,),
+                  SizedBox(height:15),
+                  Text("ETB 200",style:TextStyle(fontSize:15,fontWeight:FontWeight.bold,color:Color(0xFF6C5CE7)))
                 ]
               )
             ]

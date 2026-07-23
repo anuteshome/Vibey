@@ -43,7 +43,7 @@ class FeatureEvents extends StatelessWidget {
                         borderRadius:BorderRadius.circular(50),
                         color:Colors.white,
                       ),
-                      child: Icon(Icons.lock,color: Colors.grey,),
+                      child: Icon(Icons.favorite,color: Colors.black,),
                     )
                     ]
                   ),
