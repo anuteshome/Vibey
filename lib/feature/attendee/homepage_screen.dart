@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Icon(Ionicons.notifications),
+                        Icon(Ionicons.notifications_outline,size: 30,),
                         SizedBox(width: 20),
                         Container(
                           width: 50,
