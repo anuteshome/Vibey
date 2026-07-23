@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:vibey/core/widgets/EventDetailImage.dart";
 import "package:vibey/core/widgets/EventDetailName.dart";
+import "package:vibey/models/Attende/AttendeModel.dart";
 
 
 class ExplorePage extends StatelessWidget {
@@ -18,7 +19,7 @@ class ExplorePage extends StatelessWidget {
           child: Column(
             children:[
               EventDetailImage(),
-              EventDetailName(),
+              EventDetailName(UpcomingEvent:UpcomingEvent),
             ]
           ),
         ),
