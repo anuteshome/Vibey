@@ -10,6 +10,7 @@ class UpcomingEvents extends StatelessWidget {
       width:300,
       height:100,
       child: Row(
+        mainAxisAlignment:MainAxisAlignment.spaceBetween,
         children:[
           Image.asset("assets/image/logo.png"),
           Column(
