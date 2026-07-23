@@ -1,8 +1,10 @@
 import "package:flutter/material.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
+import "package:vibey/models/Attende/AttendeModel.dart";
 
 class UpcomingEvents extends StatelessWidget {
-  const UpcomingEvents({super.key});
+    final UpcomingEvent;
+   UpcomingEvents({super.key,required this.UpcomingEvent});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +28,7 @@ class UpcomingEvents extends StatelessWidget {
                 decoration: BoxDecoration(
                   // color:Colors.grey,
                   image: DecorationImage(
-                    image: AssetImage("assets/image/image.png"),
+                    image: AssetImage(UpcomingEvent.Image),
                     fit: BoxFit.cover,
                   ),
                   borderRadius: BorderRadius.circular(12),
@@ -38,24 +40,33 @@ class UpcomingEvents extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Flutter Developer Meetup",
+                    UpcomingEvent.Name,
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 5),
                   Row(
                     children: [
-                      Icon(Ionicons.calendar_clear_outline,size: 15,color: Color(0xFF6C5CE7),),
-                      SizedBox(width: 5,),
+                      Icon(
+                        Ionicons.calendar_clear_outline,
+                        size: 15,
+                        color: Color(0xFF6C5CE7),
+                      ),
+                      SizedBox(width: 5),
                       Text("Jul 30 2026", style: TextStyle(fontSize: 12)),
-                      SizedBox(width: 5,),
+                      SizedBox(width: 5),
                       Text("10:00 AM", style: TextStyle(fontSize: 12)),
                     ],
                   ),
                   SizedBox(height: 5),
                   Row(
                     children: [
-                      Icon(Ionicons.location_outline,size: 15,color: Color.fromARGB(255, 76, 60, 193),weight:800,),
-                       SizedBox(width: 5,),
+                      Icon(
+                        Ionicons.location_outline,
+                        size: 15,
+                        color: Color.fromARGB(255, 76, 60, 193),
+                        weight: 800,
+                      ),
+                      SizedBox(width: 5),
                       Text("Addis Ababa", style: TextStyle(fontSize: 12)),
                     ],
                   ),
