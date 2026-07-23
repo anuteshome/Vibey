@@ -223,20 +223,20 @@ class EventDetailName extends StatelessWidget {
         ),
 // footer
 Padding(
-  padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+  padding: const EdgeInsets.only(left: 20,right:20,top:2,bottom: 10),
   child: Container(
   decoration: BoxDecoration(
     color:Colors.white,
     borderRadius: BorderRadius.circular(12)
   ),
    child: Padding(
-     padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 15),
+     padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10),
      child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children:[
        Column(
       children: [
-        Text("ETB 200"),
+        Text("ETB 200",style:TextStyle(color:Color(0xFF6C5CE7),fontWeight: FontWeight.bold,fontSize:17)),
         Text("Per Ticket")
       ],
        ),
@@ -246,10 +246,11 @@ Padding(
                         width:40,
                         height:40,
                         decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 221, 218, 239),
+                        color: const Color.fromARGB(255, 245, 245, 247),
+                        // border: Border.all(color: Colors.greyr),
                           borderRadius: BorderRadius.circular(12),
                         ),
-                        child: Icon(Ionicons.heart,color: Color(0xFF6C5CE7))),
+                        child: Icon(Ionicons.heart_outline)),
        SizedBox(width:20),
                         Container(
                           decoration: BoxDecoration(
@@ -259,7 +260,7 @@ Padding(
                           child:Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 25,vertical: 7),
                             child: Column(
-                              crossAxisAlignment:CrossAxisAlignment.start ,
+                              crossAxisAlignment:CrossAxisAlignment.center ,
                               children: [
                             Text("Book Now",style:TextStyle(color: Colors.white,fontWeight:FontWeight.bold,fontSize:17)),
                             Text("Get Your Ticket",style:TextStyle(color: Colors.white))
