@@ -58,5 +58,6 @@ class Event {
     Catagorie(Name: "Music", icon: Icons.lock, color: Colors.red),
     Catagorie(Name: "Tech", icon: Icons.person, color: Colors.green),
     Catagorie(Name: "Art", icon: Icons.search, color: Colors.red),
+     Catagorie(Name: "Coffee", icon: Icons.coffee, color: Colors.brown),
   ];
 }
