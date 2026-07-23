@@ -14,8 +14,33 @@ class EventDetailImage extends StatelessWidget {
     borderRadius: BorderRadius.circular(12)
    ),
    child:Column(
+    mainAxisAlignment:MainAxisAlignment.spaceBetween,
+    crossAxisAlignment:CrossAxisAlignment.start,
     children: [
-
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+        child: Container(
+          decoration:BoxDecoration(
+            color:Color.fromARGB(255, 95, 55, 162),
+            borderRadius: BorderRadius.circular(7),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 3),
+            child: Text("Featured", style: TextStyle( color: Colors.white,fontWeight: FontWeight.bold),),
+          )),
+      ),
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 3),
+        child: Container(
+           decoration:BoxDecoration(
+            color:Color.fromARGB(255, 60, 60, 60),
+            borderRadius: BorderRadius.circular(7),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 3),
+            child: Text("1/5",style: TextStyle( color: Colors.white,fontWeight: FontWeight.bold),),
+          )),
+      )
     ],
     )
 
