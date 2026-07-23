@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:vibey/core/widgets/FeaturedEvents.dart";
 import "package:vibey/feature/auth/data/repository/auth_repository.dart";
 import "package:supabase_flutter/supabase_flutter.dart";
 import "package:vibey/feature/auth/presentation/screen/login_screen.dart";
@@ -246,6 +247,7 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
         //     )
         //   ),
         // ),
+        FeatureEvents(),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20,vertical:15),
           child: Row(
