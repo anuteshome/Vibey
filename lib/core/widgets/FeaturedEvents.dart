@@ -1,8 +1,10 @@
 import "package:flutter/material.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
+import "package:vibey/models/Attende/AttendeModel.dart";
 
 class FeatureEvents extends StatelessWidget {
-  const FeatureEvents({super.key});
+  final FeaturedEvent featureEvent;
+  FeatureEvents({super.key, required this.featureEvent});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +16,7 @@ class FeatureEvents extends StatelessWidget {
         decoration: BoxDecoration(
           // color:Colors.grey,
           image: DecorationImage(
-            image: AssetImage("assets/image/image.png"),
+            image: AssetImage(featureEvent.Image),
             fit: BoxFit.cover,
           ),
           borderRadius: BorderRadius.circular(20),
@@ -37,7 +39,7 @@ class FeatureEvents extends StatelessWidget {
                     ),
                     child: Center(
                       child: Text(
-                        "Featured",
+                        featureEvent.Type,
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -69,7 +71,7 @@ class FeatureEvents extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Addis Music Festical",
+                      featureEvent.Name,
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -77,7 +79,7 @@ class FeatureEvents extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        "Jull 30",
+                        featureEvent.Date,
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -85,7 +87,7 @@ class FeatureEvents extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        "Bole Ednamoll",
+                        featureEvent.Location,
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
