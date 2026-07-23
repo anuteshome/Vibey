@@ -37,6 +37,12 @@ class FeaturedEvent {
   final String Location;
   final String Type;
   final String Image;
+  final double Rate;
+  final String Review;
+  final String Discription;
+  final String Organizer;
+  final String Catagory;
+  final String About;
 
   FeaturedEvent({
     required this.Name,
@@ -44,6 +50,12 @@ class FeaturedEvent {
     required this.Location,
     required this.Type,
     required this.Image,
+    required this.Rate,
+    required this.Review,
+    required this.Discription,
+    required this.Organizer,
+    required this.Catagory,
+    required this.About,
   });
 }
 
