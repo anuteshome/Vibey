@@ -31,3 +31,11 @@ class FeaturedEvent {
     required this.Image,
   });
 }
+
+class Catagorie {
+  final String Name;
+  final String Icon;
+  final String Color;
+
+  Catagorie({required this.Name, required this.Icon, required this.Color});
+}
