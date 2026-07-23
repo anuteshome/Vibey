@@ -12,9 +12,9 @@ class Catagories extends StatelessWidget {
       height: 80,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        // color:(just),
+        color:(cata.color),
       ),
-      child: Column(children: [SizedBox(height: 20), Icon(), Text(cata.Name)]),
+      child: Column(children: [SizedBox(height: 20), Icon(cata.icon), Text(cata.Name)]),
     );
   }
 }
