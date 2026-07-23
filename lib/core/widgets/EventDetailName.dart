@@ -220,7 +220,55 @@ class EventDetailName extends StatelessWidget {
               Text("It introduces navigation, passing data between screens, and builds directly toward the core purpose of Vibey: finding an event,"),
             ],
           ),
-        )
+        ),
+// footer
+Padding(
+  padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+  child: Container(
+  decoration: BoxDecoration(
+    color:Colors.white,
+    borderRadius: BorderRadius.circular(12)
+  ),
+   child: Padding(
+     padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 15),
+     child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children:[
+       Column(
+      children: [
+        Text("ETB 200"),
+        Text("Per Ticket")
+      ],
+       ),
+     Row(
+      children:[
+                     Container(
+                        width:40,
+                        height:40,
+                        decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 221, 218, 239),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Icon(Ionicons.heart,color: Color(0xFF6C5CE7))),
+       SizedBox(width:20),
+                        Container(
+                          child:Column(
+                            children: [
+                          Text("Book Now"),
+                          Text("Get Your Ticket")
+                            ],
+                          )
+                        )
+      ]
+     )
+       
+        ]
+      ),
+   )
+  ),
+)
+
+
       ],
     );
   }
