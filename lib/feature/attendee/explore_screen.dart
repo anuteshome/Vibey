@@ -9,6 +9,7 @@ class ExplorePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+    backgroundColor: Color.fromARGB(255, 229, 226, 246),
       appBar:AppBar(
         title: Text("Event Detail Test"),
       ),

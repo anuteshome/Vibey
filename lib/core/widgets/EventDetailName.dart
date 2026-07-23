@@ -57,33 +57,159 @@ class EventDetailName extends StatelessWidget {
           padding: const EdgeInsets.only(right: 120,left:20,top:10),
           child: Text("Don't spend another week polishing shadows, fonts, or colors. The homepage is good enough to move forward."),
         ),
-     Container(
-      child:Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20,vertical:10),
-        child: Column(
-          children:[
-            Row(
-              children:[
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                  ),
-                  child: Icon(Ionicons.star)),
-                  SizedBox(height: 20),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("Date and Time"),
-                      Text("July 30,2025 10:00 AM"),
-                    ],
-                  )
-        
-              ]
-            )
-          ]
+     Padding(
+       padding: const EdgeInsets.only(left: 20,right:20,top:10),
+       child: Container(
+        decoration:BoxDecoration(
+          color:Colors.white,
+          borderRadius: BorderRadius.only(topLeft: Radius.circular(12),topRight: Radius.circular(12)),
         ),
-      )
-     )
+        child:Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20,vertical:10),
+          child: Column(
+            children:[
+              Row(
+                children:[
+                  Container(
+                    width:40,
+                    height:40,
+                    decoration: BoxDecoration(
+                     color: Color.fromARGB(255, 221, 218, 239),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Icon(Ionicons.calendar_outline,color: Color(0xFF6C5CE7),)),
+                    SizedBox(width: 25),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Date and Time",style:TextStyle(fontWeight: FontWeight.bold,fontSize:15)),
+                        Text("July 30,2025 10:00 AM"),
+                      ],
+                    )
+          
+                ]
+              )
+            ]
+          ),
+        ),
+        // Location Section
+       ),
+     ),
+
+      Padding(
+       padding: const EdgeInsets.only(left: 20,right:20),
+       child: Container(
+        decoration:BoxDecoration(
+          color:Colors.white,
+          // borderRadius: BorderRadius.only(topLeft: Radius.circular(12),topRight: Radius.circular(12)),
+        ),
+        child:Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20,vertical:10),
+          child: Column(
+            children:[
+              Row(
+                children:[
+                  Container(
+                    width:40,
+                    height:40,
+                    decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 221, 218, 239),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Icon(Ionicons.location,color: Color(0xFF6C5CE7))),
+                    SizedBox(width: 25),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Location",style:TextStyle(fontWeight: FontWeight.bold,fontSize:15)),
+                        Text("meskel Sequre, Addis Ababa, Ethiopia"),
+                      ],
+                    )
+          
+                ]
+              )
+            ]
+          ),
+        ),
+        )
+        ),
+
+          Padding(
+       padding: const EdgeInsets.only(left: 20,right:20),
+       child: Container(
+        decoration:BoxDecoration(
+          color:Colors.white,
+          // borderRadius: BorderRadius.only(topLeft: Radius.circular(12),topRight: Radius.circular(12)),
+        ),
+        child:Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20,vertical:10),
+          child: Column(
+            children:[
+              Row(
+                children:[
+                  Container(
+                    width:40,
+                    height:40,
+                    decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 221, 218, 239),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Icon(Ionicons.people,color: Color(0xFF6C5CE7))),
+                    SizedBox(width: 25),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Organizer",style:TextStyle(fontWeight: FontWeight.bold,fontSize:15)),
+                        Text("Vibey Events"),
+                      ],
+                    )
+          
+                ]
+              )
+            ]
+          ),
+        ),
+        )
+        ),
+       
+
+         Padding(
+       padding: const EdgeInsets.only(left: 20,right:20),
+       child: Container(
+        decoration:BoxDecoration(
+          color:Colors.white,
+          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(12),bottomRight: Radius.circular(12)),
+        ),
+        child:Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20,vertical:10),
+          child: Column(
+            children:[
+              Row(
+                children:[
+                  Container(
+                    width:40,
+                    height:40,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 221, 218, 239),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Icon(Ionicons.duplicate,color: Color(0xFF6C5CE7))),
+                    SizedBox(width: 25),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Catagory",style:TextStyle(fontWeight: FontWeight.bold,fontSize:15)),
+                        Text("Music Festival"),
+                      ],
+                    )
+          
+                ]
+              )
+            ]
+          ),
+        ),
+        )
+        ),
 
       ],
     );
