@@ -18,7 +18,11 @@ class UpcomingEvents extends StatelessWidget {
           width:120,
           height: 80,
           decoration: BoxDecoration(
-          color:Colors.grey,
+          // color:Colors.grey,
+          image:DecorationImage(
+            image:AssetImage("assets/image/image.png"),
+            fit: BoxFit.cover
+          ),
           borderRadius: BorderRadius.circular(12)
 
           ),
