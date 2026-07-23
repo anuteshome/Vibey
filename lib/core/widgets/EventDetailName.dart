@@ -3,8 +3,8 @@ import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 
 class EventDetailName extends StatelessWidget {
-  final UpcomingEvent upcomingEvent;
-  const EventDetailName({super.key,required this.upcomingEvent});
+  final EventModel event;
+  const EventDetailName({super.key,required this.event});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class EventDetailName extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-               upcomingEvent.Name,
+               event.Name,
                 style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
               ),
               Column(
@@ -30,7 +30,7 @@ class EventDetailName extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "ETB ${upcomingEvent.Price}",
+                    "ETB ${event.Price}",
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -49,16 +49,16 @@ class EventDetailName extends StatelessWidget {
             children: [
               Icon(Ionicons.star, color: Color(0xFF6C5CE7), size: 17),
               SizedBox(width: 5),
-              Text(upcomingEvent.Rate),
+              Text(event.Rate),
               SizedBox(width: 5),
-              Text("(${upcomingEvent.Review} Reviews)"),
+              Text("(${event.Review} Reviews)"),
             ],
           ),
         ),
         Padding(
           padding: const EdgeInsets.only(right: 120, left: 20, top: 10),
           child: Text(
-           upcomingEvent.Discription,
+           event.Discription,
             style: TextStyle(color: Colors.grey[800]),
           ),
         ),
@@ -101,7 +101,7 @@ class EventDetailName extends StatelessWidget {
                               fontSize: 15,
                             ),
                           ),
-                          Text("${upcomingEvent.Date }" ",${upcomingEvent.Time}"),
+                          Text("${event.Date }" ",${event.Time}"),
                         ],
                       ),
                     ],
@@ -149,7 +149,7 @@ class EventDetailName extends StatelessWidget {
                               fontSize: 15,
                             ),
                           ),
-                          Text( upcomingEvent.Location,),
+                          Text( event.Location,),
                         ],
                       ),
                     ],
@@ -193,7 +193,7 @@ class EventDetailName extends StatelessWidget {
                               fontSize: 15,
                             ),
                           ),
-                          Text(upcomingEvent.Organizer),
+                          Text(event.Organizer),
                         ],
                       ),
                     ],
@@ -243,7 +243,7 @@ class EventDetailName extends StatelessWidget {
                               fontSize: 15,
                             ),
                           ),
-                          Text(upcomingEvent.Catagory),
+                          Text(event.Catagory),
                         ],
                       ),
                     ],
