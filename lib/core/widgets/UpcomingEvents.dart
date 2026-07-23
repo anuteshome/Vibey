@@ -67,7 +67,7 @@ class UpcomingEvents extends StatelessWidget {
                         weight: 800,
                       ),
                       SizedBox(width: 5),
-                      Text("Addis Ababa", style: TextStyle(fontSize: 12)),
+                      Text(UpcomingEvent.Location, style: TextStyle(fontSize: 12)),
                     ],
                   ),
                 ],
@@ -78,7 +78,7 @@ class UpcomingEvents extends StatelessWidget {
                   Icon(Ionicons.bookmark_outline, color: Colors.grey),
                   SizedBox(height: 15),
                   Text(
-                    "ETB 200",
+                    "ETB ${UpcomingEvent.Price}",
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
