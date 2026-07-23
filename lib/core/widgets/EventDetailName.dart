@@ -252,12 +252,19 @@ Padding(
                         child: Icon(Ionicons.heart,color: Color(0xFF6C5CE7))),
        SizedBox(width:20),
                         Container(
-                          child:Column(
-                            crossAxisAlignment:CrossAxisAlignment.start ,
-                            children: [
-                          Text("Book Now"),
-                          Text("Get Your Ticket")
-                            ],
+                          decoration: BoxDecoration(
+                            color:Color(0xFF6C5CE7),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child:Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 25,vertical: 7),
+                            child: Column(
+                              crossAxisAlignment:CrossAxisAlignment.start ,
+                              children: [
+                            Text("Book Now",style:TextStyle(color: Colors.white,fontWeight:FontWeight.bold,fontSize:17)),
+                            Text("Get Your Ticket",style:TextStyle(color: Colors.white))
+                              ],
+                            ),
                           )
                         )
       ]
