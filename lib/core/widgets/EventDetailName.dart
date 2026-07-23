@@ -55,7 +55,7 @@ class EventDetailName extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.only(right: 120,left:20,top:10),
-          child: Text("Don't spend another week polishing shadows, fonts, or colors. The homepage is good enough to move forward."),
+          child: Text("Don't spend another week polishing shadows, fonts, or colors. The homepage is good enough to move forward.",style:TextStyle(color:Colors.grey[800])),
         ),
      Padding(
        padding: const EdgeInsets.only(left: 20,right:20,top:15),
@@ -217,7 +217,7 @@ class EventDetailName extends StatelessWidget {
             children: [
               Text("About This Event",style:TextStyle(fontWeight:FontWeight.bold,fontSize:16)),
               SizedBox(height: 5,),
-              Text("It introduces navigation, passing data between screens, and builds directly toward the core purpose of Vibey: finding an event,"),
+              Text("It introduces navigation, passing data between screens, and builds directly toward the core purpose of Vibey: finding an event,",style:TextStyle(color:Colors.grey[800])),
             ],
           ),
         ),
