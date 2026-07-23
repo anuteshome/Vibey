@@ -19,7 +19,7 @@ class Event {
       Catagory: "Art"
     ),
     UpcomingEvent(
-      Name: "Flutter Developer Meetup",
+      Name: "Flutter Developer Meet",
       Date: "May 21",
       Time: "3:00 AM",
       Type: "Featured",

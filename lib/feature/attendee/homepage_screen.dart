@@ -236,9 +236,18 @@ class HomePage extends StatelessWidget {
                   physics: const NeverScrollableScrollPhysics(),
                   itemCount: eventObj.upcomingEvent.length,
                   itemBuilder: (context, index) {
-                    // final upcoming = upcomingEvent[index];
-                    return UpcomingEvents(
-                      upcomingEvent: eventObj.upcomingEvent[index],
+                    final event = eventObj.upcomingEvent[index];
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                EventDetail(upcomingEvent: event),
+                          ),
+                        );
+                      },
+                      child: UpcomingEvents(upcomingEvent: event),
                     );
                   },
                 ),
