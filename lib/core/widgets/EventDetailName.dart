@@ -45,7 +45,7 @@ class EventDetailName extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Row(
             children: [
-              Icon(Ionicons.star, color: Color(0xFF6C5CE7)),
+              Icon(Ionicons.star, color: Color(0xFF6C5CE7),size: 17),
               SizedBox(width:5),
               Text("4.8"),
               SizedBox(width:5),
@@ -53,6 +53,10 @@ class EventDetailName extends StatelessWidget {
             ],
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.only(right: 120,left:20,top:10),
+          child: Text("Don't spend another week polishing shadows, fonts, or colors. The homepage is good enough to move forward."),
+        )
       ],
     );
   }
