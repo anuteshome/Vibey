@@ -14,7 +14,15 @@ class UpcomingEvents extends StatelessWidget {
         child: Row(
           mainAxisAlignment:MainAxisAlignment.spaceBetween,
           children:[
-            Image.asset("assets/image/logo.png"),
+           Container(
+          width:120,
+          height: 80,
+          decoration: BoxDecoration(
+          color:Colors.grey,
+          borderRadius: BorderRadius.circular(12)
+
+          ),
+           ),
             Column(
               children:[
                 Text("Flutter Developer Meetup"),
