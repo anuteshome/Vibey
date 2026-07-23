@@ -7,7 +7,7 @@ class UpcomingEvents extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 18,vertical: 10),
       child: Container(
         width:double.infinity,
         height:90,
@@ -33,7 +33,7 @@ class UpcomingEvents extends StatelessWidget {
           
             ),
              ),
-             SizedBox(width:5),
+             SizedBox(width:7),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment:CrossAxisAlignment.start ,
