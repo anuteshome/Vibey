@@ -42,9 +42,23 @@ class UpcomingEvents extends StatelessWidget {
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 5),
-                  Text("Jul 30 2026", style: TextStyle(fontSize: 12)),
+                  Row(
+                    children: [
+                      Icon(Ionicons.calendar_clear_outline,size: 15,color: Color(0xFF6C5CE7),),
+                      SizedBox(width: 5,),
+                      Text("Jul 30 2026", style: TextStyle(fontSize: 12)),
+                      SizedBox(width: 5,),
+                      Text("10:00 AM", style: TextStyle(fontSize: 12)),
+                    ],
+                  ),
                   SizedBox(height: 5),
-                  Text("Addis Ababa", style: TextStyle(fontSize: 12)),
+                  Row(
+                    children: [
+                      Icon(Ionicons.location_outline,size: 15,color: Color.fromARGB(255, 76, 60, 193),weight:800,),
+                       SizedBox(width: 5,),
+                      Text("Addis Ababa", style: TextStyle(fontSize: 12)),
+                    ],
+                  ),
                 ],
               ),
               Column(
