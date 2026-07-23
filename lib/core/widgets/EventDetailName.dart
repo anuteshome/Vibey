@@ -253,6 +253,7 @@ Padding(
        SizedBox(width:20),
                         Container(
                           child:Column(
+                            crossAxisAlignment:CrossAxisAlignment.start ,
                             children: [
                           Text("Book Now"),
                           Text("Get Your Ticket")
