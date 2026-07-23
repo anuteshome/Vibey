@@ -12,8 +12,8 @@ class UpcomingEvents extends StatelessWidget {
         width:double.infinity,
         height:90,
         decoration:BoxDecoration(
-          color:Colors.white,
-          borderRadius:BorderRadius.circular(12),
+          color:Color.fromARGB(255, 243, 241, 241),
+          borderRadius:BorderRadius.circular(15),
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 5),

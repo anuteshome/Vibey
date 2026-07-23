@@ -131,7 +131,13 @@ final authRepsitory = AuthRepository(Supabase.instance.client);
               ]
             ),
           ),
-          UpcomingEvents(),
+          Column(
+            children: [
+              UpcomingEvents(),
+              UpcomingEvents(),
+              UpcomingEvents(),
+            ],
+          ),
             ]
           ),
         ),
