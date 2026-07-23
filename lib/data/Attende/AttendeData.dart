@@ -7,7 +7,7 @@ class Event {
       Date:"Jull 30",
       Time:"10:00 AM",
       Location: "Addis Ababa",
-      Price: 200,
+      Price: "200",
       Image: "assets/image/image.png"
       ),
           UpcomingEvent(
@@ -15,7 +15,7 @@ class Event {
       Date:"May 21",
       Time:"3:00 AM",
       Location: "Addis Ababa",
-      Price: 100,
+      Price: "100",
       Image: "assets/image/logo.png"
       ),
 
@@ -24,7 +24,7 @@ class Event {
       Date:"Feb 3",
       Time:"5:00 AM",
       Location: "Addis Ababa",
-      Price: 400,
+      Price: "400",
       Image: "assets/image/First.png"
       ),
       

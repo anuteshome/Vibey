@@ -3,7 +3,7 @@ class UpcomingEvent {
   final String Date;
   final String Time;
   final String Location;
-  final double Price;
+  final String Price;
   final String Image;
 
   UpcomingEvent({
