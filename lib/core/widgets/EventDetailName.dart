@@ -343,6 +343,7 @@ class EventDetailName extends StatelessWidget {
                           ),
                         ),
                       ),
+                      SizedBox(height: 40,),
                     ],
                   ),
                 ],
