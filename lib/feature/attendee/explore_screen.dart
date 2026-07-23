@@ -13,12 +13,14 @@ class ExplorePage extends StatelessWidget {
       appBar:AppBar(
         title: Text("Event Detail Test"),
       ),
-      body:Center(
-        child: Column(
-          children:[
-            EventDetailImage(),
-            EventDetailName(),
-          ]
+      body:SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children:[
+              EventDetailImage(),
+              EventDetailName(),
+            ]
+          ),
         ),
       )
     );
