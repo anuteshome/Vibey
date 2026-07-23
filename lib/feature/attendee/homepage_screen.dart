@@ -198,12 +198,14 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-              ListView.builder(
-                itemCount: upcomingEvent.length,
-                itemBuilder: (context, index) {
-                  // final upcoming = upcomingEvent[index];
-                  return UpcomingEvents(upcomingEvent: upcomingEvent[index]);
-                },
+              Expanded(
+                child: ListView.builder(
+                  itemCount: upcomingEvent.length,
+                  itemBuilder: (context, index) {
+                    // final upcoming = upcomingEvent[index];
+                    return UpcomingEvents(upcomingEvent: upcomingEvent[index]);
+                  },
+                ),
               ),
             ],
           ),
