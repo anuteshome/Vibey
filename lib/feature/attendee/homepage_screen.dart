@@ -161,12 +161,16 @@ class HomePage extends StatelessWidget {
               //     ],
               //   ),
               // ),
-              ListView.builder(
+                 SizedBox(
+              height: 60,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
                 itemCount: eventObj.catagories.length,
                 itemBuilder: (context, index) {
                   return Catagories(cata: eventObj.catagories[index]);
                 },
               ),
+     ),
               //Featured Section
               Padding(
                 padding: const EdgeInsets.symmetric(

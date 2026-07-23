@@ -8,7 +8,7 @@ class Catagories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 70,
+      width: 40,
       height: 80,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
