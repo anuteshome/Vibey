@@ -56,7 +56,15 @@ class EventDetailName extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(right: 120,left:20,top:10),
           child: Text("Don't spend another week polishing shadows, fonts, or colors. The homepage is good enough to move forward."),
-        )
+        ),
+     Container(
+      child:Column(
+        children:[
+       
+        ]
+      )
+     )
+
       ],
     );
   }
