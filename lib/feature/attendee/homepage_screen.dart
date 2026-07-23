@@ -6,6 +6,7 @@ import "package:vibey/feature/auth/data/repository/auth_repository.dart";
 import "package:supabase_flutter/supabase_flutter.dart";
 import "package:vibey/feature/auth/presentation/screen/login_screen.dart";
 import "package:vibey/data/Attende/AttendeData.dart";
+import "package:ionicons_plus/ionicons_plus.dart";
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -49,7 +50,7 @@ class HomePage extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Icon(Icons.person),
+                        Icon(Ionicons.notifications),
                         SizedBox(width: 20),
                         Container(
                           width: 50,
@@ -58,9 +59,9 @@ class HomePage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(50),
                             // color: Colors.grey,
                             image: DecorationImage(
-                              image:AssetImage("assets/image/profile.png"),
+                              image: AssetImage("assets/image/profile.png"),
                               fit: BoxFit.cover,
-                            )
+                            ),
                           ),
                         ),
                       ],
@@ -178,8 +179,8 @@ class HomePage extends StatelessWidget {
               ),
               SizedBox(
                 height: 200,
-               child: ListView.builder(
-                scrollDirection: Axis.horizontal,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
                   itemCount: eventObj.featureEvents.length,
                   itemBuilder: (context, index) {
                     return FeatureEvents(
