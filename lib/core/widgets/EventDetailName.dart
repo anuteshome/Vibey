@@ -13,12 +13,12 @@ class EventDetailName extends StatelessWidget {
           child: Row(
             mainAxisAlignment:MainAxisAlignment.spaceBetween,
             children: [
-              Text("Addis Music Fest"),
+              Text("Addis Music Fest",style:TextStyle(fontSize:25,fontWeight: FontWeight.bold)),
               Column(
                 children:[
                   Text("Price"),
-                  SizedBox(height:10),
-                  Text("200")
+                  SizedBox(height:5),
+                  Text("ETB 200",style:TextStyle(fontSize:20,fontWeight:FontWeight.bold,color:Color(0xFF6C5CE7)))
                 ]
               )
             ],
