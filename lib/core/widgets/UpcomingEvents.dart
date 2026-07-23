@@ -11,6 +11,10 @@ class UpcomingEvents extends StatelessWidget {
       child: Container(
         width:double.infinity,
         height:100,
+        decoration:BoxDecoration(
+          color:Colors.white,
+          borderRadius:BorderRadius.circular(12),
+        ),
         child: Row(
           mainAxisAlignment:MainAxisAlignment.spaceBetween,
           children:[
@@ -28,6 +32,7 @@ class UpcomingEvents extends StatelessWidget {
           ),
            ),
             Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children:[
                 Text("Flutter Developer Meetup"),
                 Text("Jul 30 2026"),
