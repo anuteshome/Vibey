@@ -56,7 +56,11 @@ class HomePage extends StatelessWidget {
                           height: 50,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(50),
-                            color: Colors.grey,
+                            // color: Colors.grey,
+                            image: DecorationImage(
+                              image:AssetImage("assets/image/profile.png"),
+                              fit: BoxFit.cover,
+                            )
                           ),
                         ),
                       ],
