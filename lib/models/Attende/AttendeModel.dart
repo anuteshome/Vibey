@@ -8,7 +8,7 @@ class UpcomingEvent {
   final String Price;
   final String Image;
   final String Type;
-  final double Rate;
+  final String Rate;
   final String Review;
   final String Discription;
   final String Organizer;

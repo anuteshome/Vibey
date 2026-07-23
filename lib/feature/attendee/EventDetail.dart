@@ -9,13 +9,15 @@ class EventDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Center(
-        child: Column(
-          children: [
-            EventDetailImage(UpcomingEvent: UpcomingEvent),
-            EventDetailName(UpcomingEvent: UpcomingEvent),
-          ],
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              EventDetailImage(upcomingEvent: upcomingEvent),
+              EventDetailName(upcomingEvent: upcomingEvent),
+            ],
+          ),
         ),
       ),
     );

@@ -3,8 +3,8 @@ import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 
 class EventDetailName extends StatelessWidget {
-  final UpcomingEvent;
-  const EventDetailName({super.key,required this.UpcomingEvent});
+  final UpcomingEvent upcomingEvent;
+  const EventDetailName({super.key,required this.upcomingEvent});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class EventDetailName extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-               UpcomingEvent.Name,
+               upcomingEvent.Name,
                 style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
               ),
               Column(
@@ -30,7 +30,7 @@ class EventDetailName extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "ETB ${UpcomingEvent.Price}",
+                    "ETB ${upcomingEvent.Price}",
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -49,16 +49,16 @@ class EventDetailName extends StatelessWidget {
             children: [
               Icon(Ionicons.star, color: Color(0xFF6C5CE7), size: 17),
               SizedBox(width: 5),
-              Text(UpcomingEvent.Rate),
+              Text(upcomingEvent.Rate),
               SizedBox(width: 5),
-              Text("(${UpcomingEvent.Review} Reviews)"),
+              Text("(${upcomingEvent.Review} Reviews)"),
             ],
           ),
         ),
         Padding(
           padding: const EdgeInsets.only(right: 120, left: 20, top: 10),
           child: Text(
-           UpcomingEvent.Discription,
+           upcomingEvent.Discription,
             style: TextStyle(color: Colors.grey[800]),
           ),
         ),
@@ -101,7 +101,7 @@ class EventDetailName extends StatelessWidget {
                               fontSize: 15,
                             ),
                           ),
-                          Text("${UpcomingEvent.Date }" ",${UpcomingEvent.Time}"),
+                          Text("${upcomingEvent.Date }" ",${upcomingEvent.Time}"),
                         ],
                       ),
                     ],
@@ -149,7 +149,7 @@ class EventDetailName extends StatelessWidget {
                               fontSize: 15,
                             ),
                           ),
-                          Text( UpcomingEvent.Location,),
+                          Text( upcomingEvent.Location,),
                         ],
                       ),
                     ],
@@ -193,7 +193,7 @@ class EventDetailName extends StatelessWidget {
                               fontSize: 15,
                             ),
                           ),
-                          Text(UpcomingEvent.Organizer),
+                          Text(upcomingEvent.Organizer),
                         ],
                       ),
                     ],
@@ -243,7 +243,7 @@ class EventDetailName extends StatelessWidget {
                               fontSize: 15,
                             ),
                           ),
-                          Text(UpcomingEvent.Catagory),
+                          Text(upcomingEvent.Catagory),
                         ],
                       ),
                     ],
@@ -264,7 +264,7 @@ class EventDetailName extends StatelessWidget {
               ),
               SizedBox(height: 5),
               Text(
-               UpcomingEvent.About,
+               upcomingEvent.About,
                 style: TextStyle(color: Colors.grey[800]),
               ),
             ],
@@ -291,7 +291,7 @@ class EventDetailName extends StatelessWidget {
                   Column(
                     children: [
                       Text(
-                        "ETB ${UpcomingEvent.Price}",
+                        "ETB ${upcomingEvent.Price}",
                         style: TextStyle(
                           color: Color(0xFF6C5CE7),
                           fontWeight: FontWeight.bold,
