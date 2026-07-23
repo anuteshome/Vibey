@@ -56,18 +56,18 @@ class Event {
   final List<Catagorie> catagories =[
        Catagorie(
         Name: "Music",
-        Icon:"Icons.lock",
+        icon:"Icons.lock",
         Color: "red[600]"
        ),
         Catagorie(
         Name: "Tech",
-        Icon:"Icons.computer",
+        icon:"Icons.person",
         Color: "green[600]"
        ),
         Catagorie(
         Name: "Art",
-        Icon:"Icons.draw",
-        Color: "orange[600]"
+        icon:"Icons.search",
+        Color:Colors.red,
        ),
 
 

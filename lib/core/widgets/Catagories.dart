@@ -1,10 +1,9 @@
 import "package:flutter/material.dart";
+import "package:vibey/models/Attende/AttendeModel.dart";
 
 class Catagories extends StatelessWidget {
-  final IconData icon;
-  final String Name;
-  final String just;
-  const Catagories({super.key, required this.Name,required this.just,required this.icon});
+  final Catagorie cata;
+  const Catagories({super.key, required this.cata});
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +14,7 @@ class Catagories extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         // color:(just),
       ),
-      child: Column(
-        children: [SizedBox(height: 20), Icon(icon), Text(Name)],
-      ),
+      child: Column(children: [SizedBox(height: 20), Icon(), Text(cata.Name)]),
     );
   }
 }

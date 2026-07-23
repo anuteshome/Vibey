@@ -1,3 +1,5 @@
+import "package:flutter/material.dart";
+
 class UpcomingEvent {
   final String Name;
   final String Date;
@@ -34,8 +36,8 @@ class FeaturedEvent {
 
 class Catagorie {
   final String Name;
-  final String Icon;
-  final String Color;
+  final IconData icon;
+  final Color color;
 
-  Catagorie({required this.Name, required this.Icon, required this.Color});
+  Catagorie({required this.Name, required this.icon, required this.color});
 }
