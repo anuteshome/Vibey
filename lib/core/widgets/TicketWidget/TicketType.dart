@@ -22,7 +22,7 @@ class TicketType extends StatelessWidget {
               SizedBox(height: 5,),
               SizedBox(
                 width:230,
-                child: Text("Once a user can go from opening the app to successfully booking an event,",style:TextStyle(color:Colors.grey[700])))
+                child: Text("Once a user can go from opening the app to successfully booking an event,",style:TextStyle(color:Colors.grey[700],fontWeight:FontWeight.bold)))
             ]
           ),
           Text("ETB 2000",style:TextStyle(fontSize:15,fontWeight:FontWeight.bold))
