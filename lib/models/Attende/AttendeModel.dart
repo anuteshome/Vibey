@@ -15,6 +15,7 @@ class EventModel {
   final String Catagory;
   final String About;
   final bool isFeatured;
+  final bool isUpcoming;
 
   EventModel({
     required this.Name,
@@ -30,8 +31,8 @@ class EventModel {
     required this.Organizer,
     required this.Catagory,
     required this.About,
-   required this.isFeatured,
-    
+    required this.isFeatured,
+    required this.isUpcoming,
   });
 }
 

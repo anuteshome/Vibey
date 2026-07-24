@@ -17,7 +17,8 @@ class Event {
       Organizer: "Donkey Tube",
       About:" ait as the project grows But don't  nd you'll naturally refactor  worry about that now. It works,.",
       Catagory: "Art",
-      isFeatured:true
+      isFeatured:true,
+      isUpcoming:true,
     ),
     EventModel(
       Name: "Flutter Developer Meet",
@@ -32,7 +33,9 @@ class Event {
       Discription: "It introduces navigation, passing data between screens, and builds directly toward the core purpose of Vibey: finding an event",
       Organizer: "Kana Warehouse",
       About:"But don't worry about that now. It works, and you'll naturally refactor it as the project grows.",
-      Catagory: "Music"
+      Catagory: "Music",
+      isFeatured:false
+
     ),
 
     EventModel(
@@ -48,7 +51,8 @@ class Event {
       Discription: "screens, and builds directly toward the core purpose of Vibey:It introduces navigation, passing data between  finding an event",
       Organizer: "Venu Warehouse",
       About:" and you'll naturally refactor it as the project grows But don't worry about that now. It works,.",
-      Catagory: "Tech"
+      Catagory: "Tech",
+      isFeatured:true,
     ),
   ];
 
