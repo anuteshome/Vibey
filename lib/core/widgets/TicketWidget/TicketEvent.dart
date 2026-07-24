@@ -14,9 +14,11 @@ Container(
       width:90,
       height: 90,
       decoration: BoxDecoration(
+          borderRadius:BorderRadius.circular(12),
         image: DecorationImage(
           image:AssetImage("assets/image/image.png"),
-          fit:BoxFit.cover
+          fit:BoxFit.cover,
+        
         )
       ),
 ),
