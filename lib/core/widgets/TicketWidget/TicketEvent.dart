@@ -11,6 +11,7 @@ class TicketEvent extends StatelessWidget {
       child: Container(
       
         child:Row(
+          
           children:[
       Container(
         width:90,
@@ -26,6 +27,7 @@ class TicketEvent extends StatelessWidget {
       ),
       SizedBox(width:20),
       Column(
+        crossAxisAlignment:CrossAxisAlignment.start ,
         children:[
       Text("Addis Music Festival 2025",style:TextStyle(fontSize:20,fontWeight:FontWeight.bold)),
       Text("Sat, 24 May 2025 6:00 AM"),
