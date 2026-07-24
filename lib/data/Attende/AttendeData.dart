@@ -56,49 +56,60 @@ class Event {
       isFeatured:true,
       isUpcoming:false
     ),
-  ];
+    EventModel(
+      Name: "Addis Festival",
+      Type: "Featured",
+      Date: "Jul 30",
+       Price: "400",
+      Time: "5:00 AM",
+      Location: "Addis Ababa",
+      Image: "assets/image/image.png",
+      Rate: "3.5",
+      Review: "230",
+      Discription: "s toward the core purpose of creens, and builds directly Vibey:It introduces navigation, passing data between  finding an event",
+      Organizer: "Minliuem Hall",
+      About:"  project grows But don't worry about and you'll naturally refactor it as the that now. It works,.",
+      Catagory: "Jazz",
+      isFeatured:true,
+      isUpcoming:false
+    ),
 
-  // final List<FeaturedEvent> featureEvents = [
-  //   FeaturedEvent(
-  //     Name: "Addis Festival",
-  //     Type: "Featured",
-  //     Date: "Jul 30",
-  //     Location: "Addis Ababa",
-  //     Image: "assets/image/image.png",
-  //     Rate: 3.5,
-  //     Review: "230",
-  //     Discription: "s toward the core purpose of creens, and builds directly Vibey:It introduces navigation, passing data between  finding an event",
-  //     Organizer: "Minliuem Hall",
-  //     About:"  project grows But don't worry about and you'll naturally refactor it as the that now. It works,.",
-  //     Catagory: "Jazz"
-  //   ),
-  //   FeaturedEvent(
-  //     Name: "Odoo Developer",
-  //     Type: "Featured",
-  //     Date: "May 12",
-  //     Location: "Mekele ",
-  //     Image: "assets/image/image.png",
-  //      Rate: 4.5,
-  //     Review: "130",
-  //     Discription: "builds directly Vibey:It introduces navigation, s toward the core purpose of creens, and passing data between  finding an event",
-  //     Organizer: "Stadium ",
-  //     About:"  about and you'll naturally refactor project grows But don't worry  it as the that now. It works,.",
-  //     Catagory: "Football"
-  //   ),
-  //   FeaturedEvent(
-  //     Name: "Tecno Mobile Event",
-  //     Type: "Featured",
-  //     Date: "Oct 12",
-  //     Location: "Jimma ",
-  //     Image: "assets/image/image.png",
-  //     Rate: 3.2,
-  //     Review: "30",
-  //     Discription: "Vibey builds directly It introduces navigation, s toward the core purpose of creens, and passing data between  finding an event",
-  //     Organizer: "Capstone ",
-  //     About:" naturally refactor  about and you'll  project grows But don't worry  it as the that now. It works,.",
-  //     Catagory: "Tech"
-  //   ),
-  // ];
+    EventModel(
+      Name: "Odoo Developer Meetup",
+      Date: "Feb 3",
+      Type: "Featured",
+      Time: "5:00 AM",
+      Location: "Addis Ababa",
+     Price: "400",
+      Image: "assets/image/image.png",
+      Rate: "3.5",
+      Review: "230",
+      Discription: "s toward the core purpose of creens, and builds directly Vibey:It introduces navigation, passing data between  finding an event",
+      Organizer: "Minliuem Hall",
+      About:"  project grows But don't worry about and you'll naturally refactor it as the that now. It works,.",
+      Catagory: "Jazz",
+      isFeatured:true,
+      isUpcoming:false
+    ),
+
+    EventModel(
+      Name: "Nest Developer Meetup",
+      Date: "Feb 3",
+      Time: "5:00 AM",
+      Location: "Addis Ababa",
+      Price: "400",
+      Type: "Featured",
+      Image: "assets/image/image.png",
+      Rate: "3.5",
+      Review: "430",
+      Discription: "screens, and builds directly toward the core purpose of Vibey:It introduces navigation, passing data between  finding an event",
+      Organizer: "Venu Warehouse",
+      About:" and you'll naturally refactor it as the project grows But don't worry about that now. It works,.",
+      Catagory: "Tech",
+      isFeatured:true,
+      isUpcoming:false
+    ),
+  ];
 
   final List<Catagorie> catagories = [
     Catagorie(Name: "Music", icon: Icons.lock, color: Color.fromARGB(255, 186, 184, 201)),
