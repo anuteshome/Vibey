@@ -17,6 +17,8 @@ class ChooseTicket extends StatelessWidget {
         ),
         Expanded(
           child: ListView.builder(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
             itemCount: eventObj.TicketData.length,
             itemBuilder: (context, index) {
               final ticket = eventObj.TicketData[index];
