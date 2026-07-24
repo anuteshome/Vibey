@@ -15,8 +15,7 @@ class ChooseTicket extends StatelessWidget {
           "Choose Ticket Type",
           style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
         ),
-        Expanded(
-          child: ListView.builder(
+          ListView.builder(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             itemCount: eventObj.TicketData.length,
@@ -25,7 +24,6 @@ class ChooseTicket extends StatelessWidget {
               return TicketType(ticket: ticket);
             },
           ),
-        ),
       ],
     );
   }
