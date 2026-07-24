@@ -9,9 +9,10 @@ class TicketEvent extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left:20,right:20,top:10),
       child: Container(
-      
+              decoration: BoxDecoration(
+            borderRadius:BorderRadius.circular(12),
+              ),
         child:Row(
-          
           children:[
       Container(
         width:90,
