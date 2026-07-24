@@ -24,6 +24,43 @@ class ChooseTicket extends StatelessWidget {
               return TicketType(ticket: ticket);
             },
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children:[
+              Text("Quantity"),
+              Row(
+                children: [
+                  Container(
+                    width:30,
+                    height: 30,
+                    decoration: BoxDecoration(
+                    color:Colors.grey[400],
+                    borderRadius: BorderRadius.circular(12),
+                    ),
+                    child:Text("-")
+                  ),
+                    Container(
+                    width:30,
+                    height: 30,
+                    decoration: BoxDecoration(
+                    color:Colors.grey[400],
+                    borderRadius: BorderRadius.circular(12),
+                    ),
+                    child:TextField()
+                  ),
+                      Container(
+                    width:30,
+                    height: 30,
+                    decoration: BoxDecoration(
+                    color:Colors.grey[400],
+                    borderRadius: BorderRadius.circular(12),
+                    ),
+                    child:Text("-")
+                  )
+                ],
+              )
+            ]
+          )
       ],
     );
   }
