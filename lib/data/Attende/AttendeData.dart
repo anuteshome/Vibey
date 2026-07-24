@@ -8,7 +8,7 @@ class Event {
       Date: "Jull 30",
       Time: "10:00 AM",
       Type: "Featured",
-      Location: "Addis Ababa",
+      Location: "Addis Ababas",
       Price: "200",
       Image: "assets/image/image.png",
        Rate: "3.5",
