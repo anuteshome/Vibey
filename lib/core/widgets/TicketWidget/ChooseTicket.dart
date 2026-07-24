@@ -18,10 +18,14 @@ class ChooseTicket extends StatelessWidget {
           borderRadius:BorderRadius.circular(12)
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              "Choose Ticket Type",
-              style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+            Padding(
+              padding: const EdgeInsets.only(left:20,top:15,bottom: 10),
+              child: Text(
+                "Choose Ticket Type",
+                style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+              ),
             ),
             ListView.builder(
               shrinkWrap: true,

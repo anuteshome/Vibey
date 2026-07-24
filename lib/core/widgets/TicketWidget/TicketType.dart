@@ -12,7 +12,7 @@ class TicketType extends StatelessWidget {
       children:[
         // Text("Choose Ticket Type",style:TextStyle(fontSize:17,fontWeight:FontWeight.bold)),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 13,vertical: 13),
+          padding: const EdgeInsets.symmetric(horizontal: 13,vertical: 17),
           child: Container(
             decoration:BoxDecoration(
               color:Colors.white,
