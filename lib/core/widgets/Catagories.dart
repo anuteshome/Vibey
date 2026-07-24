@@ -16,7 +16,7 @@ class Catagories extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
           color:(cata.color),
         ),
-        child: Column(children: [SizedBox(height: 20), Icon(cata.icon),SizedBox(height: 6), Text(cata.Name)]),
+        child: Column(children: [SizedBox(height: 20), Icon(cata.icon,color: Color(0xFF6C5CE7),size:30,),SizedBox(height: 6), Text(cata.Name)]),
       ),
     );
   }
