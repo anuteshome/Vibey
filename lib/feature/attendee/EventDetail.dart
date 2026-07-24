@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 
 import "package:vibey/core/widgets/EventDetailImage.dart";
 import "package:vibey/core/widgets/EventDetailName.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
@@ -12,6 +13,11 @@ class EventDetail extends StatelessWidget {
     return Scaffold(
           appBar:AppBar(
         title: Text("Event Detail Test"),
+        actions: [
+          IconButton(icon: Icon(Ionicon.save),onPressed: () {
+            
+          },)
+        ],
       ),
       body: SingleChildScrollView(
         child: Center(
