@@ -10,7 +10,10 @@ import "package:vibey/data/Attende/AttendeData.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
 
 class HomePage extends StatelessWidget {
+  // final featuredEvent;
   HomePage({super.key});
+
+  
   final authRepsitory = AuthRepository(Supabase.instance.client);
   final eventObj = Event();
 
@@ -22,6 +25,8 @@ class HomePage extends StatelessWidget {
       (route) => false,
     );
   }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -188,8 +193,7 @@ class HomePage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) =>
-                                EventDetail(event: event),
+                            builder: (context) => EventDetail(event: event),
                           ),
                         );
                       },
@@ -242,8 +246,7 @@ class HomePage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) =>
-                                EventDetail(event: event),
+                            builder: (context) => EventDetail(event: event),
                           ),
                         );
                       },

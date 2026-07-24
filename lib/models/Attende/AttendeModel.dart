@@ -14,11 +14,12 @@ class EventModel {
   final String Organizer;
   final String Catagory;
   final String About;
+  final bool isFeatured;
 
   EventModel({
     required this.Name,
     required this.Date,
-     required this.Type,
+    required this.Type,
     required this.Time,
     required this.Location,
     required this.Price,
@@ -29,7 +30,8 @@ class EventModel {
     required this.Organizer,
     required this.Catagory,
     required this.About,
-
+   required this.isFeatured,
+    
   });
 }
 

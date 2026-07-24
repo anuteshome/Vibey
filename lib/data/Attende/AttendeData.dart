@@ -16,7 +16,8 @@ class Event {
       Discription: "s directly toward the core creens, and builds purpose of Vibey:It introduces navigation, passing data between  finding an event",
       Organizer: "Donkey Tube",
       About:" ait as the project grows But don't  nd you'll naturally refactor  worry about that now. It works,.",
-      Catagory: "Art"
+      Catagory: "Art",
+      isFeatured:true
     ),
     EventModel(
       Name: "Flutter Developer Meet",
