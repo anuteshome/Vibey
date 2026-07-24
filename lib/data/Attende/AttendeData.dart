@@ -17,8 +17,8 @@ class Event {
       Organizer: "Donkey Tube",
       About:" ait as the project grows But don't  nd you'll naturally refactor  worry about that now. It works,.",
       Catagory: "Art",
-      isFeatured:true,
-      isUpcoming:false,
+      isFeatured:false,
+      isUpcoming:true,
     ),
     EventModel(
       Name: "Flutter Developer Meet",
@@ -106,8 +106,8 @@ class Event {
       Organizer: "Venu Warehouse",
       About:" and you'll naturally refactor it as the project grows But don't worry about that now. It works,.",
       Catagory: "Tech",
-      isFeatured:true,
-      isUpcoming:false
+      isFeatured:false,
+      isUpcoming:true
     ),
   ];
 
