@@ -15,7 +15,7 @@ class EventDetail extends StatelessWidget {
         title: Center(child: Text("Event Details",style:TextStyle(fontSize:18,fontWeight:FontWeight.bold))),
         actions: [
           IconButton(icon: Icon(Ionicons.bookmark_outline,color:Colors.black), onPressed: () {}),
-          IconButton(icon: Icon(Ionicons.share_social_outline), onPressed: () {}),
+          IconButton(icon: Icon(Ionicons.share_social_outline,color:Colors.black), onPressed: () {}),
           
           ],
       ),
