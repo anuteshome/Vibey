@@ -8,11 +8,11 @@ class TicketEvent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
 
-      child:Column(
+      child:Row(
         children:[
 Container(
-      width:100,
-      height: 100,
+      width:90,
+      height: 90,
       decoration: BoxDecoration(
         image: DecorationImage(
           image:AssetImage("assets/image/image.png"),
