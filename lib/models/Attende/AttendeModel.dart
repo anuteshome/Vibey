@@ -44,12 +44,12 @@ class Catagorie {
   Catagorie({required this.Name, required this.icon, required this.color});
 }
 
-class TicketType {
+class TicketTypes {
   final String Type;
   final String Discription;
   final String Price;
 
-  TicketType({
+  TicketTypes({
     required this.Type,
     required this.Discription,
     required this.Price,

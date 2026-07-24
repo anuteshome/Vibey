@@ -142,21 +142,21 @@ class Event {
     ),
   ];
 
-  final List<TicketType> TicketData = [
-    TicketType(
+  final List<TicketTypes> TicketData = [
+    TicketTypes(
       Type: "Vip",
       Discription:
           "irst complete product flow. After that, integrating Supabase",
       Price: "2,000",
     ),
 
-    TicketType(
+    TicketTypes(
       Type: "Standard",
       Discription: "complete product flow. After that, integrating Supabase",
       Price: "1,200",
     ),
 
-    TicketType(
+    TicketTypes(
       Type: "Early Bird",
       Discription:
           "product flow. After that, irst complete  integrating Supabase",
