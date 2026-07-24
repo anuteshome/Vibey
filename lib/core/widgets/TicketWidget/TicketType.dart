@@ -14,7 +14,8 @@ class TicketType extends StatelessWidget {
           child: Container(
             decoration:BoxDecoration(
               color:Colors.white,
-              borderRadius: BorderRadius.circular(12)
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: Color(0xFF6C5CE7))
             ),
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
