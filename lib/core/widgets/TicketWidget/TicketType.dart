@@ -18,13 +18,14 @@ class TicketType extends StatelessWidget {
           Column(
             crossAxisAlignment:CrossAxisAlignment.start ,
             children:[
-              Text("VIP"),
+              Text("VIP",style:TextStyle(fontSize:17,fontWeight:FontWeight.bold)),
+              SizedBox(height: 5,),
               SizedBox(
                 width:230,
                 child: Text("Once a user can go from opening the app to successfully booking an event,"))
             ]
           ),
-          Text("ETB 2000")
+          Text("ETB 2000",style:TextStyle(fontSize:15,fontWeight:FontWeight.bold))
             ]
           ),
         )
