@@ -1,8 +1,10 @@
 import "package:flutter/material.dart";
+import "package:vibey/models/Attende/AttendeModel.dart";
 
 
 class TicketType extends StatelessWidget {
-  const TicketType({super.key});
+  final TicketType ticketModel;
+  const TicketType({super.key,required this.ticketModel});
 
   @override
   Widget build(BuildContext context) {
@@ -26,14 +28,14 @@ class TicketType extends StatelessWidget {
               Column(
                 crossAxisAlignment:CrossAxisAlignment.start ,
                 children:[
-                  Text("VIP",style:TextStyle(fontSize:17,fontWeight:FontWeight.bold)),
+                  Text(ticketModel.Type,style:TextStyle(fontSize:17,fontWeight:FontWeight.bold)),
                   SizedBox(height: 5,),
                   SizedBox(
                     width:250,
                     child: Text("Once a user can go from opening the app to successfully,",style:TextStyle(color:Colors.grey[700],fontWeight:FontWeight.bold)))
                 ]
               ),
-              Text("ETB 2000",style:TextStyle(fontSize:15,fontWeight:FontWeight.bold))
+              Text("ETB ${ticketModel.Price}",style:TextStyle(fontSize:15,fontWeight:FontWeight.bold))
                 ]
               ),
             ),

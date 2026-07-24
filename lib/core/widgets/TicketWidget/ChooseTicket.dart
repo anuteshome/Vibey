@@ -19,7 +19,7 @@ class ChooseTicket extends StatelessWidget {
             itemCount: eventObj.TicketData.length,
             itemBuilder: (context, index) {
               final ticket = eventObj.TicketData[index];
-              
+              return 
             },
           ),
         ),
