@@ -8,7 +8,7 @@ class TicketType extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children:[
-        Text("Choose Ticket Type"),
+        // Text("Choose Ticket Type",style:TextStyle(fontSize:17,fontWeight:FontWeight.bold)),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 13),
           child: Container(
