@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
         .where((event) => event.isFeatured)
         .toList();
     final upcomingEvent = eventObj.events.where((e) => e.isUpcoming).toList();
-    
+
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 229, 226, 246),
       body: Container(
@@ -186,9 +186,9 @@ class HomePage extends StatelessWidget {
                 height: 200,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: eventObj.events.length,
+                  itemCount: featuredEvent.length,
                   itemBuilder: (context, index) {
-                    final event = eventObj.events[index];
+                    final event = featuredEvent[index];
                     return GestureDetector(
                       onTap: () {
                         Navigator.push(
@@ -239,9 +239,9 @@ class HomePage extends StatelessWidget {
                 child: ListView.builder(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  itemCount: eventObj.events.length,
+                  itemCount: upcomingEvent.length,
                   itemBuilder: (context, index) {
-                    final event = eventObj.events[index];
+                    final event = upcomingEvent[index];
                     return GestureDetector(
                       onTap: () {
                         Navigator.push(
