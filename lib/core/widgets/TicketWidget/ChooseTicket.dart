@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:vibey/core/widgets/TicketWidget/TicketType.dart";
 import "package:vibey/data/Attende/AttendeData.dart";
 
 class ChooseTicket extends StatelessWidget {
@@ -19,7 +20,7 @@ class ChooseTicket extends StatelessWidget {
             itemCount: eventObj.TicketData.length,
             itemBuilder: (context, index) {
               final ticket = eventObj.TicketData[index];
-              return 
+              return TicketType(ticket: ticket);
             },
           ),
         ),

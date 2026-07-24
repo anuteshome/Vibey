@@ -3,8 +3,8 @@ import "package:vibey/models/Attende/AttendeModel.dart";
 
 
 class TicketType extends StatelessWidget {
-  final TicketType ticketModel;
-  const TicketType({super.key,required this.ticketModel});
+  final TicketTypes ticket;
+  const TicketType({super.key,required this.ticket});
 
   @override
   Widget build(BuildContext context) {
@@ -28,14 +28,14 @@ class TicketType extends StatelessWidget {
               Column(
                 crossAxisAlignment:CrossAxisAlignment.start ,
                 children:[
-                  Text(ticketModel.Type,style:TextStyle(fontSize:17,fontWeight:FontWeight.bold)),
+                  Text(ticket.Type,style:TextStyle(fontSize:17,fontWeight:FontWeight.bold)),
                   SizedBox(height: 5,),
                   SizedBox(
                     width:250,
-                    child: Text(ticketModel.Discription,style:TextStyle(color:Colors.grey[700],fontWeight:FontWeight.bold)))
+                    child: Text(ticket.Discription,style:TextStyle(color:Colors.grey[700],fontWeight:FontWeight.bold)))
                 ]
               ),
-              Text("ETB ${ticketModel.Price}",style:TextStyle(fontSize:15,fontWeight:FontWeight.bold))
+              Text("ETB ${ticket.Price}",style:TextStyle(fontSize:15,fontWeight:FontWeight.bold))
                 ]
               ),
             ),
