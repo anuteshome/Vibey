@@ -13,7 +13,11 @@ class EventDetail extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Event Detail Test"),
-        actions: [IconButton(icon: Icon(Ionicons.bookmark_outline), onPressed: () {})],
+        actions: [
+          IconButton(icon: Icon(Ionicons.bookmark_outline), onPressed: () {}),
+          IconButton(icon: Icon(Ionicons.share_social_outline), onPressed: () {}),
+          
+          ],
       ),
       body: SingleChildScrollView(
         child: Center(
