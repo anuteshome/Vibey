@@ -12,7 +12,7 @@ class EventDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Event Detail Test"),
+        title: Center(child: Text("Event Details",style:TextStyle(fontSize:18,fontWeight:FontWeight.bold))),
         actions: [
           IconButton(icon: Icon(Ionicons.bookmark_outline), onPressed: () {}),
           IconButton(icon: Icon(Ionicons.share_social_outline), onPressed: () {}),
