@@ -21,7 +21,7 @@ class ExplorePage extends StatelessWidget {
           child: Column(
             children: [
               TicketEvent(),
-              ChooseTicket()
+              Expanded(child: ChooseTicket())
             ],
           ),
         ),
