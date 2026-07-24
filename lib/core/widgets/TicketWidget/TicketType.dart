@@ -9,19 +9,24 @@ class TicketType extends StatelessWidget {
     return Column(
       children:[
         Text("Choose Ticket Type"),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children:[
-Column(
-  children:[
-    Text("VIP"),
-    SizedBox(
-      width:230,
-      child: Text("Once a user can go from opening the app to successfully booking an event,"))
-  ]
-),
-Text("ETB 2000")
-          ]
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment:CrossAxisAlignment.start ,
+            children:[
+          Column(
+            crossAxisAlignment:CrossAxisAlignment.start ,
+            children:[
+              Text("VIP"),
+              SizedBox(
+                width:230,
+                child: Text("Once a user can go from opening the app to successfully booking an event,"))
+            ]
+          ),
+          Text("ETB 2000")
+            ]
+          ),
         )
       ]
     );
