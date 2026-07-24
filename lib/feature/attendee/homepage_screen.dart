@@ -180,9 +180,9 @@ class HomePage extends StatelessWidget {
                 height: 200,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: eventObj.event.length,
+                  itemCount: eventObj.events.length,
                   itemBuilder: (context, index) {
-                    final event = eventObj.event[index];
+                    final event = eventObj.events[index];
                     return GestureDetector(
                       onTap: () {
                         Navigator.push(
@@ -234,9 +234,9 @@ class HomePage extends StatelessWidget {
                 child: ListView.builder(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  itemCount: eventObj.event.length,
+                  itemCount: eventObj.events.length,
                   itemBuilder: (context, index) {
-                    final event = eventObj.event[index];
+                    final event = eventObj.events[index];
                     return GestureDetector(
                       onTap: () {
                         Navigator.push(

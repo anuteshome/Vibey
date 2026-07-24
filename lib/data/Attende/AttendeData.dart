@@ -2,7 +2,7 @@ import "package:vibey/models/Attende/AttendeModel.dart";
 import "package:flutter/material.dart";
 
 class Event {
-  final List<EventModel> event = [
+  final List<EventModel> events = [
     EventModel(
       Name: "Addis Music Festival",
       Date: "Jull 30",
