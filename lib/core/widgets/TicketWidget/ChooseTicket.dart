@@ -107,7 +107,7 @@ class ChooseTicket extends StatelessWidget {
                         ]
                       ),
                       Container(
-                        width:130,height:50,
+                        width:180,height:50,
                         decoration: BoxDecoration(
                           color: Color(0xFF6C5CE7),
                           borderRadius:BorderRadius.circular(12)
