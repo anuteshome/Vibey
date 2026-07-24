@@ -18,7 +18,7 @@ class Event {
       About:" ait as the project grows But don't  nd you'll naturally refactor  worry about that now. It works,.",
       Catagory: "Art",
       isFeatured:true,
-      isUpcoming:true,
+      isUpcoming:false,
     ),
     EventModel(
       Name: "Flutter Developer Meet",
@@ -34,7 +34,8 @@ class Event {
       Organizer: "Kana Warehouse",
       About:"But don't worry about that now. It works, and you'll naturally refactor it as the project grows.",
       Catagory: "Music",
-      isFeatured:false
+      isFeatured:false,
+      isUpcoming:true,
 
     ),
 
@@ -53,6 +54,7 @@ class Event {
       About:" and you'll naturally refactor it as the project grows But don't worry about that now. It works,.",
       Catagory: "Tech",
       isFeatured:true,
+      isUpcoming:false
     ),
   ];
 
