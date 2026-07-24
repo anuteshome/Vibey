@@ -15,7 +15,9 @@ class TicketType extends StatelessWidget {
 Column(
   children:[
     Text("VIP"),
-    Text("Once a user can go from opening the app to successfully booking an event,")
+    SizedBox(
+      width:230,
+      child: Text("Once a user can go from opening the app to successfully booking an event,"))
   ]
 ),
 Text("ETB 2000")
