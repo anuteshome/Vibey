@@ -10,10 +10,8 @@ import "package:vibey/data/Attende/AttendeData.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
 
 class HomePage extends StatelessWidget {
-  // final featuredEvent;
   HomePage({super.key});
 
-  
   final authRepsitory = AuthRepository(Supabase.instance.client);
   final eventObj = Event();
 
@@ -26,10 +24,13 @@ class HomePage extends StatelessWidget {
     );
   }
 
-
-
   @override
   Widget build(BuildContext context) {
+    final featuredEvent = eventObj.events
+        .where((event) => event.isFeatured)
+        .toList();
+    final upcomingEvent = eventObj.events.where((e) => e.isUpcoming).toList();
+    
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 229, 226, 246),
       body: Container(
