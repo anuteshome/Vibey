@@ -47,7 +47,7 @@ class Catagorie {
 class TicketType {
   final String Type;
   final String Discription;
-  final double Price;
+  final String Price;
 
   TicketType({
     required this.Type,

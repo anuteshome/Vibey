@@ -130,7 +130,37 @@ class Event {
       color: Colors.white,
     ),
     Catagorie(Name: "Tech", icon: Ionicons.laptop_outline, color: Colors.white),
-    Catagorie(Name: "Art", icon: Ionicons.color_palette_outline, color: Colors.white),
-    Catagorie(Name: "Gaming", icon: Ionicons.game_controller_outline, color: Colors.white),
+    Catagorie(
+      Name: "Art",
+      icon: Ionicons.color_palette_outline,
+      color: Colors.white,
+    ),
+    Catagorie(
+      Name: "Gaming",
+      icon: Ionicons.game_controller_outline,
+      color: Colors.white,
+    ),
+  ];
+
+  final List<TicketType> TicketData = [
+    TicketType(
+      Type: "Vip",
+      Discription:
+          "irst complete product flow. After that, integrating Supabase",
+      Price: "2,000",
+    ),
+
+    TicketType(
+      Type: "Standard",
+      Discription: "complete product flow. After that, integrating Supabase",
+      Price: "1,200",
+    ),
+
+    TicketType(
+      Type: "Early Bird",
+      Discription:
+          "product flow. After that, irst complete  integrating Supabase",
+      Price: "800",
+    ),
   ];
 }
