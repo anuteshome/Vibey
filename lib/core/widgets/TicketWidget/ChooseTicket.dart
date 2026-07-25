@@ -219,20 +219,25 @@ class _ChooseTicketState extends State<ChooseTicket> {
                           ),
                         ],
                       ),
-                      Container(
-                        width: 180,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          color: Color(0xFF6C5CE7),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Continue",
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
+                      GestureDetector(
+                        onTap:(){
+                          Navigator.push(context,MaterialPageRoute(builder:(context)=>))
+                        },
+                        child: Container(
+                          width: 180,
+                          height: 50,
+                          decoration: BoxDecoration(
+                            color: Color(0xFF6C5CE7),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Center(
+                            child: Text(
+                              "Continue",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                         ),
