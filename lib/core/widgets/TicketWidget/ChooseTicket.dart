@@ -27,20 +27,21 @@ class _ChooseTicketState extends State<ChooseTicket> {
   }
 
   void DecreaseQuantinty() {
-    setState(() {
-      if (_SelectedTickets == null || Quantity <= 1) {
+    if (_SelectedTickets == null || Quantity <= 1) {
         return;
       }
+
+    setState(() {
       Quantity--;
       _CurrentPrice = Quantity * int.parse(_SelectedTickets!.Price);
     });
   }
 
   void IncreaseQuantity() {
-    setState(() {
-      if (_SelectedTickets == null) {
+     if (_SelectedTickets == null) {
         return;
       }
+    setState(() {
       Quantity++;
       _CurrentPrice = Quantity * int.parse(_SelectedTickets!.Price);
     });
@@ -112,7 +113,7 @@ class _ChooseTicketState extends State<ChooseTicket> {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              DecreaseQuantinty;
+                              DecreaseQuantinty();
                             },
                             child: Container(
                               width: 40,
@@ -148,7 +149,7 @@ class _ChooseTicketState extends State<ChooseTicket> {
                           SizedBox(width: 10),
                           GestureDetector(
                             onTap: () {
-                              IncreaseQuantity;
+                              IncreaseQuantity();
                             },
                             child: Container(
                               width: 40,
