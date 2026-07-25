@@ -5,10 +5,10 @@ import "package:vibey/models/Attende/AttendeModel.dart";
 class YourSelection extends StatelessWidget {
   final EventModel event;
   final int Quantity;
-  // final TicketTypes SelectedTicket;
+  final TicketTypes _SelectedTickets;
   final int SubTotal;
 
-  const YourSelection({super.key, required this.event,required this.Quantity,required this.SubTotal,});
+  const YourSelection({super.key, required this.event,required this.Quantity,required this.SubTotal,required this._SelectedTickets});
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +84,7 @@ class YourSelection extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  "event.ticketTypes.Type",
+                                  _SelectedTickets.Type,
                                   style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,

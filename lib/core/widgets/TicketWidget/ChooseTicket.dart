@@ -226,7 +226,7 @@ class _ChooseTicketState extends State<ChooseTicket> {
                                     event: widget.event,
                                     SubTotal:_CurrentPrice,
                                     Quantity: Quantity,
-                                    // SelectedTicket:,
+                                    SelectedTickets:_SelectedTickets!,
 
                                     ),
                             ),
