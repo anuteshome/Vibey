@@ -10,6 +10,7 @@ class YourSelection extends StatelessWidget {
 
   const YourSelection({super.key, required this.event,required this.Quantity,required this.SubTotal,required this._SelectedTickets});
 
+  
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -264,7 +265,7 @@ class YourSelection extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  "200",
+                               " ${ event.ServiceFee}",
                                   style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
@@ -311,7 +312,7 @@ class YourSelection extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  "4200",
+                                 "${SubTotal+ event.ServiceFee}",
                                   style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
