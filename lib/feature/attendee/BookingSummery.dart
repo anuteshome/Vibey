@@ -15,7 +15,7 @@ class BookingSummery extends StatelessWidget {
       body: Column(
         children:[
           TicketEvent(event: event,),
-          YourSelection()
+          YourSelection(event: event,)
         ]
       ),
     );
