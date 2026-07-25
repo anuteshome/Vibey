@@ -18,7 +18,12 @@ class TicketType extends StatelessWidget {
               color:Colors.white,
               borderRadius: BorderRadius.circular(12),
               boxShadow: [
-                BoxShadow(color: Colors.black.withOpacity(0.2)),
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.2),
+                  blurRadius: 8,
+                  spreadRadius: 2,
+                  offset: const Offset(0,4)
+                  ),
 
               ]
               // border: Border.all(color: Color.fromARGB(255, 153, 144, 222))
