@@ -198,7 +198,7 @@ class _ChooseTicketState extends State<ChooseTicket> {
                             ),
                           ),
                           Text(
-                            "${_CurrentPrice}",
+                            "ETB $_CurrentPrice",
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
