@@ -223,7 +223,8 @@ class _ChooseTicketState extends State<ChooseTicket> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => BookingSummery(),
+                              builder: (context) =>
+                               BookingSummery(event:widget.event),
                             ),
                           );
                         },

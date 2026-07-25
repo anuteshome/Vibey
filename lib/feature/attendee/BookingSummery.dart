@@ -1,13 +1,15 @@
 import "package:flutter/material.dart";
+import "package:vibey/models/Attende/AttendeModel.dart";
 
 class BookingSummery extends StatelessWidget {
-  const BookingSummery({super.key});
+  final EventModel event;
+  const BookingSummery({super.key,required this.event});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Booking Summery)")),
-         body:Text("Booking summery")
-      );
+      body: Text("event.Name"),
+    );
   }
 }
