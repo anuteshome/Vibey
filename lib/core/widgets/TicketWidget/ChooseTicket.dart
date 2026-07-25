@@ -222,7 +222,13 @@ class _ChooseTicketState extends State<ChooseTicket> {
                             context,
                             MaterialPageRoute(
                               builder: (context) =>
-                                  BookingSummery(event: widget.event),
+                                  BookingSummery(
+                                    event: widget.event,
+                                    SubTotal:_CurrentPrice,
+                                    Quantity: Quantity,
+                                    // SelectedTicket:,
+
+                                    ),
                             ),
                           );
                         },
