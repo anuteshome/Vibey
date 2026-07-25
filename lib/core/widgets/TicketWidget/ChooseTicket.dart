@@ -50,7 +50,10 @@ class _ChooseTicketState extends State<ChooseTicket> {
                   onTap: () {
                     _SelectedTicket(index);
                   },
-                  child: TicketType(ticket: ticket),
+                  child: TicketType(
+                    ticket: ticket,
+                    isSelected:_PassIndex==index
+                    ),
                 );
               },
             ),
