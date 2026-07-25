@@ -5,8 +5,9 @@ import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 
 class ChooseTicket extends StatefulWidget {
-  const ChooseTicket({super.key});
-
+    final EventModel event;
+  const ChooseTicket({super.key,required this.event});
+ 
   @override
   State<ChooseTicket> createState() => _ChooseTicketState();
 }
@@ -28,10 +29,10 @@ class _ChooseTicketState extends State<ChooseTicket> {
   }
 
   void DecreaseQuantinty() {
-     debugPrint("Decrease button pressed");
+    debugPrint("Decrease button pressed");
     if (_SelectedTickets == null || Quantity <= 1) {
-        return;
-      }
+      return;
+    }
 
     setState(() {
       Quantity--;
@@ -40,10 +41,10 @@ class _ChooseTicketState extends State<ChooseTicket> {
   }
 
   void IncreaseQuantity() {
-     debugPrint("Increase button pressed");
-     if (_SelectedTickets == null) {
-        return;
-      }
+    debugPrint("Increase button pressed");
+    if (_SelectedTickets == null) {
+      return;
+    }
     setState(() {
       Quantity++;
       _CurrentPrice = Quantity * int.parse(_SelectedTickets!.Price);
@@ -74,9 +75,9 @@ class _ChooseTicketState extends State<ChooseTicket> {
             ListView.builder(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
-              itemCount: eventObj.TicketData.length,
+              itemCount: widget.event.ticketTypes.length,
               itemBuilder: (context, index) {
-                final ticket = eventObj.TicketData[index];
+                final ticket = widget.event.ticketTypes[index];
 
                 return GestureDetector(
                   onTap: () {

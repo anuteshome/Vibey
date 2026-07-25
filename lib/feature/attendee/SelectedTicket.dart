@@ -20,7 +20,7 @@ class SelectedEvent extends StatelessWidget {
             children: [
               TicketEvent(event: event,), 
               SizedBox(height: 10), 
-              ChooseTicket()],
+              ChooseTicket(event:event)],
           ),
         ),
       ),

@@ -3,6 +3,7 @@ import "package:flutter/material.dart";
 class EventModel {
   final String Name;
   final String Date;
+  final List<TicketTypes> ticketTypes;
   final String Time;
   final String Location;
   final String Price;
@@ -21,6 +22,7 @@ class EventModel {
     required this.Name,
     required this.Date,
     required this.Type,
+    required this.ticketTypes,
     required this.Time,
     required this.Location,
     required this.Price,
