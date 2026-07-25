@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import "package:vibey/core/widgets/TicketWidget/TicketType.dart";
 import "package:vibey/data/Attende/AttendeData.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
+import "package:vibey/models/Attende/AttendeModel.dart";
 
 class ChooseTicket extends StatefulWidget {
   const ChooseTicket({super.key});
@@ -9,10 +10,14 @@ class ChooseTicket extends StatefulWidget {
   @override
   State<ChooseTicket> createState() => _ChooseTicketState();
 }
+TicketTypes? _SelectedTickets;
 
 class _ChooseTicketState extends State<ChooseTicket> {
+
+
   int? _PassIndex;
   int Quantity = 1;
+  int? _CurrentPrice;
 
   void _SelectedTicket(int index) {
     setState(() {
@@ -30,6 +35,10 @@ class _ChooseTicketState extends State<ChooseTicket> {
     setState(() {
       Quantity++;
     });
+  }
+
+  void CuurentPrice() {
+    setState(() {});
   }
 
   @override
@@ -59,6 +68,7 @@ class _ChooseTicketState extends State<ChooseTicket> {
               itemCount: eventObj.TicketData.length,
               itemBuilder: (context, index) {
                 final ticket = eventObj.TicketData[index];
+
                 return GestureDetector(
                   onTap: () {
                     _SelectedTicket(index);
@@ -120,7 +130,7 @@ class _ChooseTicketState extends State<ChooseTicket> {
                               ),
                               child: Center(
                                 child: Text(
-                                " ${Quantity}",
+                                  " ${Quantity}",
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
@@ -181,7 +191,7 @@ class _ChooseTicketState extends State<ChooseTicket> {
                             ),
                           ),
                           Text(
-                            "ETB 5000",
+                            "${_CurrentPrice}}",
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
