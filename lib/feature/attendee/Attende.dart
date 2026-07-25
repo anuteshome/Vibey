@@ -4,9 +4,11 @@ import "package:vibey/feature/attendee/homepage_screen.dart";
 import "package:vibey/feature/attendee/myticket_screen.dart";
 import "package:vibey/feature/attendee/profile_screen.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
+import "package:vibey/models/Attende/AttendeModel.dart";
 
 class AttendePage extends StatefulWidget {
-  const AttendePage({super.key});
+  final EventModel event;
+  const AttendePage({super.key,required this.event});
 
   @override
   State<AttendePage> createState() => _AttendePageState();

@@ -57,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
         ScaffoldMessenger.of(
           context,
         ).showSnackBar(SnackBar(content: Text("Login success")));
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => AttendePage()));
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => AttendePage(event:event)));
       }
       debugPrint('User ID: ${response.user!.id}');
       debugPrint('Email: ${response.user!.email}');
