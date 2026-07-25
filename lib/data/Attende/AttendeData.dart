@@ -147,13 +147,13 @@ class Event {
       Type: "Vip",
       Discription:
           "irst complete product flow. After that, integrating Supabase",
-      Price: "2,000",
+      Price: "2000",
     ),
 
     TicketTypes(
       Type: "Standard",
       Discription: "complete product flow. After that, integrating Supabase",
-      Price: "1,200",
+      Price: "1200",
     ),
 
     TicketTypes(

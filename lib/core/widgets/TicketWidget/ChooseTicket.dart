@@ -16,9 +16,10 @@ class _ChooseTicketState extends State<ChooseTicket> {
 
   int? _PassIndex;
   int Quantity = 1;
-  int _CurrentPrice = 0;
+  int _CurrentPrice = 20;
 
   void _SelectedTicket(int index, TicketTypes ticket) {
+    debugPrint("Ticket selected: ${ticket.Price}");
     setState(() {
       _PassIndex = index;
       _SelectedTickets = ticket;
@@ -27,6 +28,7 @@ class _ChooseTicketState extends State<ChooseTicket> {
   }
 
   void DecreaseQuantinty() {
+     debugPrint("Decrease button pressed");
     if (_SelectedTickets == null || Quantity <= 1) {
         return;
       }
@@ -38,6 +40,7 @@ class _ChooseTicketState extends State<ChooseTicket> {
   }
 
   void IncreaseQuantity() {
+     debugPrint("Increase button pressed");
      if (_SelectedTickets == null) {
         return;
       }
