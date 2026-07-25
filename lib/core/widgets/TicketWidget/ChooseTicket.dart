@@ -5,19 +5,25 @@ import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 
 class ChooseTicket extends StatefulWidget {
-    final EventModel event;
-  const ChooseTicket({super.key,required this.event});
- 
+  final EventModel event;
+  const ChooseTicket({super.key, required this.event});
+
   @override
   State<ChooseTicket> createState() => _ChooseTicketState();
 }
 
 class _ChooseTicketState extends State<ChooseTicket> {
   TicketTypes? _SelectedTickets;
+  int _CurrentPrice=0;
+  @override
+  void initState() {
+    super.initState();
+
+    int _CurrentPrice = int.parse(widget.event.ticketTypes[2].Price);
+  }
 
   int? _PassIndex;
   int Quantity = 1;
-  int _CurrentPrice = 20;
 
   void _SelectedTicket(int index, TicketTypes ticket) {
     debugPrint("Ticket selected: ${ticket.Price}");
