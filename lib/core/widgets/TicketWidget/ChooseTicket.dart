@@ -15,15 +15,18 @@ class ChooseTicket extends StatefulWidget {
 class _ChooseTicketState extends State<ChooseTicket> {
   TicketTypes? _SelectedTickets;
   int _CurrentPrice=0;
+  int? _PassIndex;
+  int Quantity = 1;
+
   @override
   void initState() {
     super.initState();
-
-    int _CurrentPrice = int.parse(widget.event.ticketTypes[2].Price);
+   _PassIndex = 2;
+      _SelectedTickets = widget.event.ticketTypes[2];
+    int _CurrentPrice = int.parse(_SelectedTickets!.Price);
   }
 
-  int? _PassIndex;
-  int Quantity = 1;
+
 
   void _SelectedTicket(int index, TicketTypes ticket) {
     debugPrint("Ticket selected: ${ticket.Price}");
