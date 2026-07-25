@@ -12,7 +12,7 @@ class TicketType extends StatelessWidget {
       children:[
         // Text("Choose Ticket Type",style:TextStyle(fontSize:17,fontWeight:FontWeight.bold)),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 13,vertical: 17),
+          padding: const EdgeInsets.symmetric(horizontal: 13,vertical: 20),
           child: Container(
             decoration:BoxDecoration(
               color:Colors.white,
@@ -29,7 +29,7 @@ class TicketType extends StatelessWidget {
               // border: Border.all(color: Color.fromARGB(255, 153, 144, 222))
             ),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment:CrossAxisAlignment.start ,

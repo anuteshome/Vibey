@@ -11,11 +11,16 @@ class SelectedEvent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 229, 226, 246),
-      appBar: AppBar(title: Text("Event Detail Test")),
+      appBar: AppBar(
+         title: Center(child: Text("Select Event",style:TextStyle(fontSize:18,fontWeight:FontWeight.bold))),
+      ),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
-            children: [TicketEvent(event: event,), SizedBox(height: 10), ChooseTicket()],
+            children: [
+              TicketEvent(event: event,), 
+              SizedBox(height: 10), 
+              ChooseTicket()],
           ),
         ),
       ),
