@@ -26,30 +26,23 @@ class _ChooseTicketState extends State<ChooseTicket> {
     });
   }
 
-  void DecreaseQuantinty(ticket) {
+  void DecreaseQuantinty(TicketTypes? _SelectedTickets) {
     setState(() {
-      if (_SelectedTickets == null || Quantity <= 0) {
+      if (_SelectedTickets == null || Quantity <= 1) {
         return;
       }
       Quantity--;
-      _CurrentPrice = Quantity * int.parse(ticket.Price);
+      _CurrentPrice = Quantity * int.parse(_SelectedTickets.Price);
     });
   }
 
-  void IncreaseQuantity(ticket) {
+  void IncreaseQuantity(TicketTypes? _SelectedTickets) {
     setState(() {
       if (_SelectedTickets == null) {
         return;
       }
       Quantity++;
-      _CurrentPrice = Quantity * int.parse(ticket.price);
-    });
-  }
-
-  void CuurentPrice(TicketTypes ticket) {
-    setState(() {
-      _SelectedTickets = ticket;
-      _CurrentPrice = Quantity * int.parse(ticket.Price);
+      _CurrentPrice = Quantity * int.parse(_SelectedTickets.Price);
     });
   }
 
@@ -119,7 +112,7 @@ class _ChooseTicketState extends State<ChooseTicket> {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              DecreaseQuantinty(_SelectedTickets);
+                              DecreaseQuantinty;
                             },
                             child: Container(
                               width: 40,
@@ -155,7 +148,7 @@ class _ChooseTicketState extends State<ChooseTicket> {
                           SizedBox(width: 10),
                           GestureDetector(
                             onTap: () {
-                              IncreaseQuantity(_SelectedTickets);
+                              IncreaseQuantity;
                             },
                             child: Container(
                               width: 40,
