@@ -8,24 +8,23 @@ class Event {
       Name: "Addis Music Festival",
       ticketTypes :[
     TicketTypes(
+      Type: "Early Bird",
+      Discription:
+          "product flow. After that, irst complete  integrating Supabase",
+      Price: "800",
+    ),
+    TicketTypes(
+      Type: "Standard",
+      Discription: "complete product flow. After that, integrating Supabase",
+      Price: "1200",
+    ),
+    TicketTypes(
       Type: "Vip",
       Discription:
           "irst complete product flow. After that, integrating Supabase",
       Price: "2000",
     ),
 
-    TicketTypes(
-      Type: "Standard",
-      Discription: "complete product flow. After that, integrating Supabase",
-      Price: "1200",
-    ),
-
-    TicketTypes(
-      Type: "Early Bird",
-      Discription:
-          "product flow. After that, irst complete  integrating Supabase",
-      Price: "800",
-    ),
       ],
       Date: "Jull 30",
       Time: "10:00 AM",
@@ -47,18 +46,6 @@ class Event {
     EventModel(
       Name: "Flutter Developer Meet",
        ticketTypes :[
-    TicketTypes(
-      Type: "Vip",
-      Discription:
-          "irst complete product flow. After that, integrating Supabase",
-      Price: "3000",
-    ),
-
-    TicketTypes(
-      Type: "Standard",
-      Discription: "complete product flow. After that, integrating Supabase",
-      Price: "1200",
-    ),
 
     TicketTypes(
       Type: "Early Bird",
@@ -66,6 +53,19 @@ class Event {
           "product flow. After that, irst complete  integrating Supabase",
       Price: "800",
     ),
+    TicketTypes(
+      Type: "Standard",
+      Discription: "complete product flow. After that, integrating Supabase",
+      Price: "1200",
+    ),
+    TicketTypes(
+      Type: "Vip",
+      Discription:
+          "irst complete product flow. After that, integrating Supabase",
+      Price: "3000",
+    ),
+
+
       ],
       Date: "May 21",
       Time: "3:00 AM",
@@ -88,6 +88,18 @@ class Event {
     EventModel(
       Name: "Odoo Developer Meetup",
        ticketTypes :[
+         TicketTypes(
+      Type: "Early Bird",
+      Discription:
+          "product flow. After that, irst complete  integrating Supabase",
+      Price: "100",
+    ),
+         TicketTypes(
+      Type: "Standard",
+      Discription: "complete product flow. After that, integrating Supabase",
+      Price: "3200",
+    ),
+
     TicketTypes(
       Type: "Vip",
       Discription:
@@ -95,18 +107,8 @@ class Event {
       Price: "5000",
     ),
 
-    TicketTypes(
-      Type: "Standard",
-      Discription: "complete product flow. After that, integrating Supabase",
-      Price: "3200",
-    ),
-
-    TicketTypes(
-      Type: "Early Bird",
-      Discription:
-          "product flow. After that, irst complete  integrating Supabase",
-      Price: "100",
-    ),
+   
+   
       ],
       Date: "Feb 3",
       Time: "5:00 AM",
@@ -128,11 +130,11 @@ class Event {
     EventModel(
       Name: "Addis Festival",
        ticketTypes :[
-    TicketTypes(
-      Type: "Vip",
+   TicketTypes(
+      Type: "Early Bird",
       Discription:
-          "irst complete product flow. After that, integrating Supabase",
-      Price: "8000",
+          "product flow. After that, irst complete  integrating Supabase",
+      Price: "600",
     ),
 
     TicketTypes(
@@ -140,13 +142,13 @@ class Event {
       Discription: "complete product flow. After that, integrating Supabase",
       Price: "4000",
     ),
-
-    TicketTypes(
-      Type: "Early Bird",
+ TicketTypes(
+      Type: "Vip",
       Discription:
-          "product flow. After that, irst complete  integrating Supabase",
-      Price: "600",
+          "irst complete product flow. After that, integrating Supabase",
+      Price: "8000",
     ),
+    
       ],
       Type: "Featured",
       Date: "Jul 30",
@@ -170,23 +172,21 @@ class Event {
       Name: "Odoo Developer Meetup",
        ticketTypes :[
     TicketTypes(
-      Type: "Vip",
+      Type: "Early Bird",
       Discription:
-          "irst complete product flow. After that, integrating Supabase",
-      Price: "2500",
+          "product flow. After that, irst complete  integrating Supabase",
+      Price: "400",
     ),
-
     TicketTypes(
       Type: "Standard",
       Discription: "complete product flow. After that, integrating Supabase",
       Price: "1000",
     ),
-
-    TicketTypes(
-      Type: "Early Bird",
+     TicketTypes(
+      Type: "Vip",
       Discription:
-          "product flow. After that, irst complete  integrating Supabase",
-      Price: "400",
+          "irst complete product flow. After that, integrating Supabase",
+      Price: "2500",
     ),
       ],
       Date: "Feb 3",
@@ -211,10 +211,10 @@ class Event {
       Name: "Nest Developer Meetup",
        ticketTypes :[
     TicketTypes(
-      Type: "Vip",
+      Type: "Early Bird",
       Discription:
-          "irst complete product flow. After that, integrating Supabase",
-      Price: "900",
+          "product flow. After that, irst complete  integrating Supabase",
+      Price: "200",
     ),
 
     TicketTypes(
@@ -223,11 +223,11 @@ class Event {
       Price: "700",
     ),
 
-    TicketTypes(
-      Type: "Early Bird",
+        TicketTypes(
+      Type: "Vip",
       Discription:
-          "product flow. After that, irst complete  integrating Supabase",
-      Price: "200",
+          "irst complete product flow. After that, integrating Supabase",
+      Price: "900",
     ),
       ],
       Date: "Feb 3",
