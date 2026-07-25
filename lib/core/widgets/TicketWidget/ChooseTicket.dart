@@ -12,10 +12,23 @@ class ChooseTicket extends StatefulWidget {
 
 class _ChooseTicketState extends State<ChooseTicket> {
   int? _PassIndex;
+  int Quantity = 1;
 
   void _SelectedTicket(int index) {
     setState(() {
       _PassIndex = index;
+    });
+  }
+
+  void DecreaseQuantinty() {
+    setState(() {
+      Quantity--;
+    });
+  }
+
+  void IncreaseQuantity() {
+    setState(() {
+      Quantity++;
     });
   }
 
@@ -52,8 +65,8 @@ class _ChooseTicketState extends State<ChooseTicket> {
                   },
                   child: TicketType(
                     ticket: ticket,
-                    isSelected:_PassIndex==index
-                    ),
+                    isSelected: _PassIndex == index,
+                  ),
                 );
               },
             ),
@@ -79,52 +92,62 @@ class _ChooseTicketState extends State<ChooseTicket> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Row(
-                        children: [
-                          Container(
-                            width: 40,
-                            height: 40,
-                            decoration: BoxDecoration(
-                              color: Colors.grey[100],
-                              borderRadius: BorderRadius.circular(8),
+                      GestureDetector(
+                        onTap: () {
+                          DecreaseQuantinty();
+                        },
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 40,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                color: Colors.grey[100],
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: Icon(
+                                Ionicons.remove_outline,
+                                color: Colors.black,
+                              ),
                             ),
-                            child: Icon(
-                              Ionicons.remove_outline,
-                              color: Colors.black,
-                            ),
-                          ),
-                          SizedBox(width: 10),
-                          Container(
-                            width: 40,
-                            height: 40,
-                            decoration: BoxDecoration(
-                              color: Colors.grey[100],
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: Center(
-                              child: Text(
-                                "2",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
+                            SizedBox(width: 10),
+                            Container(
+                              width: 40,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                color: Colors.grey[100],
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: Center(
+                                child: Text(
+                                " ${Quantity}",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                          SizedBox(width: 10),
-                          Container(
-                            width: 40,
-                            height: 40,
-                            decoration: BoxDecoration(
-                              color: Colors.grey[100],
-                              borderRadius: BorderRadius.circular(8),
+                            SizedBox(width: 10),
+                            GestureDetector(
+                              onTap: () {
+                                IncreaseQuantity();
+                              },
+                              child: Container(
+                                width: 40,
+                                height: 40,
+                                decoration: BoxDecoration(
+                                  color: Colors.grey[100],
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: Icon(
+                                  Ionicons.add_outline,
+                                  color: Colors.black,
+                                ),
+                              ),
                             ),
-                            child: Icon(
-                              Ionicons.add_outline,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ],
                   ),
