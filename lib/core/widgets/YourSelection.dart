@@ -1,8 +1,10 @@
 import "package:flutter/material.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
+import "package:vibey/models/Attende/AttendeModel.dart";
 
 class YourSelection extends StatelessWidget {
-  const YourSelection({super.key});
+  final EventModel event;
+  const YourSelection({super.key, required this.event});
 
   @override
   Widget build(BuildContext context) {
@@ -328,7 +330,7 @@ class YourSelection extends StatelessWidget {
                       child: Container(
                         decoration: BoxDecoration(
                           color: Color.fromARGB(255, 232, 230, 248),
-                          borderRadius:BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(12),
                         ),
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
@@ -338,7 +340,11 @@ class YourSelection extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Icon(Ionicons.alarm_outline,size: 50,color:Color(0xFF6C5CE7)),
+                              Icon(
+                                Ionicons.alarm_outline,
+                                size: 50,
+                                color: Color(0xFF6C5CE7),
+                              ),
                               SizedBox(width: 10),
                               Expanded(
                                 child: Text(
@@ -348,33 +354,43 @@ class YourSelection extends StatelessWidget {
                               ),
                             ],
                           ),
-                         
                         ),
                       ),
                     ),
-                    
                   ),
-                           Padding(
-                             padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10),
-                             child: Container(
-                              decoration: BoxDecoration(
-                                color:Color(0XFF6C5CE7),
-                                borderRadius: BorderRadius.circular(8)
-                              ),
-                                         child:Padding(
-                                           padding: const EdgeInsets.symmetric(horizontal: 100,vertical: 15),
-                                           child: Center(child: Text("Proceed to payment",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold))),
-                                         )                
-                             ),
-                           ),
-                           SizedBox(height:20)
-
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 15,
+                      vertical: 10,
+                    ),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Color(0XFF6C5CE7),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 100,
+                          vertical: 15,
+                        ),
+                        child: Center(
+                          child: Text(
+                            "Proceed to payment",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20),
                 ],
               ),
             ),
           ),
         ),
-
       ],
     );
   }
