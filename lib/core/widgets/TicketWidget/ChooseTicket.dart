@@ -28,15 +28,21 @@ class _ChooseTicketState extends State<ChooseTicket> {
 
   void DecreaseQuantinty(ticket) {
     setState(() {
+      if (_SelectedTickets == null && Quantity <= 0) {
+        return;
+      }
       Quantity--;
-      CuurentPrice(ticket);
+      _CurrentPrice = Quantity * int.parse(ticket.Price);
     });
   }
 
   void IncreaseQuantity(ticket) {
     setState(() {
+      if (_SelectedTickets == null) {
+        return;
+      }
       Quantity++;
-      CuurentPrice(ticket);
+      _CurrentPrice = Quantity * int.parse(ticket.price);
     });
   }
 
