@@ -10,11 +10,10 @@ class ChooseTicket extends StatefulWidget {
   @override
   State<ChooseTicket> createState() => _ChooseTicketState();
 }
+
 TicketTypes? _SelectedTickets;
 
 class _ChooseTicketState extends State<ChooseTicket> {
-
-
   int? _PassIndex;
   int Quantity = 1;
   int? _CurrentPrice;
@@ -37,8 +36,11 @@ class _ChooseTicketState extends State<ChooseTicket> {
     });
   }
 
-  void CuurentPrice() {
-    setState(() {});
+  void CuurentPrice(TicketTypes ticket) {
+    setState(() {
+      _SelectedTickets = ticket;
+      _CurrentPrice = Quantity * int.parse(ticket.Price);
+    });
   }
 
   @override
