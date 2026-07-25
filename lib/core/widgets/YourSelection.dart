@@ -359,13 +359,16 @@ class YourSelection extends StatelessWidget {
                              child: Container(
                               decoration: BoxDecoration(
                                 color:Color(0XFF6C5CE7),
+                                borderRadius: BorderRadius.circular(8)
                               ),
                                          child:Padding(
                                            padding: const EdgeInsets.symmetric(horizontal: 100,vertical: 15),
                                            child: Center(child: Text("Proceed to payment",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold))),
                                          )                
                              ),
-                           )
+                           ),
+                           SizedBox(height:20)
+
                 ],
               ),
             ),
