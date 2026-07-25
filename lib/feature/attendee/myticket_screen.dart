@@ -4,7 +4,7 @@ import "package:vibey/core/widgets/TicketWidget/TicketEvent.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 
 class MyTicketPage extends StatelessWidget {
-  const MyTicketPage({super.key);
+  const MyTicketPage({super.key});
 
   @override
   Widget build(BuildContext context) {
