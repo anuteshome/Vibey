@@ -8,8 +8,8 @@ class BookingSummery extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Booking Summery)")),
-      body: Text("event.Name"),
+      appBar: AppBar(title: Text("Booking Summery")),
+      body: Text(event.Name),
     );
   }
 }
