@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import "package:vibey/core/widgets/TicketWidget/TicketType.dart";
 import "package:vibey/data/Attende/AttendeData.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
+import "package:vibey/feature/attendee/BookingSummery.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 
 class ChooseTicket extends StatefulWidget {
@@ -14,19 +15,17 @@ class ChooseTicket extends StatefulWidget {
 
 class _ChooseTicketState extends State<ChooseTicket> {
   TicketTypes? _SelectedTickets;
-  int _CurrentPrice=0;
+  int _CurrentPrice = 0;
   int? _PassIndex;
   int Quantity = 1;
 
   @override
   void initState() {
     super.initState();
-   _PassIndex = 2;
-      _SelectedTickets = widget.event.ticketTypes[2];
-     _CurrentPrice = int.parse(_SelectedTickets!.Price);
+    _PassIndex = 2;
+    _SelectedTickets = widget.event.ticketTypes[2];
+    _CurrentPrice = int.parse(_SelectedTickets!.Price);
   }
-
-
 
   void _SelectedTicket(int index, TicketTypes ticket) {
     debugPrint("Ticket selected: ${ticket.Price}");
@@ -220,8 +219,13 @@ class _ChooseTicketState extends State<ChooseTicket> {
                         ],
                       ),
                       GestureDetector(
-                        onTap:(){
-                          Navigator.push(context,MaterialPageRoute(builder:(context)=>))
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => BookingSummery(),
+                            ),
+                          );
                         },
                         child: Container(
                           width: 180,
