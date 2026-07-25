@@ -11,28 +11,32 @@ class ChooseTicket extends StatefulWidget {
   State<ChooseTicket> createState() => _ChooseTicketState();
 }
 
-TicketTypes? _SelectedTickets;
-
 class _ChooseTicketState extends State<ChooseTicket> {
+  TicketTypes? _SelectedTickets;
+
   int? _PassIndex;
   int Quantity = 1;
-  int? _CurrentPrice;
+  int _CurrentPrice = 0;
 
-  void _SelectedTicket(int index) {
+  void _SelectedTicket(int index, TicketTypes ticket) {
     setState(() {
       _PassIndex = index;
+      _SelectedTickets = ticket;
+      _CurrentPrice = Quantity * int.parse(ticket.Price);
     });
   }
 
-  void DecreaseQuantinty() {
+  void DecreaseQuantinty(ticket) {
     setState(() {
       Quantity--;
+      CuurentPrice(ticket);
     });
   }
 
-  void IncreaseQuantity() {
+  void IncreaseQuantity(ticket) {
     setState(() {
       Quantity++;
+      CuurentPrice(ticket);
     });
   }
 
@@ -73,7 +77,7 @@ class _ChooseTicketState extends State<ChooseTicket> {
 
                 return GestureDetector(
                   onTap: () {
-                    _SelectedTicket(index);
+                    _SelectedTicket(index, ticket);
                   },
                   child: TicketType(
                     ticket: ticket,
@@ -104,13 +108,14 @@ class _ChooseTicketState extends State<ChooseTicket> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      GestureDetector(
-                        onTap: () {
-                          DecreaseQuantinty();
-                        },
-                        child: Row(
-                          children: [
-                            Container(
+
+                      Row(
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              DecreaseQuantinty(_SelectedTickets);
+                            },
+                            child: Container(
                               width: 40,
                               height: 40,
                               decoration: BoxDecoration(
@@ -122,44 +127,44 @@ class _ChooseTicketState extends State<ChooseTicket> {
                                 color: Colors.black,
                               ),
                             ),
-                            SizedBox(width: 10),
-                            Container(
+                          ),
+                          SizedBox(width: 10),
+                          Container(
+                            width: 40,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              color: Colors.grey[100],
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: Center(
+                              child: Text(
+                                " ${Quantity}",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 10),
+                          GestureDetector(
+                            onTap: () {
+                              IncreaseQuantity(_SelectedTickets);
+                            },
+                            child: Container(
                               width: 40,
                               height: 40,
                               decoration: BoxDecoration(
                                 color: Colors.grey[100],
                                 borderRadius: BorderRadius.circular(8),
                               ),
-                              child: Center(
-                                child: Text(
-                                  " ${Quantity}",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
+                              child: Icon(
+                                Ionicons.add_outline,
+                                color: Colors.black,
                               ),
                             ),
-                            SizedBox(width: 10),
-                            GestureDetector(
-                              onTap: () {
-                                IncreaseQuantity();
-                              },
-                              child: Container(
-                                width: 40,
-                                height: 40,
-                                decoration: BoxDecoration(
-                                  color: Colors.grey[100],
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                child: Icon(
-                                  Ionicons.add_outline,
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -193,7 +198,7 @@ class _ChooseTicketState extends State<ChooseTicket> {
                             ),
                           ),
                           Text(
-                            "${_CurrentPrice}}",
+                            "${_CurrentPrice}",
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
