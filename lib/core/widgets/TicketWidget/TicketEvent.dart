@@ -2,7 +2,8 @@ import "package:flutter/material.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 
 class TicketEvent extends StatelessWidget {
-  const TicketEvent({super.key});
+  final EventModel event;
+  const TicketEvent({super.key, required this.event});
 
   @override
   Widget build(BuildContext context) {
