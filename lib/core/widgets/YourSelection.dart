@@ -348,15 +348,30 @@ class YourSelection extends StatelessWidget {
                               ),
                             ],
                           ),
+                         
                         ),
                       ),
                     ),
+                    
                   ),
+                           Padding(
+                             padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10),
+                             child: Container(
+                              decoration: BoxDecoration(
+                                color:Color(0XFF6C5CE7),
+                              ),
+                                         child:Padding(
+                                           padding: const EdgeInsets.symmetric(horizontal: 100,vertical: 15),
+                                           child: Center(child: Text("Proceed to payment",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold))),
+                                         )                
+                             ),
+                           )
                 ],
               ),
             ),
           ),
         ),
+
       ],
     );
   }
