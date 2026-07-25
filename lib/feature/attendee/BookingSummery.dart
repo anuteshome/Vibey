@@ -15,7 +15,7 @@ class BookingSummery extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
             backgroundColor: Color.fromARGB(255, 229, 226, 246),
-      appBar: AppBar(title: Text("Booking Summery")),
+      appBar: AppBar(title: Center(child: Text("Booking Summery",style:TextStyle(fontSize:18,fontWeight:FontWeight.bold)))),
       body: Column(
         children:[
           TicketEvent(event: event,),
