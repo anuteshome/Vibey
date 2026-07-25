@@ -26,23 +26,23 @@ class _ChooseTicketState extends State<ChooseTicket> {
     });
   }
 
-  void DecreaseQuantinty(TicketTypes? _SelectedTickets) {
+  void DecreaseQuantinty() {
     setState(() {
       if (_SelectedTickets == null || Quantity <= 1) {
         return;
       }
       Quantity--;
-      _CurrentPrice = Quantity * int.parse(_SelectedTickets.Price);
+      _CurrentPrice = Quantity * int.parse(_SelectedTickets!.Price);
     });
   }
 
-  void IncreaseQuantity(TicketTypes? _SelectedTickets) {
+  void IncreaseQuantity() {
     setState(() {
       if (_SelectedTickets == null) {
         return;
       }
       Quantity++;
-      _CurrentPrice = Quantity * int.parse(_SelectedTickets.Price);
+      _CurrentPrice = Quantity * int.parse(_SelectedTickets!.Price);
     });
   }
 
