@@ -327,17 +327,18 @@ class YourSelection extends StatelessWidget {
                     child: Center(
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 184, 178, 227),
+                          color: Color.fromARGB(255, 232, 230, 248),
+                          borderRadius:BorderRadius.circular(12),
                         ),
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
                             horizontal: 30,
-                            vertical: 30,
+                            vertical: 20,
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Icon(Ionicons.alarm_outline),
+                              Icon(Ionicons.alarm_outline,size: 50,color:Color(0xFF6C5CE7)),
                               SizedBox(width: 10),
                               Expanded(
                                 child: Text(
