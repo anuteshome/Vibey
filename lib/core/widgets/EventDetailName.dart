@@ -1,10 +1,11 @@
 import "package:flutter/material.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
+import "package:vibey/feature/attendee/SelectedTicket.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 
 class EventDetailName extends StatelessWidget {
   final EventModel event;
-  const EventDetailName({super.key,required this.event});
+  const EventDetailName({super.key, required this.event});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class EventDetailName extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-               event.Name,
+                event.Name,
                 style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
               ),
               Column(
@@ -58,7 +59,7 @@ class EventDetailName extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(right: 120, left: 20, top: 10),
           child: Text(
-           event.Discription,
+            event.Discription,
             style: TextStyle(color: Colors.grey[800]),
           ),
         ),
@@ -101,7 +102,10 @@ class EventDetailName extends StatelessWidget {
                               fontSize: 15,
                             ),
                           ),
-                          Text("${event.Date }" ",${event.Time}"),
+                          Text(
+                            "${event.Date}"
+                            ",${event.Time}",
+                          ),
                         ],
                       ),
                     ],
@@ -143,13 +147,13 @@ class EventDetailName extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                           "Location",
+                            "Location",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 15,
                             ),
                           ),
-                          Text( event.Location,),
+                          Text(event.Location),
                         ],
                       ),
                     ],
@@ -263,10 +267,7 @@ class EventDetailName extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
               SizedBox(height: 5),
-              Text(
-               event.About,
-                style: TextStyle(color: Colors.grey[800]),
-              ),
+              Text(event.About, style: TextStyle(color: Colors.grey[800])),
             ],
           ),
         ),
@@ -314,36 +315,46 @@ class EventDetailName extends StatelessWidget {
                         child: Icon(Ionicons.heart_outline),
                       ),
                       SizedBox(width: 20),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Color(0xFF6C5CE7),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 25,
-                            vertical: 7,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SelectedEvent(event: event),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xFF6C5CE7),
+                            borderRadius: BorderRadius.circular(12),
                           ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                "Book Now",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 17,
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 25,
+                              vertical: 7,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "Book Now",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 17,
+                                  ),
                                 ),
-                              ),
-                              Text(
-                                "Get Your Ticket",
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            ],
+                                Text(
+                                  "Get Your Ticket",
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
-                      SizedBox(height: 40,),
+                      SizedBox(height: 40),
                     ],
                   ),
                 ],
