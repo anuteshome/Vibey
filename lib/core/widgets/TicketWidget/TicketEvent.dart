@@ -35,7 +35,7 @@ class TicketEvent extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Addis Music Festival ",
+                    event.Name,
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 3),
@@ -45,7 +45,7 @@ class TicketEvent extends StatelessWidget {
                   ),
                   SizedBox(height: 3),
                   Text(
-                    "Minlium Hall, Addis Ababa",
+                    event.Location,
                     style: TextStyle(color: Colors.grey[700]),
                   ),
                 ],
