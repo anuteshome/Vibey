@@ -12,7 +12,7 @@ class SelectedEvent extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 229, 226, 246),
       appBar: AppBar(
-         title: Center(child: Text("Select Event",style:TextStyle(fontSize:18,fontWeight:FontWeight.bold))),
+         title: Center(child: Text("Select Ticket",style:TextStyle(fontSize:18,fontWeight:FontWeight.bold))),
       ),
       body: SingleChildScrollView(
         child: Center(
