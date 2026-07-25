@@ -23,7 +23,7 @@ class _ChooseTicketState extends State<ChooseTicket> {
     super.initState();
    _PassIndex = 2;
       _SelectedTickets = widget.event.ticketTypes[2];
-    int _CurrentPrice = int.parse(_SelectedTickets!.Price);
+     _CurrentPrice = int.parse(_SelectedTickets!.Price);
   }
 
 
@@ -211,7 +211,7 @@ class _ChooseTicketState extends State<ChooseTicket> {
                             ),
                           ),
                           Text(
-                            "ETB $_CurrentPrice",
+                            "ETB ${_CurrentPrice}",
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
