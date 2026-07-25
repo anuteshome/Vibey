@@ -24,7 +24,7 @@ class TicketEvent extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   image: DecorationImage(
-                    image: AssetImage("assets/image/image.png"),
+                    image: AssetImage(event.Image),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -40,7 +40,7 @@ class TicketEvent extends StatelessWidget {
                   ),
                   SizedBox(height: 3),
                   Text(
-                    "Sat, 24 May 2025 6:00 AM",
+                   "${event.Date} ${event.Time}",
                     style: TextStyle(color: Colors.grey[700]),
                   ),
                   SizedBox(height: 3),
