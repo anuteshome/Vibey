@@ -31,7 +31,7 @@ class EventDetailName extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "ETB ${event.ticketTypes[2].Price}",
+                    "ETB ${event.ticketTypes[0].Price}",
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -292,7 +292,7 @@ class EventDetailName extends StatelessWidget {
                   Column(
                     children: [
                       Text(
-                        "ETB ${event.ticketTypes[2].Price}",
+                        "ETB ${event.ticketTypes[0].Price}",
                         style: TextStyle(
                           color: Color(0xFF6C5CE7),
                           fontWeight: FontWeight.bold,
