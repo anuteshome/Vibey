@@ -1,4 +1,6 @@
 import "package:flutter/material.dart";
+import "package:vibey/core/widgets/TicketWidget/ChooseTicket.dart";
+import "package:vibey/core/widgets/TicketWidget/TicketEvent.dart";
 
 
 class MyTicketPage extends StatelessWidget {
@@ -7,7 +9,19 @@ class MyTicketPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Text("MyTicket page")
+      backgroundColor: Color.fromARGB(255, 229, 226, 246),
+      appBar: AppBar(title: Text("Event Detail Test")),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              TicketEvent(),
+              SizedBox(height:10),
+              ChooseTicket()
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
