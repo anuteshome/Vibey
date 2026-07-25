@@ -7,8 +7,8 @@ import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 
 class AttendePage extends StatefulWidget {
-  final EventModel event;
-  const AttendePage({super.key,required this.event});
+  // final EventModel event;
+  const AttendePage({super.key});
 
   @override
   State<AttendePage> createState() => _AttendePageState();
