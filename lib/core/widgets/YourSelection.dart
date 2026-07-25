@@ -13,10 +13,10 @@ class YourSelection extends StatelessWidget {
             // color:Colors.white
           ),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10,vertical:20),
+              padding: const EdgeInsets.only(left: 10,right:10,top:20,bottom: 20),
               child: Container(
-                         decoration: BoxDecoration(
-              color:Colors.white,
+              decoration: BoxDecoration(
+              color: Colors.white,
               borderRadius:BorderRadius.circular(12),
                          ),
                 child: Column(
@@ -27,14 +27,14 @@ class YourSelection extends StatelessWidget {
                       child: Column(
                         children:[
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10) ,
+                          padding: const EdgeInsets.symmetric(horizontal: 20) ,
                           child: Text("Your Selection",style:TextStyle(fontSize:20,fontWeight:FontWeight.bold)),
                         ),
                         ]
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                      padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
                       child: Container(
                                         decoration: BoxDecoration(
                                   color:Colors.white,
@@ -56,7 +56,7 @@ class YourSelection extends StatelessWidget {
                                 ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 5),
+                              padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 5),
                               child: Container(
                                  decoration: BoxDecoration(
                                     border: Border(
@@ -171,12 +171,11 @@ class YourSelection extends StatelessWidget {
                                   ],
                                 ),
                             ),
-                     
                           ],
                         ),
                       ),
-                    )
-                
+                    ),
+                       SizedBox(height: 30,)
                   ]
                 ),
               ),
