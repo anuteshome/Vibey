@@ -1,10 +1,20 @@
 import "package:flutter/material.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 
-class TicketType extends StatelessWidget {
+class TicketType extends StatefulWidget {
   final TicketTypes ticket;
   final bool isSelected;
-  const TicketType({super.key, required this.ticket,required this.isSelected});
+  const TicketType({super.key, required this.ticket, required this.isSelected});
+
+  @override
+  State<TicketType> createState() => _TicketTypeState();
+}
+
+class _TicketTypeState extends State<TicketType> {
+  // void initState() {
+  //   super.initState();
+  //     widget.isSelected
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +29,9 @@ class TicketType extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
               boxShadow: [
                 BoxShadow(
-             color:isSelected ?Color(0xFF6C5CE7).withOpacity(0.4): const Color.fromARGB(255, 0, 0, 0).withOpacity(0.2),
+                  color: widget.isSelected
+                      ? Color(0xFF6C5CE7).withOpacity(0.4)
+                      : const Color.fromARGB(255, 0, 0, 0).withOpacity(0.2),
                   blurRadius: 15,
                   spreadRadius: 5,
                   offset: const Offset(0, 4),
@@ -37,7 +49,7 @@ class TicketType extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        ticket.Type,
+                        widget.ticket.Type,
                         style: TextStyle(
                           fontSize: 17,
                           fontWeight: FontWeight.bold,
@@ -47,7 +59,7 @@ class TicketType extends StatelessWidget {
                       SizedBox(
                         width: 250,
                         child: Text(
-                          ticket.Discription,
+                          widget.ticket.Discription,
                           style: TextStyle(
                             color: Colors.grey[700],
                             fontWeight: FontWeight.bold,
@@ -57,7 +69,7 @@ class TicketType extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    "ETB ${ticket.Price}",
+                    "ETB ${widget.ticket.Price}",
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                   ),
                 ],

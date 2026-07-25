@@ -22,13 +22,13 @@ class _ChooseTicketState extends State<ChooseTicket> {
   @override
   void initState() {
     super.initState();
-    _PassIndex = 2;
-    _SelectedTickets = widget.event.ticketTypes[2];
+    _PassIndex = 0;
+    _SelectedTickets = widget.event.ticketTypes[0];
     _CurrentPrice = int.parse(_SelectedTickets!.Price);
+  
   }
 
   void _SelectedTicket(int index, TicketTypes ticket) {
-    debugPrint("Ticket selected: ${ticket.Price}");
     setState(() {
       _PassIndex = index;
       _SelectedTickets = ticket;
@@ -37,7 +37,6 @@ class _ChooseTicketState extends State<ChooseTicket> {
   }
 
   void DecreaseQuantinty() {
-    debugPrint("Decrease button pressed");
     if (_SelectedTickets == null || Quantity <= 1) {
       return;
     }
@@ -49,7 +48,6 @@ class _ChooseTicketState extends State<ChooseTicket> {
   }
 
   void IncreaseQuantity() {
-    debugPrint("Increase button pressed");
     if (_SelectedTickets == null) {
       return;
     }
@@ -224,7 +222,7 @@ class _ChooseTicketState extends State<ChooseTicket> {
                             context,
                             MaterialPageRoute(
                               builder: (context) =>
-                               BookingSummery(event:widget.event),
+                                  BookingSummery(event: widget.event),
                             ),
                           );
                         },
