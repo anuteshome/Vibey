@@ -28,7 +28,7 @@ class _ChooseTicketState extends State<ChooseTicket> {
 
   void DecreaseQuantinty(ticket) {
     setState(() {
-      if (_SelectedTickets == null && Quantity <= 0) {
+      if (_SelectedTickets == null || Quantity <= 0) {
         return;
       }
       Quantity--;
