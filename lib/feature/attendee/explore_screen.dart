@@ -5,7 +5,7 @@ import "package:vibey/core/widgets/TicketWidget/TicketEvent.dart";
 // import "package:vibey/core/widgets/EventDetailImage.dart";
 // import "package:vibey/core/widgets/EventDetailName.dart";
 // import "package:vibey/models/Attende/AttendeModel.dart";
-// import "package:vibey/data/Attende/AttendeData.dart";
+import "package:vibey/data/Attende/AttendeData.dart";
 
 class ExplorePage extends StatelessWidget {
   // final TicketTypes ticketModel;
@@ -16,17 +16,17 @@ class ExplorePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 229, 226, 246),
       appBar: AppBar(title: Text("Event Detail Test")),
-      body: SingleChildScrollView(
-        child: Center(
-          child: Column(
-            children: [
-              TicketEvent(),
-              SizedBox(height:10),
-              ChooseTicket()
-            ],
-          ),
-        ),
-      ),
+      // body: SingleChildScrollView(
+      //   child: Center(
+      //     child: Column(
+      //       children: [
+      //         TicketEvent(event: ,),
+      //         SizedBox(height:10),
+      //         ChooseTicket()
+      //       ],
+      //     ),
+      //   ),
+      // ),
     );
   }
 }

@@ -1,10 +1,11 @@
 import "package:flutter/material.dart";
 import "package:vibey/core/widgets/TicketWidget/ChooseTicket.dart";
 import "package:vibey/core/widgets/TicketWidget/TicketEvent.dart";
-
+import "package:vibey/models/Attende/AttendeModel.dart";
 
 class MyTicketPage extends StatelessWidget {
-  const MyTicketPage({super.key});
+  final EventModel event;
+  const MyTicketPage({super.key,required this.event});
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +15,7 @@ class MyTicketPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Center(
           child: Column(
-            children: [
-              TicketEvent(),
-              SizedBox(height:10),
-              ChooseTicket()
-            ],
+            children: [TicketEvent(event: event,), SizedBox(height: 10), ChooseTicket()],
           ),
         ),
       ),
