@@ -174,7 +174,7 @@ class YourSelection extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  "2000",
+                                 _SelectedTickets.Price,
                                   style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,

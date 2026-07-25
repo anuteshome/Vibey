@@ -42,6 +42,7 @@ class Event {
       Catagory: "Art",
       isFeatured: false,
       isUpcoming: true,
+      ServiceFee:100,
     ),
     EventModel(
       Name: "Flutter Developer Meet",
@@ -83,6 +84,7 @@ class Event {
       Catagory: "Music",
       isFeatured: false,
       isUpcoming: true,
+      ServiceFee:300,
     ),
 
     EventModel(
@@ -126,6 +128,7 @@ class Event {
       Catagory: "Tech",
       isFeatured: true,
       isUpcoming: false,
+      ServiceFee:50,
     ),
     EventModel(
       Name: "Addis Festival",
@@ -166,6 +169,7 @@ class Event {
       Catagory: "Jazz",
       isFeatured: true,
       isUpcoming: false,
+      ServiceFee:400,
     ),
 
     EventModel(
@@ -205,6 +209,7 @@ class Event {
       Catagory: "Jazz",
       isFeatured: true,
       isUpcoming: false,
+      ServiceFee:200,
     ),
 
     EventModel(
@@ -246,6 +251,7 @@ class Event {
       Catagory: "Tech",
       isFeatured: false,
       isUpcoming: true,
+      ServiceFee:400,
     ),
   ];
 
