@@ -116,8 +116,11 @@ class BookingSuccess extends StatelessWidget {
               ),
             ),
             GestureDetector(
-              onTap:() {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => MyTicketPage(),))
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyTicketPage()),
+                );
               },
               child: Padding(
                 padding: const EdgeInsets.only(
