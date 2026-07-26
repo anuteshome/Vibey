@@ -33,19 +33,20 @@ class BookingSuccess extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20,vertical:10),
               child: Container(
                 decoration: BoxDecoration(
-                  color:Colors.grey[200]
+                  color:Colors.grey[100],
+                    borderRadius:BorderRadius.circular(12),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                  padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 15),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Column(
                            crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("booking ID"),
+                          Text("Booking ID",style:TextStyle(fontWeight:FontWeight.bold,color:Colors.grey)),
                         SizedBox(height: 10,),
-                         Text("VIB-2025-0524-7890")],
+                         Text("VIB-2025-0524-7890",style:TextStyle(fontSize:20,fontWeight:FontWeight.bold))],
                       ),
                       Icon(Ionicons.copy_outline),
                     ],
