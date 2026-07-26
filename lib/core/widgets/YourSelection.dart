@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
+import "package:vibey/feature/attendee/BookingSuccess.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 
 class YourSelection extends StatelessWidget {
@@ -8,9 +9,14 @@ class YourSelection extends StatelessWidget {
   final TicketTypes _SelectedTickets;
   final int SubTotal;
 
-  const YourSelection({super.key, required this.event,required this.Quantity,required this.SubTotal,required this._SelectedTickets});
+  const YourSelection({
+    super.key,
+    required this.event,
+    required this.Quantity,
+    required this.SubTotal,
+    required this._SelectedTickets,
+  });
 
-  
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -130,7 +136,7 @@ class YourSelection extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                 " ${Quantity}",
+                                  " ${Quantity}",
                                   style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
@@ -175,7 +181,7 @@ class YourSelection extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                 _SelectedTickets.Price,
+                                  _SelectedTickets.Price,
                                   style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
@@ -265,7 +271,7 @@ class YourSelection extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                               " ${ event.ServiceFee}",
+                                  " ${event.ServiceFee}",
                                   style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
@@ -312,7 +318,7 @@ class YourSelection extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                 "${SubTotal+ event.ServiceFee}",
+                                  "${SubTotal + event.ServiceFee}",
                                   style: TextStyle(
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
@@ -368,22 +374,32 @@ class YourSelection extends StatelessWidget {
                       horizontal: 15,
                       vertical: 10,
                     ),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Color(0XFF6C5CE7),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 100,
-                          vertical: 15,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => BookingSuccess(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Color(0XFF6C5CE7),
+                          borderRadius: BorderRadius.circular(8),
                         ),
-                        child: Center(
-                          child: Text(
-                            "Confirm booking",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 100,
+                            vertical: 15,
+                          ),
+                          child: Center(
+                            child: Text(
+                              "Confirm booking",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ),
