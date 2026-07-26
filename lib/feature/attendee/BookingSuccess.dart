@@ -75,15 +75,29 @@ class BookingSuccess extends StatelessWidget {
                            ),
              ),
              Padding(
-               padding: const EdgeInsets.symmetric(horizontal: 20,vertical:10),
+               padding: const EdgeInsets.symmetric(horizontal: 20,vertical:20),
                child: Container(
                 decoration: BoxDecoration(
                   color:Color(0xFF6C5CE7),
-                  borderRadius:BorderRadius.circular(12)
+                  borderRadius:BorderRadius.circular(10)
                 ),
                 child:Center(child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 40,vertical: 10),
-                  child: Text("View My Tickets",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold)),
+                  padding: const EdgeInsets.symmetric(horizontal: 40,vertical: 15),
+                  child: Text("View My Tickets",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold,fontSize:15)),
+                ))
+               ),
+             ),
+
+              Padding(
+               padding: const EdgeInsets.symmetric(horizontal: 20,vertical:20),
+               child: Container(
+                decoration: BoxDecoration(
+                  color:Colors.white,
+                  borderRadius:BorderRadius.circular(10)
+                ),
+                child:Center(child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 40,vertical: 15),
+                  child: Text("Back to Home",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold,fontSize:15)),
                 ))
                ),
              )
