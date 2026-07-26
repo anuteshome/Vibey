@@ -31,6 +31,11 @@ class BookingSuccess extends StatelessWidget {
               ],
             ),
           ),
+          Row(
+            children:[
+              Icon(Ionicons.calendar_clear_outline)
+            ]
+          )
         ],
       ),
     );
