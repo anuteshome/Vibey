@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/feature/attendee/homepage_screen.dart";
+import "package:vibey/feature/attendee/myticket_screen.dart";
 
 class BookingSuccess extends StatelessWidget {
   const BookingSuccess({super.key});
@@ -116,7 +117,7 @@ class BookingSuccess extends StatelessWidget {
             ),
             GestureDetector(
               onTap:() {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => ,))
+                Navigator.push(context, MaterialPageRoute(builder: (context) => MyTicketPage(),))
               },
               child: Padding(
                 padding: const EdgeInsets.only(
