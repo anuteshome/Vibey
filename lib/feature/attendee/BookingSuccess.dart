@@ -100,7 +100,7 @@ class BookingSuccess extends StatelessWidget {
                 ),
                 child:Center(child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 40,vertical: 15),
-                  child: Text("Back to Home",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold,fontSize:15)),
+                  child: Text("Back to Home",style:TextStyle(color:Color(0xFF6C5CE7),fontWeight:FontWeight.bold,fontSize:15)),
                 ))
                ),
              )
