@@ -33,7 +33,14 @@ class BookingSuccess extends StatelessWidget {
           ),
           Row(
             children:[
-              Icon(Ionicons.calendar_clear_outline)
+              Icon(Ionicons.calendar_clear_outline),
+              Text("Sat 24,May 2025 6:00PM"),
+            ]
+          ),
+           Row(
+            children:[
+              Icon(Ionicons.location_outline),
+              Text("Minilium Hall Addis Ababa"),
             ]
           )
         ],
