@@ -3,9 +3,11 @@ import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/feature/attendee/Attende.dart";
 import "package:vibey/feature/attendee/homepage_screen.dart";
 import "package:vibey/feature/attendee/myticket_screen.dart";
+import "package:vibey/models/Attende/AttendeModel.dart";
 
 class BookingSuccess extends StatelessWidget {
-  const BookingSuccess({super.key});
+  final EventModel event;
+  const BookingSuccess({super.key, required this.event});
 
   @override
   Widget build(BuildContext context) {
@@ -91,7 +93,7 @@ class BookingSuccess extends StatelessWidget {
                   Icon(Ionicons.calendar_clear_outline),
                   SizedBox(width: 20),
                   Text(
-                    "Sat 24, May 2025 6:00PM",
+                 "  ${ event.Date} ${event.Time}",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.grey[700],
@@ -107,7 +109,7 @@ class BookingSuccess extends StatelessWidget {
                   Icon(Ionicons.location_outline),
                   SizedBox(width: 20),
                   Text(
-                    "Minilium Hall Addis Ababa",
+                    "${event.Location}",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.grey[700],
