@@ -379,7 +379,7 @@ class YourSelection extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => BookingSuccess(),
+                            builder: (context) => BookingSuccess(event: event,),
                           ),
                         );
                       },
