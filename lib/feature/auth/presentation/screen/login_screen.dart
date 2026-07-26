@@ -54,9 +54,9 @@ class _LoginPageState extends State<LoginPage> {
       if (!mounted) return;
       if (response.user != null) {
         print("Login succesfully");
-        ScaffoldMessenger.of(
-          context,
-        ).showSnackBar(SnackBar(content: Text("Login success")));
+        // ScaffoldMessenger.of(
+        //   context,
+        // ).showSnackBar(SnackBar(content: Text("Login success")));
         Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => AttendePage()));
       }
       debugPrint('User ID: ${response.user!.id}');
