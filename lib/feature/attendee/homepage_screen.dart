@@ -158,7 +158,7 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              Container(
                 height: 80,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
