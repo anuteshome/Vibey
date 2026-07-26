@@ -60,7 +60,7 @@ class BookingSuccess extends StatelessWidget {
                 children:[
                   Icon(Ionicons.calendar_clear_outline),
                   SizedBox(width:20),
-                  Text("Sat 24,May 2025 6:00PM"),
+                  Text("Sat 24, May 2025 6:00PM",style:TextStyle(fontWeight:FontWeight.bold)),
                 ]
               ),
             ),
@@ -70,7 +70,7 @@ class BookingSuccess extends StatelessWidget {
                 children:[
                   Icon(Ionicons.location_outline),
                    SizedBox(width:20),
-                  Text("Minilium Hall Addis Ababa"),
+                  Text("Minilium Hall Addis Ababa",style:TextStyle(font)),
                 ]
                            ),
              )
