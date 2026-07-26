@@ -208,7 +208,7 @@ class HomePage extends StatelessWidget {
                   left: 20,
                   right: 20,
                   top: 15,
-                  bottom: 0,
+                  bottom: 7,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -237,6 +237,8 @@ class HomePage extends StatelessWidget {
                   // color:Colors.grey
                 ),
                 child: ListView.builder(
+                  padding: EdgeInsets.zero,
+
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
                   itemCount: upcomingEvent.length,
