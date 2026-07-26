@@ -11,7 +11,7 @@ class BookingSuccess extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top:100,bottom: 30),
+              padding: const EdgeInsets.only(top:150,bottom: 30),
               child: Container(
                 width: 100,
                 height: 100,
@@ -55,7 +55,7 @@ class BookingSuccess extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20,vertical:10),
+              padding: const EdgeInsets.symmetric(horizontal: 20,vertical:15),
               child: Row(
                 children:[
                   Icon(Ionicons.calendar_clear_outline),
