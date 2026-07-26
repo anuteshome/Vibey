@@ -21,6 +21,7 @@ class BookingSuccess extends StatelessWidget {
           Text("Your ticket has been booked successfully"),
           Container(
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
                   children: [Text("booking ID"), Text("VIB-2025-0524-7890")],
