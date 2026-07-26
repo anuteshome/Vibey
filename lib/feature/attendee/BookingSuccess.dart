@@ -11,7 +11,7 @@ class BookingSuccess extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top:90,bottom: 30),
+              padding: const EdgeInsets.only(top:100,bottom: 30),
               child: Container(
                 width: 100,
                 height: 100,
