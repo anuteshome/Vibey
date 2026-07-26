@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
+import "package:vibey/feature/attendee/Attende.dart";
 import "package:vibey/feature/attendee/homepage_screen.dart";
 import "package:vibey/feature/attendee/myticket_screen.dart";
 
@@ -158,7 +159,7 @@ class BookingSuccess extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
+                  MaterialPageRoute(builder: (context) => AttendePage()),
                 );
               },
               child: Padding(
