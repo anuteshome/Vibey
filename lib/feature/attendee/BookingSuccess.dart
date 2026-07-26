@@ -12,7 +12,7 @@ class BookingSuccess extends StatelessWidget {
     Container(
       width:100,height:100,
       decoration: BoxDecoration(
-        color:Color.fromARGB(255, 23, 18, 63),
+        color:Color(0xFF6C5CE7),
         borderRadius: BorderRadius.circular(50)
       ),
     )
