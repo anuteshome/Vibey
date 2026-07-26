@@ -70,7 +70,7 @@ class BookingSuccess extends StatelessWidget {
                 children:[
                   Icon(Ionicons.location_outline),
                    SizedBox(width:20),
-                  Text("Minilium Hall Addis Ababa",style:TextStyle(font)),
+                  Text("Minilium Hall Addis Ababa",style:TextStyle(fontWeight:FontWeight.bold)),
                 ]
                            ),
              )
