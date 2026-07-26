@@ -73,6 +73,18 @@ class BookingSuccess extends StatelessWidget {
                   Text("Minilium Hall Addis Ababa",style:TextStyle(fontWeight:FontWeight.bold,color:Colors.grey[700])),
                 ]
                            ),
+             ),
+             Padding(
+               padding: const EdgeInsets.symmetric(horizontal: 20,vertical:10),
+               child: Container(
+                decoration: BoxDecoration(
+                  color:Color(0xFF6C5CE7),
+                ),
+                child:Center(child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 40,vertical: 10),
+                  child: Text("View My Tickets"),
+                ))
+               ),
              )
           ],
         ),
