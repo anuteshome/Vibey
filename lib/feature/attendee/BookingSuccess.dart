@@ -75,7 +75,7 @@ class BookingSuccess extends StatelessWidget {
                            ),
              ),
              Padding(
-               padding: const EdgeInsets.symmetric(horizontal: 20,vertical:20),
+               padding: const EdgeInsets.only(left: 20,right:20,top:30,bottom:10),
                child: Container(
                 decoration: BoxDecoration(
                   color:Color(0xFF6C5CE7),
@@ -89,7 +89,7 @@ class BookingSuccess extends StatelessWidget {
              ),
 
               Padding(
-               padding: const EdgeInsets.symmetric(horizontal: 20,vertical:20),
+               padding: const EdgeInsets.only(left: 20,right:20,bottom:20),
                child: Container(
                 decoration: BoxDecoration(
                   color:Colors.white,
