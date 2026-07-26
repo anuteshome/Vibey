@@ -16,6 +16,7 @@ class BookingSuccess extends StatelessWidget {
               color: Color(0xFF6C5CE7),
               borderRadius: BorderRadius.circular(50),
             ),
+            child:Icon(Ionicons.checkmark_outline,size: 40,color: Colors.white,)
           ),
           Text("Booking Successfull!"),
           Text("Your ticket has been booked successfully"),
