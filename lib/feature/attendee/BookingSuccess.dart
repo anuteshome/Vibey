@@ -35,9 +35,9 @@ class BookingSuccess extends StatelessWidget {
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Column(
+                       crossAxisAlignment: CrossAxisAlignment.start,
                     children: [Text("booking ID"), Text("VIB-2025-0524-7890")],
                   ),
                   Icon(Ionicons.copy_outline),
