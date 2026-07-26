@@ -29,19 +29,28 @@ class BookingSuccess extends StatelessWidget {
                child:Text("Your ticket has been booked successfully",style: TextStyle(color:Colors.grey[700]),textAlign: TextAlign.center,),
               ),
            
-            Container(
-              decoration: BoxDecoration(
-                color:Colors.grey[200]
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                       crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [Text("booking ID"), Text("VIB-2025-0524-7890")],
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20,vertical:10),
+              child: Container(
+                decoration: BoxDecoration(
+                  color:Colors.grey[200]
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                           crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("booking ID"),
+                        SizedBox(height: 10,),
+                         Text("VIB-2025-0524-7890")],
+                      ),
+                      Icon(Ionicons.copy_outline),
+                    ],
                   ),
-                  Icon(Ionicons.copy_outline),
-                ],
+                ),
               ),
             ),
             Row(
