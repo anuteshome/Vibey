@@ -67,7 +67,7 @@ class HomePage extends StatelessWidget {
                             // color: Colors.grey,
                             border: Border.all(color: Colors.black),
                             image: DecorationImage(
-                              image: AssetImage("assets/image/profile.png"),
+                              image: AssetImage("assets/image/mypic.png"),
                               fit: BoxFit.cover,
                             ),
                           ),

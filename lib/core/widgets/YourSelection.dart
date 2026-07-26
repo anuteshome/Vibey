@@ -380,7 +380,7 @@ class YourSelection extends StatelessWidget {
                         ),
                         child: Center(
                           child: Text(
-                            "Proceed to payment",
+                            "Confirm booking",
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
