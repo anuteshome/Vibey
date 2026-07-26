@@ -10,7 +10,7 @@ class EventDetailImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 390,
-      height: 220,
+      height: 200,
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage(event.Image),
