@@ -15,7 +15,10 @@ class BookingSuccess extends StatelessWidget {
         color:Color(0xFF6C5CE7),
         borderRadius: BorderRadius.circular(50)
       ),
-    )
+    ),
+    Text("Booking Successfull!"),
+    Text("Your ticket has been booked successfully"),
+    
         ],
       )
     );
