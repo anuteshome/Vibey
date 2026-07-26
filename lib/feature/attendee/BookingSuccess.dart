@@ -23,7 +23,12 @@ class BookingSuccess extends StatelessWidget {
               ),
             ),
             Text("Booking Successfull!",style:TextStyle(fontSize:28,fontWeight:FontWeight.bold)),
-            Text("Your ticket has been booked successfully"),
+            SizedBox(height:15),
+             SizedBox(
+              width:190,
+               child:Text("Your ticket has been booked successfully",textAlign: TextAlign.center,),
+              ),
+           
             Container(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
