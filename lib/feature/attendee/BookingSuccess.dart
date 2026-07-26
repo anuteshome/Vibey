@@ -44,7 +44,7 @@ class BookingSuccess extends StatelessWidget {
                       Column(
                            crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("Booking ID",style:TextStyle(fontWeight:FontWeight.bold,color:Colors.grey)),
+                          Text("Booking ID",style:TextStyle(fontWeight:FontWeight.bold,color:Colors.grey[700])),
                         SizedBox(height: 10,),
                          Text("VIB-2025-0524-7890",style:TextStyle(fontSize:20,fontWeight:FontWeight.bold))],
                       ),
@@ -54,18 +54,24 @@ class BookingSuccess extends StatelessWidget {
                 ),
               ),
             ),
-            Row(
-              children:[
-                Icon(Ionicons.calendar_clear_outline),
-                Text("Sat 24,May 2025 6:00PM"),
-              ]
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20,vertical:10),
+              child: Row(
+                children:[
+                  Icon(Ionicons.calendar_clear_outline),
+                  Text("Sat 24,May 2025 6:00PM"),
+                ]
+              ),
             ),
-             Row(
-              children:[
-                Icon(Ionicons.location_outline),
-                Text("Minilium Hall Addis Ababa"),
-              ]
-            )
+             Padding(
+               padding: const EdgeInsets.symmetric(horizontal: 20,vertical:10),
+               child: Row(
+                children:[
+                  Icon(Ionicons.location_outline),
+                  Text("Minilium Hall Addis Ababa"),
+                ]
+                           ),
+             )
           ],
         ),
       ),
