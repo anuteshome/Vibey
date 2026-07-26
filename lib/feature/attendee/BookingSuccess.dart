@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "pa"
 
 
 class BookingSuccess extends StatelessWidget {
@@ -18,7 +19,19 @@ class BookingSuccess extends StatelessWidget {
     ),
     Text("Booking Successfull!"),
     Text("Your ticket has been booked successfully"),
-    
+    Container(
+child:Row(
+ children:[
+  Column(
+    children:[
+      Text("booking ID"),
+      Text("VIB-2025-0524-7890"),
+    ]
+  ),
+  Icon(Ionicons.copy_outline)
+ ]
+)
+    )
         ],
       )
     );
