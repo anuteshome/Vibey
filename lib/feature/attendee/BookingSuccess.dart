@@ -93,7 +93,10 @@ class BookingSuccess extends StatelessWidget {
                child: Container(
                 decoration: BoxDecoration(
                   color:Colors.white,
-                  borderRadius:BorderRadius.circular(10)
+                  borderRadius:BorderRadius.circular(10),
+                  border: Border.all(
+                    color:Color(0xFF6C5CE7)
+                  )
                 ),
                 child:Center(child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 40,vertical: 15),
