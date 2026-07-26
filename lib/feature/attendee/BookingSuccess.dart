@@ -22,7 +22,7 @@ class BookingSuccess extends StatelessWidget {
                 child:Icon(Ionicons.checkmark_outline,size: 40,color: Colors.white,)
               ),
             ),
-            Text("Booking Successfull!",style:Text),
+            Text("Booking Successfull!",style:TextStyle(fontSize:28,fontWeight:FontWeight.bold)),
             Text("Your ticket has been booked successfully"),
             Container(
               child: Row(
