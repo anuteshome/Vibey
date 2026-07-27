@@ -12,7 +12,7 @@ class EventDetailName extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 20, right: 20, top: 10),
+          padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -57,14 +57,14 @@ class EventDetailName extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(right: 120, left: 20, top: 10),
+          padding: const EdgeInsets.only(right: 120, left: 20, top: 15),
           child: Text(
             event.Discription,
             style: TextStyle(color: Colors.grey[800]),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
+          padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
           child: Container(
             decoration: BoxDecoration(
               color: Colors.white,
@@ -74,7 +74,7 @@ class EventDetailName extends StatelessWidget {
               ),
             ),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
               child: Column(
                 children: [
                   Row(
@@ -118,14 +118,14 @@ class EventDetailName extends StatelessWidget {
         ),
 
         Padding(
-          padding: const EdgeInsets.only(left: 20, right: 20),
+          padding: const EdgeInsets.only(left: 20, right: 20 ),
           child: Container(
             decoration: BoxDecoration(
               color: Colors.white,
               // borderRadius: BorderRadius.only(topLeft: Radius.circular(12),topRight: Radius.circular(12)),
             ),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
               child: Column(
                 children: [
                   Row(
@@ -172,7 +172,7 @@ class EventDetailName extends StatelessWidget {
               // borderRadius: BorderRadius.only(topLeft: Radius.circular(12),topRight: Radius.circular(12)),
             ),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
               child: Column(
                 children: [
                   Row(
@@ -219,7 +219,7 @@ class EventDetailName extends StatelessWidget {
               ),
             ),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
               child: Column(
                 children: [
                   Row(
@@ -258,7 +258,7 @@ class EventDetailName extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
