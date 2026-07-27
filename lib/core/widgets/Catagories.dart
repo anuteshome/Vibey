@@ -10,7 +10,7 @@ class Catagories extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Container(
-        width: 100,
+        width: 75,
         height: 80,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
