@@ -77,7 +77,7 @@ class YourSelection extends StatelessWidget {
                             padding: const EdgeInsets.only(
                               left: 15,
                               right: 15,
-                              top: 20,
+                              top: 25,
                               bottom: 10,
                             ),
                             child: Row(
@@ -121,9 +121,11 @@ class YourSelection extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 15,
-                              vertical: 10,
+                            padding: const EdgeInsets.only(
+                              left: 15,
+                              right: 15,
+                              top: 25,
+                              bottom: 10,
                             ),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
