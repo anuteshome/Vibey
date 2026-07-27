@@ -97,7 +97,7 @@ class _ChooseTicketState extends State<ChooseTicket> {
               },
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
+              padding: const EdgeInsets.only(left: 15, right: 15, top: 10,bottom: 10),
               child: Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -182,7 +182,7 @@ class _ChooseTicketState extends State<ChooseTicket> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 23),
               child: Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
