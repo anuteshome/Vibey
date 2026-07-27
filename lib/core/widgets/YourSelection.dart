@@ -45,7 +45,7 @@ class YourSelection extends StatelessWidget {
                     child: Column(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
+                          padding: const EdgeInsets.symmetric(horizontal: 25),
                           child: Text(
                             "Your Selection",
                             style: TextStyle(
