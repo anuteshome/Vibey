@@ -15,7 +15,7 @@ class TicketEvent extends StatelessWidget {
           color: Colors.white,
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
           child: Row(
             children: [
               Container(
