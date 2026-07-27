@@ -8,9 +8,9 @@ class Catagories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12),
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Container(
-        width: 80,
+        width: double.infinity,
         height: 80,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
