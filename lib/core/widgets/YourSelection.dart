@@ -339,7 +339,7 @@ class YourSelection extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 30),
+                  SizedBox(height: 35),
                   Padding(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 20,
@@ -400,7 +400,7 @@ class YourSelection extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
                             horizontal: 100,
-                            vertical: 15,
+                            vertical: 17,
                           ),
                           child: Center(
                             child: Text(
