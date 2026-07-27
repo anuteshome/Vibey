@@ -16,16 +16,18 @@ class BookingSummery extends StatelessWidget {
     return Scaffold(
             backgroundColor: Color.fromARGB(255, 229, 226, 246),
       appBar: AppBar(title: Center(child: Text("Booking Summery",style:TextStyle(fontSize:18,fontWeight:FontWeight.bold)))),
-      body: Column(
-        children:[
-          TicketEvent(event: event,),
-          YourSelection(
-            event: event,
-            Quantity: Quantity,
-           SubTotal:SubTotal ,
-           SelectedTickets:_SelectedTickets!,
-            )
-        ]
+      body: SingleChildScrollView(
+        child: Column(
+          children:[
+            TicketEvent(event: event,),
+            YourSelection(
+              event: event,
+              Quantity: Quantity,
+             SubTotal:SubTotal ,
+             SelectedTickets:_SelectedTickets!,
+              )
+          ]
+        ),
       ),
     );
   }
