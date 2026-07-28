@@ -14,15 +14,15 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  // final EventModel event;
-  const MyApp({super.key});
+  final EventModel event;
+  const MyApp({super.key,required this.event});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: SplashScreen(event:event),
     );
   }
 }
