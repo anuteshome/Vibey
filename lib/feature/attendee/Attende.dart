@@ -8,16 +8,30 @@ import "package:vibey/models/Attende/AttendeModel.dart";
 
 class AttendePage extends StatefulWidget {
   final EventModel event;
-  const AttendePage({super.key,required this.event});
+  const AttendePage({super.key, required this.event});
 
   @override
   State<AttendePage> createState() => _AttendePageState();
 }
 
-@override
-
-
 class _AttendePageState extends State<AttendePage> {
+
+
+@override
+void initState() {
+  super.initState();
+ final List<Widget> _Pages = [
+    HomePage(event: widget.event),
+    ExplorePage(),
+    MyTicketPage(event: widget.event),
+    ProfilePage(event: widget.event),
+  ];
+
+
+
+}
+
+
   int _selectedIndex = 0;
 
   void ChangePage(int index) {
@@ -26,13 +40,7 @@ class _AttendePageState extends State<AttendePage> {
     });
   }
 
-  final List<Widget> _Pages = [
-    HomePage(),
-    ExplorePage(),
-    MyTicketPage(event: widget.event,),
-    ProfilePage(event:event),
-  ];
-
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
