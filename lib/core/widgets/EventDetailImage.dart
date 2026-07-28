@@ -12,7 +12,7 @@ class EventDetailImage extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Container(
         width: double.infinity,
-        height: 220,
+        height: 250,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(event.Image),
