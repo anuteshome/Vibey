@@ -9,82 +9,23 @@ class TicketUpcoming extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-      child: Column(
-        children: [
-          TicketEvent(event: event),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      width: 45,
-                      height: 45,
-                      decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 215, 212, 242),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Icon(Ionicons.ticket_outline,color: Color(0xFF6C5CE7),),
-                    ),
-                    SizedBox(width: 10),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Ticket Type",
-                          style: TextStyle(fontWeight: FontWeight.bold),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+      child: Container(
+        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(12),
                         ),
-                        Text(
-                          "Erily Bird",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Color(0XFF6C5CE7),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-            
-                 Row(
-                  children: [
-                    Container(
-                      width: 45,
-                      height: 45,
-                      decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 215, 212, 242),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Icon(Ionicons.people,color: Color(0xFF6C5CE7),),
-                    ),
-                    SizedBox(width: 10),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Quantity",
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          "2",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Color(0XFF6C5CE7),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                             Row(
-                                     children: [
+        child: Column(
+          children: [
+            TicketEvent(event: event),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
                       Container(
                         width: 45,
                         height: 45,
@@ -92,18 +33,18 @@ class TicketUpcoming extends StatelessWidget {
                           color: Color.fromARGB(255, 215, 212, 242),
                           borderRadius: BorderRadius.circular(12),
                         ),
-                        child: Icon(Ionicons.wallet,color: Color(0xFF6C5CE7),),
+                        child: Icon(Ionicons.ticket_outline,color: Color(0xFF6C5CE7),),
                       ),
                       SizedBox(width: 10),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Total Paid",
+                            "Ticket Type",
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           Text(
-                            "ETB 2,000",
+                            "Erily Bird",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Color(0XFF6C5CE7),
@@ -111,50 +52,113 @@ class TicketUpcoming extends StatelessWidget {
                           ),
                         ],
                       ),
-                                     ],
-                                   ),
-              ],
-            ),
-          ),
-          SizedBox(height: 10,),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                   decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 225, 237, 224),
-                        borderRadius: BorderRadius.circular(12),
+                    ],
+                  ),
+              SizedBox(width: 10),
+                   Row(
+                    children: [
+                      Container(
+                        width: 45,
+                        height: 45,
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 215, 212, 242),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Icon(Ionicons.people,color: Color(0xFF6C5CE7),),
                       ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
-                    child: Row(
-                      children: [
-                        Icon(Ionicons.checkmark_circle,color:Colors.green),
-                        SizedBox(width: 3,),
-                        Text("Confirmed",style:TextStyle(color:Colors.green,fontWeight:FontWeight.bold,fontSize:15)),
-                      ],
+                      SizedBox(width: 10),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Quantity",
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            "2",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Color(0XFF6C5CE7),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  SizedBox(width: 10),
+                               Row(
+                                       children: [
+                        Container(
+                          width: 45,
+                          height: 45,
+                          decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 215, 212, 242),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Icon(Ionicons.wallet,color: Color(0xFF6C5CE7),),
+                        ),
+                        SizedBox(width: 10),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Total Paid",
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              "ETB 2,000",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Color(0XFF6C5CE7),
+                              ),
+                            ),
+                          ],
+                        ),
+                                       ],
+                                     ),
+                ],
+              ),
+            ),
+            SizedBox(height: 10,),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                     decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 225, 237, 224),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                      child: Row(
+                        children: [
+                          Icon(Ionicons.checkmark_circle,color:Colors.green),
+                          SizedBox(width: 3,),
+                          Text("Confirmed",style:TextStyle(color:Colors.green,fontWeight:FontWeight.bold,fontSize:15)),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                Container(
-                     decoration: BoxDecoration(
-                        color: Color(0XFF6C5CE7),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-                    child: Row(children: [
-                      Icon(Ionicons.film,color: Colors.white,),
-                      SizedBox(width: 10),
-                     Text("View Tickets",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold,fontSize:15))]),
+                  Container(
+                       decoration: BoxDecoration(
+                          color: Color(0XFF6C5CE7),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                      child: Row(children: [
+                        Icon(Ionicons.film,color: Colors.white,),
+                        SizedBox(width: 10),
+                       Text("View Tickets",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold,fontSize:15))]),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
