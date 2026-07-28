@@ -10,9 +10,9 @@ class FeatureEvents extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 6),
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 6),
       child: Container(
-        width: 320,
+        width: 350,
         height: 250,
         decoration: BoxDecoration(
           // color:Colors.grey,

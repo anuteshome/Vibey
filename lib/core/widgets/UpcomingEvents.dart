@@ -18,7 +18,7 @@ class UpcomingEvents extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 5),
+          padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -34,7 +34,7 @@ class UpcomingEvents extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                 ),
               ),
-              SizedBox(width: 7),
+              SizedBox(width: 5),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
