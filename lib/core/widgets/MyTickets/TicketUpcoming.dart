@@ -127,7 +127,7 @@ class TicketUpcoming extends StatelessWidget {
                 children: [
                   Container(
                      decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 225, 237, 224),
+                          color: Color.fromARGB(255, 236, 255, 235),
                           borderRadius: BorderRadius.circular(12),
                         ),
                     child: Padding(
