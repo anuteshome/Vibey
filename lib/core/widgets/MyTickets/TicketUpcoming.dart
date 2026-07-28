@@ -116,7 +116,7 @@ class TicketUpcoming extends StatelessWidget {
             children: [
               Container(
                  decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 215, 212, 242),
+                      color: Color.fromARGB(255, 225, 237, 224),
                       borderRadius: BorderRadius.circular(12),
                     ),
                 child: Padding(
@@ -131,7 +131,11 @@ class TicketUpcoming extends StatelessWidget {
                 ),
               ),
               Container(
-                child: Row(children: [Icon(Icons.lock), Text("View Tickets")]),
+                   decoration: BoxDecoration(
+                      color: Color(0XFF6C5CE7),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                child: Row(children: [Icon(Ionicons.film), Text("View Tickets")]),
               ),
             ],
           ),
