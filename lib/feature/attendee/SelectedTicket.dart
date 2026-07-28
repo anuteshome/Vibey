@@ -2,10 +2,14 @@ import "package:flutter/material.dart";
 import "package:vibey/core/widgets/TicketWidget/ChooseTicket.dart";
 import "package:vibey/core/widgets/TicketWidget/TicketEvent.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
+import "package:vibey/models/Attende/BookingModel.dart";
 
 class SelectedEvent extends StatelessWidget {
   final EventModel event;
-  const SelectedEvent({super.key,required this.event});
+     final BookingModel book;
+  final TicketTypes ticket;
+  const SelectedEvent({super.key,required this.event,required this.book,
+    required this.ticket});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +24,7 @@ class SelectedEvent extends StatelessWidget {
             children: [
               TicketEvent(event: event,), 
               SizedBox(height: 10), 
-              ChooseTicket(event:event)],
+              ChooseTicket(event:event,book:book,ticket:ticket)],
           ),
         ),
       ),
