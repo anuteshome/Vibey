@@ -27,7 +27,7 @@ class _ProfilePageState extends State<ProfilePage> {
       if (!mounted) return;
       Navigator.pushAndRemoveUntil(
         context,
-        MaterialPageRoute(builder: (context) => LoginPage(event:event)),
+        MaterialPageRoute(builder: (context) => LoginPage(event:widget.event)),
         (route) => false,
       );
     } finally {
