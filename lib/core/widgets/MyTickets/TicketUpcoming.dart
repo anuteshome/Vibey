@@ -9,7 +9,46 @@ class TicketUpcoming extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Column(children: [TicketEvent(event: event)]),
+      child: Column(children: [
+        TicketEvent(event: event),
+        Row(
+          children:[
+            Row(
+              children:[
+                Icon(Icons.lock),
+                Column(
+                  children: [
+                  Text("Text Type"),
+                  Text("Erily Bird")
+                  ],)
+              ]
+            ),
+
+            Row(
+              children:[
+                Icon(Icons.lock),
+                Column(
+                  children: [
+                  Text("Text Type"),
+                  Text("Erily Bird")
+                  ],)
+              ]
+            ),
+
+            Row(
+              children:[
+                Icon(Icons.lock),
+                Column(
+                  children: [
+                  Text("Text Type"),
+                  Text("Erily Bird")
+                  ],)
+              ]
+            )
+          ]
+        )
+        
+        ]),
     );
   }
 }
