@@ -13,8 +13,10 @@ void main() async {
     url: 'https://crzywgmtkkxzkkbeqxan.supabase.co',
     anonKey: 'sb_publishable_BheiLctkyMgyaYpgYxl3Wg_JIvknRmk',
   );
+
+   final bookData = books();
   final initialEvent = Event().events.first;
-  final initialBooking = bookingData.first;
+  final initialBooking = bookData.bookingData.first;
   runApp(MyApp(event: initialEvent, book: initialBooking));
 }
 
