@@ -3,9 +3,11 @@ import "package:vibey/feature/attendee/Attende.dart";
 import "package:vibey/feature/attendee/homepage_screen.dart";
 import "package:vibey/feature/auth/presentation/screen/login_screen.dart";
 import "package:supabase_flutter/supabase_flutter.dart";
+import "package:vibey/models/Attende/AttendeModel.dart";
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+  final EventModel event;
+  const SplashScreen({super.key,required this.event});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
