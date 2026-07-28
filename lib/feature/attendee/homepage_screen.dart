@@ -10,10 +10,13 @@ import "package:vibey/data/Attende/AttendeData.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/core/navigation/navigation_guard.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
+import "package:vibey/models/Attende/BookingModel.dart";
 
 class HomePage extends StatelessWidget {
   final EventModel event;
-  HomePage({super.key, required this.event});
+        final BookingModel book;
+  final TicketTypes ticket;
+  HomePage({super.key, required this.event,required this.book, required this.ticket});
 
   final authRepsitory = AuthRepository(Supabase.instance.client);
   final eventObj = Event();
@@ -23,7 +26,7 @@ class HomePage extends StatelessWidget {
     if (!context.mounted) return;
     Navigator.pushAndRemoveUntil(
       context,
-      MaterialPageRoute(builder: (context) => LoginPage(event: event)),
+      MaterialPageRoute(builder: (context) => LoginPage(event: event,book:book,ticket:ticket,)),
       (route) => false,
     );
   }

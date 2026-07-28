@@ -5,10 +5,13 @@ import "package:vibey/feature/attendee/Attende.dart";
 import "package:vibey/feature/attendee/homepage_screen.dart";
 import "package:vibey/feature/attendee/myticket_screen.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
+import "package:vibey/models/Attende/BookingModel.dart";
 
 class BookingSuccess extends StatelessWidget {
   final EventModel event;
-  const BookingSuccess({super.key, required this.event});
+      final BookingModel book;
+  final TicketTypes ticket;
+  const BookingSuccess({super.key, required this.event,required this.book,required this.ticket});
 
   @override
   Widget build(BuildContext context) {
@@ -124,7 +127,11 @@ class BookingSuccess extends StatelessWidget {
               onTap: () {
                 pushOnce(
                   context,
-                  MaterialPageRoute(builder: (context) => MyTicketPage(event:event)),
+                  MaterialPageRoute(builder: (context) => MyTicketPage(
+                    event:event,
+                     book: book,
+                      ticket: ticket,
+                    )),
                 );
               },
               child: Padding(
@@ -163,7 +170,7 @@ class BookingSuccess extends StatelessWidget {
               onTap: () {
                 pushOnce(
                   context,
-                  MaterialPageRoute(builder: (context) => AttendePage(event: event,)),
+                  MaterialPageRoute(builder: (context) => AttendePage(event: event,book:book,ticket:ticket)),
                 );
               },
               child: Padding(

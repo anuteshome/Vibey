@@ -5,10 +5,13 @@ import "package:vibey/core/widgets/TextField.dart";
 import "package:vibey/feature/auth/data/repository/auth_repository.dart";
 import "package:vibey/feature/auth/presentation/screen/login_screen.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
+import "package:vibey/models/Attende/BookingModel.dart";
 
 class SignUpPage extends StatefulWidget {
   final EventModel event;
-  SignUpPage({super.key, required this.event});
+            final BookingModel book;
+  final TicketTypes ticket;
+  SignUpPage({super.key, required this.event, required this.book, required this.ticket});
 
   @override
   State<SignUpPage> createState() => _SignUpPageState();
@@ -72,7 +75,7 @@ class _SignUpPageState extends State<SignUpPage> {
         }
         pushOnce(
           context,
-          MaterialPageRoute(builder: (context) => LoginPage(event: widget.event)),
+          MaterialPageRoute(builder: (context) => LoginPage(event: widget.event,book: widget.book,ticket:widget.ticket,)),
         );
       }
     } on AuthException catch (er) {
@@ -276,7 +279,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               pushOnce(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => LoginPage(event:widget.event),
+                                  builder: (context) => LoginPage(event:widget.event,book:widget.book,ticket:widget.ticket),
                                 ),
                               ),
                             },

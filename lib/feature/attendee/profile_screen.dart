@@ -3,10 +3,14 @@ import "package:vibey/feature/auth/data/repository/auth_repository.dart";
 import "package:supabase_flutter/supabase_flutter.dart";
 import "package:vibey/feature/auth/presentation/screen/login_screen.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
+import "package:vibey/models/Attende/BookingModel.dart";
+
 
 class ProfilePage extends StatefulWidget {
   final EventModel event;
-  const ProfilePage({super.key,required this.event});
+      final BookingModel book;
+  final TicketTypes ticket;
+  const ProfilePage({super.key,required this.event , required this.book, required this.ticket});
 
   @override
   State<ProfilePage> createState() => _ProfilePageState();
@@ -27,7 +31,7 @@ class _ProfilePageState extends State<ProfilePage> {
       if (!mounted) return;
       Navigator.pushAndRemoveUntil(
         context,
-        MaterialPageRoute(builder: (context) => LoginPage(event:widget.event)),
+        MaterialPageRoute(builder: (context) => LoginPage(event:widget.event,book: widget.book,ticket:widget.ticket,)),
         (route) => false,
       );
     } finally {

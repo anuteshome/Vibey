@@ -7,10 +7,13 @@ import "package:vibey/feature/auth/data/repository/auth_repository.dart";
 import "package:supabase_flutter/supabase_flutter.dart";
 import "package:vibey/feature/auth/presentation/screen/signup_screen.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
+import "package:vibey/models/Attende/BookingModel.dart";
 
 class LoginPage extends StatefulWidget {
   final EventModel event;
-  LoginPage({super.key,required this.event});
+          final BookingModel book;
+  final TicketTypes ticket;
+  LoginPage({super.key,required this.event,required this.book,required this.ticket});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -63,7 +66,7 @@ class _LoginPageState extends State<LoginPage> {
         // ).showSnackBar(SnackBar(content: Text("Login success")));
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => AttendePage(event: widget.event)),
+          MaterialPageRoute(builder: (context) => AttendePage(event: widget.event,book: widget.book,ticket:widget.ticket,)),
         );
       }
       debugPrint('User ID: ${response.user!.id}');
@@ -312,7 +315,7 @@ class _LoginPageState extends State<LoginPage> {
                       onTap: () => {
                         pushOnce(
                           context,
-                          MaterialPageRoute(builder: (context) => SignUpPage(event:widget.event)),
+                          MaterialPageRoute(builder: (context) => SignUpPage(event:widget.event,book: widget.book,ticket:widget.ticket,)),
                         ),
                       },
                       child: Text(

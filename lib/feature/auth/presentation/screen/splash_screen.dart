@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:vibey/data/Attende/BookingData.dart";
 import "package:vibey/feature/attendee/Attende.dart";
 import "package:vibey/feature/attendee/homepage_screen.dart";
 import "package:vibey/feature/auth/presentation/screen/login_screen.dart";
@@ -29,7 +30,17 @@ class _SplashScreenState extends State<SplashScreen> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => session != null ? AttendePage(event:widget.event) : LoginPage(event:widget.event),
+        builder: (context) => session != null
+            ? AttendePage(
+                event: widget.event,
+                book: bookingData.first,
+                ticket: widget.event.ticketTypes.first,
+              )
+            : LoginPage(
+                event: widget.event,
+                book: bookingData.first,
+                ticket: widget.event.ticketTypes.first,
+              ),
       ),
     );
   }

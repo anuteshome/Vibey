@@ -389,7 +389,7 @@ class YourSelection extends StatelessWidget {
                         pushOnce(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => BookingSuccess(event: event),
+                            builder: (context) => BookingSuccess(event: event,book:book,ticket:ticket),
                           ),
                         );
                       },

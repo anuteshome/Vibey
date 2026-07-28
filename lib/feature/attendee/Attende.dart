@@ -5,10 +5,13 @@ import "package:vibey/feature/attendee/myticket_screen.dart";
 import "package:vibey/feature/attendee/profile_screen.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
+import "package:vibey/models/Attende/BookingModel.dart";
 
 class AttendePage extends StatefulWidget {
   final EventModel event;
-  const AttendePage({super.key, required this.event});
+        final BookingModel book;
+  final TicketTypes ticket;
+  const AttendePage({super.key, required this.event,required this.book,required this.ticket});
 
   @override
   State<AttendePage> createState() => _AttendePageState();
@@ -21,10 +24,10 @@ class _AttendePageState extends State<AttendePage> {
   void initState() {
     super.initState();
        Pages = [
-      HomePage(event: widget.event),
+      HomePage(event: widget.event,book:widget.book,ticket:widget.ticket),
       ExplorePage(),
-      MyTicketPage(event: widget.event),
-      ProfilePage(event: widget.event),
+      MyTicketPage(event: widget.event,book:widget.book,ticket:widget.ticket),
+      ProfilePage(event: widget.event,book:widget.book,ticket:widget.ticket),
     ];
   }
 
