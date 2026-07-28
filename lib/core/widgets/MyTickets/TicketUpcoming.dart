@@ -81,7 +81,7 @@ class TicketUpcoming extends StatelessWidget {
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           Text(
-                            "2",
+                          "${book.Quantity}",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Color(0XFF6C5CE7),
@@ -112,7 +112,7 @@ class TicketUpcoming extends StatelessWidget {
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           Text(
-                            "ETB 2,000",
+                            "ETB ${book.TotalPaid}",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Color(0XFF6C5CE7),
