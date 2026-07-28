@@ -7,7 +7,8 @@ import "package:vibey/models/Attende/BookingModel.dart";
 class TicketUpcoming extends StatelessWidget {
   final EventModel event;
   final BookingModel book;
-  const TicketUpcoming({super.key, required this.event,required this.book});
+  final TicketTypes ticket;
+  const TicketUpcoming({super.key, required this.event, required this.book,required this.ticket});
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +50,7 @@ class TicketUpcoming extends StatelessWidget {
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           Text(
-                            "Erily Bird",
+                            ticket.Price,
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Color(0XFF6C5CE7),
