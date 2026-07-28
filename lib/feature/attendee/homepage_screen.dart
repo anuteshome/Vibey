@@ -202,7 +202,7 @@ class HomePage extends StatelessWidget {
                         pushOnce(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => EventDetail(event: event),
+                            builder: (context) => EventDetail(event: event,book:book,ticket:ticket),
                           ),
                         );
                       },
@@ -257,7 +257,7 @@ class HomePage extends StatelessWidget {
                         pushOnce(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => EventDetail(event: event),
+                            builder: (context) => EventDetail(event: event,book:book,ticket:ticket),
                           ),
                         );
                       },

@@ -3,10 +3,14 @@ import "package:vibey/core/navigation/navigation_guard.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/feature/attendee/SelectedTicket.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
+import "package:vibey/models/Attende/BookingModel.dart";
 
 class EventDetailName extends StatelessWidget {
   final EventModel event;
-  const EventDetailName({super.key, required this.event});
+       final BookingModel book;
+  final TicketTypes ticket;
+  const EventDetailName({super.key, required this.event,required this.book,
+    required this.ticket});
 
   @override
   Widget build(BuildContext context) {
@@ -321,7 +325,7 @@ class EventDetailName extends StatelessWidget {
                           pushOnce(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SelectedEvent(event: event),
+                              builder: (context) => SelectedEvent(event: event,book:book,ticket:ticket),
                             ),
                           );
                         },

@@ -1,14 +1,20 @@
 import "package:flutter/material.dart";
-import "package:vibey/data/Attende/BookingData.dart";
 import "package:vibey/feature/attendee/Attende.dart";
 import "package:vibey/feature/attendee/homepage_screen.dart";
 import "package:vibey/feature/auth/presentation/screen/login_screen.dart";
 import "package:supabase_flutter/supabase_flutter.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
+import "package:vibey/models/Attende/BookingModel.dart";
 
 class SplashScreen extends StatefulWidget {
   final EventModel event;
-  const SplashScreen({super.key,required this.event});
+  final BookingModel book;
+
+  const SplashScreen({
+    super.key,
+    required this.event,
+    required this.book,
+  });
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -33,12 +39,12 @@ class _SplashScreenState extends State<SplashScreen> {
         builder: (context) => session != null
             ? AttendePage(
                 event: widget.event,
-                book: bookingData.first,
+                book: widget.book,
                 ticket: widget.event.ticketTypes.first,
               )
             : LoginPage(
                 event: widget.event,
-                book: bookingData.first,
+                book: widget.book,
                 ticket: widget.event.ticketTypes.first,
               ),
       ),

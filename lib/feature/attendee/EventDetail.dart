@@ -3,10 +3,13 @@ import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/core/widgets/EventDetailImage.dart";
 import "package:vibey/core/widgets/EventDetailName.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
+import "package:vibey/models/Attende/BookingModel.dart";
 
 class EventDetail extends StatelessWidget {
   final EventModel event;
-  const EventDetail({super.key, required this.event});
+         final BookingModel book;
+  final TicketTypes ticket;
+  const EventDetail({super.key, required this.event, required this.book,required this.ticket});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +27,7 @@ class EventDetail extends StatelessWidget {
           child: Column(
             children: [
               EventDetailImage(event: event),
-              EventDetailName(event: event),
+              EventDetailName(event: event,book:book,ticket:ticket),
             ],
           ),
         ),
