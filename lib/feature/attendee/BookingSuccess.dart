@@ -124,7 +124,7 @@ class BookingSuccess extends StatelessWidget {
               onTap: () {
                 pushOnce(
                   context,
-                  MaterialPageRoute(builder: (context) => MyTicketPage()),
+                  MaterialPageRoute(builder: (context) => MyTicketPage(event:event)),
                 );
               },
               child: Padding(
