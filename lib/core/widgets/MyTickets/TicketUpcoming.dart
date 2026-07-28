@@ -139,6 +139,7 @@ class TicketUpcoming extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
                   child: Row(children: [
                     Icon(Ionicons.film),
+                    SizedBox(width: 10),
                    Text("View Tickets")]),
                 ),
               ),
