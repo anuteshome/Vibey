@@ -42,7 +42,7 @@ class YourSelection extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 20, bottom: 15),
+                    padding: const EdgeInsets.only(top: 20, bottom: 17),
                     child: Column(
                       children: [
                         Padding(
@@ -401,7 +401,7 @@ class YourSelection extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
                             horizontal: 100,
-                            vertical: 17,
+                            vertical: 20,
                           ),
                           child: Center(
                             child: Text(
