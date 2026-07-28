@@ -72,7 +72,7 @@ class _SignUpPageState extends State<SignUpPage> {
         }
         pushOnce(
           context,
-          MaterialPageRoute(builder: (context) => LoginPage(event: event)),
+          MaterialPageRoute(builder: (context) => LoginPage(event: widget.event)),
         );
       }
     } on AuthException catch (er) {
@@ -276,7 +276,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               pushOnce(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => LoginPage(),
+                                  builder: (context) => LoginPage(event:widget.event),
                                 ),
                               ),
                             },
