@@ -3,12 +3,15 @@ import "package:vibey/core/navigation/navigation_guard.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/feature/attendee/BookingSuccess.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
+import "package:vibey/models/Attende/BookingModel.dart";
 
 class YourSelection extends StatelessWidget {
   final EventModel event;
   final int Quantity;
   final TicketTypes _SelectedTickets;
   final int SubTotal;
+            final BookingModel book;
+  final TicketTypes ticket;
 
   const YourSelection({
     super.key,
@@ -16,6 +19,8 @@ class YourSelection extends StatelessWidget {
     required this.Quantity,
     required this.SubTotal,
     required this._SelectedTickets,
+    required this.book,
+    required this.ticket
   });
 
   @override

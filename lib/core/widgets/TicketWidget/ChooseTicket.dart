@@ -5,10 +5,13 @@ import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/feature/attendee/BookingSummery.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 import "package:vibey/core/navigation/navigation_guard.dart";
+import "package:vibey/models/Attende/BookingModel.dart";
 
 class ChooseTicket extends StatefulWidget {
   final EventModel event;
-  const ChooseTicket({super.key, required this.event});
+   final BookingModel book;
+  final TicketTypes ticket;
+  const ChooseTicket({super.key, required this.event,    required this.book,required this.ticket,});
 
   @override
   State<ChooseTicket> createState() => _ChooseTicketState();
@@ -231,6 +234,7 @@ class _ChooseTicketState extends State<ChooseTicket> {
                                 SubTotal: _CurrentPrice,
                                 Quantity: Quantity,
                                 SelectedTickets: _SelectedTickets!,
+                                book:widget.book,ticket:widget.ticket,
                               ),
                             ),
                           );
