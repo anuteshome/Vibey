@@ -15,22 +15,18 @@ class AttendePage extends StatefulWidget {
 }
 
 class _AttendePageState extends State<AttendePage> {
+  late final List<Widget> Pages;
 
-
-@override
-void initState() {
-  super.initState();
- final List<Widget> _Pages = [
-    HomePage(event: widget.event),
-    ExplorePage(),
-    MyTicketPage(event: widget.event),
-    ProfilePage(event: widget.event),
-  ];
-
-
-
-}
-
+  @override
+  void initState() {
+    super.initState();
+       Pages = [
+      HomePage(event: widget.event),
+      ExplorePage(),
+      MyTicketPage(event: widget.event),
+      ProfilePage(event: widget.event),
+    ];
+  }
 
   int _selectedIndex = 0;
 
@@ -40,11 +36,10 @@ void initState() {
     });
   }
 
- 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _Pages[_selectedIndex],
+      body: Pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: ChangePage,
