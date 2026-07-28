@@ -49,6 +49,7 @@ class TicketUpcoming extends StatelessWidget {
           ]
         ),
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children:[
             Text("Confirmed"),
             Container(
