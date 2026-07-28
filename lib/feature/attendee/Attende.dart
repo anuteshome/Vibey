@@ -24,10 +24,10 @@ class _AttendePageState extends State<AttendePage> {
   }
 
   List<Widget> _Pages = [
-    HomePage(),
+    HomePage(event:event),
     ExplorePage(),
     MyTicketPage(event: event,),
-    ProfilePage(),
+    ProfilePage(event:event),
   ];
 
   @override

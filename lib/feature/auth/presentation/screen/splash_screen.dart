@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => session != null ? AttendePage() : LoginPage(),
+        builder: (context) => session != null ? AttendePage(event:event) : LoginPage(event:event),
       ),
     );
   }
