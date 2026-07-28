@@ -4,9 +4,11 @@ import "package:vibey/core/navigation/navigation_guard.dart";
 import "package:vibey/core/widgets/TextField.dart";
 import "package:vibey/feature/auth/data/repository/auth_repository.dart";
 import "package:vibey/feature/auth/presentation/screen/login_screen.dart";
+import "package:vibey/models/Attende/AttendeModel.dart";
 
 class SignUpPage extends StatefulWidget {
-  SignUpPage({super.key});
+  final EventModel event;
+  SignUpPage({super.key, required this.event});
 
   @override
   State<SignUpPage> createState() => _SignUpPageState();
@@ -68,7 +70,10 @@ class _SignUpPageState extends State<SignUpPage> {
             context,
           ).showSnackBar(SnackBar(content: Text("Signup success")));
         }
-        pushOnce(context, MaterialPageRoute(builder: (context) => LoginPage()));
+        pushOnce(
+          context,
+          MaterialPageRoute(builder: (context) => LoginPage(event: event)),
+        );
       }
     } on AuthException catch (er) {
       if (!mounted) return;

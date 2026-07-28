@@ -9,9 +9,11 @@ import "package:vibey/feature/auth/presentation/screen/login_screen.dart";
 import "package:vibey/data/Attende/AttendeData.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/core/navigation/navigation_guard.dart";
+import "package:vibey/models/Attende/AttendeModel.dart";
 
 class HomePage extends StatelessWidget {
-  HomePage({super.key});
+  final EventModel event;
+  HomePage({super.key, required this.event});
 
   final authRepsitory = AuthRepository(Supabase.instance.client);
   final eventObj = Event();
@@ -21,7 +23,7 @@ class HomePage extends StatelessWidget {
     if (!context.mounted) return;
     Navigator.pushAndRemoveUntil(
       context,
-      MaterialPageRoute(builder: (context) => LoginPage()),
+      MaterialPageRoute(builder: (context) => LoginPage(event: event)),
       (route) => false,
     );
   }
