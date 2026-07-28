@@ -110,10 +110,26 @@ class TicketUpcoming extends StatelessWidget {
               )
             ],
           ),
+          SizedBox(height: 10,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Confirmed"),
+              Container(
+                 decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 215, 212, 242),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                  child: Row(
+                    children: [
+                      Icon(Ionicons.checkmark_circle,color:Colors.green),
+                      SizedBox(width: 3,),
+                      Text("Confirmed",style:TextStyle(color:Colors.green,fontWeight:FontWeight.bold,fontSize:15)),
+                    ],
+                  ),
+                ),
+              ),
               Container(
                 child: Row(children: [Icon(Icons.lock), Text("View Tickets")]),
               ),
