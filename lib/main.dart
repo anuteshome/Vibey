@@ -12,7 +12,7 @@ void main() async {
     anonKey: 'sb_publishable_BheiLctkyMgyaYpgYxl3Wg_JIvknRmk',
   );
   final initailEvent = Event().events.first;
-  runApp(const MyApp(event:initailEvent));
+  runApp( MyApp(event:initailEvent));
 }
 
 class MyApp extends StatelessWidget {
