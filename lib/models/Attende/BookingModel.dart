@@ -19,6 +19,8 @@ class BookingModel {
   final bool isFeatured;
   final bool isUpcoming;
   final int ServiceFee;
+  final int Quantity;
+  final String TotalPaid;
 
   BookingModel({
     required this.Name,
@@ -38,5 +40,8 @@ class BookingModel {
     required this.isFeatured,
     required this.isUpcoming,
     required this.ServiceFee,
+    required this.Quantity,
+    required this.TotalPaid,
+    
   });
 }
