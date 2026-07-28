@@ -4,19 +4,20 @@ import "package:vibey/core/widgets/TicketWidget/ChooseTicket.dart";
 import "package:vibey/core/widgets/TicketWidget/TicketEvent.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 import "package:vibey/models/Attende/BookingModel.dart";
-import "package:vibey/data/Attende/AttendeData.dart";
+import "package:vibey/data/Attende/BookingData.dart";
 
 class MyTicketPage extends StatelessWidget {
   final EventModel event;
   final BookingModel book;
   final TicketTypes ticket;
-  const MyTicketPage({
+
+   MyTicketPage({
     super.key,
     required this.event,
     required this.book,
     required this.ticket,
   });
-
+  final bookData = books();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +27,7 @@ class MyTicketPage extends StatelessWidget {
         child: Column(
           children: [
             ListView.builder(
-              itemCount: bookingData.length,
+              itemCount:bookData.bookingData.length,
               itemBuilder: (context, index) {
                 return TicketUpcoming(event: event, book: book, ticket: ticket);
               },
