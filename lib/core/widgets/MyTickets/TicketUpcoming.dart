@@ -10,6 +10,10 @@ class TicketUpcoming extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(12),
+                      ),
       child: Column(
         children: [
           TicketEvent(event: event),
