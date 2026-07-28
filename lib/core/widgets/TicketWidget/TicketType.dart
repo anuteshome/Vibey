@@ -22,7 +22,7 @@ class _TicketTypeState extends State<TicketType> {
       children: [
         // Text("Choose Ticket Type",style:TextStyle(fontSize:17,fontWeight:FontWeight.bold)),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 22),
+          padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 25),
           child: Container(
             decoration: BoxDecoration(
               color: Colors.white,

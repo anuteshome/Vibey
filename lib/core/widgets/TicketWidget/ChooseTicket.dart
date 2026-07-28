@@ -72,7 +72,7 @@ class _ChooseTicketState extends State<ChooseTicket> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 20, top: 15, bottom: 10),
+              padding: const EdgeInsets.only(left: 20, top: 18, bottom: 10),
               child: Text(
                 "Choose Ticket Type",
                 style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
