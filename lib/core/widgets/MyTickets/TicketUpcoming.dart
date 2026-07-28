@@ -22,10 +22,10 @@ class TicketUpcoming extends StatelessWidget {
                     width: 45,
                     height: 45,
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 196, 192, 232),
+                      color: Color.fromARGB(255, 215, 212, 242),
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Icon(Ionicons.ticket_outline),
+                    child: Icon(Ionicons.ticket_outline,color: Color(0xFF6C5CE7),),
                   ),
                   SizedBox(width: 20),
                   Column(
@@ -47,19 +47,67 @@ class TicketUpcoming extends StatelessWidget {
                 ],
               ),
 
-              Row(
+               Row(
                 children: [
-                  Icon(Icons.lock),
-                  Column(children: [Text("Quantity"), Text("2")]),
+                  Container(
+                    width: 45,
+                    height: 45,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 215, 212, 242),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Icon(Ionicons.people_outline,color: Color(0xFF6C5CE7),),
+                  ),
+                  SizedBox(width: 20),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Quantity",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "2",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Color(0XFF6C5CE7),
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
 
-              Row(
+                 Row(
                 children: [
-                  Icon(Icons.lock),
-                  Column(children: [Text("Total Paid"), Text("ETB 2000")]),
+                  Container(
+                    width: 45,
+                    height: 45,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 215, 212, 242),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Icon(Ionicons.ticket_outline,color: Color(0xFF6C5CE7),),
+                  ),
+                  SizedBox(width: 20),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Total Paid",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "ETB 2,000",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Color(0XFF6C5CE7),
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
-              ),
+              )
             ],
           ),
           Row(
