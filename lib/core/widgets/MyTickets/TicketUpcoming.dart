@@ -12,6 +12,7 @@ class TicketUpcoming extends StatelessWidget {
       child: Column(children: [
         TicketEvent(event: event),
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children:[
             Row(
               children:[
@@ -29,8 +30,8 @@ class TicketUpcoming extends StatelessWidget {
                 Icon(Icons.lock),
                 Column(
                   children: [
-                  Text("Text Type"),
-                  Text("Erily Bird")
+                  Text("Quantity"),
+                  Text("2")
                   ],)
               ]
             ),
@@ -40,10 +41,23 @@ class TicketUpcoming extends StatelessWidget {
                 Icon(Icons.lock),
                 Column(
                   children: [
-                  Text("Text Type"),
-                  Text("Erily Bird")
+                  Text("Total Paid"),
+                  Text("ETB 2000")
                   ],)
               ]
+            )
+          ]
+        ),
+        Row(
+          children:[
+            Text("Confirmed"),
+            Container(
+              child:Row(
+                children:[
+                  Icon(Icons.lock),
+                  Text("View Tickets")
+                ]
+              )
             )
           ]
         )
