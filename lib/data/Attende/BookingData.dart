@@ -1,6 +1,8 @@
 import "package:vibey/models/Attende/AttendeModel.dart";
 import "package:vibey/models/Attende/BookingModel.dart";
 
+class books{
+
 final List<BookingModel> bookingData = [
   BookingModel(
     Name: "Addis Music Festival",
@@ -122,3 +124,4 @@ final List<BookingModel> bookingData = [
     ],
   ),
 ];
+}

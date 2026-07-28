@@ -26,7 +26,7 @@ class MyTicketPage extends StatelessWidget {
         child: Column(
           children: [
             ListView.builder(
-              itemCount: 2,
+              itemCount: bookingData.length,
               itemBuilder: (context, index) {
                 return TicketUpcoming(event: event, book: book, ticket: ticket);
               },
