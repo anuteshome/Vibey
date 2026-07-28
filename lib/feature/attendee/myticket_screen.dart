@@ -4,12 +4,18 @@ import "package:vibey/core/widgets/TicketWidget/ChooseTicket.dart";
 import "package:vibey/core/widgets/TicketWidget/TicketEvent.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 import "package:vibey/models/Attende/BookingModel.dart";
+import "package:vibey/data/Attende/AttendeData.dart";
 
 class MyTicketPage extends StatelessWidget {
   final EventModel event;
-    final BookingModel book;
+  final BookingModel book;
   final TicketTypes ticket;
-  const MyTicketPage({super.key,required this.event,required this.book,required this.ticket});
+  const MyTicketPage({
+    super.key,
+    required this.event,
+    required this.book,
+    required this.ticket,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +23,17 @@ class MyTicketPage extends StatelessWidget {
       backgroundColor: Color.fromARGB(255, 229, 226, 246),
       appBar: AppBar(title: Text("My Tickets")),
       body: SingleChildScrollView(
-        child:TicketUpcoming(
-          event: event,
-          book: book,
-          ticket: ticket,
-          )
+        child: Column(
+          children: [
+            ListView.builder(
+              itemCount: 2,
+              itemBuilder: (context, index) {
+                return TicketUpcoming(event: event, book: book, ticket: ticket);
+              },
+            ),
+          ],
         ),
+      ),
     );
   }
 }
