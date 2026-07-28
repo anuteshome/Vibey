@@ -14,6 +14,9 @@ class AttendePage extends StatefulWidget {
   State<AttendePage> createState() => _AttendePageState();
 }
 
+@override
+
+
 class _AttendePageState extends State<AttendePage> {
   int _selectedIndex = 0;
 
@@ -23,10 +26,10 @@ class _AttendePageState extends State<AttendePage> {
     });
   }
 
-  List<Widget> _Pages = [
-    HomePage(event:event),
+  final List<Widget> _Pages = [
+    HomePage(),
     ExplorePage(),
-    MyTicketPage(event: event,),
+    MyTicketPage(event: widget.event,),
     ProfilePage(event:event),
   ];
 
