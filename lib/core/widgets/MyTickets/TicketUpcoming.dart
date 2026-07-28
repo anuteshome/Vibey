@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 import "package:vibey/core/widgets/TicketWidget/TicketEvent.dart";
+impo
 
 class TicketUpcoming extends StatelessWidget {
   final EventModel event;
@@ -16,11 +17,21 @@ class TicketUpcoming extends StatelessWidget {
           children:[
             Row(
               children:[
-                Icon(Icons.lock),
+                Container(
+                  width:45,
+                  height:45,
+                  decoration: BoxDecoration(
+                    color:Color.fromARGB(255, 196, 192, 232),
+                    borderRadius: BorderRadius.circular(12)
+                  ),
+                  child: Icon(Ionicons.ticket_outline)
+                  ),
+                  SizedBox(width: 20,),
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                  Text("Text Type"),
-                  Text("Erily Bird")
+                  Text("Ticket Type",style:TextStyle(fontWeight:FontWeight.bold)),
+                  Text("Erily Bird",style:TextStyle(fontWeight:FontWeight.bold,color:Color(0XFF6C5CE7)))
                   ],)
               ]
             ),
