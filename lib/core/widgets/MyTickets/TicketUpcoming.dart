@@ -135,7 +135,12 @@ class TicketUpcoming extends StatelessWidget {
                       color: Color(0XFF6C5CE7),
                       borderRadius: BorderRadius.circular(12),
                     ),
-                child: Row(children: [Icon(Ionicons.film), Text("View Tickets")]),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                  child: Row(children: [
+                    Icon(Ionicons.film),
+                   Text("View Tickets")]),
+                ),
               ),
             ],
           ),
