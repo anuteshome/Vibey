@@ -56,7 +56,7 @@ class TicketUpcoming extends StatelessWidget {
                       color: Color.fromARGB(255, 215, 212, 242),
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Icon(Ionicons.people_outline,color: Color(0xFF6C5CE7),),
+                    child: Icon(Ionicons.people,color: Color(0xFF6C5CE7),),
                   ),
                   SizedBox(width: 20),
                   Column(
@@ -87,7 +87,7 @@ class TicketUpcoming extends StatelessWidget {
                       color: Color.fromARGB(255, 215, 212, 242),
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Icon(Ionicons.ticket_outline,color: Color(0xFF6C5CE7),),
+                    child: Icon(Ionicons.wallet,color: Color(0xFF6C5CE7),),
                   ),
                   SizedBox(width: 20),
                   Column(
