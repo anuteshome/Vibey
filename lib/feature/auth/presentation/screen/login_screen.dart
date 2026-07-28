@@ -6,6 +6,7 @@ import "package:vibey/feature/attendee/homepage_screen.dart";
 import "package:vibey/feature/auth/data/repository/auth_repository.dart";
 import "package:supabase_flutter/supabase_flutter.dart";
 import "package:vibey/feature/auth/presentation/screen/signup_screen.dart";
+import 
 
 class LoginPage extends StatefulWidget {
   LoginPage({super.key});
@@ -61,7 +62,7 @@ class _LoginPageState extends State<LoginPage> {
         // ).showSnackBar(SnackBar(content: Text("Login success")));
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => AttendePage()),
+          MaterialPageRoute(builder: (context) => AttendePage(event: event,)),
         );
       }
       debugPrint('User ID: ${response.user!.id}');
