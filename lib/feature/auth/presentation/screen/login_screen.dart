@@ -63,7 +63,7 @@ class _LoginPageState extends State<LoginPage> {
         // ).showSnackBar(SnackBar(content: Text("Login success")));
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => AttendePage(event: event)),
+          MaterialPageRoute(builder: (context) => AttendePage(event: widget.event)),
         );
       }
       debugPrint('User ID: ${response.user!.id}');
@@ -312,7 +312,7 @@ class _LoginPageState extends State<LoginPage> {
                       onTap: () => {
                         pushOnce(
                           context,
-                          MaterialPageRoute(builder: (context) => SignUpPage()),
+                          MaterialPageRoute(builder: (context) => SignUpPage(event:widget.event)),
                         ),
                       },
                       child: Text(
