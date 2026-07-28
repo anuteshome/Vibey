@@ -111,39 +111,42 @@ class TicketUpcoming extends StatelessWidget {
             ],
           ),
           SizedBox(height: 10,),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                 decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 225, 237, 224),
-                      borderRadius: BorderRadius.circular(12),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                   decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 225, 237, 224),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                    child: Row(
+                      children: [
+                        Icon(Ionicons.checkmark_circle,color:Colors.green),
+                        SizedBox(width: 3,),
+                        Text("Confirmed",style:TextStyle(color:Colors.green,fontWeight:FontWeight.bold,fontSize:15)),
+                      ],
                     ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
-                  child: Row(
-                    children: [
-                      Icon(Ionicons.checkmark_circle,color:Colors.green),
-                      SizedBox(width: 3,),
-                      Text("Confirmed",style:TextStyle(color:Colors.green,fontWeight:FontWeight.bold,fontSize:15)),
-                    ],
                   ),
                 ),
-              ),
-              Container(
-                   decoration: BoxDecoration(
-                      color: Color(0XFF6C5CE7),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-                  child: Row(children: [
-                    Icon(Ionicons.film,color: Colors.white,),
-                    SizedBox(width: 10),
-                   Text("View Tickets",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold,fontSize:15))]),
+                Container(
+                     decoration: BoxDecoration(
+                        color: Color(0XFF6C5CE7),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                    child: Row(children: [
+                      Icon(Ionicons.film,color: Colors.white,),
+                      SizedBox(width: 10),
+                     Text("View Tickets",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold,fontSize:15))]),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),
