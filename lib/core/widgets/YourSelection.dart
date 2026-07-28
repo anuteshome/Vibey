@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:vibey/core/navigation/navigation_guard.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/feature/attendee/BookingSuccess.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
@@ -377,7 +378,7 @@ class YourSelection extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height:20),
+                  SizedBox(height: 20),
                   Padding(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 15,
@@ -385,10 +386,10 @@ class YourSelection extends StatelessWidget {
                     ),
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.push(
+                        pushOnce(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => BookingSuccess(event: event,),
+                            builder: (context) => BookingSuccess(event: event),
                           ),
                         );
                       },

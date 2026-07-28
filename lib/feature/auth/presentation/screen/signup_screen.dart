@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:supabase_flutter/supabase_flutter.dart";
+import "package:vibey/core/navigation/navigation_guard.dart";
 import "package:vibey/core/widgets/TextField.dart";
 import "package:vibey/feature/auth/data/repository/auth_repository.dart";
 import "package:vibey/feature/auth/presentation/screen/login_screen.dart";
@@ -19,6 +20,8 @@ class _SignUpPageState extends State<SignUpPage> {
   bool isLoading = false;
 
   Future<void> SignUp() async {
+    if (isLoading) return;
+
     final name = NameController.text.trim();
     final email = EmailController.text.trim();
     final password = PasswordController.text;
@@ -60,26 +63,20 @@ class _SignUpPageState extends State<SignUpPage> {
               content: Text("Account Created! please confirm your account"),
             ),
           );
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => LoginPage()),
-          );
         } else {
           ScaffoldMessenger.of(
             context,
           ).showSnackBar(SnackBar(content: Text("Signup success")));
-
         }
-        Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => LoginPage()),
-          );
+        pushOnce(context, MaterialPageRoute(builder: (context) => LoginPage()));
       }
     } on AuthException catch (er) {
+      if (!mounted) return;
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(SnackBar(content: Text(er.message)));
     } catch (error) {
+      if (!mounted) return;
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(SnackBar(content: Text("something went wrong")));
@@ -271,7 +268,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           SizedBox(width: 10),
                           GestureDetector(
                             onTap: () => {
-                              Navigator.push(
+                              pushOnce(
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) => LoginPage(),

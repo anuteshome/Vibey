@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:vibey/core/widgets/TextField.dart";
+import "package:vibey/core/navigation/navigation_guard.dart";
 import "package:vibey/feature/attendee/Attende.dart";
 import "package:vibey/feature/attendee/homepage_screen.dart";
 import "package:vibey/feature/auth/data/repository/auth_repository.dart";
@@ -20,9 +21,10 @@ class _LoginPageState extends State<LoginPage> {
   bool isLoading = false;
 
   Future<void> Login() async {
+    if (isLoading) return;
+
     String email = EmailTextController.text.trim();
     String password = PasswordTextController.text;
-  
 
     if (email.isEmpty || password.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -57,15 +59,20 @@ class _LoginPageState extends State<LoginPage> {
         // ScaffoldMessenger.of(
         //   context,
         // ).showSnackBar(SnackBar(content: Text("Login success")));
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => AttendePage()));
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => AttendePage()),
+        );
       }
       debugPrint('User ID: ${response.user!.id}');
       debugPrint('Email: ${response.user!.email}');
     } on AuthException catch (er) {
+      if (!mounted) return;
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(SnackBar(content: Text(er.message)));
     } catch (error) {
+      if (!mounted) return;
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(const SnackBar(content: Text("Something went wrong")));
@@ -76,7 +83,6 @@ class _LoginPageState extends State<LoginPage> {
         });
       }
     }
-
   }
 
   @override
@@ -233,7 +239,7 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                             ),
                             GestureDetector(
-                              onTap: Login,
+                              onTap: isLoading ? null : Login,
                               child: Container(
                                 width: double.infinity,
                                 height: 60,
@@ -302,7 +308,7 @@ class _LoginPageState extends State<LoginPage> {
                     SizedBox(width: 20),
                     GestureDetector(
                       onTap: () => {
-                        Navigator.push(
+                        pushOnce(
                           context,
                           MaterialPageRoute(builder: (context) => SignUpPage()),
                         ),

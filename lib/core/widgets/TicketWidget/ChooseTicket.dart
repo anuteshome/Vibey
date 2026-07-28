@@ -4,6 +4,7 @@ import "package:vibey/data/Attende/AttendeData.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/feature/attendee/BookingSummery.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
+import "package:vibey/core/navigation/navigation_guard.dart";
 
 class ChooseTicket extends StatefulWidget {
   final EventModel event;
@@ -25,7 +26,6 @@ class _ChooseTicketState extends State<ChooseTicket> {
     _PassIndex = 0;
     _SelectedTickets = widget.event.ticketTypes[0];
     _CurrentPrice = int.parse(_SelectedTickets!.Price);
-  
   }
 
   void _SelectedTicket(int index, TicketTypes ticket) {
@@ -97,7 +97,12 @@ class _ChooseTicketState extends State<ChooseTicket> {
               },
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 15, right: 15, top: 10,bottom: 10),
+              padding: const EdgeInsets.only(
+                left: 15,
+                right: 15,
+                top: 10,
+                bottom: 10,
+              ),
               child: Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -218,17 +223,15 @@ class _ChooseTicketState extends State<ChooseTicket> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Navigator.push(
+                          pushOnce(
                             context,
                             MaterialPageRoute(
-                              builder: (context) =>
-                                  BookingSummery(
-                                    event: widget.event,
-                                    SubTotal:_CurrentPrice,
-                                    Quantity: Quantity,
-                                    SelectedTickets:_SelectedTickets!,
-
-                                    ),
+                              builder: (context) => BookingSummery(
+                                event: widget.event,
+                                SubTotal: _CurrentPrice,
+                                Quantity: Quantity,
+                                SelectedTickets: _SelectedTickets!,
+                              ),
                             ),
                           );
                         },

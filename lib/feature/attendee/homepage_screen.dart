@@ -8,6 +8,7 @@ import "package:supabase_flutter/supabase_flutter.dart";
 import "package:vibey/feature/auth/presentation/screen/login_screen.dart";
 import "package:vibey/data/Attende/AttendeData.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
+import "package:vibey/core/navigation/navigation_guard.dart";
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -17,6 +18,7 @@ class HomePage extends StatelessWidget {
 
   void Logout(BuildContext context) async {
     await authRepsitory.logout();
+    if (!context.mounted) return;
     Navigator.pushAndRemoveUntil(
       context,
       MaterialPageRoute(builder: (context) => LoginPage()),
@@ -160,7 +162,7 @@ class HomePage extends StatelessWidget {
               ),
               Container(
                 height: 80,
-                width:double.infinity,
+                width: double.infinity,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: eventObj.catagories.length,
@@ -192,7 +194,7 @@ class HomePage extends StatelessWidget {
                     final event = featuredEvent[index];
                     return GestureDetector(
                       onTap: () {
-                        Navigator.push(
+                        pushOnce(
                           context,
                           MaterialPageRoute(
                             builder: (context) => EventDetail(event: event),
@@ -247,7 +249,7 @@ class HomePage extends StatelessWidget {
                     final event = upcomingEvent[index];
                     return GestureDetector(
                       onTap: () {
-                        Navigator.push(
+                        pushOnce(
                           context,
                           MaterialPageRoute(
                             builder: (context) => EventDetail(event: event),

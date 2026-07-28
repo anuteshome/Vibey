@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:vibey/core/navigation/navigation_guard.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/feature/attendee/Attende.dart";
 import "package:vibey/feature/attendee/homepage_screen.dart";
@@ -12,7 +13,7 @@ class BookingSuccess extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       backgroundColor: Color(0xFFF6F4FF),
+      backgroundColor: Color(0xFFF6F4FF),
       body: Center(
         child: Column(
           children: [
@@ -94,7 +95,7 @@ class BookingSuccess extends StatelessWidget {
                   Icon(Ionicons.calendar_clear_outline),
                   SizedBox(width: 20),
                   Text(
-                 "  ${ event.Date} ${event.Time}",
+                    "  ${event.Date} ${event.Time}",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.grey[700],
@@ -121,7 +122,7 @@ class BookingSuccess extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.push(
+                pushOnce(
                   context,
                   MaterialPageRoute(builder: (context) => MyTicketPage()),
                 );
@@ -160,7 +161,7 @@ class BookingSuccess extends StatelessWidget {
 
             GestureDetector(
               onTap: () {
-                Navigator.push(
+                pushOnce(
                   context,
                   MaterialPageRoute(builder: (context) => AttendePage()),
                 );

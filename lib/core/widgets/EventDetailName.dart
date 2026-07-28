@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:vibey/core/navigation/navigation_guard.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/feature/attendee/SelectedTicket.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
@@ -118,7 +119,7 @@ class EventDetailName extends StatelessWidget {
         ),
 
         Padding(
-          padding: const EdgeInsets.only(left: 20, right: 20 ),
+          padding: const EdgeInsets.only(left: 20, right: 20),
           child: Container(
             decoration: BoxDecoration(
               color: Colors.white,
@@ -317,7 +318,7 @@ class EventDetailName extends StatelessWidget {
                       SizedBox(width: 20),
                       GestureDetector(
                         onTap: () {
-                          Navigator.push(
+                          pushOnce(
                             context,
                             MaterialPageRoute(
                               builder: (context) => SelectedEvent(event: event),

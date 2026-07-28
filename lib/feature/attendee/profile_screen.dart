@@ -3,19 +3,38 @@ import "package:vibey/feature/auth/data/repository/auth_repository.dart";
 import "package:supabase_flutter/supabase_flutter.dart";
 import "package:vibey/feature/auth/presentation/screen/login_screen.dart";
 
+class ProfilePage extends StatefulWidget {
+  const ProfilePage({super.key});
 
-class ProfilePage extends StatelessWidget {
-   ProfilePage({super.key});
+  @override
+  State<ProfilePage> createState() => _ProfilePageState();
+}
 
+class _ProfilePageState extends State<ProfilePage> {
   final authRepsitory = AuthRepository(Supabase.instance.client);
+  bool _isLoggingOut = false;
 
-  void Logout(BuildContext context) async {
-    await authRepsitory.logout();
-    Navigator.pushAndRemoveUntil(
-      context,
-      MaterialPageRoute(builder: (context) => LoginPage()),
-      (route) => false
-    );
+  Future<void> Logout() async {
+    if (_isLoggingOut) return;
+    setState(() {
+      _isLoggingOut = true;
+    });
+
+    try {
+      await authRepsitory.logout();
+      if (!mounted) return;
+      Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => LoginPage()),
+        (route) => false,
+      );
+    } finally {
+      if (mounted) {
+        setState(() {
+          _isLoggingOut = false;
+        });
+      }
+    }
   }
 
   @override
@@ -26,11 +45,11 @@ class ProfilePage extends StatelessWidget {
         actions: [
           IconButton(
             icon: Icon(Icons.logout),
-            onPressed: () => Logout(context),
+            onPressed: _isLoggingOut ? null : Logout,
           ),
         ],
       ),
-      body:Text("Profile page")
+      body: Text("Profile page"),
     );
   }
 }
