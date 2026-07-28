@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:vibey/feature/attendee/Attende.dart";
 import "package:vibey/feature/attendee/homepage_screen.dart";
 import "package:vibey/feature/auth/presentation/screen/login_screen.dart";
 import "package:supabase_flutter/supabase_flutter.dart";
@@ -26,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => session != null ? HomePage() : LoginPage(),
+        builder: (context) => session != null ? AttendePage() : LoginPage(),
       ),
     );
   }
