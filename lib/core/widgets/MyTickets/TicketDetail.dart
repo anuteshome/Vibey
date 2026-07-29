@@ -23,13 +23,36 @@ class TicketDetail extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("VIP-2 Tickets",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold,fontSize:18)),
+                      Text("VIP-2 Tickets",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold,fontSize:15)),
                        SizedBox(height:10),
                       Text("Addis Music Festival 2025",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold,fontSize:20)),
                        SizedBox(height:10),
-                      Text("Sat,24 May 2025 6:00 AM",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold)),
+                     Row(
+                    children: [
+                      Icon(
+                        Ionicons.calendar_clear_outline,
+                        size: 15,
+                        color: Colors.white,
+                      ),
+                      SizedBox(width: 5),
+                      Text("Sat 24 May 2025", style: TextStyle(fontSize: 12, color: Colors.white,)),
+                      SizedBox(width: 5),
+                      Text("6:00 AM", style: TextStyle(fontSize: 12, color: Colors.white,)),
+                    ],
+                  ),
                        SizedBox(height:10),
-                      Text("Minilium Hall, Addis Ababa",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold)),
+                         Row(
+                    children: [
+                      Icon(
+                        Ionicons.location_outline,
+                        size: 15,
+                        color: Colors.white,
+                        weight: 800,
+                      ),
+                      SizedBox(width: 5),
+                      Text("Minlium Hall, Addis Ababa", style: TextStyle(fontSize: 12,color: Colors.white,)),
+                    ],
+                  ),
                     ],
                   ),
                 ), // QR Code
