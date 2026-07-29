@@ -11,7 +11,7 @@ class MyTicketPage extends StatelessWidget {
   final BookingModel book;
   final TicketTypes ticket;
 
-   MyTicketPage({
+  MyTicketPage({
     super.key,
     required this.event,
     required this.book,
@@ -27,9 +27,10 @@ class MyTicketPage extends StatelessWidget {
         child: Column(
           children: [
             ListView.builder(
-              itemCount:bookData.bookingData.length,
+              itemCount: bookData.bookingData.length,
               itemBuilder: (context, index) {
-                return TicketUpcoming(book:book);
+                final bookings = bookData.bookingData[index];
+                return TicketUpcoming(book: bookings);
               },
             ),
           ],
