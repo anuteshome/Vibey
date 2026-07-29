@@ -16,12 +16,36 @@ class ExplorePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 229, 226, 246),
-      appBar: AppBar(title: Text("Event Detail Tests")),
+      appBar: AppBar(title: Center(child: Text("Explore Events",style:TextStyle(fontSize:18,fontWeight:FontWeight.bold)))),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
             children: [
-
+  Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                child: Container(
+                  // width:double.infinity,
+                  // height:60,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: Colors.white,
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 17,
+                      vertical: 6,
+                    ),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        prefixIcon: Icon(Icons.search),
+                        contentPadding: EdgeInsets.all(12),
+                        hintText: "Search events, artists or places...",
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
