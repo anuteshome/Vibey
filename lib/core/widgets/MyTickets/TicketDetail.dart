@@ -27,6 +27,8 @@ class TicketDetail extends StatelessWidget {
               Icon(Ionicons.copy_outline),
             ],
           ),
+          Center(child: Image.asset("assets/image/qrcode.png")),
+          
         ],
       ),
     );
