@@ -122,8 +122,8 @@ class _MyTicketPageState extends State<MyTicketPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(EventSelected ? "Past  eventsss" : "Upcoming Events"),
-                  Text(EventSelected ? Pastlen.toString() : Uplen.toString()),
+                  Text(EventSelected ? "Past Events" : "Upcoming Events",style:TextStyle(fontSize:16,fontWeight:FontWeight.bold)),
+                  Text(EventSelected ? Pastlen.toString() : Uplen.toString(),style:TextStyle(fontSize:16,fontWeight:FontWeight.bold)),
                 ],
               ),
             ),
