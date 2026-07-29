@@ -10,17 +10,25 @@ class TicketDetail extends StatelessWidget {
       appBar:AppBar(title:Center(child: Text("Ticket Detail",style:TextStyle(fontSize:18,fontWeight:FontWeight.bold)))),
       body:Container(
           child: Column(
+             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Header
               Container(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("VIP-2 Tickets"),
-                    Text("Addis Music Festival 2025"),
-                    Text("Sat,24 May 2025 6:00 AM"),
-                    Text("Minilium Hall, Addis Ababa"),
-                  ],
+                width:double.infinity,
+                decoration:BoxDecoration(
+                  color:Color(0xFF6C5CE7),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("VIP-2 Tickets"),
+                      Text("Addis Music Festival 2025"),
+                      Text("Sat,24 May 2025 6:00 AM"),
+                      Text("Minilium Hall, Addis Ababa"),
+                    ],
+                  ),
                 ), // QR Code
               ),
               Row(
