@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:vibey/core/widgets/MyTickets/TicketDetail.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 import "package:vibey/core/widgets/TicketWidget/TicketEvent.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
@@ -8,7 +9,7 @@ class TicketUpcoming extends StatelessWidget {
   // final EventModel event;
   final BookingModel book;
   // final TicketTypes ticket;
-  const TicketUpcoming({super.key,required this.book});
+  const TicketUpcoming({super.key, required this.book});
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +82,7 @@ class TicketUpcoming extends StatelessWidget {
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           Text(
-                          "${book.Quantity}",
+                            "${book.Quantity}",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Color(0XFF6C5CE7),
@@ -157,29 +158,37 @@ class TicketUpcoming extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color(0XFF6C5CE7),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 20,
-                        vertical: 10,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => TicketDetail()),
+                      );
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Color(0XFF6C5CE7),
+                        borderRadius: BorderRadius.circular(8),
                       ),
-                      child: Row(
-                        children: [
-                          Icon(Ionicons.film, color: Colors.white),
-                          SizedBox(width: 10),
-                          Text(
-                            "View Tickets",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 15,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 20,
+                          vertical: 10,
+                        ),
+                        child: Row(
+                          children: [
+                            Icon(Ionicons.film, color: Colors.white),
+                            SizedBox(width: 10),
+                            Text(
+                              "View Tickets",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 15,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
