@@ -26,6 +26,32 @@ class MyTicketPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+              child: Row(
+                children:[
+                Container(
+                  decoration: BoxDecoration(
+                    color:Color(0xFF6C5CE7)
+                  ),
+                  child:Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 40,vertical: 10),
+                    child: Text("Upcoming Tickets",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold)),
+                  )
+                ),
+                 Container(
+                  decoration: BoxDecoration(
+                    color:Color(0xFF6C5CE7)
+                  ),
+                  child:Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 40,vertical: 10),
+                    child: Text("Past Tickets",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold)),
+                  )
+                )
+                ]
+                
+              ),
+            ),
             ListView.builder(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
