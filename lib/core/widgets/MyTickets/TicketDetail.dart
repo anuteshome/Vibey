@@ -84,8 +84,8 @@ class TicketDetail extends StatelessWidget {
                 color:Color(0xFF6C5CE7)
               ),
               child:Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-                child: Text("Download Ticket"),
+                padding: const EdgeInsets.symmetric(horizontal: 130,vertical: 15),
+                child: Center(child: Text("Download Ticket",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold))),
               )
              )
             ],
