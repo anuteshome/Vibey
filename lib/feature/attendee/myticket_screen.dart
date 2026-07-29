@@ -19,7 +19,11 @@ class MyTicketPage extends StatelessWidget {
   });
   final bookData = books();
 
-  void PastEvent() {}
+  final bool EventSelected = false;
+
+  void PastEvent() {
+    !EventSelected;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -61,21 +65,26 @@ class MyTicketPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xFF6C5CE7),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 60,
-                        vertical: 15,
+                  GestureDetector(
+                    onTap: () {
+                      PastEvent();
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xFF6C5CE7),
+                        borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Text(
-                        "Past Tickets",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 60,
+                          vertical: 15,
+                        ),
+                        child: Text(
+                          "Past Tickets",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                     ),
