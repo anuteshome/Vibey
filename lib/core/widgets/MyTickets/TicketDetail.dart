@@ -27,8 +27,44 @@ class TicketDetail extends StatelessWidget {
               Icon(Ionicons.copy_outline),
             ],
           ),
-          Center(child: Image.asset("assets/image/qrcode.png")),
-          
+          Center(child: Image.asset("assets/image/qrcode.png",width: 300,height:300,)),
+         Column(
+          children:[
+            Row(
+              children:[
+                Text("Ticket Type"),
+                Text("VIP")
+              ],
+            ),
+              Row(
+              children:[
+                Text("Quantity"),
+                Text("2")
+              ],
+            ),
+              Row(
+              children:[
+                Text("Total Paid"),
+                Text("ETB 5,200")
+              ],
+            ),
+              Row(
+              children:[
+                Text("Purchase Date"),
+                Text("320 May 2025 10:30 AM")
+              ],
+            )
+          ]
+         ),
+         Container(
+          decoration: BoxDecoration(
+            color:Color(0xFF6C5CE7)
+          ),
+          child:Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+            child: Text("Download Ticket"),
+          )
+         )
         ],
       ),
     );
