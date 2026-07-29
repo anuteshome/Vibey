@@ -57,7 +57,7 @@ class MyTicketPage extends StatelessWidget {
                         vertical: 15,
                       ),
                       child: Text(
-                        "Upcoming Tickets",
+                       EventSelected? "Past Tickets":"Upcoming Tickets",
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
