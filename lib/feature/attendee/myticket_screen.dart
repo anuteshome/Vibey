@@ -72,7 +72,7 @@ class _MyTicketPageState extends State<MyTicketPage> {
                     },
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Color(0xFF6C5CE7),
+                        color: EventSelected? Colors.white:const Color(0xFF6C5CE7),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Padding(
@@ -83,7 +83,7 @@ class _MyTicketPageState extends State<MyTicketPage> {
                         child: Text(
                           "Upcoming Tickets",
                           style: TextStyle(
-                            color: Colors.white,
+                            color:EventSelected? Color(0xFF6C5CE7):Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -96,7 +96,7 @@ class _MyTicketPageState extends State<MyTicketPage> {
                     },
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Color(0xFF6C5CE7),
+                       color: EventSelected? Color(0xFF6C5CE7):Colors.white,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Padding(
@@ -107,7 +107,7 @@ class _MyTicketPageState extends State<MyTicketPage> {
                         child: Text(
                           "Past Tickets",
                           style: TextStyle(
-                            color: Colors.white,
+                            color:EventSelected? Colors.white:Color(0xFF6C5CE7),
                             fontWeight: FontWeight.bold,
                           ),
                         ),
