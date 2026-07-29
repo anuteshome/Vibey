@@ -24,8 +24,11 @@ class TicketDetail extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text("VIP-2 Tickets"),
+                       SizedBox(height:10),
                       Text("Addis Music Festival 2025"),
+                       SizedBox(height:10),
                       Text("Sat,24 May 2025 6:00 AM"),
+                       SizedBox(height:10),
                       Text("Minilium Hall, Addis Ababa"),
                     ],
                   ),
