@@ -27,6 +27,8 @@ class MyTicketPage extends StatelessWidget {
         child: Column(
           children: [
             ListView.builder(
+               shrinkWrap: true,
+  physics: const NeverScrollableScrollPhysics(),
               itemCount: bookData.bookingData.length,
               itemBuilder: (context, index) {
                 final bookings = bookData.bookingData[index];
