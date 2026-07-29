@@ -5,10 +5,10 @@ import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/models/Attende/BookingModel.dart";
 
 class TicketUpcoming extends StatelessWidget {
-  final EventModel event;
+  // final EventModel event;
   final BookingModel book;
-  final TicketTypes ticket;
-  const TicketUpcoming({super.key, required this.event, required this.book,required this.ticket});
+  // final TicketTypes ticket;
+  const TicketUpcoming({super.key,required this.book});
 
   @override
   Widget build(BuildContext context) {

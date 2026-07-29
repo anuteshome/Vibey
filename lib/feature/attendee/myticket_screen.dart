@@ -29,7 +29,7 @@ class MyTicketPage extends StatelessWidget {
             ListView.builder(
               itemCount:bookData.bookingData.length,
               itemBuilder: (context, index) {
-                return TicketUpcoming(event:event,book:bookData.bookingData[index],ticket:ticket);
+                return TicketUpcoming(book:book);
               },
             ),
           ],
