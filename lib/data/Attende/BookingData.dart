@@ -13,6 +13,8 @@ class books {
       SelectedTickets: eventObj.events[0].ticketTypes[0],
       Quantity: 2,
       TotalPaid: "1650",
+      UpcomingEvent:true,
+      PastEvent:false,
     ),
 
     BookingModel(
