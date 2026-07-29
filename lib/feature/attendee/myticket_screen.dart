@@ -57,7 +57,7 @@ class _MyTicketPageState extends State<MyTicketPage> {
     final int Pastlen = PasstEvent.length;
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 229, 226, 246),
-      appBar: AppBar(title: Text("My Tickets")),
+      appBar: AppBar(title: Center(child: Text("My Tickets",style:TextStyle(fontSize:18,fontWeight:FontWeight.bold)))),
       body: SingleChildScrollView(
         child: Column(
           children: [
