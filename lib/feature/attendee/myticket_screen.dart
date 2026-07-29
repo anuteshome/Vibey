@@ -57,7 +57,7 @@ class MyTicketPage extends StatelessWidget {
                         vertical: 15,
                       ),
                       child: Text(
-                       EventSelected? "Past Tickets":"Upcoming Tickets",
+                  "Upcoming Tickets",
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -96,7 +96,7 @@ class MyTicketPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [Text("Upcoming event"), Text(Uplen.toString())],
+                children: [Text(EventSelected? "Upcoming event":" Past events"), Text(Uplen.toString())],
               ),
             ),
             ListView.builder(
