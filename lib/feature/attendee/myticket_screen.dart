@@ -29,6 +29,8 @@ class MyTicketPage extends StatelessWidget {
     final PasstEvent = bookData.bookingData
         .where((e) => e.isPastEvent)
         .toList();
+
+    final int Uplen = UpcomingEvent.length;
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 229, 226, 246),
       appBar: AppBar(title: Text("My Tickets")),
@@ -85,7 +87,7 @@ class MyTicketPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [Text("Upcoming event"), Text("3 Tickets")],
+                children: [Text("Upcoming event"), Text(Uplen.toString())],
               ),
             ),
             ListView.builder(
