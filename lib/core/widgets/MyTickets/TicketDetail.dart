@@ -55,6 +55,7 @@ class TicketDetail extends StatelessWidget {
                       Text("VIP")
                     ],
                   ),
+                   SizedBox(height:10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children:[
@@ -62,6 +63,7 @@ class TicketDetail extends StatelessWidget {
                       Text("2")
                     ],
                   ),
+                   SizedBox(height:10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children:[
@@ -69,6 +71,7 @@ class TicketDetail extends StatelessWidget {
                       Text("ETB 5,200")
                     ],
                   ),
+                  SizedBox(height:10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children:[
@@ -79,14 +82,18 @@ class TicketDetail extends StatelessWidget {
                 ]
                ),
              ),
-             Container(
-              decoration: BoxDecoration(
-                color:Color(0xFF6C5CE7)
-              ),
-              child:Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 130,vertical: 15),
-                child: Center(child: Text("Download Ticket",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold))),
-              )
+             Padding(
+               padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+               child: Container(
+                decoration: BoxDecoration(
+                  color:Color(0xFF6C5CE7),
+                  borderRadius:BorderRadius.circular(10)
+                ),
+                child:Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 130,vertical: 20),
+                  child: Center(child: Text("Download Ticket",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold))),
+                )
+               ),
              )
             ],
           ),
