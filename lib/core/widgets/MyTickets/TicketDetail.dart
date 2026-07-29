@@ -7,14 +7,14 @@ class TicketDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:AppBar(title:Text("Ticket Detail",style:TextStyle(fontSize:18,fontWeight:FontWeight.bold)))
-      body: Center(
-        child: Container(
+      appBar:AppBar(title:Center(child: Text("Ticket Detail",style:TextStyle(fontSize:18,fontWeight:FontWeight.bold)))),
+      body:Container(
           child: Column(
             children: [
               // Header
               Container(
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text("VIP-2 Tickets"),
                     Text("Addis Music Festival 2025"),
@@ -71,7 +71,6 @@ class TicketDetail extends StatelessWidget {
             ],
           ),
         ),
-      ),
     );
   }
 }
