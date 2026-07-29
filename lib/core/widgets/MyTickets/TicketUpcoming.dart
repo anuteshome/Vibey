@@ -50,7 +50,7 @@ class TicketUpcoming extends StatelessWidget {
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           Text(
-                            book.SelectedTickets,
+                            book.SelectedTickets.Type,
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Color(0XFF6C5CE7),
