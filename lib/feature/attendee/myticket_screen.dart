@@ -11,7 +11,6 @@ class MyTicketPage extends StatefulWidget {
   final BookingModel book;
   final TicketTypes ticket;
 
-
   MyTicketPage({
     super.key,
     required this.event,
@@ -24,19 +23,19 @@ class MyTicketPage extends StatefulWidget {
 }
 
 class _MyTicketPageState extends State<MyTicketPage> {
-   final  bool EventSelected=false ;
+  bool EventSelected = false;
   final bookData = books();
   String EventType = "Upcoming Event";
 
-  void PastEvent(bool  EventSelected) {
+  void PastEvent() {
     setState(() {
-      EventSelected =true;
+      EventSelected = true;
       String EventType = "Past events";
     });
     debugPrint("EventSelected is pressed${EventSelected}");
   }
 
-  void UpcomingEvent(bool EventSelected) {
+  void UpcomingEventFunc() {
     setState(() {
       EventSelected = false;
       ;
@@ -55,7 +54,7 @@ class _MyTicketPageState extends State<MyTicketPage> {
         .toList();
 
     final int Uplen = UpcomingEvent.length;
-      final int Pastlen = PasstEvent.length;
+    final int Pastlen = PasstEvent.length;
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 229, 226, 246),
       appBar: AppBar(title: Text("My Tickets")),
@@ -67,28 +66,33 @@ class _MyTicketPageState extends State<MyTicketPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xFF6C5CE7),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 40,
-                        vertical: 15,
+                  GestureDetector(
+                    onTap: () {
+                      UpcomingEventFunc();
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xFF6C5CE7),
+                        borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Text(
-                        "Upcoming Tickets",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 40,
+                          vertical: 15,
+                        ),
+                        child: Text(
+                          "Upcoming Tickets",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                     ),
                   ),
                   GestureDetector(
                     onTap: () {
-                      PastEvent(EventSelected);
+                      PastEvent();
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -118,10 +122,8 @@ class _MyTicketPageState extends State<MyTicketPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    EventSelected ? "Past  eventsss" : "Upcoming Events",
-                  ),
-                  Text(EventSelected? Uplen.toString():Pastlen.toString()),
+                  Text(EventSelected ? "Past  eventsss" : "Upcoming Events"),
+                  Text(EventSelected ? Pastlen.toString() : Uplen.toString()),
                 ],
               ),
             ),
