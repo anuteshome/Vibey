@@ -23,7 +23,15 @@ class TicketDetail extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("VIP-2 Tickets",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold,fontSize:15)),
+                      Container(
+                        decoration: BoxDecoration(
+                          color:Colors.grey[400],
+                          borderRadius: BorderRadius.circular(12)
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10,vertical:3),
+                          child: Text("VIP-2 Tickets",style:TextStyle(color:Colors.black,fontWeight:FontWeight.bold,fontSize:15)),
+                        )),
                        SizedBox(height:10),
                       Text("Addis Music Festival 2025",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold,fontSize:20)),
                        SizedBox(height:10),
