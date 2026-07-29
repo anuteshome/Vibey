@@ -7,7 +7,7 @@ class books {
   final List<BookingModel> bookingData = [
 
     BookingModel(
-      event: ,
+      events:,
       Quantity: 2,
       TotalPaid: "1650",
       ticketTypes: [
