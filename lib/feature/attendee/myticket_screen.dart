@@ -6,7 +6,7 @@ import "package:vibey/models/Attende/AttendeModel.dart";
 import "package:vibey/models/Attende/BookingModel.dart";
 import "package:vibey/data/Attende/BookingData.dart";
 
-class MyTicketPage extends StatelessWidget {
+class MyTicketPage extends StatefulWidget {
   final EventModel event;
   final BookingModel book;
   final TicketTypes ticket;
@@ -17,12 +17,20 @@ class MyTicketPage extends StatelessWidget {
     required this.book,
     required this.ticket,
   });
+
+  @override
+  State<MyTicketPage> createState() => _MyTicketPageState();
+}
+
+class _MyTicketPageState extends State<MyTicketPage> {
   final bookData = books();
 
   final bool EventSelected = false;
 
   void PastEvent() {
-    !EventSelected;
+  setState(() {
+      !EventSelected;
+  });
   }
 
   @override
