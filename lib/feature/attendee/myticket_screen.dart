@@ -130,12 +130,12 @@ class _MyTicketPageState extends State<MyTicketPage> {
             ListView.builder(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
-              itemCount: EventSelected? Uplen:Pastlen,
+              itemCount: EventSelected? Pastlen:Uplen,
               itemBuilder: (context, index) {
                 final bookings = bookData.bookingData[index];
                 return EventSelected
-                    ? TicketUpcoming(book: UpcomingEvent[index])
-                    : TicketUpcoming(book: PasstEvent[index]);
+                    ? TicketUpcoming(book: PasstEvent[index])
+                    : TicketUpcoming(book: UpcomingEvent[index]);
                 // return TicketUpcoming(book: bookings);
               },
             ),
