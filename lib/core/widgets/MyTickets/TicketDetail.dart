@@ -27,9 +27,9 @@ class TicketDetail extends StatelessWidget {
                        SizedBox(height:10),
                       Text("Addis Music Festival 2025",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold,fontSize:20)),
                        SizedBox(height:10),
-                      Text("Sat,24 May 2025 6:00 AM"),
+                      Text("Sat,24 May 2025 6:00 AM",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold)),
                        SizedBox(height:10),
-                      Text("Minilium Hall, Addis Ababa"),
+                      Text("Minilium Hall, Addis Ababa",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold)),
                     ],
                   ),
                 ), // QR Code
