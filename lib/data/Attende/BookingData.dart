@@ -3,11 +3,12 @@ import "package:vibey/models/Attende/BookingModel.dart";
 import "package:vibey/data/Attende/AttendeData.dart";
 
 class books {
+  
   final eventObj = Event();
   final List<BookingModel> bookingData = [
 
     BookingModel(
-      events:,
+      events:eventObj.events[0],
       Quantity: 2,
       TotalPaid: "1650",
       ticketTypes: [
