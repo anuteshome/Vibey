@@ -31,41 +31,53 @@ class TicketDetail extends StatelessWidget {
                   ),
                 ), // QR Code
               ),
-              Row(
-                mainAxisAlignment:MainAxisAlignment.spaceBetween ,
-                children: [
-                  Column(children: [Text("Booking Id"), Text("VIB-2025-0524-7890")]),
-                  Icon(Ionicons.copy_outline),
-                ],
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                child: Row(
+                  mainAxisAlignment:MainAxisAlignment.spaceBetween ,
+                  children: [
+                    Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [Text("Booking Id"), Text("VIB-2025-0524-7890")]),
+                    Icon(Ionicons.copy_outline),
+                  ],
+                ),
               ),
               Center(child: Image.asset("assets/image/qrcode.png",width: 300,height:300,)),
-             Column(
-              children:[
-                Row(
-                  children:[
-                    Text("Ticket Type"),
-                    Text("VIP")
-                  ],
-                ),
+             Padding(
+               padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+               child: Column(
+                children:[
                   Row(
-                  children:[
-                    Text("Quantity"),
-                    Text("2")
-                  ],
-                ),
-                  Row(
-                  children:[
-                    Text("Total Paid"),
-                    Text("ETB 5,200")
-                  ],
-                ),
-                  Row(
-                  children:[
-                    Text("Purchase Date"),
-                    Text("320 May 2025 10:30 AM")
-                  ],
-                )
-              ]
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children:[
+                      Text("Ticket Type"),
+                      Text("VIP")
+                    ],
+                  ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children:[
+                      Text("Quantity"),
+                      Text("2")
+                    ],
+                  ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children:[
+                      Text("Total Paid"),
+                      Text("ETB 5,200")
+                    ],
+                  ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children:[
+                      Text("Purchase Date"),
+                      Text("320 May 2025 10:30 AM")
+                    ],
+                  )
+                ]
+               ),
              ),
              Container(
               decoration: BoxDecoration(
