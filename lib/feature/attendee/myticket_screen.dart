@@ -18,9 +18,14 @@ class MyTicketPage extends StatelessWidget {
     required this.ticket,
   });
   final bookData = books();
+
+   void PastEvent(){
+
+   }
+
   @override
   Widget build(BuildContext context) {
-    
+    final UpcomingEvent=bookData.bookingData.where((e)=>e.)
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 229, 226, 246),
       appBar: AppBar(title: Text("My Tickets")),

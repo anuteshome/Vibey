@@ -13,8 +13,8 @@ class books {
       SelectedTickets: eventObj.events[0].ticketTypes[0],
       Quantity: 2,
       TotalPaid: "1650",
-      UpcomingEvent:true,
-      PastEvent:false,
+      isUpcomingEvent:true,
+      isPastEvent:false,
     ),
 
     BookingModel(
@@ -22,8 +22,8 @@ class books {
       SelectedTickets: eventObj.events[0].ticketTypes[1],
       Quantity: 1,
       TotalPaid: "530",
-       UpcomingEvent:true,
-      PastEvent:false,
+       isUpcomingEvent:true,
+      isPastEvent:false,
     ),
 
     BookingModel(
@@ -31,8 +31,8 @@ class books {
       SelectedTickets: eventObj.events[0].ticketTypes[1],
       Quantity: 2,
       TotalPaid: "2475",
-       UpcomingEvent:true,
-      PastEvent:false,
+      isUpcomingEvent:true,
+      isPastEvent:false,
     ),
 
     BookingModel(
@@ -40,8 +40,8 @@ class books {
       SelectedTickets: eventObj.events[0].ticketTypes[2],
       Quantity: 3,
       TotalPaid: "1070",
-       UpcomingEvent:false,
-      PastEvent:true,
+       isUpcomingEvent:false,
+     isPastEvent:true,
     ),
 
     BookingModel(
@@ -49,8 +49,8 @@ class books {
       SelectedTickets: eventObj.events[0].ticketTypes[0],
       Quantity: 2,
       TotalPaid: "1340",
-       UpcomingEvent:false,
-      PastEvent:true,
+       isUpcomingEvent:false,
+      isPastEvent:true,
     ),
   ];
 }
