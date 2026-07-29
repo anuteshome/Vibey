@@ -11,6 +11,7 @@ class MyTicketPage extends StatefulWidget {
   final BookingModel book;
   final TicketTypes ticket;
 
+
   MyTicketPage({
     super.key,
     required this.event,
@@ -23,14 +24,25 @@ class MyTicketPage extends StatefulWidget {
 }
 
 class _MyTicketPageState extends State<MyTicketPage> {
+   final  bool EventSelected=false ;
   final bookData = books();
+  String EventType = "Upcoming Event";
 
-  final bool EventSelected = false;
+  void PastEvent(bool  EventSelected) {
+    setState(() {
+      EventSelected =true;
+      String EventType = "Past events";
+    });
+    debugPrint("EventSelected is pressed${EventSelected}");
+  }
 
-  void PastEvent() {
-  setState(() {
-      !EventSelected;
-  });
+  void UpcomingEvent(bool EventSelected) {
+    setState(() {
+      EventSelected = false;
+      ;
+      String EventType = "Past events";
+    });
+    debugPrint("EventSelected is pressed${EventSelected}");
   }
 
   @override
@@ -65,7 +77,7 @@ class _MyTicketPageState extends State<MyTicketPage> {
                         vertical: 15,
                       ),
                       child: Text(
-                  "Upcoming Tickets",
+                        "Upcoming Tickets",
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -75,7 +87,7 @@ class _MyTicketPageState extends State<MyTicketPage> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      PastEvent();
+                      PastEvent(EventSelected);
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -104,7 +116,12 @@ class _MyTicketPageState extends State<MyTicketPage> {
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [Text(EventSelected? "Upcoming event":" Past events"), Text(Uplen.toString())],
+                children: [
+                  Text(
+                    EventSelected ? "Past  eventsss" : "Upcoming Events",
+                  ),
+                  Text(Uplen.toString()),
+                ],
               ),
             ),
             ListView.builder(
