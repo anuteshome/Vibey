@@ -19,13 +19,16 @@ class MyTicketPage extends StatelessWidget {
   });
   final bookData = books();
 
-   void PastEvent(){
-
-   }
+  void PastEvent() {}
 
   @override
   Widget build(BuildContext context) {
-    final UpcomingEvent=bookData.bookingData.where((e)=>e.)
+    final UpcomingEvent = bookData.bookingData
+        .where((e) => e.isUpcomingEvent)
+        .toList();
+    final PasstEvent = bookData.bookingData
+        .where((e) => e.isPastEvent)
+        .toList();
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 229, 226, 246),
       appBar: AppBar(title: Text("My Tickets")),
@@ -33,42 +36,56 @@ class MyTicketPage extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children:[
-                Container(
-                  decoration: BoxDecoration(
-                    color:Color(0xFF6C5CE7),
-                     borderRadius:BorderRadius.circular(10)
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Color(0xFF6C5CE7),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 40,
+                        vertical: 15,
+                      ),
+                      child: Text(
+                        "Upcoming Tickets",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
                   ),
-                  child:Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 40,vertical: 15),
-                    child: Text("Upcoming Tickets",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold)),
-                  )
-                ),
-                 Container(
-                  decoration: BoxDecoration(
-                    color:Color(0xFF6C5CE7),
-                    borderRadius:BorderRadius.circular(10)
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Color(0xFF6C5CE7),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 60,
+                        vertical: 15,
+                      ),
+                      child: Text(
+                        "Past Tickets",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
                   ),
-                  child:Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 60,vertical: 15),
-                    child: Text("Past Tickets",style:TextStyle(color:Colors.white,fontWeight:FontWeight.bold)),
-                  )
-                )
-                ]
-                
+                ],
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 5),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children:[
-               Text("Upcoming event"),
-               Text("3 Tickets")
-                ]
+                children: [Text("Upcoming event"), Text("3 Tickets")],
               ),
             ),
             ListView.builder(
