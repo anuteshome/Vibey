@@ -55,6 +55,7 @@ class _MyTicketPageState extends State<MyTicketPage> {
         .toList();
 
     final int Uplen = UpcomingEvent.length;
+      final int Pastlen = PasstEvent.length;
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 229, 226, 246),
       appBar: AppBar(title: Text("My Tickets")),
@@ -120,7 +121,7 @@ class _MyTicketPageState extends State<MyTicketPage> {
                   Text(
                     EventSelected ? "Past  eventsss" : "Upcoming Events",
                   ),
-                  Text(Uplen.toString()),
+                  Text(EventSelected? Uplen.toString():Pastlen.toString()),
                 ],
               ),
             ),
