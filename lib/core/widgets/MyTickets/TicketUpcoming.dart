@@ -21,7 +21,7 @@ class TicketUpcoming extends StatelessWidget {
         ),
         child: Column(
           children: [
-            TicketEvent(event: event),
+            TicketEvent(event: book.event),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               child: Row(
@@ -50,7 +50,7 @@ class TicketUpcoming extends StatelessWidget {
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           Text(
-                            ticket.Price,
+                            book.SelectedTickets,
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Color(0XFF6C5CE7),
