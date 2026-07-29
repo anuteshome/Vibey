@@ -57,7 +57,7 @@ class TicketDetail extends StatelessWidget {
                             vertical: 3,
                           ),
                           child: Text(
-                            "{book.SelectedTickets.Type}-{book.Quantity} Tickets",
+                            "${book.SelectedTickets.Type}-${book.Quantity} Tickets",
                             style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
@@ -204,7 +204,7 @@ class TicketDetail extends StatelessWidget {
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                         Text(
-                        " { book.event.Date} {book.event.Time}",
+                        " ${book.event.Date} ${book.event.Time}",
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ],
