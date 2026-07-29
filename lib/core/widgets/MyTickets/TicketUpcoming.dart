@@ -162,7 +162,7 @@ class TicketUpcoming extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => TicketDetail()),
+                        MaterialPageRoute(builder: (context) => TicketDetail(book:book)),
                       );
                     },
                     child: Container(
