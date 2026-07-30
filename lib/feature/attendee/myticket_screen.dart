@@ -62,53 +62,63 @@ class _MyTicketPageState extends State<MyTicketPage> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  GestureDetector(
-                    onTap: () {
-                      UpcomingEventFunc();
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: EventSelected? Colors.white:const Color(0xFF6C5CE7),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 40,
-                          vertical: 15,
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () {
+                        UpcomingEventFunc();
+                      },
+                      child: Container(
+                        // width:double.infinity,
+                        decoration: BoxDecoration(
+                          color: EventSelected? Colors.white:const Color(0xFF6C5CE7),
+                          // borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Text(
-                          "Upcoming Tickets",
-                          style: TextStyle(
-                            color:EventSelected? Color(0xFF6C5CE7):Colors.white,
-                            fontWeight: FontWeight.bold,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                            // horizontal: 40,
+                            vertical: 15,
+                          ),
+                          child: Center(
+                            child: Text(
+                              "Upcoming Tickets",
+                              style: TextStyle(
+                                color:EventSelected? Color(0xFF6C5CE7):Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ),
                         ),
                       ),
                     ),
                   ),
-                  GestureDetector(
-                    onTap: () {
-                      PastEvent();
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                       color: EventSelected? Color(0xFF6C5CE7):Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 60,
-                          vertical: 15,
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () {
+                        PastEvent();
+                      },
+                      child: Container(
+                          // width:double.infinity,
+                        decoration: BoxDecoration(
+                         color: EventSelected? Color(0xFF6C5CE7):Colors.white,
+                          // borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Text(
-                          "Past Tickets",
-                          style: TextStyle(
-                            color:EventSelected? Colors.white:Color(0xFF6C5CE7),
-                            fontWeight: FontWeight.bold,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                            // horizontal: 60,
+                            vertical: 15,
+                          ),
+                          child: Center(
+                            child: Text(
+                              "Past Tickets",
+                              style: TextStyle(
+                                color:EventSelected? Colors.white:Color(0xFF6C5CE7),
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ),
                         ),
                       ),
