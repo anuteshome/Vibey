@@ -104,7 +104,10 @@ class _MyTicketPageState extends State<MyTicketPage> {
                           // width:double.infinity,
                         decoration: BoxDecoration(
                          color: EventSelected? Color(0xFF6C5CE7):Colors.white,
-                          // borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(10),
+                            bottomRight: Radius.circular(10)
+                          ),
                         ),
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
