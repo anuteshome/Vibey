@@ -71,11 +71,11 @@ class YourSelection extends StatelessWidget {
                     child: Container(
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(12),
+                        // borderRadius: BorderRadius.circular(12),
                         // border: Border.all(color: Colors.black)
-                        boxShadow: [
-                          BoxShadow(blurRadius: 2, color: Colors.grey),
-                        ],
+                        // boxShadow: [
+                        //   BoxShadow(blurRadius: 2, color: Colors.grey),
+                        // ],
                       ),
                       child: Column(
                         children: [
