@@ -41,14 +41,14 @@ class TicketDetail extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 20,
-                    vertical: 10,
+                    vertical: 15,
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
                         decoration: BoxDecoration(
-                          color: Colors.grey[400],
+                          color: const Color.fromARGB(255, 233, 233, 233),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Padding(
