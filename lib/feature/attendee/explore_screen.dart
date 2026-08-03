@@ -14,8 +14,8 @@ import "package:vibey/models/Attende/BookingModel.dart";
 
 class ExplorePage extends StatelessWidget {
   final TicketTypes ticketModel;
-
-  const ExplorePage({super.key, required this.ticketModel});
+  final BookingModel book;
+  const ExplorePage({super.key, required this.ticketModel, required this.book});
 
   @override
   Widget build(BuildContext context) {
