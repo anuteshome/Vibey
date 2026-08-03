@@ -17,6 +17,7 @@ class EventModel {
   final String About;
   final bool isFeatured;
   final bool isUpcoming;
+  final bool isPopular;
   final int ServiceFee;
 
   EventModel({
@@ -36,6 +37,7 @@ class EventModel {
     required this.About,
     required this.isFeatured,
     required this.isUpcoming,
+    required this.isPopular,
     required this.ServiceFee,
   });
 }
