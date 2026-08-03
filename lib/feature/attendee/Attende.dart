@@ -25,7 +25,7 @@ class _AttendePageState extends State<AttendePage> {
     super.initState();
        Pages = [
       HomePage(event: widget.event,book:widget.book,ticket:widget.ticket),
-      ExplorePage(),
+      ExplorePage(event: widget.event,book:widget.book,ticketModel:widget.ticket),
       MyTicketPage(event: widget.event,book:widget.book,ticket:widget.ticket),
       ProfilePage(event: widget.event,book:widget.book,ticket:widget.ticket),
     ];
