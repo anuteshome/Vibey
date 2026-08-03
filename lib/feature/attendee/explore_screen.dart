@@ -58,7 +58,7 @@ class ExplorePage extends StatelessWidget {
                   ),
                 ),
               ),
-
+                SizedBox(height:20),
               Container(
                 height: 80,
                 width: double.infinity,
