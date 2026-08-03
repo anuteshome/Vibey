@@ -8,6 +8,7 @@ import "package:vibey/core/widgets/TicketWidget/TicketEvent.dart";
 // import "package:vibey/models/Attende/AttendeModel.dart";
 import "package:vibey/data/Attende/AttendeData.dart";
 import "package:vibey/feature/attendee/BookingSuccess.dart";
+import "package:vibey/feature/attendee/EventDetail.dart";
 
 class ExplorePage extends StatelessWidget {
   // final TicketTypes ticketModel;
@@ -16,6 +17,7 @@ class ExplorePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final eventObj = Event();
+    final PopularEvent = eventObj.events.where((e) => e.isPopular).toList();
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 229, 226, 246),
       appBar: AppBar(
@@ -58,7 +60,7 @@ class ExplorePage extends StatelessWidget {
                   ),
                 ),
               ),
-                SizedBox(height:20),
+              SizedBox(height: 20),
               Container(
                 height: 80,
                 width: double.infinity,
@@ -70,7 +72,7 @@ class ExplorePage extends StatelessWidget {
                   },
                 ),
               ),
-                 Container(
+              Container(
                 decoration: BoxDecoration(
                   // color:Colors.grey
                 ),
@@ -87,7 +89,11 @@ class ExplorePage extends StatelessWidget {
                         pushOnce(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => EventDetail(event: event,book:book,ticket:ticket),
+                            builder: (context) => EventDetail(
+                              event: event,
+                              book: book,
+                              ticket: ticket,
+                            ),
                           ),
                         );
                       },
