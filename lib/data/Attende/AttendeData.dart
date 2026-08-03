@@ -214,7 +214,7 @@ class Event {
       isFeatured: true,
       isUpcoming: false,
       ServiceFee:200,
-      isPopular:false,
+      isPopular:true,
     ),
 
     EventModel(
@@ -257,7 +257,7 @@ class Event {
       isFeatured: false,
       isUpcoming: true,
       ServiceFee:400,
-      isPopular:false,
+      isPopular:true,
     ),
   ];
 
