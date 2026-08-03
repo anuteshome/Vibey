@@ -9,6 +9,7 @@ import "package:vibey/core/widgets/TicketWidget/TicketEvent.dart";
 import "package:vibey/data/Attende/AttendeData.dart";
 import "package:vibey/feature/attendee/BookingSuccess.dart";
 import "package:vibey/feature/attendee/EventDetail.dart";
+import "package:vibey/core/navigation/navigation_guard.dart";
 
 class ExplorePage extends StatelessWidget {
   // final TicketTypes ticketModel;
@@ -81,9 +82,9 @@ class ExplorePage extends StatelessWidget {
 
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  itemCount: upcomingEvent.length,
+                  itemCount: PopularEvent.length,
                   itemBuilder: (context, index) {
-                    final event = upcomingEvent[index];
+                    final event = PopularEvent[index];
                     return GestureDetector(
                       onTap: () {
                         pushOnce(
@@ -97,7 +98,7 @@ class ExplorePage extends StatelessWidget {
                           ),
                         );
                       },
-                      child: UpcomingEvents(event: event),
+                      // child: UpcomingEvents(event: event),
                     );
                   },
                 ),
