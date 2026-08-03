@@ -43,6 +43,7 @@ class Event {
       isFeatured: false,
       isUpcoming: true,
       ServiceFee:100,
+      isPopular:true,
     ),
     EventModel(
       Name: "Flutter Developer Meet",
@@ -85,6 +86,7 @@ class Event {
       isFeatured: false,
       isUpcoming: true,
       ServiceFee:300,
+      isPopular:true,
     ),
 
     EventModel(
@@ -129,6 +131,7 @@ class Event {
       isFeatured: true,
       isUpcoming: false,
       ServiceFee:50,
+      isPopular: true,
     ),
     EventModel(
       Name: "Addis Festival",
@@ -170,6 +173,7 @@ class Event {
       isFeatured: true,
       isUpcoming: false,
       ServiceFee:400,
+      isPopular:true,
     ),
 
     EventModel(
@@ -210,6 +214,7 @@ class Event {
       isFeatured: true,
       isUpcoming: false,
       ServiceFee:200,
+      isPopular:false,
     ),
 
     EventModel(
@@ -252,6 +257,7 @@ class Event {
       isFeatured: false,
       isUpcoming: true,
       ServiceFee:400,
+      isPopular:false,
     ),
   ];
 
