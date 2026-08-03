@@ -5,15 +5,17 @@ import "package:vibey/core/widgets/TicketWidget/TicketEvent.dart";
 // import "package:vibey/core/widgets/TicketWidget/TicketType.dart";
 // import "package:vibey/core/widgets/EventDetailImage.dart";
 // import "package:vibey/core/widgets/EventDetailName.dart";
-// import "package:vibey/models/Attende/AttendeModel.dart";
+import "package:vibey/models/Attende/AttendeModel.dart";
 import "package:vibey/data/Attende/AttendeData.dart";
 import "package:vibey/feature/attendee/BookingSuccess.dart";
 import "package:vibey/feature/attendee/EventDetail.dart";
 import "package:vibey/core/navigation/navigation_guard.dart";
+import "package:vibey/models/Attende/BookingModel.dart";
 
 class ExplorePage extends StatelessWidget {
-  // final TicketTypes ticketModel;
-  const ExplorePage({super.key});
+  final TicketTypes ticketModel;
+
+  const ExplorePage({super.key, required this.ticketModel});
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +95,7 @@ class ExplorePage extends StatelessWidget {
                             builder: (context) => EventDetail(
                               event: event,
                               book: book,
-                              ticket: ticket,
+                              ticket: ticketModel,
                             ),
                           ),
                         );
