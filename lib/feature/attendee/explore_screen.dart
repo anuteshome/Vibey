@@ -77,6 +77,19 @@ class ExplorePage extends StatelessWidget {
                 ),
               ),
               SizedBox(height:20),
+                   Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 15,
+                ),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "Popular This Week",
+                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
               Container(
                 decoration: BoxDecoration(
                   // color:Colors.grey
