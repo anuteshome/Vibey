@@ -70,6 +70,32 @@ class ExplorePage extends StatelessWidget {
                   },
                 ),
               ),
+                 Container(
+                decoration: BoxDecoration(
+                  // color:Colors.grey
+                ),
+                child: ListView.builder(
+                  padding: EdgeInsets.zero,
+
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: upcomingEvent.length,
+                  itemBuilder: (context, index) {
+                    final event = upcomingEvent[index];
+                    return GestureDetector(
+                      onTap: () {
+                        pushOnce(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => EventDetail(event: event,book:book,ticket:ticket),
+                          ),
+                        );
+                      },
+                      child: UpcomingEvents(event: event),
+                    );
+                  },
+                ),
+              ),
             ],
           ),
         ),
