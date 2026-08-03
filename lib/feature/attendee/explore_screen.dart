@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:vibey/core/widgets/Catagories.dart";
 import "package:vibey/core/widgets/TicketWidget/ChooseTicket.dart";
 import "package:vibey/core/widgets/TicketWidget/TicketEvent.dart";
 // import "package:vibey/core/widgets/TicketWidget/TicketType.dart";
@@ -14,15 +15,26 @@ class ExplorePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final eventObj = Event();
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 229, 226, 246),
-      appBar: AppBar(title: Center(child: Text("Explore Events",style:TextStyle(fontSize:18,fontWeight:FontWeight.bold)))),
+      appBar: AppBar(
+        title: Center(
+          child: Text(
+            "Explore Events",
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
             children: [
-  Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 10,
+                ),
                 child: Container(
                   // width:double.infinity,
                   // height:60,
@@ -44,6 +56,18 @@ class ExplorePage extends StatelessWidget {
                       ),
                     ),
                   ),
+                ),
+              ),
+
+              Container(
+                height: 80,
+                width: double.infinity,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: eventObj.catagories.length,
+                  itemBuilder: (context, index) {
+                    return Catagories(cata: eventObj.catagories[index]);
+                  },
                 ),
               ),
             ],

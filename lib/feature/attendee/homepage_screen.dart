@@ -164,7 +164,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
+       ),
               Container(
                 height: 80,
                 width: double.infinity,
@@ -175,7 +175,7 @@ class HomePage extends StatelessWidget {
                     return Catagories(cata: eventObj.catagories[index]);
                   },
                 ),
-              ),
+              ),       
               //Featured Section
               Padding(
                 padding: const EdgeInsets.symmetric(
