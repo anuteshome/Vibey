@@ -43,7 +43,7 @@ The model is derived from the mockup decision log, velkap2_react_page_checklist.
 | **Dashboard unlock** | **All onboarding requirements must be complete: registration complete, questionnaire passed, email verified, KYC approved, Velkap 1 linked, and account operational status active.** |
 | **KYC threshold** | **KYC approval is required. Uploading documents or being under review does not unlock the next step or dashboard access.** |
 | **Velkap 1 linking** | **Mandatory for every investor in the MVP.** |
-| **Onboarding order** | **Mandatory sequential order. KYC must be approved before account linking begins.** |
+| **Onboarding order** | **Mandatory sequential order. KYC must be approved before account linking begins ? or we can make parallel but can not access dashboard.** |
 | **Product access** | **Products are accessible only after dashboard access is enabled, with additional product-specific eligibility checks.** |
 | **Profile changes** | **All profile edits trigger re-verification under the current approved rule.** |
 | **State representation** | **Use multiple independent status dimensions, not one overloaded account status.** |
