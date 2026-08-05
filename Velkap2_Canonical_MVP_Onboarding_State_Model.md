@@ -11,7 +11,6 @@ and Account-State Model**
 | **Field** | **Value** |
 | --- | --- |
 | **Source baseline** | **Velkap 2 mockup repository, decision log, page checklist, route flow, onboarding/document/profile/dashboard/account-linking pages** |
-| **Decision input** | **Stakeholder answers provided on 4 August 2026** |
 | **Primary use** | **Shared implementation reference for Epics 1, 2, and 3** |
 | **Status** | **Canonical for confirmed rules; open items explicitly ticketed** |
 
