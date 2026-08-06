@@ -29,25 +29,34 @@ class HomePage extends StatefulWidget {
 
 
 class _HomePageState extends State<HomePage> {
+
+  List<EventModel> events = [];
+bool isLoading = true;
+String? errorMessage;
+
 final eventRepository = EventRepository();
 
 Future<void> loadEvents() async {
   try {
-    final events = await eventRepository.getEvents();
+    final loadedEvents = await eventRepository.getEvents();
 
-    for (final event in events) {
-      debugPrint("Event: ${event.Name}");
-      debugPrint("Tickets: ${event.ticketTypes.length}");
+    if (!mounted) return;
 
-      for (final ticket in event.ticketTypes) {
-        debugPrint("${ticket.Type}: ${ticket.Price}");
-      }
-    }
+    setState(() {
+      events = loadedEvents;
+      isLoading = false;
+    });
   } catch (error) {
+    if (!mounted) return;
+
+    setState(() {
+      errorMessage = error.toString();
+      isLoading = false;
+    });
+
     debugPrint("Error loading events: $error");
   }
 }
-
   final authRepsitory = AuthRepository(Supabase.instance.client);
 
   final eventObj = Event();
@@ -70,10 +79,29 @@ void initState() {
 
   @override
   Widget build(BuildContext context) {
-    final featuredEvent = eventObj.events
-        .where((event) => event.isFeatured)
-        .toList();
-    final upcomingEvent = eventObj.events.where((e) => e.isUpcoming).toList();
+      if (isLoading) {
+    return const Scaffold(
+      body: Center(
+        child: CircularProgressIndicator(),
+      ),
+    );
+  }
+
+  if (errorMessage != null) {
+    return Scaffold(
+      body: Center(
+        child: Text("Error: $errorMessage"),
+      ),
+    );
+  }
+
+  final featuredEvent = events
+    .where((event) => event.isFeatured)
+    .toList();
+
+final upcomingEvent = events
+    .where((event) => event.isUpcoming)
+    .toList();
 
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 229, 226, 246),
