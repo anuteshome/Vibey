@@ -11,14 +11,45 @@ import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/core/navigation/navigation_guard.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 import "package:vibey/models/Attende/BookingModel.dart";
+import "package:vibey/data/Attende/event.repository.dart";
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   final EventModel event;
         final BookingModel book;
   final TicketTypes ticket;
   HomePage({super.key, required this.event,required this.book, required this.ticket});
 
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+
+
+
+
+class _HomePageState extends State<HomePage> {
+final eventRepository = EventRepository();
+
+Future<void> loadEvents() async {
+  try {
+    final events = await eventRepository.getEvents();
+
+    for (final event in events) {
+      debugPrint("Event: ${event.Name}");
+      debugPrint("Tickets: ${event.ticketTypes.length}");
+
+      for (final ticket in event.ticketTypes) {
+        debugPrint("${ticket.Type}: ${ticket.Price}");
+      }
+    }
+  } catch (error) {
+    debugPrint("Error loading events: $error");
+  }
+}
+
   final authRepsitory = AuthRepository(Supabase.instance.client);
+
   final eventObj = Event();
 
   void Logout(BuildContext context) async {
@@ -26,10 +57,16 @@ class HomePage extends StatelessWidget {
     if (!context.mounted) return;
     Navigator.pushAndRemoveUntil(
       context,
-      MaterialPageRoute(builder: (context) => LoginPage(event: event,book:book,ticket:ticket,)),
+      MaterialPageRoute(builder: (context) => LoginPage(event: widget.event,book:widget.book,ticket:widget.ticket,)),
       (route) => false,
     );
   }
+
+  @override
+void initState() {
+  super.initState();
+  loadEvents();
+}
 
   @override
   Widget build(BuildContext context) {
@@ -202,7 +239,7 @@ class HomePage extends StatelessWidget {
                         pushOnce(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => EventDetail(event: event,book:book,ticket:ticket),
+                            builder: (context) => EventDetail(event: event,book:widget.book,ticket:widget.ticket),
                           ),
                         );
                       },
@@ -257,7 +294,7 @@ class HomePage extends StatelessWidget {
                         pushOnce(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => EventDetail(event: event,book:book,ticket:ticket),
+                            builder: (context) => EventDetail(event: event,book:widget.book,ticket:widget.ticket),
                           ),
                         );
                       },
