@@ -134,9 +134,11 @@ class Event {
       isPopular: true,
     ),
     EventModel(
+      id: "1",
       Name: "Addis Festival",
        ticketTypes :[
    TicketTypes(
+    id: "1",
       Type: "Early Bird",
       Discription:
           "product flow. After that, irst complete  integrating Supabase",
@@ -144,15 +146,19 @@ class Event {
     ),
 
     TicketTypes(
+      id: "2",
       Type: "Standard",
       Discription: "complete product flow. After that, integrating Supabase",
       Price: "4000",
+      quantityAvailable: 100,
     ),
  TicketTypes(
+  id: "3",
       Type: "Vip",
       Discription:
           "irst complete product flow. After that, integrating Supabase",
       Price: "8000",
+      quantityAvailable: 100,
     ),
     
       ],
