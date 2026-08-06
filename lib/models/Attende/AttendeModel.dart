@@ -62,8 +62,6 @@
 //   });
 // }
 
-
-
 import "package:flutter/material.dart";
 
 class EventModel {
@@ -84,6 +82,7 @@ class EventModel {
   final String About;
   final bool isFeatured;
   final bool isUpcoming;
+  final bool isPopular;
   final int ServiceFee;
 
   EventModel({
@@ -104,6 +103,7 @@ class EventModel {
     required this.About,
     required this.isFeatured,
     required this.isUpcoming,
+    required this .isPopular,
     required this.ServiceFee,
   });
 
@@ -112,12 +112,10 @@ class EventModel {
 
     final tickets = rawTickets
         .map(
-          (ticketJson) => TicketTypes.fromJson(
-            ticketJson as Map<String, dynamic>,
-          ),
+          (ticketJson) =>
+              TicketTypes.fromJson(ticketJson as Map<String, dynamic>),
         )
         .toList();
-        
 
     return EventModel(
       id: json["id"]?.toString() ?? "",
@@ -139,6 +137,7 @@ class EventModel {
       About: json["about"]?.toString() ?? "",
       isFeatured: json["is_featured"] as bool? ?? false,
       isUpcoming: json["is_upcoming"] as bool? ?? false,
+      isPopular: json["is_popular"] as bool? ?? false,
       ServiceFee: (json["service_fee"] as num?)?.toInt() ?? 0,
       ticketTypes: tickets,
     );
@@ -166,8 +165,7 @@ class TicketTypes {
       Type: json["name"]?.toString() ?? "",
       Discription: json["description"]?.toString() ?? "",
       Price: json["price"]?.toString() ?? "0",
-      quantityAvailable:
-          (json["quantity_available"] as num?)?.toInt() ?? 0,
+      quantityAvailable: (json["quantity_available"] as num?)?.toInt() ?? 0,
     );
   }
 }
@@ -177,9 +175,5 @@ class Catagorie {
   final IconData icon;
   final Color color;
 
-  Catagorie({
-    required this.Name,
-    required this.icon,
-    required this.color,
-  });
+  Catagorie({required this.Name, required this.icon, required this.color});
 }
