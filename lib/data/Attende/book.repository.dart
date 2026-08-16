@@ -10,7 +10,9 @@ class BookRepsoitory {
     );
     final BookingData = response as List<dynamic>;
 
-  return BookingData.map((FetchBooking)=>
-  BookingModel.fromJson())
+    return BookingData.map(
+      (FetchBooking) =>
+          BookingModel.fromJson(FetchBooking as Map<String, dynamic>),
+    ).toList();
   }
 }
