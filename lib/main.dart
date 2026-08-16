@@ -3,7 +3,7 @@ import 'package:vibey/feature/auth/presentation/screen/splash_screen.dart';
 import "package:supabase_flutter/supabase_flutter.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 import "package:vibey/data/Attende/AttendeData.dart";
-import "package:vibey/data/Attende/BookingData.dart";
+import "package:vibey/data/Attende/book.repository.dart";
 import "package:vibey/models/Attende/BookingModel.dart";
 
 void main() async {
@@ -11,12 +11,23 @@ void main() async {
 
   await Supabase.initialize(
     url: 'https://crzywgmtkkxzkkbeqxan.supabase.co',
-    anonKey: 'sb_publishable_BheiLctkyMgyaYpgYxl3Wg_JIvknRmk',
+    publishableKey: 'sb_publishable_BheiLctkyMgyaYpgYxl3Wg_JIvknRmk',
   );
 
-  //  final bookData = books();
   final initialEvent = Event().events.first;
-  final initialBooking = books.first;
+  final loadedBooks = await BookRepsoitory().getBooks();
+
+  if (loadedBooks.isEmpty) {
+    runApp(const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Center(child: Text('No bookings found')),
+      ),
+    ));
+    return;
+  }
+
+  final initialBooking = loadedBooks.first;
   runApp(MyApp(event: initialEvent, book: initialBooking));
 }
 
