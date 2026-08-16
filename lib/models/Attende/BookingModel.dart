@@ -22,10 +22,11 @@ class BookingModel {
   factory BookingModel.fromJson(Map<String, dynamic> json) {
     final rawEvents = json["events"] as List<dynamic>? ?? [];
 
-    final events = 
-              EventModel.fromJson(json["events"] as Map<String, dynamic>).toList();
+    final events = EventModel.fromJson(json["events"] as Map<String, dynamic>);
 
-    final tickets = TicketTypes.fromJson(json["ticket_types"]as Map<String, dynamic>).toList();
+    final tickets = TicketTypes.fromJson(
+      json["ticket_types"] as Map<String, dynamic>,
+    )
 
     return BookingModel(
       id: json["id"] as String? ?? "",
