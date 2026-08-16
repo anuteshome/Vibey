@@ -34,7 +34,7 @@ class _MyTicketPageState extends State<MyTicketPage> {
 
   final bookRepo = BookRepsoitory();
 
-  void LoadBooks() async {}
+  Future<void> LoadBooks() async {}
     final loadedBokks = await bookRepo.getBooks();
   @override
   void initState() {
