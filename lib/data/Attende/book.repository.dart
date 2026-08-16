@@ -3,11 +3,8 @@ import "package:vibey/models/Attende/BookingModel.dart";
 
 class BookRepsoitory {
   final SupabaseClient supabase = Supabase.instance.client;
-  
-   Future <List<BookingModel>> getBooks() async{
-     final response = await supabase.
 
-   }
-     
-
+  Future<List<BookingModel>> getBooks() async {
+    final response = await supabase.from("bookings").select(""" *, """);
+  }
 }
