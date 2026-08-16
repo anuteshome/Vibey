@@ -35,7 +35,8 @@ return BookingModel(
   event:events,
   SelectedTickets:tickets,
   Quantity: json["Quantity"] as int ,
-  TotalPaid:json["TotalPaid"] as int,
+  TotalPaid:json["TotalPaid"] as String,
+  isUpcomingEvent
 
 
 )
