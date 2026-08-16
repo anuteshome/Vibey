@@ -1,6 +1,4 @@
 import "package:supabase_flutter/supabase_flutter.dart";
-import "package:"
+import "package:vibey/models/Attende/BookingModel.dart";
 
-class BookRepsoitory{
-
-}
+class BookRepsoitory {}
