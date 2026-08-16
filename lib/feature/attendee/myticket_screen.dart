@@ -35,13 +35,14 @@ class _MyTicketPageState extends State<MyTicketPage> {
   final bookRepo = BookRepsoitory();
 
   Future<void> LoadBooks() async {
-    try{
-    final loadedBokks = await bookRepo.getBooks();
-    
-
-    }catch(error){
-
-    }
+    try {
+      final loadedBokks = await bookRepo.getBooks();
+      if (!mounted) return;
+      setState(() {
+        books = loadedBokks;
+        isLoading = false;
+      });
+    } catch (error) {}
   }
 
   @override
