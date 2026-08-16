@@ -9,5 +9,8 @@ class BookRepsoitory {
       """ *,ticket_types(*), events(*)""",
     );
     final BookingData = response as List<dynamic>;
+
+  return BookingData.map((FetchBooking)=>
+  BookingModel.fromJson())
   }
 }
