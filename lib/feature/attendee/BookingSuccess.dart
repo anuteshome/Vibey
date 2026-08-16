@@ -128,9 +128,9 @@ class BookingSuccess extends StatelessWidget {
                 pushOnce(
                   context,
                   MaterialPageRoute(builder: (context) => MyTicketPage(
-                    event:event,
-                     book: book,
-                      ticket: ticket,
+                    // event:event,
+                    //  book: book,
+                    //   ticket: ticket,
                     )),
                 );
               },

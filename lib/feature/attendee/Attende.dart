@@ -26,7 +26,7 @@ class _AttendePageState extends State<AttendePage> {
        Pages = [
       HomePage(event: widget.event,book:widget.book,ticket:widget.ticket),
       ExplorePage(book:widget.book,ticketModel:widget.ticket),
-      MyTicketPage(event: widget.event,book:widget.book,ticket:widget.ticket),
+      MyTicketPage(),
       ProfilePage(event: widget.event,book:widget.book,ticket:widget.ticket),
     ];
   }

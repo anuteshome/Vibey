@@ -14,9 +14,9 @@ void main() async {
     anonKey: 'sb_publishable_BheiLctkyMgyaYpgYxl3Wg_JIvknRmk',
   );
 
-   final bookData = books();
+  //  final bookData = books();
   final initialEvent = Event().events.first;
-  final initialBooking = bookData.bookingData.first;
+  final initialBooking = books.first;
   runApp(MyApp(event: initialEvent, book: initialBooking));
 }
 
