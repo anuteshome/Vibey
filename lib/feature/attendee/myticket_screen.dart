@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import "package:vibey/core/widgets/MyTickets/TicketUpcoming.dart";
 import "package:vibey/core/widgets/TicketWidget/ChooseTicket.dart";
 import "package:vibey/core/widgets/TicketWidget/TicketEvent.dart";
+import "package:vibey/data/Attende/book.repository.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 import "package:vibey/models/Attende/BookingModel.dart";
 import "package:vibey/data/Attende/BookingData.dart";
@@ -18,8 +19,6 @@ class MyTicketPage extends StatefulWidget {
     // required this.ticket,
   });
 
- 
-
   @override
   State<MyTicketPage> createState() => _MyTicketPageState();
 }
@@ -29,26 +28,18 @@ class _MyTicketPageState extends State<MyTicketPage> {
   final bookData = books();
   String EventType = "Upcoming Event";
 
-
-
-
- List<BookingModel> books=[];
-   String? errorMessage;
+  List<BookingModel> books = [];
+  String? errorMessage;
   bool isLoading = true;
 
-final bookRepo=
- void LoadBooks() async{
-    
+  final bookRepo = BookRepsoitory();
 
-
- }
-
+  void LoadBooks() async {}
+    final loadedBokks = await bookRepo.getBooks();
   @override
   void initState() {
     super.initState();
-
   }
-
 
   void PastEvent() {
     setState(() {
