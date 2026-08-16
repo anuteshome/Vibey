@@ -6,5 +6,6 @@ class BookRepsoitory {
 
   Future<List<BookingModel>> getBooks() async {
     final response = await supabase.from("bookings").select(""" *,ticket_types(*), events(*)""");
+    final BookingData = response
   }
 }
