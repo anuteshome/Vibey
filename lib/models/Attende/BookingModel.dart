@@ -26,7 +26,7 @@ class BookingModel {
 
     final tickets = TicketTypes.fromJson(
       json["ticket_types"] as Map<String, dynamic>,
-    )
+    );
 
     return BookingModel(
       id: json["id"] as String? ?? "",
