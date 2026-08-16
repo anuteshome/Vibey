@@ -20,7 +20,7 @@ class BookingModel {
     required this.isPastEvent,
   });
   factory BookingModel.fromJson(Map<String, dynamic> json) {
-    final rawEvents = json["events"] as List<dynamic>? ?? [];
+    // final rawEvents = json["events"] as List<dynamic>? ?? [];
 
     final events = EventModel.fromJson(json["events"] as Map<String, dynamic>);
 
