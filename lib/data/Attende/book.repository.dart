@@ -4,14 +4,23 @@ import "package:vibey/models/Attende/BookingModel.dart";
 class BookRepsoitory {
   final SupabaseClient supabase = Supabase.instance.client;
 
-  Future<List<BookingModel>> getBooks() async {
-    final response = await supabase.from("bookings").select(
-      """ *,ticket_types(*), events(*)""",
-    );
-    final BookingData = response as List<dynamic>;
+Future<List<BookingModel>> getBooks() async {
+  final response = await supabase
+      .from("bookings")
+      .select("""
+        *,
+        ticket_types(*),
+        events(*)
+      """);
 
-    return BookingData.map((FetchBooking) {
-      return BookingModel.fromJson(FetchBooking as Map<String, dynamic>);
-    }).toList();
-  }
+  print("BOOKING RESPONSE: $response");
+
+  final bookingData = response as List<dynamic>;
+
+  return bookingData.map((bookingJson) {
+    return BookingModel.fromJson(
+      bookingJson as Map<String, dynamic>,
+    );
+  }).toList();
+}
 }
