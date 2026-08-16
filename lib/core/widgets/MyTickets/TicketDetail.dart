@@ -190,7 +190,7 @@ class TicketDetail extends StatelessWidget {
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                         Text(
-                          book.TotalPaid.toString,
+                          book.TotalPaid.toString(),
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ],
