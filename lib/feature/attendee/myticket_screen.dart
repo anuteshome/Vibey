@@ -25,7 +25,7 @@ class MyTicketPage extends StatefulWidget {
 
 class _MyTicketPageState extends State<MyTicketPage> {
   bool EventSelected = false;
-  final bookData = books();
+  // final bookData = books();
   String EventType = "Upcoming Event";
 
   List<BookingModel> books = [];
@@ -86,6 +86,9 @@ class _MyTicketPageState extends State<MyTicketPage> {
 
     final int Uplen = UpcomingEvent.length;
     final int Pastlen = PasstEvent.length;
+
+      
+
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 229, 226, 246),
       appBar: AppBar(
@@ -200,7 +203,7 @@ class _MyTicketPageState extends State<MyTicketPage> {
               physics: const NeverScrollableScrollPhysics(),
               itemCount: EventSelected ? Pastlen : Uplen,
               itemBuilder: (context, index) {
-                final bookings = bookData.bookingData[index];
+                final bookings = books[index];
                 return EventSelected
                     ? TicketUpcoming(book: PasstEvent[index])
                     : TicketUpcoming(book: UpcomingEvent[index]);
