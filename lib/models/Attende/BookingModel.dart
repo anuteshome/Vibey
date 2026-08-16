@@ -37,6 +37,7 @@ class BookingModel {
               TicketTypes.fromJson(singleTickets as Map<String, dynamic>),
         )
         .toList();
+
     return BookingModel(
       id: json["id"] as String? ?? "",
       event: events,
