@@ -17,4 +17,6 @@ class BookingModel {
     required this.isUpcomingEvent,
     required this.isPastEvent,
   });
+ factory 
+
 }
