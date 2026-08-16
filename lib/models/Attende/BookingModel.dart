@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 
 class BookingModel {
+  final String id;
   final EventModel event;
   final TicketTypes SelectedTickets;
   final int Quantity;
@@ -10,6 +11,7 @@ class BookingModel {
   final bool isPastEvent;
 
   BookingModel({
+    required this.id,
     required this.event,
     required this.SelectedTickets,
     required this.Quantity,
@@ -20,8 +22,16 @@ class BookingModel {
   factory BookingModel.fromJson(Map<String,dynamic> json) {
     final rawEvents = json["events"] as List<dynamic>? ?? [];
 
-    final events= rawEvents.map((singleTicket)=>
-     TicketTypes.fromJson(singleTicket as Map<String,dynamic>)
+    final events= rawEvents.map((singleEvent)=>
+     EventModel.fromJson(singleEvent as Map<String,dynamic>)
     ).toList();
+
+return BookingModel(
+  id:json["id"] as String? ?? "",
+  event:events,
+  
+
+)
+
   }
 }
