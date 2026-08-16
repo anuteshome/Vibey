@@ -1,56 +1,56 @@
-import "package:vibey/models/Attende/AttendeModel.dart";
-import "package:vibey/models/Attende/BookingModel.dart";
-import "package:vibey/data/Attende/AttendeData.dart";
+// import "package:vibey/models/Attende/AttendeModel.dart";
+// import "package:vibey/models/Attende/BookingModel.dart";
+// import "package:vibey/data/Attende/AttendeData.dart";
 
-class books {
+// class books {
 
-  final eventObj = Event();
+//   final eventObj = Event();
 
-  late final List<BookingModel> bookingData = [
+//   late final List<BookingModel> bookingData = [
 
-    BookingModel(
-      event:eventObj.events[0],
-      SelectedTickets: eventObj.events[0].ticketTypes[0],
-      Quantity: 2,
-      TotalPaid: "1650",
-      isUpcomingEvent:true,
-      isPastEvent:false,
-    ),
+//     BookingModel(
+//       event:eventObj.events[0],
+//       SelectedTickets: eventObj.events[0].ticketTypes[0],
+//       Quantity: 2,
+//       TotalPaid: "1650",
+//       isUpcomingEvent:true,
+//       isPastEvent:false,
+//     ),
 
-    BookingModel(
-       event:eventObj.events[1],
-      SelectedTickets: eventObj.events[0].ticketTypes[1],
-      Quantity: 1,
-      TotalPaid: "530",
-       isUpcomingEvent:true,
-      isPastEvent:false,
-    ),
+//     BookingModel(
+//        event:eventObj.events[1],
+//       SelectedTickets: eventObj.events[0].ticketTypes[1],
+//       Quantity: 1,
+//       TotalPaid: "530",
+//        isUpcomingEvent:true,
+//       isPastEvent:false,
+//     ),
 
-    BookingModel(
-   event:eventObj.events[2],
-      SelectedTickets: eventObj.events[0].ticketTypes[1],
-      Quantity: 2,
-      TotalPaid: "2475",
-      isUpcomingEvent:true,
-      isPastEvent:false,
-    ),
+//     BookingModel(
+//    event:eventObj.events[2],
+//       SelectedTickets: eventObj.events[0].ticketTypes[1],
+//       Quantity: 2,
+//       TotalPaid: "2475",
+//       isUpcomingEvent:true,
+//       isPastEvent:false,
+//     ),
 
-    BookingModel(
-   event:eventObj.events[3],
-      SelectedTickets: eventObj.events[0].ticketTypes[2],
-      Quantity: 3,
-      TotalPaid: "1070",
-       isUpcomingEvent:false,
-     isPastEvent:true,
-    ),
-//this is test
-    BookingModel(
-         event:eventObj.events[4],
-      SelectedTickets: eventObj.events[0].ticketTypes[0],
-      Quantity: 2,
-      TotalPaid: "1340",
-       isUpcomingEvent:false,
-      isPastEvent:true,
-    ),
-  ];
-}
+//     BookingModel(
+//    event:eventObj.events[3],
+//       SelectedTickets: eventObj.events[0].ticketTypes[2],
+//       Quantity: 3,
+//       TotalPaid: "1070",
+//        isUpcomingEvent:false,
+//      isPastEvent:true,
+//     ),
+// //this is test
+//     BookingModel(
+//          event:eventObj.events[4],
+//       SelectedTickets: eventObj.events[0].ticketTypes[0],
+//       Quantity: 2,
+//       TotalPaid: "1340",
+//        isUpcomingEvent:false,
+//       isPastEvent:true,
+//     ),
+//   ];
+// }

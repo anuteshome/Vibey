@@ -7,16 +7,18 @@ import "package:vibey/models/Attende/BookingModel.dart";
 import "package:vibey/data/Attende/BookingData.dart";
 
 class MyTicketPage extends StatefulWidget {
-  final EventModel event;
-  final BookingModel book;
-  final TicketTypes ticket;
+  // final EventModel event;
+  // final BookingModel book;
+  // final TicketTypes ticket;
 
   MyTicketPage({
     super.key,
-    required this.event,
-    required this.book,
-    required this.ticket,
+    // required this.event,
+    // required this.book,
+    // required this.ticket,
   });
+
+ 
 
   @override
   State<MyTicketPage> createState() => _MyTicketPageState();
@@ -26,6 +28,27 @@ class _MyTicketPageState extends State<MyTicketPage> {
   bool EventSelected = false;
   final bookData = books();
   String EventType = "Upcoming Event";
+
+
+
+
+ List<BookingModel> books=[];
+   String? errorMessage;
+  bool isLoading = true;
+
+final bookRepo=
+ void LoadBooks() async{
+    
+
+
+ }
+
+  @override
+  void initState() {
+    super.initState();
+
+  }
+
 
   void PastEvent() {
     setState(() {
@@ -57,7 +80,14 @@ class _MyTicketPageState extends State<MyTicketPage> {
     final int Pastlen = PasstEvent.length;
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 229, 226, 246),
-      appBar: AppBar(title: Center(child: Text("My Tickets",style:TextStyle(fontSize:18,fontWeight:FontWeight.bold)))),
+      appBar: AppBar(
+        title: Center(
+          child: Text(
+            "My Tickets",
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -74,10 +104,12 @@ class _MyTicketPageState extends State<MyTicketPage> {
                       child: Container(
                         // width:double.infinity,
                         decoration: BoxDecoration(
-                          color: EventSelected? Colors.white:const Color(0xFF6C5CE7),
+                          color: EventSelected
+                              ? Colors.white
+                              : const Color(0xFF6C5CE7),
                           borderRadius: BorderRadius.only(
-                            topLeft:Radius.circular(10),
-                            bottomLeft: Radius.circular(10)
+                            topLeft: Radius.circular(10),
+                            bottomLeft: Radius.circular(10),
                           ),
                         ),
                         child: Padding(
@@ -89,7 +121,9 @@ class _MyTicketPageState extends State<MyTicketPage> {
                             child: Text(
                               "Upcoming Tickets",
                               style: TextStyle(
-                                color:EventSelected? Color(0xFF6C5CE7):Colors.white,
+                                color: EventSelected
+                                    ? Color(0xFF6C5CE7)
+                                    : Colors.white,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -104,12 +138,14 @@ class _MyTicketPageState extends State<MyTicketPage> {
                         PastEvent();
                       },
                       child: Container(
-                          // width:double.infinity,
+                        // width:double.infinity,
                         decoration: BoxDecoration(
-                         color: EventSelected? Color(0xFF6C5CE7):Colors.white,
+                          color: EventSelected
+                              ? Color(0xFF6C5CE7)
+                              : Colors.white,
                           borderRadius: BorderRadius.only(
                             topRight: Radius.circular(10),
-                            bottomRight: Radius.circular(10)
+                            bottomRight: Radius.circular(10),
                           ),
                         ),
                         child: Padding(
@@ -121,7 +157,9 @@ class _MyTicketPageState extends State<MyTicketPage> {
                             child: Text(
                               "Past Tickets",
                               style: TextStyle(
-                                color:EventSelected? Colors.white:Color(0xFF6C5CE7),
+                                color: EventSelected
+                                    ? Colors.white
+                                    : Color(0xFF6C5CE7),
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -138,15 +176,21 @@ class _MyTicketPageState extends State<MyTicketPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(EventSelected ? "Past Events" : "Upcoming Events",style:TextStyle(fontSize:16,fontWeight:FontWeight.bold)),
-                  Text(EventSelected ? Pastlen.toString() : Uplen.toString(),style:TextStyle(fontSize:16,fontWeight:FontWeight.bold)),
+                  Text(
+                    EventSelected ? "Past Events" : "Upcoming Events",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    EventSelected ? Pastlen.toString() : Uplen.toString(),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
                 ],
               ),
             ),
             ListView.builder(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
-              itemCount: EventSelected? Pastlen:Uplen,
+              itemCount: EventSelected ? Pastlen : Uplen,
               itemBuilder: (context, index) {
                 final bookings = bookData.bookingData[index];
                 return EventSelected
