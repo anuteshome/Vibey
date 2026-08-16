@@ -25,11 +25,13 @@ class BookingModel {
     final events= rawEvents.map((singleEvent)=>
      EventModel.fromJson(singleEvent as Map<String,dynamic>)
     ).toList();
-
+          
+          r
 return BookingModel(
   id:json["id"] as String? ?? "",
   event:events,
-  
+
+
 
 )
 
