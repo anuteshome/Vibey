@@ -77,10 +77,10 @@ class _MyTicketPageState extends State<MyTicketPage> {
 
   @override
   Widget build(BuildContext context) {
-    final UpcomingEvent = bookData.bookingData
+    final UpcomingEvent = books
         .where((e) => e.isUpcomingEvent)
         .toList();
-    final PasstEvent = bookData.bookingData
+    final PasstEvent = books
         .where((e) => e.isPastEvent)
         .toList();
 
