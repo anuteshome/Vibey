@@ -22,14 +22,8 @@ class BookingModel {
   factory BookingModel.fromJson(Map<String, dynamic> json) {
     final rawEvents = json["events"] as List<dynamic>? ?? [];
 
-    final events = rawEvents
-        .map(
-          (singleEvent) =>
-              EventModel.fromJson(singleEvent as Map<String, dynamic>),
-        )
-        .toList();
-
-    final rawTickets = json["ticket_types"] as List<dynamic>? ?? [];
+    final events = 
+              EventModel.fromJson(json["events"] as Map<String, dynamic>).toList();
 
     final tickets = TicketTypes.fromJson(json["ticket_types"]as Map<String, dynamic>).toList();
 
