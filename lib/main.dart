@@ -17,15 +17,15 @@ void main() async {
   final initialEvent = Event().events.first;
   final loadedBooks = await BookRepsoitory().getBooks();
 
-  if (loadedBooks.isEmpty) {
-    runApp(const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(child: Text('No bookings found')),
-      ),
-    ));
-    return;
-  }
+  // if (loadedBooks.isEmpty) {
+  //   runApp(const MaterialApp(
+  //     debugShowCheckedModeBanner: false,
+  //     home: Scaffold(
+  //       body: Center(child: Text('No bookings found')),
+  //     ),
+  //   ));
+  //   return;
+  // }
 
   final initialBooking = loadedBooks.first;
   runApp(MyApp(event: initialEvent, book: initialBooking));
