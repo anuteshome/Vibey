@@ -13,7 +13,7 @@ Future<List<BookingModel>> getBooks() async {
         events(*)
       """);
 
-  print("BOOKING RESPONSE: $response");
+  // print("BOOKING RESPONSE: $response");
 
   final bookingData = response as List<dynamic>;
 
