@@ -26,7 +26,9 @@ class BookingModel {
      EventModel.fromJson(singleEvent as Map<String,dynamic>)
     ).toList();
           
-       final rawTickets= json["ticket_types"] as List 
+       final rawTickets= json["ticket_types"] as List <dynamic>? ??[];
+
+       final tickets= rawTickets
 return BookingModel(
   id:json["id"] as String? ?? "",
   event:events,
