@@ -17,6 +17,8 @@ class BookingModel {
     required this.isUpcomingEvent,
     required this.isPastEvent,
   });
- factory 
+ factory BookingModel.fromJson(Map<String,dynamic>json){
+final rawEvents = 
+ }
 
 }
