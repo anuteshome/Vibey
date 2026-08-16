@@ -19,27 +19,32 @@ class BookingModel {
     required this.isUpcomingEvent,
     required this.isPastEvent,
   });
-  factory BookingModel.fromJson(Map<String,dynamic> json) {
+  factory BookingModel.fromJson(Map<String, dynamic> json) {
     final rawEvents = json["events"] as List<dynamic>? ?? [];
 
-    final events= rawEvents.map((singleEvent)=>
-     EventModel.fromJson(singleEvent as Map<String,dynamic>)
-    ).toList();
-          
-       final rawTickets= json["ticket_types"] as List <dynamic>? ??[];
+    final events = rawEvents
+        .map(
+          (singleEvent) =>
+              EventModel.fromJson(singleEvent as Map<String, dynamic>),
+        )
+        .toList();
 
-       final tickets= rawTickets.map((singleTickets)=>
-       TicketTypes.fromJson( singleTickets as Map<String,dynamic>)).toList();
-return BookingModel(
-  id:json["id"] as String? ?? "",
-  event:events,
-  SelectedTickets:tickets,
-  Quantity: json["Quantity"] as int ,
-  TotalPaid:json["total_paid"] as String,
-  isUpcomingEvent:json["is_upcoming_event"]as bool,
-  isPastEvent:json["is_past_event"] as bool
+    final rawTickets = json["ticket_types"] as List<dynamic>? ?? [];
 
-)
-
+    final tickets = rawTickets
+        .map(
+          (singleTickets) =>
+              TicketTypes.fromJson(singleTickets as Map<String, dynamic>),
+        )
+        .toList();
+    return BookingModel(
+      id: json["id"] as String? ?? "",
+      event: events,
+      SelectedTickets: tickets,
+      Quantity: json["Quantity"] as int,
+      TotalPaid: json["total_paid"] as String,
+      isUpcomingEvent: json["is_upcoming_event"] as bool,
+      isPastEvent: json["is_past_event"] as bool,
+    );
   }
 }
