@@ -42,12 +42,20 @@ class _MyTicketPageState extends State<MyTicketPage> {
         books = loadedBokks;
         isLoading = false;
       });
-    } catch (error) {}
+    } catch (error) {
+      if (!mounted) return;
+
+      setState(() {
+        errorMessage = error.toString();
+        isLoading = false;
+      });
+    }
   }
 
   @override
   void initState() {
     super.initState();
+    LoadBooks();
   }
 
   void PastEvent() {
