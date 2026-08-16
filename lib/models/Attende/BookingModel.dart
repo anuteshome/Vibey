@@ -32,7 +32,7 @@ class BookingModel {
       id: json["id"] as String? ?? "",
       event: events,
       SelectedTickets: tickets,
-      Quantity: (json["Quantity"] as num?)?.toInt() ?? 0,
+      Quantity: (json["quantity"] as num?)?.toInt() ?? 0,
       TotalPaid: (json["total_paid"] as num?)?.toString() ?? "",
       isUpcomingEvent: json["is_upcoming_event"] as bool? ?? false,
       isPastEvent: json["is_past_event"] as bool? ?? false,
