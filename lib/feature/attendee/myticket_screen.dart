@@ -63,7 +63,7 @@ class _MyTicketPageState extends State<MyTicketPage> {
       EventSelected = true;
       String EventType = "Past events";
     });
-    debugPrint("EventSelected is pressed${EventSelected}");
+    // debugPrint("EventSelected is pressed${EventSelected}");
   }
 
   void UpcomingEventFunc() {
@@ -72,7 +72,7 @@ class _MyTicketPageState extends State<MyTicketPage> {
       ;
       String EventType = "Past events";
     });
-    debugPrint("EventSelected is pressed${EventSelected}");
+    // debugPrint("EventSelec?ted is pressed${EventSelected}");
   }
 
   @override
