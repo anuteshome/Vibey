@@ -5,6 +5,6 @@ class BookRepsoitory {
   final SupabaseClient supabase = Supabase.instance.client;
 
   Future<List<BookingModel>> getBooks() async {
-    final response = await supabase.from("bookings").select(""" *, """);
+    final response = await supabase.from("bookings").select(""" *,ticket_types(*), """);
   }
 }
