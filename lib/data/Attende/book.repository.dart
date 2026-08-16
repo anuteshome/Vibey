@@ -1,1 +1,1 @@
-import "supabase_flutter/supabase_flutter.dart";
+import "package:supabase_flutter/supabase_flutter.dart";
