@@ -61,7 +61,7 @@ class _ProfilePageState extends State<ProfilePage> {
         children:[
          Container(
             width:double.infinity,
-            height: 250,
+            height: 200,
             decoration: BoxDecoration(
 
             ),
