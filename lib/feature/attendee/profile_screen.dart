@@ -55,7 +55,11 @@ class _ProfilePageState extends State<ProfilePage> {
       //     ),
       //   ],
       // ),
-      body: Text("Profile page"),
+      body: Column(
+        children:[
+         
+        ]
+      ),
     );
   }
 }
