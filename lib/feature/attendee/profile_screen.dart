@@ -49,10 +49,10 @@ class _ProfilePageState extends State<ProfilePage> {
       appBar: AppBar(
         title: Text("Vibey"),
         actions: [
-          IconButton(
-            icon: Icon(Icons.logout),
-            onPressed: _isLoggingOut ? null : Logout,
-          ),
+          // IconButton(
+          //   icon: Icon(Icons.logout),
+          //   onPressed: _isLoggingOut ? null : Logout,
+          // ),
         ],
       ),
       body: Text("Profile page"),
