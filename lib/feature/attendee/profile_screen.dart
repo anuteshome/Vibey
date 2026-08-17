@@ -60,7 +60,7 @@ class _ProfilePageState extends State<ProfilePage> {
         children:[
          Container(
             width:double.infinity,
-            height: 300,
+            height: 250,
             decoration: BoxDecoration(
               // color:Colors.white
             ),
