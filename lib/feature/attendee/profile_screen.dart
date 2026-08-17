@@ -70,13 +70,14 @@ class _ProfilePageState extends State<ProfilePage> {
            ),
          ),
 
-           Container(
-          width:double.infinity,
-          height: 400,
-          decoration: BoxDecoration(
-            color:Colors.white
-          ),
-         )
+           Expanded(
+             child: Container(
+                       width:double.infinity,
+                       decoration: BoxDecoration(
+              color:Colors.white
+                       ),
+                      ),
+           )
 
         ]
       ),
