@@ -58,18 +58,14 @@ class _ProfilePageState extends State<ProfilePage> {
       // ),
       body: Column(
         children:[
-         Padding(
-           padding: const EdgeInsets.only(top:170),
-           child: Container(
-            // width:double.infinity,
-            // height: 400,
-            // decoration: BoxDecoration(
-            //   color:Colors.white
-            // ),
+         Container(
+            width:double.infinity,
+            height: 300,
+            decoration: BoxDecoration(
+              // color:Colors.white
+            ),
            child: Text("Profile")
            ),
-         ),
-
            Expanded(
              child: Container(
                        width:double.infinity,
