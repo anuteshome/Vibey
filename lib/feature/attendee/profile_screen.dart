@@ -66,6 +66,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
             ),
            child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children:[
             Text("Profile"),
             Icon(Ionicons.settings_outline)
