@@ -5,7 +5,7 @@ import "package:vibey/core/widgets/TicketWidget/TicketEvent.dart";
 import "package:vibey/data/Attende/book.repository.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 import "package:vibey/models/Attende/BookingModel.dart";
-import "package:vibey/data/Attende/BookingData.dart";
+// import "package:vibey/data/Attende/BookingData.dart";
 
 class MyTicketPage extends StatefulWidget {
   // final EventModel event;
