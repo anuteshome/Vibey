@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/feature/auth/data/repository/auth_repository.dart";
 import "package:supabase_flutter/supabase_flutter.dart";
 import "package:vibey/feature/auth/presentation/screen/login_screen.dart";
@@ -66,7 +67,8 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
            child: Row(
             children:[
-            Text("Profile")
+            Text("Profile"),
+            Icon(Ionicons.settings_outline)
             ]
            )
            ),
