@@ -46,15 +46,15 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Vibey"),
-        actions: [
-          // IconButton(
-          //   icon: Icon(Icons.logout),
-          //   onPressed: _isLoggingOut ? null : Logout,
-          // ),
-        ],
-      ),
+      // appBar: AppBar(
+      //   title: Text("Vibey"),
+      //   actions: [
+      //     IconButton(
+      //       icon: Icon(Icons.logout),
+      //       onPressed: _isLoggingOut ? null : Logout,
+      //     ),
+      //   ],
+      // ),
       body: Text("Profile page"),
     );
   }
