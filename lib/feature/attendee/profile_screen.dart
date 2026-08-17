@@ -65,12 +65,15 @@ class _ProfilePageState extends State<ProfilePage> {
             decoration: BoxDecoration(
 
             ),
-           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children:[
-            Text("Profile"),
-            Icon(Ionicons.settings_outline)
-            ]
+           child: Padding(
+             padding: const EdgeInsets.symmetric(horizontal: 20),
+             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children:[
+              Text("Profile"),
+              Icon(Ionicons.settings_outline)
+              ]
+             ),
            )
            ),
            Expanded(
