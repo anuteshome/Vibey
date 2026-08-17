@@ -62,9 +62,13 @@ class _ProfilePageState extends State<ProfilePage> {
             width:double.infinity,
             height: 250,
             decoration: BoxDecoration(
-              // color:Colors.white
+
             ),
-           child: Text("Profile")
+           child: Row(
+            children:[
+            Text("Profile")
+            ]
+           )
            ),
            Expanded(
              child: Container(
