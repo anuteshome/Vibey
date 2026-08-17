@@ -71,7 +71,7 @@ class _ProfilePageState extends State<ProfilePage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children:[
               Text("Profile",style:TextStyle(color:Colors.white,fontSize:30,)),
-              Icon(Ionicons.settings_outline)
+              Icon(Ionicons.settings_outline,size: 30,color: Colors.white,)
               ]
              ),
            )
