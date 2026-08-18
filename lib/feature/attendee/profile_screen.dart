@@ -352,7 +352,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   )
                 ),
                  child: Padding(
-                   padding: const EdgeInsets.symmetric(horizontal: 30,vertical:20),
+                   padding: const EdgeInsets.symmetric(horizontal: 120,vertical:20),
                      child: Center(
                        child: Row(
                           children:[
