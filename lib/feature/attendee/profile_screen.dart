@@ -198,7 +198,7 @@ Padding(
     children:[
       Row(
         children: [
-          Icon(Ionicons.person,color:Colors.black),
+          Icon(Ionicons.wallet_outline,color:Colors.black),
           SizedBox(width:20),
           Text("Payment Methods",style:TextStyle(color:Colors.black)),
         ],
