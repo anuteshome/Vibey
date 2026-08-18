@@ -337,21 +337,31 @@ class _ProfilePageState extends State<ProfilePage> {
                  ]
                ),
              ),
-             Container(
-              decoration:BoxDecoration(
-                borderRadius:BorderRadius.circular(12),
-              ),
-             child: Row(
-                children:[
-              Icon(Ionicons.log_out_outline,color:Colors.red),
-              Text("Log Out",style:TextStyle(color:Colors.red))
-                ]
-              )
-             )
                          ]
                          ),
+                         
            )
-              )
+              ),
+                Padding(
+               padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+               child: Container(
+                decoration:BoxDecoration(
+                  borderRadius:BorderRadius.circular(12),
+                  border:BoxBorder.all(
+                    color:Colors.grey
+                  )
+                ),
+                 child: Padding(
+                   padding: const EdgeInsets.symmetric(horizontal: 20,vertical:10),
+                   child: Row(
+                      children:[
+                    Icon(Ionicons.log_out_outline,color:Colors.red),
+                    Text("Log Out",style:TextStyle(color:Colors.red))
+                      ]
+                    ),
+                 ),
+               )
+               ),
                     ]
                   ),
                   
