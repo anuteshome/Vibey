@@ -170,11 +170,19 @@ class _ProfilePageState extends State<ProfilePage> {
            child:Column(
                   children:[
 Row(
+  mainAxisAlignment:MainAxisAlignment.spaceBetween,
   children:[
-    Icon(Ionicons.person,color:Colors.black),
-    Text("Personal Information",style:TextStyle(color:Colors.black)),
-    SizedBox(width:30),
-    Icon(Ionicons.chevron_forward_outline,color:Colors.black)
+    Row(
+      children: [
+        Icon(Ionicons.person,color:Colors.black),
+        Text("Personal Information",style:TextStyle(color:Colors.black)),
+      ],
+    ),
+    Column(
+      children: [
+        Icon(Ionicons.chevron_forward_outline,color:Colors.black),
+      ],
+    )
   ]
 )
                        ]
