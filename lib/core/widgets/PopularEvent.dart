@@ -68,15 +68,9 @@ class PopularEvent extends StatelessWidget {
                       ),
                       SizedBox(width: 5),
                       Text(event.Location, style: TextStyle(fontSize: 12)),
+                      
                     ],
                   ),
-                ],
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Ionicons.bookmark_outline, color: Colors.grey),
-                  SizedBox(height: 15),
                   Text(
                     "ETB ${event.Price}",
                     style: TextStyle(
@@ -85,6 +79,14 @@ class PopularEvent extends StatelessWidget {
                       color: Color(0xFF6C5CE7),
                     ),
                   ),
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Ionicons.bookmark_outline, color: Colors.grey),
+                  SizedBox(height: 15),
+                  
                 ],
               ),
             ],
