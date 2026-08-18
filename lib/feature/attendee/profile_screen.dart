@@ -142,7 +142,16 @@ class _ProfilePageState extends State<ProfilePage> {
                         children: [
                                    Text("Ananya Teshome",style:TextStyle(fontSize:23,fontWeight:FontWeight.bold)),
                                    Text("ananyateshome2@gmail.com"),
-                                   Text("Attende")
+                                   SizedBox(height:5),
+                                   Container( 
+                                    decoration: BoxDecoration(
+                                      color:Color.fromARGB(255, 205, 200, 244),
+                                      borderRadius:BorderRadius.circular(12)
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                                      child: Text("Attende"),
+                                    ))
                         ],
                       ),
                     ),
