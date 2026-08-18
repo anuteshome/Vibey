@@ -159,16 +159,10 @@ class _ProfilePageState extends State<ProfilePage> {
                                           ),
                        ),
                      ),
-                   Column(
-                    crossAxisAlignment:CrossAxisAlignment.start,
-                    children:[
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 10,vertical:15),
                           child: Text("Account",style:TextStyle(fontSize:22,fontWeight:FontWeight.bold)),
                         )
-                    ]
-                   )
-
                     ]
                   ),
                   
