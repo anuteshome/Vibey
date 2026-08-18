@@ -337,7 +337,11 @@ class _ProfilePageState extends State<ProfilePage> {
                  ]
                ),
              ),
-             
+             Container(
+              decoration:BoxDecoration(
+                borderRadius:BorderRadius.circular(12),
+              )
+             )
                          ]
                          ),
            )
