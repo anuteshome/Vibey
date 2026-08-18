@@ -172,172 +172,175 @@ class _ProfilePageState extends State<ProfilePage> {
               color:Colors.grey
             )
             ),
-           child:Column(
-                  children:[
-Padding(
-  padding: const EdgeInsets.symmetric(vertical:5,horizontal: 10),
-  child: Row(
-    mainAxisAlignment:MainAxisAlignment.spaceBetween,
-    children:[
-      Row(
-        children: [
-          Icon(Ionicons.person_outline,color:Colors.black),
-          SizedBox(width:20),
-          Text("Personal Information",style:TextStyle(color:Colors.black)),
-        ],
-      ),
-      Column(
-        children: [
-          Icon(Ionicons.chevron_forward_outline,color:Colors.black),
-        ],
-      )
-    ]
-  ),
-),
- Padding(
-   padding: const EdgeInsets.symmetric(horizontal: 5,),
-   child: Divider(
-        color: Colors.grey, // Line color
-        thickness: 1,       // Line thickness
-        height: 20,   
-   ),
- ),
-Padding(
-  padding: const EdgeInsets.symmetric(vertical:5,horizontal: 10),
-  child: Row(
-    mainAxisAlignment:MainAxisAlignment.spaceBetween,
-    children:[
-      Row(
-        children: [
-          Icon(Ionicons.wallet_outline,color:Colors.black),
-          SizedBox(width:20),
-          Text("Payment Methods",style:TextStyle(color:Colors.black)),
-        ],
-      ),
-      Column(
-        children: [
-          Icon(Ionicons.chevron_forward_outline,color:Colors.black),
-        ],
-      )
-    ]
-  ),
-),
- Padding(
-   padding: const EdgeInsets.symmetric(horizontal: 15,),
-   child: Divider(
-        color: Colors.grey, // Line color
-        thickness: 1,       // Line thickness
-        height: 20,   
-   ),
- ),
-
-Padding(
-  padding: const EdgeInsets.symmetric(vertical:5,horizontal: 10),
-  child: Row(
-    mainAxisAlignment:MainAxisAlignment.spaceBetween,
-    children:[
-      Row(
-        children: [
-          Icon(Ionicons.heart_outline,color:Colors.black),
-          SizedBox(width:20),
-          Text("My Favorite",style:TextStyle(color:Colors.black)),
-        ],
-      ),
-      Column(
-        children: [
-          Icon(Ionicons.chevron_forward_outline,color:Colors.black),
-        ],
-      )
-    ]
-  ),
-),
- Padding(
-   padding: const EdgeInsets.symmetric(horizontal: 15,),
-   child: Divider(
-        color: Colors.grey, // Line color
-        thickness: 1,       // Line thickness
-        height: 20,   
-   ),
- ),
-Padding(
-  padding: const EdgeInsets.symmetric(vertical:5,horizontal: 10),
-  child: Row(
-    mainAxisAlignment:MainAxisAlignment.spaceBetween,
-    children:[
-      Row(
-        children: [
-          Icon(Ionicons.notifications_outline,color:Colors.black),
-          SizedBox(width:20),
-          Text("Notification Setting",style:TextStyle(color:Colors.black)),
-        ],
-      ),
-      Column(
-        children: [
-          Icon(Ionicons.chevron_forward_outline,color:Colors.black),
-        ],
-      )
-    ]
-  ),
-),
- Padding(
-   padding: const EdgeInsets.symmetric(horizontal: 15,),
-   child: Divider(
-        color: Colors.grey, // Line color
-        thickness: 1,       // Line thickness
-        height: 20,   
-   ),
- ),
-Padding(
-  padding: const EdgeInsets.symmetric(vertical:5,horizontal: 10),
-  child: Row(
-    mainAxisAlignment:MainAxisAlignment.spaceBetween,
-    children:[
-      Row(
-        children: [
-          Icon(Ionicons.help_circle_outline,color:Colors.black),
-          SizedBox(width:20),
-          Text("Help & Support",style:TextStyle(color:Colors.black)),
-        ],
-      ),
-      Column(
-        children: [
-          Icon(Ionicons.chevron_forward_outline,color:Colors.black),
-        ],
-      )
-    ]
-  ),
-),
- Padding(
-   padding: const EdgeInsets.symmetric(horizontal: 15,),
-   child: Divider(
-        color: Colors.grey, // Line color
-        thickness: 1,       // Line thickness
-        height: 20,   
-   ),
- ),
-Padding(
-  padding: const EdgeInsets.symmetric(vertical:5,horizontal: 10),
-  child: Row(
-    mainAxisAlignment:MainAxisAlignment.spaceBetween,
-    children:[
-      Row(
-        children: [
-          Icon(Ionicons.information_circle_outline,color:Colors.black),
-          SizedBox(width:20),
-          Text("About Vibey",style:TextStyle(color:Colors.black)),
-        ],
-      ),
-      Column(
-        children: [
-          Icon(Ionicons.chevron_forward_outline,color:Colors.black),
-        ],
-      )
-    ]
-  ),
-),
-
-                       ]
-                       )
+           child:Padding(
+             padding: const EdgeInsets.only(top:10,bottom:10),
+             child: Column(
+                    children:[
+             Padding(
+               padding: const EdgeInsets.symmetric(vertical:5,horizontal: 10),
+               child: Row(
+                 mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                 children:[
+                   Row(
+                     children: [
+                       Icon(Ionicons.person_outline,color:Colors.black),
+                       SizedBox(width:20),
+                       Text("Personal Information",style:TextStyle(color:Colors.black)),
+                     ],
+                   ),
+                   Column(
+                     children: [
+                       Icon(Ionicons.chevron_forward_outline,color:Colors.black),
+                     ],
+                   )
+                 ]
+               ),
+             ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 5,),
+                child: Divider(
+                     color: Colors.grey, // Line color
+                     thickness: 1,       // Line thickness
+                     height: 20,   
+                ),
+              ),
+             Padding(
+               padding: const EdgeInsets.symmetric(vertical:5,horizontal: 10),
+               child: Row(
+                 mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                 children:[
+                   Row(
+                     children: [
+                       Icon(Ionicons.wallet_outline,color:Colors.black),
+                       SizedBox(width:20),
+                       Text("Payment Methods",style:TextStyle(color:Colors.black)),
+                     ],
+                   ),
+                   Column(
+                     children: [
+                       Icon(Ionicons.chevron_forward_outline,color:Colors.black),
+                     ],
+                   )
+                 ]
+               ),
+             ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15,),
+                child: Divider(
+                     color: Colors.grey, // Line color
+                     thickness: 1,       // Line thickness
+                     height: 20,   
+                ),
+              ),
+             
+             Padding(
+               padding: const EdgeInsets.symmetric(vertical:5,horizontal: 10),
+               child: Row(
+                 mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                 children:[
+                   Row(
+                     children: [
+                       Icon(Ionicons.heart_outline,color:Colors.black),
+                       SizedBox(width:20),
+                       Text("My Favorite",style:TextStyle(color:Colors.black)),
+                     ],
+                   ),
+                   Column(
+                     children: [
+                       Icon(Ionicons.chevron_forward_outline,color:Colors.black),
+                     ],
+                   )
+                 ]
+               ),
+             ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15,),
+                child: Divider(
+                     color: Colors.grey, // Line color
+                     thickness: 1,       // Line thickness
+                     height: 20,   
+                ),
+              ),
+             Padding(
+               padding: const EdgeInsets.symmetric(vertical:5,horizontal: 10),
+               child: Row(
+                 mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                 children:[
+                   Row(
+                     children: [
+                       Icon(Ionicons.notifications_outline,color:Colors.black),
+                       SizedBox(width:20),
+                       Text("Notification Setting",style:TextStyle(color:Colors.black)),
+                     ],
+                   ),
+                   Column(
+                     children: [
+                       Icon(Ionicons.chevron_forward_outline,color:Colors.black),
+                     ],
+                   )
+                 ]
+               ),
+             ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15,),
+                child: Divider(
+                     color: Colors.grey, // Line color
+                     thickness: 1,       // Line thickness
+                     height: 20,   
+                ),
+              ),
+             Padding(
+               padding: const EdgeInsets.symmetric(vertical:5,horizontal: 10),
+               child: Row(
+                 mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                 children:[
+                   Row(
+                     children: [
+                       Icon(Ionicons.help_circle_outline,color:Colors.black),
+                       SizedBox(width:20),
+                       Text("Help & Support",style:TextStyle(color:Colors.black)),
+                     ],
+                   ),
+                   Column(
+                     children: [
+                       Icon(Ionicons.chevron_forward_outline,color:Colors.black),
+                     ],
+                   )
+                 ]
+               ),
+             ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15,),
+                child: Divider(
+                     color: Colors.grey, // Line color
+                     thickness: 1,       // Line thickness
+                     height: 20,   
+                ),
+              ),
+             Padding(
+               padding: const EdgeInsets.symmetric(vertical:5,horizontal: 10),
+               child: Row(
+                 mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                 children:[
+                   Row(
+                     children: [
+                       Icon(Ionicons.information_circle_outline,color:Colors.black),
+                       SizedBox(width:20),
+                       Text("About Vibey",style:TextStyle(color:Colors.black)),
+                     ],
+                   ),
+                   Column(
+                     children: [
+                       Icon(Ionicons.chevron_forward_outline,color:Colors.black),
+                     ],
+                   )
+                 ]
+               ),
+             ),
+             
+                         ]
+                         ),
+           )
               )
                     ]
                   ),
