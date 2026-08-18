@@ -126,7 +126,8 @@ class _ProfilePageState extends State<ProfilePage> {
              decoration:BoxDecoration(
             // color:Colors.black,
             image: DecorationImage(
-              image:Image.asset("assets")
+              image:AssetImage("assets/image/mypic.png"),
+              fit: BoxFit.cover,
                ),
              borderRadius: BorderRadius.circular(80),
             )
