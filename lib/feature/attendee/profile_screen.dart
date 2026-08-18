@@ -171,7 +171,7 @@ class _ProfilePageState extends State<ProfilePage> {
            child:Column(
                   children:[
 Padding(
-  padding: const EdgeInsets.symmetric(vertical:15,horizontal: 10),
+  padding: const EdgeInsets.symmetric(vertical:5,horizontal: 10),
   child: Row(
     mainAxisAlignment:MainAxisAlignment.spaceBetween,
     children:[
@@ -191,7 +191,7 @@ Padding(
   ),
 ),
  Padding(
-   padding: const EdgeInsets.symmetric(horizontal: 15,),
+   padding: const EdgeInsets.symmetric(horizontal: 5,),
    child: Divider(
         color: Colors.grey, // Line color
         thickness: 1,       // Line thickness
