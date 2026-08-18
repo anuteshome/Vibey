@@ -171,9 +171,10 @@ class _ProfilePageState extends State<ProfilePage> {
                   children:[
 Row(
   children:[
-    Icon(Ionicons.person),
-    Text("Personal Information",style:Te),
-    Icon(Ionicons.chevron_forward_outline,color:Colors.white)
+    Icon(Ionicons.person,color:Colors.black),
+    Text("Personal Information",style:TextStyle(color:Colors.black)),
+    SizedBox(width:30),
+    Icon(Ionicons.chevron_forward_outline,color:Colors.black)
   ]
 )
                        ]
