@@ -140,7 +140,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                                   Text("Ananya Teshome"),
+                                   Text("Ananya Teshome",style:TextStyle(fontSize:23,fontWeight:FontWeight.bold)),
                                    Text("ananyateshome2@gmail.com"),
                                    Text("Attende")
                         ],
