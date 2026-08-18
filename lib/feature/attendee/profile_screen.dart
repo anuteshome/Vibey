@@ -140,7 +140,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                               ,Column(
                                                 children: [
                                                   Text("7"),
-                                                  Text("12")
+                                                  Text("Past Events")
                                                 ],
                                               )
                                             ],
