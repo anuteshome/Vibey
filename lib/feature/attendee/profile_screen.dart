@@ -128,7 +128,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             Column(
                              children: [
                             Text("12",style:TextStyle(fontSize:25,fontWeight:FontWeight.bold)),
-                            Text("Tickets")
+                            Text("My Tickets")
                             ],
                           ),
                               Column(
