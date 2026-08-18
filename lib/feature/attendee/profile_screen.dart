@@ -283,7 +283,7 @@ Padding(
     children:[
       Row(
         children: [
-          Icon(Ionicons.person,color:Colors.black),
+          Icon(Ionicons.information_circle_outline,color:Colors.black),
           SizedBox(width:20),
           Text("About Vibey",style:TextStyle(color:Colors.black)),
         ],
