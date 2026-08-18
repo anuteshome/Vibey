@@ -23,7 +23,7 @@ class ExplorePage extends StatelessWidget {
     void Load() async {
       final loadEvents = await EventRepository().getEvents();
      final List events = loadEvents;
-      final PopularEvent = events.where((e) => e.isPopular).toList();
+      final popularEvents = events.where((e) => e.isPopular).toList();
     }
 
     final eventObj = Event();
@@ -120,9 +120,9 @@ class ExplorePage extends StatelessWidget {
 
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  itemCount: PopularEvent.length,
+                  itemCount: popularEvents.length,
                   itemBuilder: (context, index) {
-                    final event = PopularEvent[index];
+                    final event = popularEvents[index];
                     return GestureDetector(
                       onTap: () {
                         pushOnce(
