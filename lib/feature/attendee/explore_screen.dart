@@ -26,7 +26,7 @@ class ExplorePage extends StatelessWidget {
       final PopularEvent = events.where((e) => e.isPopular).toList();
     }
 
-    // final eventObj = Event();
+    final eventObj = Event();
 
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 229, 226, 246),
