@@ -171,7 +171,7 @@ class _ProfilePageState extends State<ProfilePage> {
            child:Column(
                   children:[
 Padding(
-  padding: const EdgeInsets.symmetric(vertical:20,horizontal: 10),
+  padding: const EdgeInsets.symmetric(vertical:15,horizontal: 10),
   child: Row(
     mainAxisAlignment:MainAxisAlignment.spaceBetween,
     children:[
@@ -192,7 +192,7 @@ Padding(
 ),
 
 Padding(
-  padding: const EdgeInsets.symmetric(vertical:20,horizontal: 10),
+  padding: const EdgeInsets.symmetric(vertical:15,horizontal: 10),
   child: Row(
     mainAxisAlignment:MainAxisAlignment.spaceBetween,
     children:[
@@ -214,7 +214,7 @@ Padding(
 
 
 Padding(
-  padding: const EdgeInsets.symmetric(vertical:20,horizontal: 10),
+  padding: const EdgeInsets.symmetric(vertical:15,horizontal: 10),
   child: Row(
     mainAxisAlignment:MainAxisAlignment.spaceBetween,
     children:[
@@ -235,7 +235,7 @@ Padding(
 ),
 
 Padding(
-  padding: const EdgeInsets.symmetric(vertical:20,horizontal: 10),
+  padding: const EdgeInsets.symmetric(vertical:15,horizontal: 10),
   child: Row(
     mainAxisAlignment:MainAxisAlignment.spaceBetween,
     children:[
@@ -256,7 +256,7 @@ Padding(
 ),
 
 Padding(
-  padding: const EdgeInsets.symmetric(vertical:20,horizontal: 10),
+  padding: const EdgeInsets.symmetric(vertical:15,horizontal: 10),
   child: Row(
     mainAxisAlignment:MainAxisAlignment.spaceBetween,
     children:[
@@ -277,7 +277,7 @@ Padding(
 ),
 
 Padding(
-  padding: const EdgeInsets.symmetric(vertical:20,horizontal: 10),
+  padding: const EdgeInsets.symmetric(vertical:15,horizontal: 10),
   child: Row(
     mainAxisAlignment:MainAxisAlignment.spaceBetween,
     children:[
