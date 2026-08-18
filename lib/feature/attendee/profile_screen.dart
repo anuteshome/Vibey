@@ -135,7 +135,7 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
 
                                 Positioned(
-                      top:220,
+                      top:210,
                       right:50,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
