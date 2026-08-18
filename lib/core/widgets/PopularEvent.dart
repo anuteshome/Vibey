@@ -20,7 +20,7 @@ class PopularEvent extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 width: 150,
@@ -34,7 +34,7 @@ class PopularEvent extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                 ),
               ),
-              // SizedBox(width: 5),
+              SizedBox(width: 25),
               Column(
                 // mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
