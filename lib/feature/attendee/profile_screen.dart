@@ -76,25 +76,30 @@ class _ProfilePageState extends State<ProfilePage> {
              ),
            )
            ),
-           Container(
-           width: 150,
-           height:150,
-           decoration:BoxDecoration(
-            color:Colors.black,
-            borderRadius: BorderRadius.circular(80),
-           )
-           ),
+        
            Expanded(
-             child: Container(
-                       width:double.infinity,
-                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          topLeft:Radius.circular(20),
-                          topRight:Radius.circular(20)
-                        ),
-              color:Colors.white
-                       ),
-                      ),
+              child: Column(
+                 children: [
+                   Container(
+                              width: 150,
+                              height:150,
+                              decoration:BoxDecoration(
+                               color:Colors.black,
+                               borderRadius: BorderRadius.circular(80),
+                              )
+                              ),
+                                Container(
+                           width:double.infinity,
+                           decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                              topLeft:Radius.circular(20),
+                              topRight:Radius.circular(20)
+                            ),
+                                 color:Colors.white
+                           ),
+                          ),
+                 ],
+               ),
            )
 
         ]
