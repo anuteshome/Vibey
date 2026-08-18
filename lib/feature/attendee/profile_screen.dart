@@ -228,7 +228,7 @@ Padding(
  ),
 
 Padding(
-  padding: const EdgeInsets.symmetric(vertical:15,horizontal: 10),
+  padding: const EdgeInsets.symmetric(vertical:5,horizontal: 10),
   child: Row(
     mainAxisAlignment:MainAxisAlignment.spaceBetween,
     children:[
