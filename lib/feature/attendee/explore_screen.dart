@@ -12,11 +12,18 @@ import "package:vibey/feature/attendee/EventDetail.dart";
 import "package:vibey/core/navigation/navigation_guard.dart";
 import "package:vibey/models/Attende/BookingModel.dart";
 
-class ExplorePage extends StatelessWidget {
+class ExplorePage extends StatefulWidget {
   final TicketTypes ticketModel;
   final BookingModel book;
 
-   ExplorePage({super.key, required this.ticketModel, required this.book});
+  ExplorePage({super.key, required this.ticketModel, required this.book});
+
+  @override
+  State<ExplorePage> createState() => _ExplorePageState();
+}
+
+class _ExplorePageState extends State<ExplorePage> {
+  final List<EventModel> events = [];
 
   @override
   void initState() {
@@ -24,23 +31,18 @@ class ExplorePage extends StatelessWidget {
     leadEvents();
   }
 
-    final List events = [];
+  Future<void> leadEvents() async {
+    final loadEvents = await EventRepository().getEvents();
 
-    Future<void> leadEvents() async {
-      final loadEvents = await EventRepository().getEvents();
+    if (!mounted) return;
 
-      if(!mounted) return;
-
-      setState((){
-        events = loadEvents;
-      })
-    }
-
-
+    setState(() {
+      events = loadEvents;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-
     final popularEvents = events.where((e) => e.isPopular).toList();
     final eventObj = Event();
 
@@ -146,8 +148,8 @@ class ExplorePage extends StatelessWidget {
                           MaterialPageRoute(
                             builder: (context) => EventDetail(
                               event: event,
-                              book: book,
-                              ticket: ticketModel,
+                              book: widget.book,
+                              ticket: widget.ticketModel,
                             ),
                           ),
                         );
