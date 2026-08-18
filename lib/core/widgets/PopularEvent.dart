@@ -39,7 +39,7 @@ class PopularEvent extends StatelessWidget {
                 // mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                    SizedBox(height: 5),
+                    SizedBox(height: 25),
                   Text(
                     event.Name,
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
