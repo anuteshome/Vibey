@@ -256,7 +256,7 @@ Padding(
 ),
 
 Padding(
-  padding: const EdgeInsets.symmetric(vertical:15,horizontal: 10),
+  padding: const EdgeInsets.symmetric(vertical:0,horizontal: 10),
   child: Row(
     mainAxisAlignment:MainAxisAlignment.spaceBetween,
     children:[
@@ -275,9 +275,16 @@ Padding(
     ]
   ),
 ),
-
+ Padding(
+   padding: const EdgeInsets.symmetric(horizontal: 15,),
+   child: Divider(
+        color: Colors.grey, // Line color
+        thickness: 1,       // Line thickness
+        height: 20,   
+   ),
+ ),
 Padding(
-  padding: const EdgeInsets.symmetric(vertical:15,horizontal: 10),
+  padding: const EdgeInsets.symmetric(vertical:0,horizontal: 10),
   child: Row(
     mainAxisAlignment:MainAxisAlignment.spaceBetween,
     children:[
