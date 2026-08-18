@@ -110,11 +110,14 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 child:Column(
                   children:[
-        // Row(
-        //   children:[
-       
-        //   ]
-        // )
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                                 Text("Ananya Teshome"),
+                                 Text("ananyateshome2@gmail.com"),
+                                 Text("Attende")
+                      ],
+                    ),
                   ]
                 )
               ),
@@ -125,13 +128,13 @@ class _ProfilePageState extends State<ProfilePage> {
               top:130,
               left:25,
               child: Container(
-                                  width: 150,
-                                  height:150,
-                                  decoration:BoxDecoration(
-                                   color:Colors.black,
-                                   borderRadius: BorderRadius.circular(80),
-                                  )
-                                  ),
+               width: 150,
+              height:150,
+             decoration:BoxDecoration(
+            color:Colors.black,
+             borderRadius: BorderRadius.circular(80),
+            )
+         ),
             ),
         ]
       ),
