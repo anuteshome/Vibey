@@ -162,7 +162,23 @@ class _ProfilePageState extends State<ProfilePage> {
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 10,vertical:15),
                           child: Text("Account",style:TextStyle(fontSize:22,fontWeight:FontWeight.bold)),
-                        )
+                        ),
+
+             Container(
+              decoration:BoxDecoration(
+            color:Colors.grey ),
+           child:Column(
+                  children:[
+Row(
+  children:[
+    Icon(Ionicons.person),
+    Text("Personal Information",style:Te),
+    Icon(Ionicons.chevron_forward_outline,color:Colors.white)
+  ]
+)
+                       ]
+                       )
+              )
                     ]
                   ),
                   
