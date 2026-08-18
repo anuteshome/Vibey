@@ -133,16 +133,21 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                           VerticalDivider(
                    thickness: 1,
-                   width:20,
-                   color:Colors.grey
+                   width:1,
+                   color:Colors.black
                           ),
                               Column(
                                                 children: [
                                                   Text("5",style:TextStyle(fontSize:25,fontWeight:FontWeight.bold)),
                                                   Text("Upcoming")
                                                 ],
-                                              )
-                                              ,Column(
+                                              ),
+                                                  VerticalDivider(
+                   thickness: 2,
+                   width:1,
+                   color:Colors.black
+                          ),
+                                            Column(
                                                 children: [
                                                   Text("7",style:TextStyle(fontSize:25,fontWeight:FontWeight.bold)),
                                                   Text("Past Events")
@@ -151,9 +156,12 @@ class _ProfilePageState extends State<ProfilePage> {
                                             ],
                                           ),
                        ),
-                     )
+                     ),
+                     Text("Account",style:TextStyle(fontSize:25,fontWeight:FontWeight.bold))
+
                     ]
                   ),
+                  
                 )
               ),
             ),
