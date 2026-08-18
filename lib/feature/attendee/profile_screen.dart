@@ -119,29 +119,32 @@ class _ProfilePageState extends State<ProfilePage> {
                       decoration:BoxDecoration(
                         border: BoxBorder.all(color: Colors.black)
                       ),
-                       child: Row(
-                                           mainAxisAlignment:MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                           children: [
-                          Text("Total"),
-                          Text("12")
-                          ],
-                        ),
+                       child: Padding(
+                         padding: const EdgeInsets.symmetric(horizontal: 20,vertical:20),
+                         child: Row(
+                         mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                          children: [
                             Column(
-                                              children: [
-                                                Text("Total"),
-                                                Text("12")
-                                              ],
-                                            )
-                                            ,Column(
-                                              children: [
-                                                Text("Total"),
-                                                Text("12")
-                                              ],
-                                            )
-                                          ],
-                                        ),
+                             children: [
+                            Text("Total"),
+                            Text("12")
+                            ],
+                          ),
+                              Column(
+                                                children: [
+                                                  Text("Total"),
+                                                  Text("12")
+                                                ],
+                                              )
+                                              ,Column(
+                                                children: [
+                                                  Text("Total"),
+                                                  Text("12")
+                                                ],
+                                              )
+                                            ],
+                                          ),
+                       ),
                      )
                     ]
                   ),
