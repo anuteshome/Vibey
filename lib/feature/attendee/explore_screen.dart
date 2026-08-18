@@ -3,9 +3,7 @@ import "package:vibey/core/widgets/Catagories.dart";
 import "package:vibey/core/widgets/TicketWidget/ChooseTicket.dart";
 import "package:vibey/core/widgets/TicketWidget/TicketEvent.dart";
 import "package:vibey/core/widgets/UpcomingEvents.dart";
-// import "package:vibey/core/widgets/TicketWidget/TicketType.dart";
-// import "package:vibey/core/widgets/EventDetailImage.dart";
-// import "package:vibey/core/widgets/EventDetailName.dart";
+import "package:vibey/core/widgets/PopularEvent.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 import "package:vibey/data/Attende/AttendeData.dart";
 import "package:vibey/feature/attendee/BookingSuccess.dart";
@@ -76,8 +74,8 @@ class ExplorePage extends StatelessWidget {
                   },
                 ),
               ),
-              SizedBox(height:20),
-                          Padding(
+              SizedBox(height: 20),
+              Padding(
                 padding: const EdgeInsets.only(
                   left: 20,
                   right: 20,
@@ -130,7 +128,7 @@ class ExplorePage extends StatelessWidget {
                           ),
                         );
                       },
-                      child: UpcomingEvents(event: event),
+                      child: PopularEvent(event: event),
                     );
                   },
                 ),

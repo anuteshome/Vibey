@@ -2,9 +2,9 @@ import "package:flutter/material.dart";
 import "package:ionicons_plus/ionicons_plus.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 
-class UpcomingEvents extends StatelessWidget {
+class PopularEvent extends StatelessWidget {
     final EventModel event;
-   UpcomingEvents({super.key,required this.event});
+   PopularEvent({super.key,required this.event});
 
   @override
   Widget build(BuildContext context) {
