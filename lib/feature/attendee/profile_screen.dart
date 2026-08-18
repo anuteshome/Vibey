@@ -352,7 +352,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   )
                 ),
                  child: Padding(
-                   padding: const EdgeInsets.symmetric(horizontal: 20,vertical:10),
+                   padding: const EdgeInsets.symmetric(horizontal: 30,vertical:15),
                    child: Row(
                       children:[
                     Icon(Ionicons.log_out_outline,color:Colors.red),
