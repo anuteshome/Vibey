@@ -241,7 +241,7 @@ Padding(
     children:[
       Row(
         children: [
-          Icon(Ionicons.person,color:Colors.black),
+          Icon(Ionicons.notifications_outline,color:Colors.black),
           SizedBox(width:20),
           Text("Notification Setting",style:TextStyle(color:Colors.black)),
         ],
