@@ -343,7 +343,8 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
              child: Row(
                 children:[
-
+              Icon(Ionicons.logout),
+              Text("Log Out")
                 ]
               )
              )
