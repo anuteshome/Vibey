@@ -127,19 +127,19 @@ class _ProfilePageState extends State<ProfilePage> {
                           children: [
                             Column(
                              children: [
-                            Text("12"),
+                            Text("12",style:TextStyle(fontSize:25,fontWeight:FontWeight.bold)),
                             Text("Tickets")
                             ],
                           ),
                               Column(
                                                 children: [
-                                                  Text("5"),
+                                                  Text("5",style:TextStyle(fontSize:25,fontWeight:FontWeight.bold)),
                                                   Text("Upcoming")
                                                 ],
                                               )
                                               ,Column(
                                                 children: [
-                                                  Text("7"),
+                                                  Text("7",style:TextStyle(fontSize:25,fontWeight:FontWeight.bold)),
                                                   Text("Past Events")
                                                 ],
                                               )
