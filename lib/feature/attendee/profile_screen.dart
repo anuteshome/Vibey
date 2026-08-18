@@ -110,14 +110,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 child:Column(
                   children:[
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                                 Text("Ananya Teshome"),
-                                 Text("ananyateshome2@gmail.com"),
-                                 Text("Attende")
-                      ],
-                    ),
+
                   ]
                 )
               ),
@@ -125,7 +118,7 @@ class _ProfilePageState extends State<ProfilePage> {
           ],
         ),
             Positioned(
-              top:130,
+              top:160,
               left:25,
               child: Container(
                width: 150,
@@ -136,6 +129,19 @@ class _ProfilePageState extends State<ProfilePage> {
             )
          ),
             ),
+
+                                Positioned(
+                      top:220,
+                      right:50,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                                   Text("Ananya Teshome"),
+                                   Text("ananyateshome2@gmail.com"),
+                                   Text("Attende")
+                        ],
+                      ),
+                    ),
         ]
       ),
     );
