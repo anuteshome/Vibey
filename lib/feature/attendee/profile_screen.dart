@@ -68,7 +68,7 @@ class _ProfilePageState extends State<ProfilePage> {
       //   ],
       // ),
       body: Stack(
-        
+        clipBehavior:Clip.none,
         children: [ Column(
           children: [
             Container(
