@@ -23,7 +23,7 @@ class ExplorePage extends StatefulWidget {
 }
 
 class _ExplorePageState extends State<ExplorePage> {
-  final List<EventModel> events = [];
+   List<EventModel> events = [];
 
   @override
   void initState() {
