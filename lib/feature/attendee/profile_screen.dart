@@ -167,6 +167,10 @@ class _ProfilePageState extends State<ProfilePage> {
              Container(
               decoration:BoxDecoration(
             // color:Colors.grey 
+            borderRadius:BorderRadius.circular(12),
+            border: BoxBorder.all(
+              color:Colors.grey
+            )
             ),
            child:Column(
                   children:[
