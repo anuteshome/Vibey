@@ -4,6 +4,7 @@ import "package:vibey/core/widgets/TicketWidget/ChooseTicket.dart";
 import "package:vibey/core/widgets/TicketWidget/TicketEvent.dart";
 import "package:vibey/core/widgets/UpcomingEvents.dart";
 import "package:vibey/core/widgets/PopularEvent.dart";
+import "package:vibey/data/Attende/event.repository.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 import "package:vibey/data/Attende/AttendeData.dart";
 import "package:vibey/feature/attendee/BookingSuccess.dart";
@@ -18,8 +19,15 @@ class ExplorePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final eventObj = Event();
-    final PopularEvent = eventObj.events.where((e) => e.isPopular).toList();
+
+    void Load() async {
+      final loadEvents = await EventRepository().getEvents();
+     final List events = loadEvents;
+      final PopularEvent = events.where((e) => e.isPopular).toList();
+    }
+
+    // final eventObj = Event();
+
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 229, 226, 246),
       appBar: AppBar(
