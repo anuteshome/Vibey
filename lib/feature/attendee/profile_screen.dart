@@ -163,8 +163,8 @@ class _ProfilePageState extends State<ProfilePage> {
                     crossAxisAlignment:CrossAxisAlignment.start,
                     children:[
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20,vertical:10),
-                          child: Text("Account",style:TextStyle(fontSize:25,fontWeight:FontWeight.bold)),
+                          padding: const EdgeInsets.symmetric(horizontal: 10,vertical:15),
+                          child: Text("Account",style:TextStyle(fontSize:22,fontWeight:FontWeight.bold)),
                         )
                     ]
                    )
