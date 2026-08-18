@@ -262,7 +262,7 @@ Padding(
     children:[
       Row(
         children: [
-          Icon(Ionicons.person,color:Colors.black),
+          Icon(Ionicons.help_circle_outline,color:Colors.black),
           SizedBox(width:20),
           Text("Help & Support",style:TextStyle(color:Colors.black)),
         ],
