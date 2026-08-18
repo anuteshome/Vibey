@@ -112,20 +112,20 @@ class _ProfilePageState extends State<ProfilePage> {
                   color: Colors.white,
                 ),
                 child:Padding(
-                  padding: const EdgeInsets.only(top:120),
+                  padding: const EdgeInsets.only(top:120,left:25,right:25),
                   child: Column(
                     children:[
                   
-                                      Row(
-                                        mainAxisAlignment:MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Column(
-                                            children: [
-                                              Text("Total"),
-                                              Text("12")
-                                            ],
-                                          ),
-                                          Column(
+                     Row(
+                    mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                         children: [
+                        Text("Total"),
+                        Text("12")
+                        ],
+                      ),
+                          Column(
                                             children: [
                                               Text("Total"),
                                               Text("12")
