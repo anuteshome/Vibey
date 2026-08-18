@@ -17,18 +17,26 @@ class ExplorePage extends StatelessWidget {
   final BookingModel book;
 
    ExplorePage({super.key, required this.ticketModel, required this.book});
-   
-    final List events = [];
-    void Load() async {
-      final loadEvents = await EventRepository().getEvents();
-      events = loadEvents;
-    }
 
   @override
   void initState() {
     super.initState();
-    Load();
+    leadEvents();
   }
+
+    final List events = [];
+
+    Future<void> leadEvents() async {
+      final loadEvents = await EventRepository().getEvents();
+
+      if(!mounted) return;
+
+      setState((){
+        events = loadEvents;
+      })
+    }
+
+
 
   @override
   Widget build(BuildContext context) {
