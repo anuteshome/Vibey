@@ -70,6 +70,7 @@ class _ProfilePageState extends State<ProfilePage> {
       body: Stack(
         clipBehavior:Clip.none,
         children: [ Column(
+             crossAxisAlignment:CrossAxisAlignment.start,
           children: [
             Container(
               width: double.infinity,
@@ -114,6 +115,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 child:Padding(
                   padding: const EdgeInsets.only(top:120,left:25,right:25),
                   child: Column(
+                       crossAxisAlignment:CrossAxisAlignment.start,
                     children:[
                      Container(
                       decoration:BoxDecoration(
@@ -158,8 +160,12 @@ class _ProfilePageState extends State<ProfilePage> {
                        ),
                      ),
                    Column(
+                    crossAxisAlignment:CrossAxisAlignment.start,
                     children:[
-                        Text("Account",style:TextStyle(fontSize:25,fontWeight:FontWeight.bold))
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20,vertical:10),
+                          child: Text("Account",style:TextStyle(fontSize:25,fontWeight:FontWeight.bold)),
+                        )
                     ]
                    )
 
