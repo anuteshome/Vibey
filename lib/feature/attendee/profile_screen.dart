@@ -131,6 +131,10 @@ class _ProfilePageState extends State<ProfilePage> {
                             Text("My Tickets")
                             ],
                           ),
+                          VerticalDivider(
+                   thickness: 1,
+                   widh
+                          ),
                               Column(
                                                 children: [
                                                   Text("5",style:TextStyle(fontSize:25,fontWeight:FontWeight.bold)),
