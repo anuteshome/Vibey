@@ -219,7 +219,7 @@ Padding(
   ),
 ),
  Padding(
-   padding: const EdgeInsets.symmetric(horizontal: 5,),
+   padding: const EdgeInsets.symmetric(horizontal: 15,),
    child: Divider(
         color: Colors.grey, // Line color
         thickness: 1,       // Line thickness
