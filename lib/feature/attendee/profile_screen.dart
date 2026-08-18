@@ -220,7 +220,7 @@ Padding(
     children:[
       Row(
         children: [
-          Icon(Ionicons.person,color:Colors.black),
+          Icon(Ionicons.heart_outline,color:Colors.black),
           SizedBox(width:20),
           Text("My Favorite",style:TextStyle(color:Colors.black)),
         ],
