@@ -200,7 +200,7 @@ Padding(
         children: [
           Icon(Ionicons.person,color:Colors.black),
           SizedBox(width:20),
-          Text("Personal Information",style:TextStyle(color:Colors.black)),
+          Text("Payment Methods",style:TextStyle(color:Colors.black)),
         ],
       ),
       Column(
@@ -222,7 +222,7 @@ Padding(
         children: [
           Icon(Ionicons.person,color:Colors.black),
           SizedBox(width:20),
-          Text("Personal Information",style:TextStyle(color:Colors.black)),
+          Text("My Favorite",style:TextStyle(color:Colors.black)),
         ],
       ),
       Column(
