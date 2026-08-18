@@ -77,23 +77,26 @@ class _ProfilePageState extends State<ProfilePage> {
               decoration: BoxDecoration(),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Profile",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Profile",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    Icon(
-                      Ionicons.settings_outline,
-                      size: 30,
-                      color: Colors.white,
-                    ),
-                  ],
+                      Icon(
+                        Ionicons.settings_outline,
+                        size: 30,
+                        color: Colors.white,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -108,10 +111,36 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                   color: Colors.white,
                 ),
-                child:Column(
-                  children:[
-
-                  ]
+                child:Padding(
+                  padding: const EdgeInsets.only(top:120),
+                  child: Column(
+                    children:[
+                  
+                                      Row(
+                                        mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Column(
+                                            children: [
+                                              Text("Total"),
+                                              Text("12")
+                                            ],
+                                          ),
+                                          Column(
+                                            children: [
+                                              Text("Total"),
+                                              Text("12")
+                                            ],
+                                          )
+                                          ,Column(
+                                            children: [
+                                              Text("Total"),
+                                              Text("12")
+                                            ],
+                                          )
+                                        ],
+                                      )
+                    ]
+                  ),
                 )
               ),
             ),
@@ -134,7 +163,7 @@ class _ProfilePageState extends State<ProfilePage> {
          ),
             ),
 
-                                Positioned(
+                    Positioned(
                       top:210,
                       right:50,
                       child: Column(
@@ -152,30 +181,6 @@ class _ProfilePageState extends State<ProfilePage> {
                                       padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
                                       child: Text("Attende"),
                                     )),
-
-                                    Row(
-                                      mainAxisAlignment:MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Column(
-                                          children: [
-                                            Text("Total"),
-                                            Text("12")
-                                          ],
-                                        ),
-                                        Column(
-                                          children: [
-                                            Text("Total"),
-                                            Text("12")
-                                          ],
-                                        )
-                                        ,Column(
-                                          children: [
-                                            Text("Total"),
-                                            Text("12")
-                                          ],
-                                        )
-                                      ],
-                                    )
                         ],
                       ),
                     ),
