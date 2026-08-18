@@ -177,7 +177,7 @@ Padding(
     children:[
       Row(
         children: [
-          Icon(Ionicons.person,color:Colors.black),
+          Icon(Ionicons.person_outline,color:Colors.black),
           SizedBox(width:20),
           Text("Personal Information",style:TextStyle(color:Colors.black)),
         ],
