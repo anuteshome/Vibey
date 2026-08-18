@@ -15,17 +15,23 @@ import "package:vibey/models/Attende/BookingModel.dart";
 class ExplorePage extends StatelessWidget {
   final TicketTypes ticketModel;
   final BookingModel book;
+  
   const ExplorePage({super.key, required this.ticketModel, required this.book});
+
+   @override
+   void initState(){
+    
+   }
 
   @override
   Widget build(BuildContext context) {
-
+    final List events = [];
     void Load() async {
       final loadEvents = await EventRepository().getEvents();
-     final List events = loadEvents;
-      final popularEvents = events.where((e) => e.isPopular).toList();
+       events = loadEvents;
     }
 
+    final popularEvents = events.where((e) => e.isPopular).toList();
     final eventObj = Event();
 
     return Scaffold(
