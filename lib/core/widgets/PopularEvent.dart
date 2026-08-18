@@ -52,13 +52,13 @@ class PopularEvent extends StatelessWidget {
                         size: 15,
                         color: Color(0xFF6C5CE7),
                       ),
-                    SizedBox(height: 15),
+                    SizedBox(height: 10),
                       Text(event.Date, style: TextStyle(fontSize: 12)),
                       SizedBox(width: 5),
                       Text(event.Time, style: TextStyle(fontSize: 12)),
                     ],
                   ),
-                 SizedBox(height: 15),
+                 SizedBox(height: 10),
                   Row(
                     children: [
                       Icon(
@@ -72,6 +72,7 @@ class PopularEvent extends StatelessWidget {
                       
                     ],
                   ),
+                   SizedBox(height: 10),
                   Text(
                     "ETB ${event.Price}",
                     style: TextStyle(
