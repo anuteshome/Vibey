@@ -112,14 +112,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   children:[
         // Row(
         //   children:[
-        //    Container(
-        //                         width: 150,
-        //                         height:150,
-        //                         decoration:BoxDecoration(
-        //                          color:Colors.black,
-        //                          borderRadius: BorderRadius.circular(80),
-        //                         )
-        //                         ),
+       
         //   ]
         // )
                   ]
@@ -128,6 +121,14 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
           ],
         ),
+            Container(
+                                width: 150,
+                                height:150,
+                                decoration:BoxDecoration(
+                                 color:Colors.black,
+                                 borderRadius: BorderRadius.circular(80),
+                                )
+                                ),
         ]
       ),
     );
