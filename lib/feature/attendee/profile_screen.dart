@@ -6,12 +6,16 @@ import "package:vibey/feature/auth/presentation/screen/login_screen.dart";
 import "package:vibey/models/Attende/AttendeModel.dart";
 import "package:vibey/models/Attende/BookingModel.dart";
 
-
 class ProfilePage extends StatefulWidget {
   final EventModel event;
-      final BookingModel book;
+  final BookingModel book;
   final TicketTypes ticket;
-  const ProfilePage({super.key,required this.event , required this.book, required this.ticket});
+  const ProfilePage({
+    super.key,
+    required this.event,
+    required this.book,
+    required this.ticket,
+  });
 
   @override
   State<ProfilePage> createState() => _ProfilePageState();
@@ -32,7 +36,13 @@ class _ProfilePageState extends State<ProfilePage> {
       if (!mounted) return;
       Navigator.pushAndRemoveUntil(
         context,
-        MaterialPageRoute(builder: (context) => LoginPage(event:widget.event,book: widget.book,ticket:widget.ticket,)),
+        MaterialPageRoute(
+          builder: (context) => LoginPage(
+            event: widget.event,
+            book: widget.book,
+            ticket: widget.ticket,
+          ),
+        ),
         (route) => false,
       );
     } finally {
@@ -47,7 +57,7 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:Color(0xFF6C5CE7),
+      backgroundColor: Color(0xFF6C5CE7),
       // appBar: AppBar(
       //   title: Text("Vibey"),
       //   actions: [
@@ -58,39 +68,48 @@ class _ProfilePageState extends State<ProfilePage> {
       //   ],
       // ),
       body: Column(
-        children:[
-         Container(
-            width:double.infinity,
+        children: [
+          Container(
+            width: double.infinity,
             height: 200,
-            decoration: BoxDecoration(
-
+            decoration: BoxDecoration(),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Profile",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Icon(
+                    Ionicons.settings_outline,
+                    size: 30,
+                    color: Colors.white,
+                  ),
+                ],
+              ),
             ),
-           child: Padding(
-             padding: const EdgeInsets.symmetric(horizontal: 20),
-             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children:[
-              Text("Profile",style:TextStyle(color:Colors.white,fontSize:30,fontWeight:FontWeight.bold)),
-              Icon(Ionicons.settings_outline,size: 30,color: Colors.white,)
-              ]
-             ),
-           )
-           ),
-        
-           Expanded(
-              child: Container(
-                           width:double.infinity,
-                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(
-                              topLeft:Radius.circular(20),
-                              topRight:Radius.circular(20)
-                            ),
-                                 color:Colors.white
-                           ),
-                          ),
-                 ],
-               ),
-        
+          ),
+
+          Expanded(
+            child: Container(
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20),
+                  topRight: Radius.circular(20),
+                ),
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
