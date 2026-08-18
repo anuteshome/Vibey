@@ -133,7 +133,8 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                           VerticalDivider(
                    thickness: 1,
-                   widh
+                   width:20,
+                   color:Colors.grey
                           ),
                               Column(
                                                 children: [
