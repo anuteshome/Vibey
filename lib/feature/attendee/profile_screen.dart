@@ -211,7 +211,14 @@ Padding(
     ]
   ),
 ),
-
+ Padding(
+   padding: const EdgeInsets.symmetric(horizontal: 15,),
+   child: Divider(
+        color: Colors.grey, // Line color
+        thickness: 1,       // Line thickness
+        height: 20,   
+   ),
+ ),
 
 Padding(
   padding: const EdgeInsets.symmetric(vertical:15,horizontal: 10),
