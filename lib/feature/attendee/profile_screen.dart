@@ -110,18 +110,18 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 child:Column(
                   children:[
-        Row(
-          children:[
-           Container(
-                                width: 150,
-                                height:150,
-                                decoration:BoxDecoration(
-                                 color:Colors.black,
-                                 borderRadius: BorderRadius.circular(80),
-                                )
-                                ),
-          ]
-        )
+        // Row(
+        //   children:[
+        //    Container(
+        //                         width: 150,
+        //                         height:150,
+        //                         decoration:BoxDecoration(
+        //                          color:Colors.black,
+        //                          borderRadius: BorderRadius.circular(80),
+        //                         )
+        //                         ),
+        //   ]
+        // )
                   ]
                 )
               ),
