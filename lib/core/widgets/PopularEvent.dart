@@ -34,7 +34,7 @@ class PopularEvent extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                 ),
               ),
-              SizedBox(width: 5),
+              // SizedBox(width: 5),
               Column(
                 // mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
