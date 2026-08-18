@@ -151,7 +151,31 @@ class _ProfilePageState extends State<ProfilePage> {
                                     child: Padding(
                                       padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
                                       child: Text("Attende"),
-                                    ))
+                                    )),
+
+                                    Row(
+                                      mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Column(
+                                          children: [
+                                            Text("Total"),
+                                            Text("12")
+                                          ],
+                                        ),
+                                        Column(
+                                          children: [
+                                            Text("Total"),
+                                            Text("12")
+                                          ],
+                                        )
+                                        ,Column(
+                                          children: [
+                                            Text("Total"),
+                                            Text("12")
+                                          ],
+                                        )
+                                      ],
+                                    )
                         ],
                       ),
                     ),
