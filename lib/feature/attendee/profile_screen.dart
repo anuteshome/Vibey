@@ -124,7 +124,10 @@ class _ProfilePageState extends State<ProfilePage> {
                width: 150,
               height:150,
              decoration:BoxDecoration(
-            color:Colors.black,
+            // color:Colors.black,
+            image: DecorationImage(
+              image:Image.asset("assets")
+               ),
              borderRadius: BorderRadius.circular(80),
             )
          ),
