@@ -264,7 +264,7 @@ Padding(
         children: [
           Icon(Ionicons.person,color:Colors.black),
           SizedBox(width:20),
-          Text("Personal Information",style:TextStyle(color:Colors.black)),
+          Text("Help & Support",style:TextStyle(color:Colors.black)),
         ],
       ),
       Column(
