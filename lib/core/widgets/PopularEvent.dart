@@ -12,7 +12,7 @@ class PopularEvent extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 5),
       child: Container(
         width: double.infinity,
-        height: 90,
+        height: 150,
         decoration: BoxDecoration(
           color: Color.fromARGB(255, 243, 241, 241),
           borderRadius: BorderRadius.circular(15),
