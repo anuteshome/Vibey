@@ -67,64 +67,68 @@ class _ProfilePageState extends State<ProfilePage> {
       //     ),
       //   ],
       // ),
-      body: Column(
-        children: [
-          Container(
-            width: double.infinity,
-            height: 200,
-            decoration: BoxDecoration(),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Profile",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Icon(
-                    Ionicons.settings_outline,
-                    size: 30,
-                    color: Colors.white,
-                  ),
-                ],
-              ),
-            ),
-          ),
-
-          Expanded(
-            child: Container(
+      body: Stack(
+        
+        children: [ Column(
+          children: [
+            Container(
               width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
+              height: 200,
+              decoration: BoxDecoration(),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Profile",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Icon(
+                      Ionicons.settings_outline,
+                      size: 30,
+                      color: Colors.white,
+                    ),
+                  ],
                 ),
-                color: Colors.white,
               ),
-              child:Column(
-                children:[
-Row(
-  children:[
-         Container(
-                              width: 150,
-                              height:150,
-                              decoration:BoxDecoration(
-                               color:Colors.black,
-                               borderRadius: BorderRadius.circular(80),
-                              )
-                              ),
-  ]
-)
-                ]
-              )
             ),
-          ),
-        ],
+        
+            Expanded(
+              child: Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20),
+                  ),
+                  color: Colors.white,
+                ),
+                child:Column(
+                  children:[
+        Row(
+          children:[
+           Container(
+                                width: 150,
+                                height:150,
+                                decoration:BoxDecoration(
+                                 color:Colors.black,
+                                 borderRadius: BorderRadius.circular(80),
+                                )
+                                ),
+          ]
+        )
+                  ]
+                )
+              ),
+            ),
+          ],
+        ),
+        ]
       ),
     );
   }
