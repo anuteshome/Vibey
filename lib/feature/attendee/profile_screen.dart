@@ -106,6 +106,22 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 color: Colors.white,
               ),
+              child:Column(
+                children:[
+Row(
+  children:[
+         Container(
+                              width: 150,
+                              height:150,
+                              decoration:BoxDecoration(
+                               color:Colors.black,
+                               borderRadius: BorderRadius.circular(80),
+                              )
+                              ),
+  ]
+)
+                ]
+              )
             ),
           ),
         ],
