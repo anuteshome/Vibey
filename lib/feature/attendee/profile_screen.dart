@@ -188,7 +188,7 @@ Padding(
       )
     ]
   ),
-)
+),
 
 Padding(
   padding: const EdgeInsets.symmetric(vertical:15,horizontal: 10),
