@@ -166,7 +166,8 @@ class _ProfilePageState extends State<ProfilePage> {
 
              Container(
               decoration:BoxDecoration(
-            color:Colors.grey ),
+            // color:Colors.grey 
+            ),
            child:Column(
                   children:[
 Padding(
@@ -252,7 +253,50 @@ Padding(
       )
     ]
   ),
-)
+),
+
+Padding(
+  padding: const EdgeInsets.symmetric(vertical:20,horizontal: 10),
+  child: Row(
+    mainAxisAlignment:MainAxisAlignment.spaceBetween,
+    children:[
+      Row(
+        children: [
+          Icon(Ionicons.person,color:Colors.black),
+          SizedBox(width:20),
+          Text("Personal Information",style:TextStyle(color:Colors.black)),
+        ],
+      ),
+      Column(
+        children: [
+          Icon(Ionicons.chevron_forward_outline,color:Colors.black),
+        ],
+      )
+    ]
+  ),
+),
+
+Padding(
+  padding: const EdgeInsets.symmetric(vertical:20,horizontal: 10),
+  child: Row(
+    mainAxisAlignment:MainAxisAlignment.spaceBetween,
+    children:[
+      Row(
+        children: [
+          Icon(Ionicons.person,color:Colors.black),
+          SizedBox(width:20),
+          Text("Personal Information",style:TextStyle(color:Colors.black)),
+        ],
+      ),
+      Column(
+        children: [
+          Icon(Ionicons.chevron_forward_outline,color:Colors.black),
+        ],
+      )
+    ]
+  ),
+),
+
                        ]
                        )
               )
