@@ -18,13 +18,13 @@ class PopularEvent extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15),
+          padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                width: 120,
-                height: 80,
+                width: 150,
+                height: 140,
                 decoration: BoxDecoration(
                   // color:Colors.grey,
                   image: DecorationImage(
