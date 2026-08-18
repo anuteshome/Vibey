@@ -355,8 +355,9 @@ class _ProfilePageState extends State<ProfilePage> {
                    padding: const EdgeInsets.symmetric(horizontal: 30,vertical:20),
                    child: Row(
                       children:[
-                    Icon(Ionicons.log_out_outline,color:Colors.red,size:25),
-                    Text("Log Out",style:TextStyle(color:Colors.red))
+                    Icon(Ionicons.log_out_outline,color:Colors.red,size:27),
+                    SizedBox(width:20),
+                    Text("Log Out",style:TextStyle(color:Colors.red,fontWeight:FontWeight.bold,fontSize:17))
                       ]
                     ),
                  ),
