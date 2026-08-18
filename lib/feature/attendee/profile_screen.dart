@@ -157,7 +157,11 @@ class _ProfilePageState extends State<ProfilePage> {
                                           ),
                        ),
                      ),
-                     Text("Account",style:TextStyle(fontSize:25,fontWeight:FontWeight.bold))
+                   Column(
+                    children:[
+                        Text("Account",style:TextStyle(fontSize:25,fontWeight:FontWeight.bold))
+                    ]
+                   )
 
                     ]
                   ),
