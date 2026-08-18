@@ -121,14 +121,18 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
           ],
         ),
-            Container(
-                                width: 150,
-                                height:150,
-                                decoration:BoxDecoration(
-                                 color:Colors.black,
-                                 borderRadius: BorderRadius.circular(80),
-                                )
-                                ),
+            Positioned(
+              top:130,
+              left:25,
+              child: Container(
+                                  width: 150,
+                                  height:150,
+                                  decoration:BoxDecoration(
+                                   color:Colors.black,
+                                   borderRadius: BorderRadius.circular(80),
+                                  )
+                                  ),
+            ),
         ]
       ),
     );
